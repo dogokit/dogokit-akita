@@ -1,14 +1,14 @@
-# 🐶Dogokit Dingo
+# 🐶Dogokit Akita
 
-🐶Dogokit Dingo is a full stack app development kit with React, Remix, GraphQL with Domain-Driven Design.
+🐶Dogokit Akita is a full stack app development kit with React, Remix, GraphQL with Domain-Driven Design. With long term support of adaptability and scalability with various other platforms, through monorepo setup with moonrepo.
 
-> "Dingo" is an ancient lineage of dog found in Australia.
+> The codename "Akita" comes from a Japanese dog breed of large size, originating from the mountains of northern Japan.
 
 ## Introduction
 
 Goals and benefits:
 
-- Build web app as fast as possible with Dogokit pre-built modules
+- Build web app as fast as possible with pre-built modules
 - Encourage web standards with Remix
 - Scale complexity and integration with GraphQL
 - Ability to support mobile app development with React Native using Expo
@@ -16,35 +16,45 @@ Goals and benefits:
 
 ## Tech Stack
 
+These are the things used and recommendations.
+
 ### General
 
+- Browser: Chromium / Google Chrome / Arc Browser / Brave Browser
+- Code editor: VS Code / WebStorm / Neovim / Vim
+- Terminal emulator: Warp / Alacritty / Kitty / Rio
 - Docs: Markdown
 - Markup: HTML
 - Styling: CSS
-- Programming: JavaScript with TypeScript
-- Runtime: Node.js / Bun
-- Monorepo: Turborepo
-- Code editor: VS Code
+- Programming: JavaScript with TypeScript 👍
+- Runtime version manager: proto 👍, alternative to nvm / asdf
+- Runtime: Bun 👍, alternative to Node.js
+  - Package manager: pnpm 👍, alternative to npm
+- Monorepo: moonrepo 👍, alternative to Turborepo
 
 ### Frontend
 
-- Meta-framework: Remix v2 (React Router v6), the Next.js contender
-- UI library: React v18
+- UI library: React v18 👍
   - Optimization: Million.js
+- Meta-framework: Remix v2 👍 (React Router v6), the Next.js contender
+  - Bundler: Vite 👍
+  - PWA: Vite PWA Plugin for Remix
+  - Extension: Remix Forge for VS Code
 - Auth: Remix Auth / Lucia Auth
-- GraphQL client: Apollo Client v3
+- GraphQL client: Apollo Client v3 👍
 
 ### Frontend Styling
 
-- CSS framework: Tailwind CSS v4
-- UI components: shadcn/ui, Aceternity UI, Radix UI, Ariakit, Ark UI, etc
-- UI icons: React Icons, Tabler Icons, Lucide Icons, etc
+- CSS framework: Tailwind CSS v4 👍
+- UI components: shadcn/ui 👍, Tremor.so UI, Aceternity UI, Radix UI, Ariakit, Ark UI, etc
+- UI icons: React Icons, Tabler Icons, Lucide Icons, Remix Icon, etc
 - UI component development: Storybook v8
+- UI animation: Motion One / Framer Motion
 
 ### Backend
 
-- API layer: GraphQL
-- GraphQL server: Apollo Server
+- API layer: GraphQL 👍
+- GraphQL server: Apollo Server v4 👍
 - GraphQL schema generator: Pothos GraphQL / GraphQL Nexus
 - ORM (Object Relational Mapper): Drizzle, the Prisma contender
 - Database / DBMS (Database Management System): PostgreSQL
@@ -52,15 +62,24 @@ Goals and benefits:
 - Key-value store: Redis
   - Hosted: Upstash
 
+### Auth
+
+- Password with email or username
+- Email OTP
+- Phone OTP
+- GitHub Account
+- Google Account
+- Facebook Account
+
 ### Utilities
 
-- Package manager: pnpm, to replace npm
-- Formatter: Prettier
-- Linter: ESLint, Million Lint for React
-  - Alternatives: Biome
+- Toolchain: Biome
+  - Formatter: Prettier
+  - Linter: ESLint
+  - Performance linter: Million Lint for React
 - Containerization: Docker, Docker Compose with Docker Rollout
   - Mac-only: OrbStack
-- Form management: Conform / React Hook Form
+- Form management: Conform / React Hook Form / Formiz
 - Data validation: Zod
 - Auth utility: Oslo.js, to replace jsonwebtoken, bcrypt/argon, etc
 - Email templating: React Email
@@ -82,32 +101,24 @@ Goals and benefits:
 - Secret credentials: Doppler
 - Frontend deployment: Vercel / Netlify
 - Backend deployment: Render.com / Railway.app
-- Payment gateway:
-  - International: Stripe / Lemonsqueezy
-  - Indonesia: Xendit / Midtrans
 - Analytics: Vercel Analytics / Plausible
 - Event tracking: LogSnag
 - Error tracking: Sentry
 - Email service: Resend / Loops.so / Bento
 - File upload and storage: Uploadcare / Uploadthing
-- HTTP client: Firecamp / Postman / Insomnia
-- GraphQL client: Apollo Studio with Apollo Sandbox
+- GraphQL web client: Apollo Studio with Apollo Sandbox
 - Status monitoring: OpenStatus / BetterStack
 - Link shortener: Dub.co
-- Meeting scheduler: Cal.com with Google Calendar
 - Background jobs: Trigger.dev
 - Notification system: Novu
+- Meeting scheduler: Cal.com with Google Calendar
 - Business dashboard: Retool
 - BaaS (Backend as a Service): Directus
-
-### Auth Method
-
-- Password
-- Email OTP
-- Phone OTP
-- GitHub Account
-- Google Account
-- Facebook Account
+- Integration: Alloy Automation / Zapier
+- HTTP client: Firecamp / Hoppscotch Postman / Insomnia
+- Payment gateway:
+  - International: Stripe / Lemonsqueezy
+  - Indonesia: Xendit / Midtrans
 
 ### 3D
 
@@ -134,10 +145,16 @@ Goals and benefits:
 - OpenAI
 - Mistral AI
 
-### Management
+### Extra Recommendations
+
+Non-codebase development tools to enhance the workflow.
 
 - Account credentials: Bitwarden / 1Password
 - Communication and community: Telegram / Discord
 - Business database and MVP builder: Airtable
 - Project/product management: Linear
+- Launcher: Raycast (macOS)
 
+## References
+
+- [`dev-xo/stripe-stack`](https://github.com/dev-xo/stripe-stack)
