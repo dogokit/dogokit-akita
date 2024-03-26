@@ -16,7 +16,7 @@ Goals and benefits:
 
 ## Tech Stack
 
-These are the things used and recommendations.
+These are the things used and recommendations, with more focus on things labeled by the 👍 (thumbs up) emoji.
 
 ### General
 
@@ -36,12 +36,12 @@ These are the things used and recommendations.
 
 - UI library: React v18 👍
   - Optimization: Million.js
-- Meta-framework: Remix v2 👍 (React Router v6), the Next.js contender
+- Meta-framework: Remix v2 👍 (React Router v6), alternative to Next.js
   - Bundler: Vite 👍
   - PWA: Vite PWA Plugin for Remix
   - Extension: Remix Forge for VS Code
-- Auth: Remix Auth / Lucia Auth
 - GraphQL client: Apollo Client v3 👍
+- Auth: Remix Auth / Lucia Auth
 
 ### Frontend Styling
 
@@ -55,10 +55,10 @@ These are the things used and recommendations.
 
 - API layer: GraphQL 👍
 - GraphQL server: Apollo Server v4 👍
-- GraphQL schema generator: Pothos GraphQL / GraphQL Nexus
-- ORM (Object Relational Mapper): Drizzle, the Prisma contender
-- Database / DBMS (Database Management System): PostgreSQL
-  - Hosted: Vercel Posgtres / Supabase / Tembo.io / Neon.tech
+- GraphQL schema generator: Pothos GraphQL 👍 / GraphQL Nexus
+- ORM (Object Relational Mapper): Drizzle 👍, alternative to Prisma
+- Database / DBMS (Database Management System): PostgreSQL 👍
+  - Hosted: Vercel Postgres / Supabase / Tembo.io / Neon.tech
 - Key-value store: Redis
   - Hosted: Upstash
 
@@ -77,11 +77,11 @@ These are the things used and recommendations.
   - Formatter: Prettier
   - Linter: ESLint
   - Performance linter: Million Lint for React
-- Containerization: Docker, Docker Compose with Docker Rollout
+- Containerization: Docker 👍, Docker Compose with Docker Rollout
   - Mac-only: OrbStack
-- Form management: Conform / React Hook Form / Formiz
 - Data validation: Zod
-- Auth utility: Oslo.js, to replace jsonwebtoken, bcrypt/argon, etc
+- Form management: Conform / React Hook Form / Formiz
+- Auth utility: Oslo.js, alternative to jsonwebtoken, bcrypt/argon, etc
 - Email templating: React Email
 - Rich text editor: TipTap
 - Search utility: Fuse.js v7
@@ -157,4 +157,6 @@ Non-codebase development tools to enhance the workflow.
 
 ## References
 
+- [`epicweb-dev/epic-stack`](https://github.com/epicweb-dev/epic-stack)
 - [`dev-xo/stripe-stack`](https://github.com/dev-xo/stripe-stack)
+
