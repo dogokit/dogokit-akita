@@ -1,25 +1,31 @@
 # 🐶Dogokit Akita
 
-🐶Dogokit Akita is a full stack app development kit with mainly using React, Remix, GraphQL with Domain-Driven Design.
+🐶Dogokit Akita is a full stack app development kit with mainly using React, Remix, GraphQL with [Domain-Driven Design](docs/domain-driven-design.md).
 
 Aiming for longer support of adaptability and scalability with various other platforms, through monorepo setup using moonrepo.
 
-Mainly using:
+Ready to get started? [Read the Setup Guide](guides/setup.md)
 
-1. TypeScript 🚧
-2. Bun 🚧
-3. Remix (Vite) 🚧
-4. React 🚧
-5. Tailwind CSS
-6. shadcn UI
-7. GraphQL
-8. Apollo
-9. Drizzle
-10. PostgreSQL
-11. Docker
-12. moonrepo
+Default tech stack:
+
+1. Repo: [moonrepo](docs/moonrepo.md) with [domain-driven design](docs/domain-driven-design.md)
+2. Language: [TypeScript](docs/typescript.md)
+3. Runtime: [Bun](docs/bun.md)
+4. API: [GraphQL](docs/graphql.md) and [Apollo](docs/apollo.md)
+5. Framework: [Remix](docs/remix.md) ([Vite](docs/vite.md) & [React Router](docs/react-router.md))
+6. UI library: [React](docs/react.md)
+7. UI styling: [Tailwind CSS](docs/tailwind.md) with [design system](docs/design-system.md)
+8. UI component: [shadcn UI](docs/shadcn-ui.md) [component library](docs/component-library.md)
+9. ORM: [Drizzle](docs/drizzle.md)
+10. Database: [PostgreSQL](docs/postgresql.md)
+11. Container: [Docker](docs/docker.md)
+12. Testing: [Vitest](docs/vitest.md) and [Playwright](docs/playwright.md)
+
+[Check the inspirations](docs/inspirations.md)
 
 > The codename "Akita" comes from a Japanese dog breed of large size, originating from the mountains of northern Japan.
+
+🐶Dogokit is a collection of development kit, templates, tech stack docs, and code marketplace
 
 ## Introduction
 
@@ -29,13 +35,13 @@ Goals and benefits:
 - Encourage web standards with Remix
 - Scale complexity and integration with GraphQL
 - Ready to use React UI components, styled with Tailwind CSS, with the help of shadcn UI and more
-- Develop beyond JavaScript, moonrepo can help to manage other runtimes such as Golang, Rust, etc
-- Ability to later support mobile app development with React Native using Expo
+- Ability to develop beyond JavaScript and React, moonrepo can help to manage other runtimes and runtimes such as Golang, Rust, Vue, Angular, etc
+- Later support mobile app development with React Native using Expo
 - Highly customizable, 100% of the stack can still be changed
 
 ## Tech Stack
 
-These are the complete things that can be used and recommended, with more focus on things labeled by the 👍 (thumbs up) emoji.
+Feel free to adjust the tech stack as you need and prefer. These are the complete things that can be used and recommended, with more focus on things labeled by the 👍 (thumbs up) emoji.
 
 ### General
 
@@ -65,6 +71,7 @@ These are the complete things that can be used and recommended, with more focus 
 ### Frontend Styling
 
 - CSS framework: Tailwind CSS v4 👍
+- Fonts: Fontsource 👍
 - UI components: shadcn/ui 👍, Tremor.so UI, Aceternity UI, Radix UI, Ariakit, Ark UI, Catalyst UI Kit, etc
 - UI icons: React Icons, Tabler Icons, Lucide Icons, Remix Icon, etc
 - UI component development: Storybook v8
@@ -77,7 +84,8 @@ These are the complete things that can be used and recommended, with more focus 
 - GraphQL schema generator: Pothos GraphQL 👍 / GraphQL Nexus
 - ORM (Object Relational Mapper): Drizzle 👍, alternative to Prisma
 - Database / DBMS (Database Management System): PostgreSQL 👍
-  - Hosted: Vercel Postgres / Supabase / Tembo.io / Neon.tech
+  - Hosted: Vercel Postgres / Supabase / Xata.io / Neon.tech / Tembo.io
+  - Utility: Snaplet
 - Key-value store: Redis
   - Hosted: Upstash
 
@@ -104,6 +112,8 @@ These are the complete things that can be used and recommended, with more focus 
 - Email templating: React Email
 - Rich text editor: TipTap
 - Search utility: Fuse.js v7
+- Upgrade packages: Taze
+- Find unused stuffs: Knip
 
 ### Testing
 
@@ -164,7 +174,16 @@ These are the complete things that can be used and recommended, with more focus 
 - OpenAI
 - Mistral AI
 
-### Extra Recommendations
+### Extra
+
+- `@uidotdev/usehooks`
+- `date-fns` / `dayjs`
+- `remix-typedjson`
+- `remix-utils`
+- `undici`
+- `usehooks-ts`
+
+### Workflow Recommendations
 
 Non-codebase development tools to enhance the workflow, development, and learning process.
 
@@ -174,7 +193,13 @@ Non-codebase development tools to enhance the workflow, development, and learnin
 - Project/product management: Linear
 - Launcher: Raycast (macOS)
 
-## References
+## Credits
 
-- [`epicweb-dev/epic-stack`](https://github.com/epicweb-dev/epic-stack)
-- [`dev-xo/stripe-stack`](https://github.com/dev-xo/stripe-stack)
+Originally created by [@mhaidarhanif](https://github.com/mhaidarhanif) in 2024, from the 🐾 Allnimal group (🐻 Bearmentor, 🐱 Catamyst, 🐶 Dogokit)
+
+- [🐾 Allnimal](https://allnimal.com)
+  - [🐻 Bearmentor](https://bearmentor.com)
+  - [🐱 Catamyst](https://catamyst.com)
+  - [🐶 Dogokit](https://dogokit.allnimal.com)
+
+2024 ©️ 🐶 Dogokit
