@@ -1,0 +1,9 @@
+__*.md
+/build
+/coverage-ts
+/node_modules
+bun.lockb
+package-lock.json
+pnpm-lock.yaml
+slides.md
+yarn.lock

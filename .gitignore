@@ -1,0 +1,17 @@
+__*
+.DS_Store
+.env
+.env.production
+.eslintcache
+.react-email
+.sentryclirc
+.stylelintcache
+.vercel
+*.local
+/.cache
+/build
+/coverage-ts
+/node_modules
+/prisma/docs
+/public/build
+tsconfig.tsbuildinfo
