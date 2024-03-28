@@ -37,7 +37,7 @@ Goals and benefits:
 - Ready to use React UI components, styled with Tailwind CSS, with the help of shadcn UI and more
 - Ability to develop beyond JavaScript and React, moonrepo can help to manage other runtimes and runtimes such as Golang, Rust, Vue, Angular, etc
 - Later support mobile app development with React Native using Expo
-- Highly customizable, 100% of the stack can still be changed
+- Highly customizable, 100% of the stack can still be changed or remove unnecessary parts
 
 ## Tech Stack
 
@@ -75,7 +75,7 @@ Feel free to adjust the tech stack as you need and prefer. These are the complet
 - UI components: shadcn/ui 👍, Tremor.so UI, Aceternity UI, Radix UI, Ariakit, Ark UI, Catalyst UI Kit, etc
 - UI icons: React Icons, Tabler Icons, Lucide Icons, Remix Icon, etc
 - UI component development: Storybook v8
-- UI animation: Motion One / Framer Motion
+- UI animation: Rive / Motion One / Framer Motion / React Native Skia
 
 ### Backend
 
@@ -110,7 +110,8 @@ Feel free to adjust the tech stack as you need and prefer. These are the complet
 - Form management: Conform / React Hook Form / Formiz
 - Auth utility: Oslo.js, alternative to jsonwebtoken, bcrypt/argon, etc
 - Email templating: React Email
-- Rich text editor: TipTap
+- Rich text editor: TipTap, BlockNote, Yjs
+- Security scan: Snyk, SonarCloud
 - Search utility: Fuse.js v7
 - Upgrade packages: Taze
 - Find unused stuffs: Knip
