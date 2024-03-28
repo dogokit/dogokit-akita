@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/dogokit/dogokit-akita/discussions/category_choices
+    about: Ask questions and discuss with the community
+  - name: Visit the site
+    url: https://dogokit.com
+    about: Check out the examples
