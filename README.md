@@ -1,6 +1,23 @@
 # 🐶Dogokit Akita
 
-🐶Dogokit Akita is a full stack app development kit with React, Remix, GraphQL with Domain-Driven Design. With long term support of adaptability and scalability with various other platforms, through monorepo setup with moonrepo.
+🐶Dogokit Akita is a full stack app development kit with mainly using React, Remix, GraphQL with Domain-Driven Design.
+
+Aiming for longer support of adaptability and scalability with various other platforms, through monorepo setup using moonrepo.
+
+Mainly using:
+
+1. TypeScript 🚧
+2. Bun 🚧
+3. Remix (Vite) 🚧
+4. React 🚧
+5. Tailwind CSS
+6. shadcn UI
+7. GraphQL
+8. Apollo
+9. Drizzle
+10. PostgreSQL
+11. Docker
+12. moonrepo
 
 > The codename "Akita" comes from a Japanese dog breed of large size, originating from the mountains of northern Japan.
 
@@ -11,12 +28,14 @@ Goals and benefits:
 - Build web app as fast as possible with pre-built modules
 - Encourage web standards with Remix
 - Scale complexity and integration with GraphQL
-- Ability to support mobile app development with React Native using Expo
+- Ready to use React UI components, styled with Tailwind CSS, with the help of shadcn UI and more
+- Develop beyond JavaScript, moonrepo can help to manage other runtimes such as Golang, Rust, etc
+- Ability to later support mobile app development with React Native using Expo
 - Highly customizable, 100% of the stack can still be changed
 
 ## Tech Stack
 
-These are the things used and recommendations, with more focus on things labeled by the 👍 (thumbs up) emoji.
+These are the complete things that can be used and recommended, with more focus on things labeled by the 👍 (thumbs up) emoji.
 
 ### General
 
@@ -28,9 +47,9 @@ These are the things used and recommendations, with more focus on things labeled
 - Styling: CSS
 - Programming: JavaScript with TypeScript 👍
 - Runtime version manager: proto 👍, alternative to nvm / asdf
-- Runtime: Bun 👍, alternative to Node.js
-  - Package manager: pnpm 👍, alternative to npm
-- Monorepo: moonrepo 👍, alternative to Turborepo
+- Runtime: Bun 👍, alternative to Node.js / Deno
+  - Package manager: Bun 👍, alternative to npm / yarn / pnpm
+- Monorepo: moonrepo 👍, alternative to Turborepo / Nx
 
 ### Frontend
 
@@ -46,7 +65,7 @@ These are the things used and recommendations, with more focus on things labeled
 ### Frontend Styling
 
 - CSS framework: Tailwind CSS v4 👍
-- UI components: shadcn/ui 👍, Tremor.so UI, Aceternity UI, Radix UI, Ariakit, Ark UI, etc
+- UI components: shadcn/ui 👍, Tremor.so UI, Aceternity UI, Radix UI, Ariakit, Ark UI, Catalyst UI Kit, etc
 - UI icons: React Icons, Tabler Icons, Lucide Icons, Remix Icon, etc
 - UI component development: Storybook v8
 - UI animation: Motion One / Framer Motion
@@ -147,10 +166,10 @@ These are the things used and recommendations, with more focus on things labeled
 
 ### Extra Recommendations
 
-Non-codebase development tools to enhance the workflow.
+Non-codebase development tools to enhance the workflow, development, and learning process.
 
 - Account credentials: Bitwarden / 1Password
-- Communication and community: Telegram / Discord
+- Communication and community: Telegram / Discord / X
 - Business database and MVP builder: Airtable
 - Project/product management: Linear
 - Launcher: Raycast (macOS)
@@ -159,4 +178,3 @@ Non-codebase development tools to enhance the workflow.
 
 - [`epicweb-dev/epic-stack`](https://github.com/epicweb-dev/epic-stack)
 - [`dev-xo/stripe-stack`](https://github.com/dev-xo/stripe-stack)
-
