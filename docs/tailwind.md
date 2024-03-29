@@ -1,10 +1,20 @@
 # Tailwind
 
-Tailwind is...
+Tailwind ecosystem consists of several different things:
+
+- Tailwind CSS
+- Tailwind UI
+  - Catalyst UI Kit
 
 ## Tailwind CSS
 
-Links: <https://tailwindcss.com>
+Tailwind CSS is a utility-first CSS framework for rapid UI development.
+
+Links:
+
+- <https://tailwindcss.com>
+- <https://github.com/tailwindlabs>
+  - <https://github.com/tailwindlabs/tailwindcss>
 
 References:
 

@@ -131,12 +131,13 @@ Feel free to adjust the tech stack as you need and prefer. These are the complet
 - Secret credentials: Doppler
 - Frontend deployment: Vercel / Netlify
 - Backend deployment: Render.com / Railway.app
+- HTTP client: Firecamp / Hoppscotch / Insomnia / Postman / HTTPie
+- GraphQL web client: Apollo Studio with Apollo Sandbox
 - Analytics: Vercel Analytics / Plausible
 - Event tracking: LogSnag
 - Error tracking: Sentry
 - Email service: Resend / Loops.so / Bento
 - File upload and storage: Uploadcare / Uploadthing
-- GraphQL web client: Apollo Studio with Apollo Sandbox
 - Status monitoring: OpenStatus / BetterStack
 - Link shortener: Dub.co
 - Background jobs: Trigger.dev
@@ -144,8 +145,8 @@ Feel free to adjust the tech stack as you need and prefer. These are the complet
 - Meeting scheduler: Cal.com with Google Calendar
 - Business dashboard: Retool
 - BaaS (Backend as a Service): Directus
+- Internal tool: Refine / Retool
 - Integration: Alloy Automation / Zapier
-- HTTP client: Firecamp / Hoppscotch Postman / Insomnia
 - Payment gateway:
   - International: Stripe / Lemonsqueezy
   - Indonesia: Xendit / Midtrans
