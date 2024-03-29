@@ -49,36 +49,47 @@ If necessary, create the `.env.production` for production access. Adjust accordi
 cp -i .env.example .env.production
 ```
 
-Required:
+Or run the `setup-env.sh` in one go, then specify the variables:
 
-- `APP_MAIN_URL`: For example, `http://localhost:3000`
-  - There can also be like `APP_ADMIN_URL`
-- `API_MAIN_URL`: For example, `http://localhost:4000`
-  - There can also be like `API_ADMIN_URL`
-- `SESSION_SECRET`: For example, `the_secret_text`. Anything goes, but better to generate a random string using `openssl rand -base64 32` on the terminal or put any long random text.
+```sh
+./scripts/setup-env.sh
+# cp -i .env.example .env.local
+# cp -i .env.example .env.production
+```
+
+Client/Frontend/Application:
+
+- `MAIN_CLIENT_URL`: For example, `http://localhost:3000`
+- `ADMIN_CLIENT_URL` is also possible
+
+Server/Backend/API:
+
+- `MAIN_SERVER_URL`: For example, `http://localhost:4000`
+
+Database:
+
 - `DATABASE_URL`: For example, `postgres://user:password@localhost:5432/dogokit-akita`. Continue to read the Database Setup.
 
-Optional:
+Auth:
 
-- `NODE_ENV`: For example, `development`
-- `*_CLIENT_ID` and `*_CLIENT_SECRET`: For OAuth related,
-  [check OAuth Guide](guides/oauth.md)
+- `SESSION_SECRET`: For example, `the_secret_text`. Anything goes, but better to generate a random string using `openssl rand -base64 32` on the terminal or put any long random text.
 
-### Database Setup
+OAuth:
+
+- `*_CLIENT_ID`
+- `*_CLIENT_SECRET`
+
+[Check the OAuth Guide](oauth.md)
+
+## Database Setup
 
 Drizzle ORM is used to communicate with the database easily. Can replace with query builder such as Kysely if needed or even raw database query.
 
 For the database system itself, either choose to use PostgreSQL or MySQL from local system, Docker container, or hosted services.
 
-If prefer using Docker and Docker Compose for local development, [follow the database guide](guides/database.md).
+If prefer using Docker and Docker Compose for local development, [check the database guide](database.md).
 
-The app is configured primarily to be deployed using PlanetScale. Because of that, the migration
-files are not needed. Therefore, push the schema directly there. The migration process will be
-handled through its [deploy requests](https://planetscale.com/docs/concepts/deploy-requests).
-
-This repo template does not recommend MongoDB (document database), although Prisma has a stable
-support for it. The database provider can still be changed, and the schema and databaase operations
-might need to adapt.
+The app is configured primarily to be deployed using PlanetScale. Because of that, the migration files are not needed. Therefore, push the schema directly there. The migration process will be handled through its [deploy requests](https://planetscale.com/docs/concepts/deploy-requests).
 
 ### PostgresQL Database
 
@@ -89,7 +100,7 @@ To start quickly, create a PostgresQL database with either of these:
 - Neon.tech
 - Xata.io
 
-## Database Operations
+### Database Operations
 
 Sync between Drizzle schema and the database directly:
 
