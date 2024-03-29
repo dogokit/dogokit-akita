@@ -4,7 +4,7 @@ Tailwind is...
 
 ## Tailwind CSS
 
-Docs: <https://tailwindcss.com>
+Links: <https://tailwindcss.com>
 
 References:
 
@@ -14,8 +14,8 @@ References:
 
 ## Tailwind UI
 
-Docs: <https://tailwindui.com>
+Links: <https://tailwindui.com>
 
 ### Catalyst UI Kit
 
-Docs: <https://catalyst.tailwindui.com>
+Links: <https://catalyst.tailwindui.com>

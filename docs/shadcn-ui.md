@@ -1,6 +1,6 @@
 # shadcn UI
 
-Docs: <https://ui.shadcn.com>
+Links: <https://ui.shadcn.com>
 
 Complementaries:
 

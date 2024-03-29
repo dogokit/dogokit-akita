@@ -1,3 +1,3 @@
 # RedwoodJS
 
-Docs: <https://redwoodjs.com>
+Links: <https://redwoodjs.com>

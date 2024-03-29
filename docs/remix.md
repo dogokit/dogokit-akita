@@ -1,6 +1,6 @@
 # Remix
 
-Docs: <http://remix.run>
+Links: <http://remix.run>
 
 References:
 

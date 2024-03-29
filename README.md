@@ -48,7 +48,7 @@ Feel free to adjust the tech stack as you need and prefer. These are the complet
 - Browser: Chromium / Google Chrome / Arc Browser / Brave Browser
 - Code editor: VS Code / WebStorm / Neovim / Vim
 - Terminal emulator: Warp / Alacritty / Kitty / Rio
-- Docs: Markdown
+- Links: Markdown
 - Markup: HTML
 - Styling: CSS
 - Programming: JavaScript with TypeScript 👍

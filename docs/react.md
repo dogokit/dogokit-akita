@@ -1,6 +1,6 @@
 # React
 
-Docs: <https://react.dev>
+Links: <https://react.dev>
 
 References
 

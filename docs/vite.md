@@ -1,3 +1,3 @@
 # Vite
 
-Docs: <https://vitejs.dev>
+Links: <https://vitejs.dev>

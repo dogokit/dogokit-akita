@@ -1,3 +1,3 @@
 # GraphQL
 
-Docs: <https://graphql.org>
+Links: <https://graphql.org>
