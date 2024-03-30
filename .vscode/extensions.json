@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "artdiniz.quitcontrol-vscode",
+    "biomejs.biome",
     "bradlc.vscode-tailwindcss",
     "codeforge.remix-forge",
     "csstools.postcss",

@@ -6,16 +6,16 @@ Aiming for longer support of adaptability and scalability with various other pla
 
 Ready to get started? [Read the Setup Guide](guides/setup.md)
 
-Default tech stack:
+Default configuration:
 
-1. Repo: [moonrepo](docs/moonrepo.md) with [domain-driven design](docs/domain-driven-design.md)
-2. Language: [TypeScript](docs/typescript.md)
-3. Runtime: [Bun](docs/bun.md)
-4. API: [GraphQL](docs/graphql.md) and [Apollo](docs/apollo.md)
-5. Framework: [Remix](docs/remix.md) ([Vite](docs/vite.md) & [React Router](docs/react-router.md))
-6. UI library: [React](docs/react.md)
-7. UI styling: [Tailwind CSS](docs/tailwind.md) with [design system](docs/design-system.md)
-8. UI component: [shadcn UI](docs/shadcn-ui.md) [component library](docs/component-library.md)
+1. Pattern: [Domain-Driven Design](docs/domain-driven-design.md)
+2. Repo: [moonrepo](docs/moonrepo.md)
+3. Language and runtime: [TypeScript](docs/typescript.md) on [Bun](docs/bun.md)
+4. Frontend Framework: [Remix](docs/remix.md) ([Vite](docs/vite.md & [React Router](docs/react-router.md))
+5. UI library: [React](docs/react.md)
+6. UI styling: [Tailwind CSS](docs/tailwind.md) with [cva](docs/cva.md) and [design system](docs/design-system.md)
+7. UI component: [shadcn UI](docs/shadcn-ui.md) [component library](docs/component-library.md)
+8. API: [GraphQL](docs/graphql.md), [Apollo](docs/apollo.md), [Pothos](docs/graphql-pothos.md)
 9. ORM: [Drizzle](docs/drizzle.md)
 10. Database: [PostgreSQL](docs/postgresql.md)
 11. Container: [Docker](docs/docker.md)
@@ -46,43 +46,44 @@ Feel free to adjust the tech stack as you need and prefer. These are the complet
 ### General
 
 - Browser: Chromium / Google Chrome / Arc Browser / Brave Browser
-- Code editor: VS Code / WebStorm / Neovim / Vim
+- Code editor: [VS Code](docs/vscode.md) / WebStorm / Neovim / Vim
 - Terminal emulator: Warp / Alacritty / Kitty / Rio
-- Links: Markdown
-- Markup: HTML
-- Styling: CSS
-- Programming: JavaScript with TypeScript 👍
-- Runtime version manager: proto 👍, alternative to nvm / asdf
-- Runtime: Bun 👍, alternative to Node.js / Deno
-  - Package manager: Bun 👍, alternative to npm / yarn / pnpm
-- Monorepo: moonrepo 👍, alternative to Turborepo / Nx
+- Links: [Markdown](docs/markdown.md)
+- Markup: [HTML](docs/html.md)
+- Styling: [CSS](docs/css.md)
+- Programming: [JavaScript](docs/javascript.md) with [TypeScript](docs/typescript.md) 👍
+- Runtime version manager: [proto](docs/proto.md) 👍, alternative to nvm / asdf
+- Runtime: [Bun](docs/bun.md) 👍, alternative to [Node.js](docs/nodejs.md) / [Deno](docs/deno.md) / WinterJS
+  - Package manager: [Bun](docs/bun.md) 👍, alternative to [npm](docs/npm.md) / [yarn](docs/yarn.md) / [pnpm](docs/pnpm.md)
+- Monorepo: [moonrepo](docs/moonrepo.md) 👍, alternative to [Turborepo](docs/turborepo.md) / [Nx](docs/nx.md)
 
 ### Frontend
 
-- UI library: React v18 👍
-  - Optimization: Million.js
-- Meta-framework: Remix v2 👍 (React Router v6), alternative to Next.js
-  - Bundler: Vite 👍
+- UI library: [React](docs/react.md) v18 👍
+  - Optimization: [Million.js](docs/millionjs.md)
+- Meta-framework: [Remix](docs/remix.md) v2 👍 ([React Router](docs/react-router.md) v6), alternative to [Next.js](docs/nextjs.md)
+  - Bundler: [Vite](docs/vite.md) 👍
   - PWA: Vite PWA Plugin for Remix
   - Extension: Remix Forge for VS Code
-- GraphQL client: Apollo Client v3 👍
-- Auth: Remix Auth / Lucia Auth
+- GraphQL client: [Apollo Client](docs/apollo.md) v3 👍
+- Auth: [Lucia Auth](docs/lucia-auth.md) / [Remix Auth](docs/remix-auth.md)
 
 ### Frontend Styling
 
-- CSS framework: Tailwind CSS v4 👍
-- Fonts: Fontsource 👍
-- UI components: shadcn/ui 👍, Tremor.so UI, Aceternity UI, Radix UI, Ariakit, Ark UI, Catalyst UI Kit, etc
-- UI icons: React Icons, Tabler Icons, Lucide Icons, Remix Icon, etc
-- UI component development: Storybook v8
-- UI animation: Rive / Motion One / Framer Motion / React Native Skia
+- CSS framework: [Tailwind CSS](docs/tailwind.md) v4 👍
+- Variants: [Class Variance Authority (cva)](docs/cva.md) 👍
+- Fonts: [Fontsource](docs/fontsource.md) 👍
+- UI components: [shadcn/ui](docs/shadcn-ui.md) 👍, [Radix UI](docs/radix-ui.md), Tremor.so UI, Aceternity UI, Ariakit, Ark UI, Catalyst UI Kit, etc
+- UI icons: [React Icons](docs/react-icons.md), Tabler Icons, Lucide Icons, Remix Icon, etc
+- UI component development: [Storybook](docs/storybook.md) v8
+- UI interaction and animation: [Motion One](docs/motion-one.md) / Framer Motion / Pragmatic drag and drop / React Native Skia / Rive
 
 ### Backend
 
-- API layer: GraphQL 👍
-- GraphQL server: Apollo Server v4 👍
-- GraphQL schema generator: Pothos GraphQL 👍 / GraphQL Nexus
-- ORM (Object Relational Mapper): Drizzle 👍, alternative to Prisma
+- API layer: [GraphQL](docs/graphql.md) 👍
+- GraphQL server: [Apollo Server](docs/apollo.md) v4 👍
+- GraphQL schema generator: [Pothos GraphQL](docs/graphql-pothos.md) 👍 / [GraphQL Nexus](docs/graphql-nexus.md)
+- ORM (Object Relational Mapper): [Drizzle](docs/drizzle.md) 👍, alternative to [Prisma](docs/prisma.md)
 - Database / DBMS (Database Management System): PostgreSQL 👍
   - Hosted: Vercel Postgres / Supabase / Xata.io / Neon.tech / Tembo.io
   - Utility: Snaplet
@@ -107,6 +108,7 @@ Feel free to adjust the tech stack as you need and prefer. These are the complet
 - Containerization: Docker 👍, Docker Compose with Docker Rollout
   - Mac-only: OrbStack
 - Data validation: Zod
+- Unique ID: nanoid
 - Form management: Conform / React Hook Form / Formiz
 - Auth utility: Oslo.js, alternative to jsonwebtoken, bcrypt/argon, etc
 - Email templating: React Email
@@ -143,9 +145,9 @@ Feel free to adjust the tech stack as you need and prefer. These are the complet
 - Background jobs: Trigger.dev
 - Notification system: Novu
 - Meeting scheduler: Cal.com with Google Calendar
-- Business dashboard: Retool
+- Realtime and collaboration: Replicache
 - BaaS (Backend as a Service): Directus
-- Internal tool: Refine / Retool
+- Business dashboard and internal tool: Refine / Retool
 - Integration: Alloy Automation / Zapier
 - Payment gateway:
   - International: Stripe / Lemonsqueezy
