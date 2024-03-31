@@ -1,5 +1,7 @@
 # Inspirations
 
+References:
+
 - [Remix Directory](https://remix.directory)
 - [Remix Stacks](https://remix.run/stacks)
   - [💿 Remix Indie Stack](https://github.com/remix-run/indie-stack)

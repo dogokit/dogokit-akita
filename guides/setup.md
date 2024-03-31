@@ -1,4 +1,4 @@
-# Setup GUIDE
+# Setup Guide
 
 ## Dependencies
 
