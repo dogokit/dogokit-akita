@@ -2,8 +2,6 @@
 
 🐶Dogokit Akita is a full stack app development kit with mainly using React, Remix, GraphQL with [Domain-Driven Design](docs/domain-driven-design.md).
 
-Aiming for longer support of adaptability and scalability with various other platforms, through monorepo setup using moonrepo.
-
 > The codename "Akita" comes from a Japanese dog breed of large size, originating from the mountains of northern Japan.
 
 ## Goals and Benefits
@@ -12,9 +10,8 @@ Aiming for longer support of adaptability and scalability with various other pla
 - Encourage web standards with Remix
 - Scale complexity and integration with GraphQL
 - Ready to use React UI components, styled with Tailwind CSS, with the help of shadcn UI and more
-- Ability to develop beyond JavaScript and React, moonrepo can help to manage other runtimes and runtimes such as Golang, Rust, Vue, Angular, etc
-- Later support mobile app development with React Native using Expo
-- Highly customizable, 100% of the stack can still be changed or remove unnecessary parts
+- Highly customizable, 100% of the stack and components can be changed, or remove unnecessary parts
+- Adaptability and scalability to develop for various other platforms beyond JavaScript and React, moonrepo and proto can help to manage other runtimes and runtimes such as Golang, Rust, Vue, Angular, etc
 
 ## Setup to Get Started
 
@@ -24,7 +21,7 @@ Read the [Setup Guide](guides/setup.md)
 
 Read the whole [Tech Stack Guide](guides/tech-stack.md)
 
-## Default Configuration
+Default configuration:
 
 1. Pattern: [Domain-Driven Design](docs/domain-driven-design.md)
 2. Repo: [moonrepo](docs/moonrepo.md)
