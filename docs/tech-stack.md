@@ -109,7 +109,7 @@ Feel free to adjust the tech stack as you need and prefer. These are the complet
 - Business dashboard and internal tool: Refine / Retool
 - Integration: Alloy Automation / Zapier
 - Payment gateway:
-  - International: Stripe / Lemonsqueezy
+  - International: [Lemon Squeezy](lemonsqueezy.md) / [Stripe](stripe.md)
   - Indonesia: Xendit / Midtrans
 
 ## 3D

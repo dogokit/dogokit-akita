@@ -1,4 +1,4 @@
-# Component Library
+# UI Component Library
 
 References:
 
