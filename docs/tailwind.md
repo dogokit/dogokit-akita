@@ -16,7 +16,7 @@ Links:
 - <https://github.com/tailwindlabs>
   - <https://github.com/tailwindlabs/tailwindcss>
 
-References:
+Links:
 
 - [Why we use Tailwind CSS as our primary framework | Clean Commit](https://cleancommit.io/blog/why-we-use-tailwind-css-as-our-primary-framework)
 - [An Honest Look at Tailwind as an API for CSS | thoughtbot, inc.](https://thoughtbot.com/blog/an-honest-look-at-tailwind-as-an-api-for-css)

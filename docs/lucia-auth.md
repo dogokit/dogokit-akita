@@ -1,5 +1,5 @@
 # Lucia Auth
 
-References:
+Links:
 
 - <https://github.com/romanslonov/lucia-remix-example>

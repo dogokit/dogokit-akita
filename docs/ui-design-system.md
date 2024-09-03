@@ -1,6 +1,6 @@
 # UI Design System
 
-References:
+Links:
 
 - [Design System Checklist](https://designsystemchecklist.com)
 - [saasui.design](https://saasui.design)

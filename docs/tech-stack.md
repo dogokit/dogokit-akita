@@ -1,48 +1,50 @@
 # Tech Stack
 
-Feel free to adjust the tech stack as you need and prefer. These are the complete things that can be used and recommended, with more focus on things labeled by the 👍 (thumbs up) emoji.
+Feel free to adjust the tech stack as you need and prefer.
+
+These are the complete things that can be used and recommended, with more focus on things labeled by the 👍 (thumbs up) emoji.
 
 ## General
 
 - Browser: Chromium / Google Chrome / Arc Browser / Brave Browser
-- Code editor: [VS Code](vscode.md) / WebStorm / Neovim / Vim
-- Terminal emulator: Warp / Alacritty / Kitty / Rio
+- Code editor: [VS Code](vscode.md) / [Cursor](cursor.md) / WebStorm / Neovim
+- Terminal emulator: iTerm / Warp / Alacritty
 - Links: [Markdown](markdown.md)
 - Markup: [HTML](html.md)
 - Styling: [CSS](css.md)
 - Programming: [JavaScript](javascript.md) with [TypeScript](typescript.md) 👍
 - Runtime version manager: [proto](proto.md) 👍, alternative to nvm / asdf
-- Runtime: [Bun](bun.md) 👍, alternative to [Node.js](nodejs.md) / [Deno](deno.md) / WinterJS
+- Runtime: [Bun](bun.md) 👍, alternative to [Node.js](nodejs.md) / [Deno](deno.md)
   - Package manager: [Bun](bun.md) 👍, alternative to [npm](npm.md) / [yarn](yarn.md) / [pnpm](pnpm.md)
 - Monorepo: [moonrepo](moonrepo.md) 👍, alternative to [Turborepo](turborepo.md) / [Nx](nx.md)
 
 ## Frontend
 
-- UI library: [React](react.md) v18 👍
+- UI library: [React](react.md) v18/v19 👍
   - Optimization: [Million.js](millionjs.md)
 - Meta-framework: [Remix](remix.md) v2 👍 ([React Router](react-router.md) v6), alternative to [Next.js](nextjs.md)
   - Bundler: [Vite](vite.md) 👍
   - PWA: Vite PWA Plugin for Remix
   - Extension: Remix Forge for VS Code
 - GraphQL client: [Apollo Client](apollo.md) v3 👍
-- Auth: [Lucia Auth](lucia-auth.md) / [Remix Auth](remix-auth.md)
+- Auth: [Remix Auth](remix-auth.md) / [Lucia Auth](lucia-auth.md)
 
 ## Frontend Styling
 
 - CSS framework: [Tailwind CSS](tailwind.md) v4 👍
-- Variants: [Class Variance Authority (cva)](cva.md) 👍
 - Fonts: [Fontsource](fontsource.md) 👍
 - UI components: [shadcn/ui](shadcn-ui.md) 👍, [Radix UI](radix-ui.md), Tremor.so UI, Aceternity UI, Ariakit, Ark UI, Catalyst UI Kit, etc
+- UI variants: [Class Variance Authority (cva)](cva.md) 👍
 - UI icons: [React Icons](react-icons.md), Tabler Icons, Lucide Icons, Remix Icon, etc
 - UI component development: [Storybook](storybook.md) v8
 - UI interaction and animation: [Motion One](motion-one.md) / Framer Motion / Pragmatic drag and drop / React Native Skia / Rive
 
 ## Backend
 
-- API layer: [GraphQL](graphql.md) 👍
-- GraphQL server: [Apollo Server](apollo.md) v4 👍
-- GraphQL schema generator: [Pothos GraphQL](graphql-pothos.md) 👍 / [GraphQL Nexus](graphql-nexus.md)
-- ORM (Object Relational Mapper): [Drizzle](drizzle.md) 👍, alternative to [Prisma](prisma.md)
+- API layer: [GraphQL](graphql.md) 👍, alternative to [REST API](rest-api.md)
+- API server: [Apollo Server](apollo.md) v4 👍
+- Schema generator: [Pothos GraphQL](graphql-pothos.md) 👍 / [GraphQL Nexus](graphql-nexus.md)
+- ORM (Object Relational Mapper): [Prisma](prisma.md) 👍, alternative to [Drizzle](drizzle.md)
 - Database / DBMS (Database Management System): PostgreSQL 👍
   - Hosted: Vercel Postgres / Supabase / Xata.io / Neon.tech / Tembo.io
   - Utility: Snaplet

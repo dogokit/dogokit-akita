@@ -2,7 +2,7 @@
 
 Links: <http://remix.run>
 
-References:
+Links:
 
 - [Remix Blog Tutorial](http://remix.run/docs/en/main/tutorials/blog)
 - [Up and Running with Remix - Kent C. Dodds - egghead.io](https://egghead.io/courses/up-and-running-with-remix-b82b6bb6)

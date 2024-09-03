@@ -1,6 +1,6 @@
 # Inspirations
 
-References:
+Links:
 
 - [Remix Directory](https://remix.directory)
 - [Remix Stacks](https://remix.run/stacks)

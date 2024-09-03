@@ -1,6 +1,6 @@
 # Web
 
-References:
+Links:
 
 - [web.dev](https://web.dev)
 - [The Web’s Next Transition - Epic Web Dev by Kent C. Dodds](https://epicweb.dev/the-webs-next-transition)
