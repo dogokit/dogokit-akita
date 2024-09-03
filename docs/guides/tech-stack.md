@@ -33,11 +33,11 @@ These are the complete things that can be used and recommended, with more focus 
 
 - CSS framework: [Tailwind CSS](tailwind.md) v4 👍
 - Fonts: [Fontsource](fontsource.md) 👍
-- UI components: [shadcn/ui](shadcn-ui.md) 👍, [Radix UI](radix-ui.md), Tremor.so UI, Aceternity UI, Ariakit, Ark UI, Catalyst UI Kit, etc
+- UI components: [shadcn/ui](shadcn-ui.md) 👍, [Radix UI](radix-ui.md), SyntaxUI, Tremor.so, Aceternity UI, React Aria, Ariakit, Ark UI, Catalyst UI Kit, etc
 - UI variants: [Class Variance Authority (cva)](cva.md) 👍
-- UI icons: [React Icons](react-icons.md), Tabler Icons, Lucide Icons, Remix Icon, etc
+- UI [icons](icons.md): React Icons, Lucide, Tabler Icons, Remix Icon, etc
+- UI interaction and animation with various [motion library](motion-library.md): Motion One / Framer Motion / React Native Skia / Rive
 - UI component development: [Storybook](storybook.md) v8
-- UI interaction and animation: [Motion One](motion-one.md) / Framer Motion / Pragmatic drag and drop / React Native Skia / Rive
 
 ## Backend
 

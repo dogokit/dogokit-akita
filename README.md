@@ -1,82 +1,101 @@
-# 🐶Dogokit Akita
+<p align="center">
+	<h1 align="center"><b>🐶Dogokit 🐕Akita</b></h1>
+<p align="center">
+    A Keen Full Stack Development Kit For All
+    <br />
+    <a href="https://akita.allnimal.com"><b>Website</b></a> · 
+    <a href="https://github.com/dogokit/dogokit-akita/issues"><b>Issues</b></a> · 
+    <a href="#tech-stack"><b>Tech Stack</b></a>
+  </p>
+</p>
 
-🐶Dogokit Akita is a full stack app development kit with mainly using React, Remix, GraphQL with [Domain-Driven Design](docs/domain-driven-design.md).
+[Check live demo](https://akita.allnimal.com) then [read getting started](docs/guides/start.md).
 
-> The codename "Akita" comes from a Japanese dog breed of large size, originating from the mountains of northern Japan.
+Dogokit Akita is a full stack development kit featuring React, Tailwind CSS, Remix/Next.js, Prisma, and GraphQL/REST API. It offers a versatile toolkit for building robust web applications, focusing on both frontend and backend development.
 
-## Goals and Benefits
+## Goals & Benefits
 
-- Build web app as fast as possible with pre-built modules
-- Encourage web standards with Remix
-- Scale complexity and integration with GraphQL
-- Ready to use React UI components, styled with Tailwind CSS, with the help of shadcn UI and more
-- Highly customizable, 100% of the stack and components can be changed, or remove unnecessary parts
-- Adaptability and scalability to develop for various other platforms beyond JavaScript and React, moonrepo and proto can help to manage other runtimes and runtimes such as Golang, Rust, Vue, Angular, etc
-
-## Setup to Get Started
-
-Read the [Setup](guides/setup.md)
-
-## Main Structure
-
-```sh
-├── apps
-│   ├── app-remix
-│   ├── api-graphql
-│   └── ...
-├── packages
-│   ├── config
-│   ├── database
-│   ├── env
-│   ├── ui
-│   ├── utils
-│   └── ...
-└── docker-compose.yml
-```
+1. Build SaaS quickly with pre-built modules.
+2. Leverage React on Remix/Next.js with Tailwind CSS & shadcn UI.
+3. Scale API complexity with GraphQL/REST API.
+4. Manage database & migrations with Prisma ORM.
+5. Setup Auth & RBAC with RemixAuth/NextAuth and Zenstack.
+6. Customize architecture flexibly, with the defaults should not use any 3rd party services.
+7. Demonstrate the JavaScript ecosystem capability to compete with the others such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
+8. Adapt to develop with various languages/runtimes/platforms beyond JavaScript, React, and Web. As moonrepo & proto can manage others such as Golang, Rust, Vue, Angular, etc.
 
 ## Tech Stack
 
-Read the [Tech Stack](docs/tech-stack.md) and follow the [Domain-Driven Design](docs/domain-driven-design.md), [UI Design System](docs/ui-design-system.md), [UI Component Library](docs/ui-component-library.md)
+### Essentials
 
-The only essentials:
+- Frontend Web: React, Remix/Next.js, Tailwind CSS
+- Backend API: Apollo/Hono, Prisma, PostgreSQL, Docker
 
-1. TypeScript
-2. Bun
-3. Remix
-4. Tailwind CSS
-5. Prisma
-6. PostgreSQL
-7. Docker
+### Recommendations
 
-The recommendations:
+1. Core: [HTML](docs/html.md), [CSS](docs/css.md), [JavaScript](docs/javascript.md)
+2. Runtime: [TypeScript](docs/typescript.md) with [Bun](docs/bun.md)
+3. Tooling: [Biome](docs/biome.md) & [Prettier](docs/prettier.md)
+4. Frontend: [React](docs/react.md) with [Remix](docs/remix.md) ([Vite](docs/vite.md) & [React Router](docs/react-router.md))
+5. UI: [Tailwind CSS](docs/tailwind.md) with [shadcn UI](docs/shadcn-ui.md) and [Storybook](docs/storybook.md)
+6. Backend:
+   - [GraphQL](docs/graphql.md) with [Apollo](docs/apollo.md) & [Pothos](docs/graphql-pothos.md)
+   - [REST API](docs/rest-api.md) with [Hono](docs/hono.md) & [OpenAPI Swagger](docs/swagger.md)
+7. ORM: [Prisma](docs/prisma.md) with [ZenStack](docs/zenstack.md)
+8. Database: [PostgreSQL](docs/postgresql.md)
+9. Container: [Docker](docs/docker.md)
+10. Auth: [Remix Auth](docs/remix-auth.md) with [Oslo](docs/oslo.md)
+11. Testing: [Vitest](docs/vitest.md) with [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
+12. Mobile: [React Native](docs/react-native.md) with [Expo](docs/expo.md)
+13. Monorepo: [moonrepo](docs/moonrepo.md) with [Changesets](docs/changesets.md)
+14. Secrets: `.env` file
 
-1. Monorepo: [moonrepo](docs/moonrepo.md)
-2. Language and runtime: [TypeScript](docs/typescript.md) with [Bun](docs/bun.md)
-3. Frontend framework: [Remix](docs/remix.md) ([Vite](docs/vite.md) & [React Router](docs/react-router.md))
-4. Backend API framework options:
-   - [GraphQL](docs/graphql.md) with [Apollo](docs/apollo.md) and [Pothos](docs/graphql-pothos.md)
-   - [REST API](docs/rest-api.md) with [Hono](docs/hono.md) and [OpenAPI Swagger](docs/swagger.md)
-   - [tRPC](docs/trpc.md)
-5. Auth: [Remix Auth](docs/remix-auth.md) with [Oslo](docs/oslo.md)
-6. UI library: [React](docs/react.md)
-7. UI styling: [Tailwind CSS](docs/tailwind.md) with [cva](docs/cva.md)
-8. UI component: [shadcn UI](docs/shadcn-ui.md) with [Radix UI](docs/radix-ui.md) and more
-9. ORM: [Prisma](docs/prisma.md) with [ZenStack](docs/zenstack.md)
-10. Database: [PostgreSQL](docs/postgresql.md) on [Neon](docs/neon.md)
-11. Container: [Docker](docs/docker.md), especially for local database
-12. Analytics: [Simple Analytics](docs/simpleanalytics.md) and [PostHog](docs/posthog.md)
-13. Mail: [React Email](docs/react-email.md) with [Plunk](docs/plunk.md) or [Resend](docs/resend.md)
-14. Testing: [Vitest](docs/vitest.md) with [Testing Library](docs/testing-library.md) and [Playwright](docs/playwright.md)
-15. Environment variables: plain `.env` file with [Infisical](docs/infisical.md)
-16. Payment: [Lemon Squeezy](docs/lemonsqueezy.md) or [Polar](docs/polar.md)
+### Optional 3rd Party Services
+
+1. VPS: [Linode](docs/linode.md) / [DigitalOcean](docs/digitalocean.md) / [Amazon Lightsail](docs/amazon-lightsail.md) / [Hetzner](docs/hetzner.md)
+2. Cloud: [Google Cloud](docs/google-cloud.md) / [Amazon Web Services](docs/amazon-web-services.md)
+3. Secrets: [Infisical](docs/infisical.md) / [Doppler](docs/doppler.md)
+4. Frontend Deployment: [Vercel](docs/vercel.md)
+5. Backend Deployment: [Render](docs/render.md)
+6. Database Deployment: [Neon](docs/neon.md)
+7. PaaS: [Dokku](docs/dokku.md) / [Coolify](docs/coolify.md)
+8. Analytics: [PostHog](docs/posthog.md) / [Openpanel.dev](docs/openpanel.md) / [Simple Analytics](docs/simpleanalytics.md) / [Plausible](docs/plausible.md)
+9. Mail: [React Email](docs/react-email.md) with [Plunk](docs/plunk.md) / [Resend](docs/resend.md) / [Amazon SES](docs/amazon-ses.md)
+10. Error Tracking: [Sentry](docs/sentry.md)
+11. Monitoring: [OpenStatus](docs/openstatus.md)
+12. File Upload: [Uploadcare](docs/uploadcare.md)
+13. Internationalization (i18n): [Lingui](docs/lingui.md)
+14. Background Jobs: [Trigger.dev](docs/trigger-dev.md)
+15. Link Shortener: [Dub.co](docs/dub-co.md)
+16. Search: [Meilisearch](docs/meilisearch.md)
+17. Notification: [Novu](docs/novu.md)
+18. Documentation: [Mintlify](docs/mintlify.md)
+19. Payment: [Lemon Squeezy](docs/lemonsqueezy.md) / [Polar](docs/polar.md)
+20. Auth: [WorkOS](docs/workos.md)
+
+## Guides
+
+- [Tech Stack](docs/guides/tech-stack.md)
+- [Domain-Driven Design](docs/guides/domain-driven-design.md)
+- [UI Design System](docs/guides/ui-design-system.md)
+- [UI Component Library](docs/guides/ui-component-library.md)
+
+## Inspirations
+
+- [RedwoodJS](https://redwoodjs.com)
+- [T3 Stack](https://create.t3.gg)
+- [`midday-ai/v1`](https://github.com/midday-ai/v1)
+- [`ixahmedxi/orbitkit`](https://github.com/ixahmedxi/orbitkit)
+- [`shadcn-ui/taxonomy`](https://github.com/shadcn-ui/taxonomy)
 
 ## Credits
 
-🐶Dogokit itself is a collection of development kit, templates, tech stack docs, and code marketplace.
+The codename "Akita" comes from a Japanese dog breed of large size, originating from the mountains of northern Japan.
 
-Originally created by [M Haidar Hanif](https://github.com/mhaidarhanif) from the 🐾 Allnimal group (🐻 Bearmentor, 🐱 Catamyst, 🐶 Dogokit).
+Originally created by [🦁Haidar](https://github.com/mhaidarhanif)
 
 - [🐾 Allnimal](https://allnimal.com)
-  - [🐻 Bearmentor](https://bearmentor.com)
-  - [🐱 Catamyst](https://catamyst.com)
-  - [🐶 Dogokit](https://dogokit.allnimal.com)
+- [🐻 Bearmentor](https://bearmentor.com)
+- [🐱 Catamyst](https://catamyst.com)
+- [🐶 Dogokit](https://dogokit.allnimal.com)
+- [🐘 Elephanity](https://elephanity.allnimal.com)

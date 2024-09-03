@@ -61,7 +61,7 @@ CODE_OF_CONDUCT.md
 
 Check for the dependencies.
 
-Check the scripts for:
+Check the package scripts for:
 
 - App-related tasks
 - `check:*`: Code check commands

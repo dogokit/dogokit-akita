@@ -1,5 +1,7 @@
 # Apollo
 
+Apollo is a set of tools for building efficient, reliable, and scalable GraphQL APIs.
+
 Links:
 
 - <https://apollographql.com>

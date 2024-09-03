@@ -1,8 +1,42 @@
-# Setup Guide
+# Start
 
-## Dependencies
+Let's get started.
 
-Use [Bun](https://bun.sh), a fast JavaScript all-in-one toolkit, to replace both Node.js/Deno as runtime and npm/yarn/pnpm as package manager. So make sure to [install Bun](https://bun.sh/docs/installation) with either methods:
+## Project Structure
+
+The main structure of the project is mostly like this:
+
+```sh
+├── apps/
+│   ├── web/
+│   └── api/
+├── packages/
+│   ├── config/
+│   ├── database/
+│   ├── ui/
+│   └── utils/
+├── docs/
+├── docker-compose.yml
+└── README.md
+```
+
+The possiblity of the project structure is endless.
+
+```sh
+├── apps/
+│   ├── web/
+│   ├── admin/
+│   ├── graphql/
+│   └── rest-api/
+```
+
+## Prerequisites
+
+### Bun
+
+Use [Bun](https://bun.sh), a fast JavaScript all-in-one toolkit that replace Node.js and npm/yarn/pnpm.
+
+[Install Bun](https://bun.sh/docs/installation) with either methods:
 
 ```sh
 curl -fsSL https://bun.sh/install | bash
@@ -11,13 +45,36 @@ brew install oven-sh/bun/bun
 proto install bun
 ```
 
+### Docker
+
+Use [Docker](https://docker.com) for setting up the container, especially for the database.
+
+Install Docker with either methods:
+
+- [OrbStack](https://orbstack.dev) on macOS.
+- [Docker Desktop](https://docker.com/products/docker-desktop) or [Podman](https://podman.io) on anywhere else.
+
+## Clone repo
+
+```sh
+bunx degit dogokit/dogokit-akita
+```
+
+or
+
+```sh
+git clone --depth 1 https://github.com/dogokit/dogokit-akita.git <your-project-name>
+```
+
+## Install Dependencies
+
 To run the app locally, make sure the project's local packages/dependencies are installed:
 
 ```sh
 bun install
 ```
 
-## Code Quality
+## Check and Fix Code Quality
 
 Log, format, lint to check if the setup is fine:
 
@@ -33,7 +90,7 @@ bun fix
 
 > Note: Can ignore non-critical warning from ESLint and TypeScript
 
-## Environment Variables
+## Setup Environment Variables
 
 Create the `.env.local` file from `.env.example`. This is the one for local development, not production
 
@@ -49,10 +106,10 @@ If necessary, create the `.env.production` for production access. Adjust accordi
 cp -i .env.example .env.production
 ```
 
-Or run the `setup-env.sh` in one go, then specify the variables:
+Or run the script:
 
 ```sh
-./scripts/setup-env.sh
+make setup-env
 # cp -i .env.example .env.local
 # cp -i .env.example .env.production
 ```

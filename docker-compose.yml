@@ -1,6 +1,5 @@
 # Docker Compose
 # https://docs.docker.com/engine/reference/commandline/compose_up
-version: "3.9"
 
 services:
   postgres:

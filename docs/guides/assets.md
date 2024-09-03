@@ -23,3 +23,7 @@ Get through Iconify + Icones
 - [unDraw](https://undraw.co)
 - [Noun Project](https://thenounproject.com)
 - [Doodle Ipsum](https://doodleipsum.com)
+
+## Avatars
+
+- [Dicebear](https://dicebear.com)

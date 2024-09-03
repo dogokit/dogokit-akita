@@ -1,8 +1,13 @@
 __*.md
+.gitignore
+.prettierignore
+*.env.example
+/.changeset
 /build
 /coverage-ts
 /node_modules
 bun.lockb
+drizzle/
 package-lock.json
 pnpm-lock.yaml
 slides.md
