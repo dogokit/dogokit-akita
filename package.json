@@ -7,11 +7,12 @@
     "lint:md": "markdownlint \"**/*.md\" --dot --ignore node_modules --ignore .changeset"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
     "@types/bun": "latest",
     "markdownlint": "^0.35.0",
     "markdownlint-cli": "^0.41.0"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.5.4"
   }
 }

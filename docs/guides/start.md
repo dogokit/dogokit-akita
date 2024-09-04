@@ -32,6 +32,25 @@ The possiblity of the project structure is endless.
 
 ## Prerequisites
 
+### moon & proto
+
+Install [proto](https://moonrepo.dev/proto) for toolchain versioning:
+
+```sh
+curl -fsSL https://moonrepo.dev/install/proto.sh | bash
+```
+
+Install [moonrepo](https://moonrepo.dev) for monorepo project management:
+
+```sh
+curl -fsSL https://moonrepo.dev/install/moon.sh | bash
+# or
+proto plugin add moon "https://raw.githubusercontent.com/moonrepo/moon/master/proto-plugin.toml"
+proto install moon
+```
+
+> Note: moon & proto are not required for the project to run, but they are recommended for efficient project management and toolchain versioning.
+
 ### Bun
 
 Use [Bun](https://bun.sh), a fast JavaScript all-in-one toolkit that replace Node.js and npm/yarn/pnpm.

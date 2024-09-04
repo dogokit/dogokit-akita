@@ -33,22 +33,23 @@ Dogokit Akita is a full stack development kit featuring React, Tailwind CSS, Rem
 
 ### Recommendations
 
-1. Core: [HTML](docs/html.md), [CSS](docs/css.md), [JavaScript](docs/javascript.md)
-2. Runtime: [TypeScript](docs/typescript.md) with [Bun](docs/bun.md)
-3. Tooling: [Biome](docs/biome.md) & [Prettier](docs/prettier.md)
-4. Frontend: [React](docs/react.md) with [Remix](docs/remix.md) ([Vite](docs/vite.md) & [React Router](docs/react-router.md))
-5. UI: [Tailwind CSS](docs/tailwind.md) with [shadcn UI](docs/shadcn-ui.md) and [Storybook](docs/storybook.md)
-6. Backend:
+1. Code Editor: [Cursor](docs/cursor.md) / [VS Code](docs/vscode.md)
+2. Core: [HTML](docs/html.md), [CSS](docs/css.md), [JavaScript](docs/javascript.md)
+3. Runtime: [TypeScript](docs/typescript.md) with [Bun](docs/bun.md)
+4. Tooling: [Biome](docs/biome.md) & [Prettier](docs/prettier.md)
+5. Frontend: [React](docs/react.md) with [Remix](docs/remix.md) ([Vite](docs/vite.md) & [React Router](docs/react-router.md))
+6. UI: [Tailwind CSS](docs/tailwind.md) with [shadcn UI](docs/shadcn-ui.md) and [Storybook](docs/storybook.md)
+7. Backend:
    - [GraphQL](docs/graphql.md) with [Apollo](docs/apollo.md) & [Pothos](docs/graphql-pothos.md)
    - 🚧 [REST API](docs/rest-api.md) with [Hono](docs/hono.md) & [OpenAPI Swagger](docs/swagger.md)
-7. ORM: [Prisma](docs/prisma.md) with [ZenStack](docs/zenstack.md)
-8. Database: [PostgreSQL](docs/postgresql.md)
-9. Container: [Docker](docs/docker.md)
-10. Auth: [Remix Auth](docs/remix-auth.md) with [Oslo](docs/oslo.md)
-11. 🚧 Testing: [Vitest](docs/vitest.md) with [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
-12. 🚧 Mobile: [React Native](docs/react-native.md) with [Expo](docs/expo.md)
-13. Monorepo: [moonrepo](docs/moonrepo.md) with [Changesets](docs/changesets.md)
-14. Secrets: `.env` file
+8. ORM: [Prisma](docs/prisma.md) with [ZenStack](docs/zenstack.md)
+9. Database: [PostgreSQL](docs/postgresql.md)
+10. Container: [Docker](docs/docker.md)
+11. Auth: [Remix Auth](docs/remix-auth.md) with [Oslo](docs/oslo.md)
+12. 🚧 Testing: [Vitest](docs/vitest.md) with [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
+13. 🚧 Mobile: [React Native](docs/react-native.md) with [Expo](docs/expo.md)
+14. Monorepo: [moonrepo](docs/moonrepo.md) with [Changesets](docs/changesets.md)
+15. Secrets: `.env` file
 
 ### Optional 3rd Party Services
 
@@ -72,6 +73,7 @@ Dogokit Akita is a full stack development kit featuring React, Tailwind CSS, Rem
 18. Documentation: [Mintlify](docs/mintlify.md)
 19. Payment: [Lemon Squeezy](docs/lemonsqueezy.md) / [Polar](docs/polar.md)
 20. Auth: [WorkOS](docs/workos.md)
+21. AI: [Claude](docs/claude.md) / [Perplexity](docs/perplexity.md) / [ChatGPT](docs/chatgpt.md) / [Galileo](docs/galileo.md)
 
 ## Guides
 

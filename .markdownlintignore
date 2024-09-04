@@ -1,3 +1,4 @@
 __*.md
 CODEOWNERS
 LICENSE
+node_modules
