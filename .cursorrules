@@ -34,8 +34,8 @@ Error Handling and Validation:
 
 UI and Styling:
 
-- Use Shadcn UI, Radix, and Tailwind Aria for components and styling
-- Implement responsive design with Tailwind CSS; use a mobile-first approach
+- Use Shadcn UI, Radix, and Tailwind CSS for components and styling
+- Implement responsive design with Tailwind CSS, use a mobile-first approach
 
 Performance Optimization:
 

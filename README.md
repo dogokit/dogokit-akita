@@ -40,13 +40,13 @@ Dogokit Akita is a full stack development kit featuring React, Tailwind CSS, Rem
 5. UI: [Tailwind CSS](docs/tailwind.md) with [shadcn UI](docs/shadcn-ui.md) and [Storybook](docs/storybook.md)
 6. Backend:
    - [GraphQL](docs/graphql.md) with [Apollo](docs/apollo.md) & [Pothos](docs/graphql-pothos.md)
-   - [REST API](docs/rest-api.md) with [Hono](docs/hono.md) & [OpenAPI Swagger](docs/swagger.md)
+   - 🚧 [REST API](docs/rest-api.md) with [Hono](docs/hono.md) & [OpenAPI Swagger](docs/swagger.md)
 7. ORM: [Prisma](docs/prisma.md) with [ZenStack](docs/zenstack.md)
 8. Database: [PostgreSQL](docs/postgresql.md)
 9. Container: [Docker](docs/docker.md)
 10. Auth: [Remix Auth](docs/remix-auth.md) with [Oslo](docs/oslo.md)
-11. Testing: [Vitest](docs/vitest.md) with [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
-12. Mobile: [React Native](docs/react-native.md) with [Expo](docs/expo.md)
+11. 🚧 Testing: [Vitest](docs/vitest.md) with [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
+12. 🚧 Mobile: [React Native](docs/react-native.md) with [Expo](docs/expo.md)
 13. Monorepo: [moonrepo](docs/moonrepo.md) with [Changesets](docs/changesets.md)
 14. Secrets: `.env` file
 
@@ -84,6 +84,7 @@ Dogokit Akita is a full stack development kit featuring React, Tailwind CSS, Rem
 
 - [RedwoodJS](https://redwoodjs.com)
 - [T3 Stack](https://create.t3.gg)
+- [Built At Lightspeed](https://builtatlightspeed.com)
 - [`midday-ai/v1`](https://github.com/midday-ai/v1)
 - [`ixahmedxi/orbitkit`](https://github.com/ixahmedxi/orbitkit)
 - [`shadcn-ui/taxonomy`](https://github.com/shadcn-ui/taxonomy)
