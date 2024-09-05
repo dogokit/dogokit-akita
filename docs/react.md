@@ -1,5 +1,9 @@
 # React
 
+React is a JavaScript library for building user interfaces.
+
+Latest version: v18
+
 Links: <https://react.dev>
 
 References

@@ -1,5 +1,9 @@
 # Remix
 
+Remix is a full-stack React framework for building modern web apps and websites.
+
+Latest version: v2
+
 Links: <http://remix.run>
 
 Links:
