@@ -3,6 +3,8 @@ __*
 .env
 .env.production
 .eslintcache
+.moon/cache
+.moon/docker
 .react-email
 .sentryclirc
 .stylelintcache

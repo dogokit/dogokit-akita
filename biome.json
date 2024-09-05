@@ -18,7 +18,6 @@
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "double",
       "semicolons": "always",
       "trailingCommas": "all"
     }
