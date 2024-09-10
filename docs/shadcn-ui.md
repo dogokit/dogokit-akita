@@ -11,7 +11,7 @@ Build your component library. shadcn UI is a beautifully designed components tha
 
 Links:
 
-- <https://ui.shadcn.com>
+- [shadcn/ui](https://ui.shadcn.com)
 
 Complementaries:
 
@@ -19,6 +19,7 @@ Complementaries:
 - [SyntaxUI](https://syntaxui.com)
 - [Justd](https://getjustd.com)
 - [Tremor](https://tremor.so) dashboard components
+- [cult/ui](https://cult-ui.com)
 - [v0 by Vercel](https://v0.dev)
 - [DesignGUI.io](https://designgui.io)
 - [`birobirobiro/awesome-shadcn-ui`](https://github.com/birobirobiro/awesome-shadcn-ui)
