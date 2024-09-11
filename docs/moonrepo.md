@@ -6,6 +6,10 @@ moonrepo for a new era of productivity tooling. From build to deploy, moonrepo i
 - Contextual version detection
 - Lightspeed interface
 
+This could open to adapt with various languages, runtimes, libraries, frameworks, platforms beyond JavaScript, TypeSript, Node.js, Bun, React, Web, etc.
+
+As moonrepo & [proto](proto.md) can manage others such as Golang, Rust, Vue, Angular, etc.
+
 Links:
 
 - <https://moonrepo.dev>

@@ -1,5 +1,13 @@
 # Laravel
 
+Laravel is the PHP framework for web artisans.
+
+Laravel is a web application framework with expressive, elegant syntax. It's already laid the foundation, freeing to create without sweating the small things.
+
+Links:
+
+- [Laravel](https://laravel.com)
+
 Ecosystem:
 
 1. Breeze: Lightweight starter kit for new applications.
@@ -24,6 +32,36 @@ Ecosystem:
 20. Sanctum: API and mobile app authentication.
 21. Scout: Fast full-text search for Eloquent models.
 22. Socialite: Social authentication.
-23. Spark: Billing portal for launching businesses.
+23. Spark: Billing portal for launching businesses. (Replace with Cashier)
 24. Telescope: Debugging and insight UI.
 25. Vapor: Serverless deployment on AWS.
+
+Alternatives that can be installed and should not be locked as cloud-only 3rd party services:
+
+1. Breeze: Remix/Next.js with Tailwind CSS
+2. Cashier: Remix Stripe Stack
+3. Dusk: Playwright
+4. Echo: Socket.IO
+5. Envoyer: Coolify / Dokku
+6. Forge: Coolify / Dokku
+7. Herd: Docker
+8. Horizon: Bull Dashboard
+9. Inertia: Remix/Next.js
+10. Jetstream: Remix/Next.js with Tailwind CSS
+11. Livewire: Remix/Next.js
+12. Nova: Remix/Next.js with Tailwind CSS
+13. Octane: Bun
+14. Pennant: PostHog / Unleash / Flagsmith
+15. Pint: Biome / Prettier
+16. Prompts: Inquirer
+17. Pulse: Sentry / OpenTelemetry
+18. Reverb: Socket.IO
+19. Sail: Docker
+20. Sanctum: Remix Auth / NextAuth / Auth.js
+21. Scout: Meilisearch / Elasticsearch
+22. Socialite: Remix Auth / NextAuth / Auth.js
+23. Spark: Remix Stripe Stack
+24. Telescope: ?
+25. Vapor: Serverless Framework
+
+See [Workflow](guides/workflow.md) for related ideas.

@@ -1,4 +1,4 @@
-# Tech Stack
+# Tech Stack Considerations
 
 Feel free to adjust the tech stack as you need and prefer.
 
@@ -8,7 +8,7 @@ These are the complete things that can be used and recommended, with more focus 
 
 - Browser: Chromium / Google Chrome / Arc Browser / Brave Browser
 - Code editor: [VS Code](vscode.md) / [Cursor](cursor.md) / WebStorm / Neovim
-- Terminal emulator: iTerm / Warp / Alacritty
+- Terminal emulator: Kitty / Alacritty / iTerm / Warp / Hyper
 - Links: [Markdown](markdown.md)
 - Markup: [HTML](html.md)
 - Styling: [CSS](css.md)
@@ -34,10 +34,10 @@ These are the complete things that can be used and recommended, with more focus 
 - CSS framework: [Tailwind CSS](tailwind.md) v4 👍
 - Fonts: [Fontsource](fontsource.md) 👍
 - UI components: [shadcn/ui](shadcn-ui.md) 👍, [Radix UI](radix-ui.md), SyntaxUI, Tremor.so, Aceternity UI, React Aria, Ariakit, Ark UI, Catalyst UI Kit, etc
+- UI development: [Storybook](storybook.md) v8
 - UI variants: [Class Variance Authority (cva)](cva.md) 👍
 - UI [icons](icons.md): React Icons, Lucide, Tabler Icons, Remix Icon, etc
 - UI interaction and animation with various [motion library](motion-library.md): Motion One / Framer Motion / React Native Skia / Rive
-- UI component development: [Storybook](storybook.md) v8
 
 ## Backend
 
@@ -147,13 +147,3 @@ These are the complete things that can be used and recommended, with more focus 
 - `remix-utils`
 - `undici`
 - `usehooks-ts`
-
-## Workflow Recommendations
-
-Non-codebase development tools to enhance the workflow, development, and learning process.
-
-- Account credentials: Bitwarden / 1Password
-- Communication and community: Telegram / Discord / X
-- Business database and MVP builder: Airtable
-- Project/product management: Linear
-- Launcher: Raycast (macOS)
