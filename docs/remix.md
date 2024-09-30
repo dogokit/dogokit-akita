@@ -2,9 +2,14 @@
 
 Remix is a full-stack React framework for building modern web apps and websites. Powered by [Vite](vite.md) and [React Router](react-router.md). Latest version is v2.
 
+Checklist:
+
+- [ ] [CSRF protection](https://github.com/sergiodxa/remix-utils?tab=readme-ov-file#csrf)
+
 Links:
 
-<http://remix.run>
+- [Remix](https://remix.run)
+  - [Remix Docs](https://remix.run/docs)
 
 References:
 
