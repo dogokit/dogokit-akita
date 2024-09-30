@@ -14,19 +14,17 @@
 
 🐶Dogokit Akita is a highly opiniated full stack application development kit, with ecosystem from JavaScript, TypeScript, Node.js, Bun, etc. That also can be a versatile reference for building robust web-based applications, scaling from zero to millions of users.
 
-- Primary frontend web with Vite, React, Remix/Next.js, Tailwind CSS, shadcn/ui.
+- Primary frontend web with Vite, React, Tailwind CSS.
 - Optional backend API with GraphQL or REST API.
 - Interchangeable ORM with Prisma+ZenStack or Drizzle.
 
 ## Benefits
 
 1. Build website or web app quickly with pre-built modules.
-2. Leverage React on Remix/Next.js with Tailwind CSS & shadcn UI.
-3. Manage database migrations, auth & RBAC, single source of truth with Prisma & ZenStack.
-4. Optionaly scale API complexity with GraphQL/REST/tRPC.
-5. Customize architecture flexibly, with the defaults should not use any 3rd party services.
-6. Deploy anywhere from a single VPS to any cloud provider, no vendor lock-in.
-7. Demonstrate the JavaScript developer experience ecosystem capability, as alternative to existing one like RedwoodJS, and the others such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
+2. Optionally scale API complexity with GraphQL/REST/tRPC.
+3. Customize architecture flexibly, with the defaults should not use any 3rd party services.
+4. Deploy anywhere from a single VPS to any cloud provider, no vendor lock-in.
+5. Demonstrate the JavaScript developer experience ecosystem capability, as alternative to existing one like RedwoodJS, and the others such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
 
 ## Tech Stack
 
@@ -43,7 +41,7 @@
 4. Frontend: [React](docs/react.md) with [Remix](docs/remix.md)
 5. UI: [Tailwind CSS](docs/tailwind.md)
    - Icons: [unplugin-icons](docs/unplugin-icons.md)
-   - [shadcn UI](docs/shadcn-ui.md)
+   - [shadcn/ui](docs/shadcn-ui.md)
    - [Storybook](docs/storybook.md)
    - [React Email](docs/react-email.md)
 6. Auth: [Remix Auth](docs/remix-auth.md) with [Oslo](docs/oslo.md)
