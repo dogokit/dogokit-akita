@@ -1,4 +1,4 @@
-<p align="center">
+<div align="center">
 	<h1 align="center">🐶Dogokit Akita</h1>
   <p align="center">
     <span>Full Stack App Development Kit</span>
@@ -9,15 +9,16 @@
     <span> · <span>
     <a href="docs/guides/start.md">Getting Started</a>
   </p>
-</p>
+</div>
 
 ## Goal
 
-🐶Dogokit Akita is a comprehensive, opinionated full stack application development kit, encompassing JavaScript, TypeScript, Node.js, Bun, and more. It serves as a versatile reference for constructing robust web applications that can scale from zero to millions of users.
+🐶Dogokit Akita is a comprehensive, opinionated full stack application development kit. Encompassing JavaScript, TypeScript, Node.js, Bun, and more. It serves as a versatile reference for constructing robust web applications, that can scale from zero to millions of users.
 
-- Primary frontend web with Vite, React, Tailwind CSS.
+- Default frontend web with React and Tailwind CSS.
 - Optional backend API with GraphQL or REST API.
-- Interchangeable ORM with Prisma+ZenStack or Drizzle.
+- Interchangeable ORM with Prisma or Drizzle.
+- Bring your own thing from non-JS ecosystem.
 
 ## Benefits
 
