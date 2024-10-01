@@ -7,3 +7,6 @@ setup-db:
 
 generate-secret:
 	openssl rand -base64 32
+
+check-links:
+	bunx linkinator *.md

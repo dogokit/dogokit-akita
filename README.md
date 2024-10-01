@@ -32,6 +32,7 @@
 
 - [Core](#core)
 - [Default](#default)
+- [Alternative](#alternative)
 - [Deployment](#deployment)
 - [Separated Backend](#separated-backend)
 - [Features](#features)
@@ -40,25 +41,33 @@
 
 ### Core
 
+- General: TypeScript, Bun
 - Frontend: React, Tailwind CSS
 - Backend: ORM, SQL Database, Docker
 
 ### Default
 
-1. Core: [HTML](docs/html.md), [CSS](docs/css.md), [JavaScript](docs/javascript.md)
-2. Runtime: [TypeScript](docs/typescript.md) with [Bun](docs/bun.md)
-3. Tooling: [Biome](docs/biome.md) & [Prettier](docs/prettier.md)
-4. Frontend: [React](docs/react.md) with [Remix](docs/remix.md)
-5. Styling: [Tailwind CSS](docs/tailwind.md)
+1. Language: [TypeScript](docs/typescript.md), [JavaScript](docs/javascript.md), [HTML](docs/html.md), [CSS](docs/css.md)
+2. Runtime: [Bun](docs/bun.md) / [Deno](docs/deno.md) / [Node.js](docs/nodejs.md)
+3. Format & Lint: [Biome](docs/biome.md) & [Prettier](docs/prettier.md)
+4. Bundler: [Vite](docs/vite.md)
+5. Frontend: [React](docs/react.md)
+6. Frontend Meta Framework: [Remix](docs/remix.md) / [Next.js](docs/nextjs.md)
+   - Backend with built-in server-side features
+7. Styling: [Tailwind CSS](docs/tailwind.md)
    - UI Component: [shadcn/ui](docs/shadcn-ui.md)
    - Icon: [unplugin-icons](docs/unplugin-icons.md)
    - Email: [React Email](docs/react-email.md)
    - Test: [Storybook](docs/storybook.md)
-6. Auth: [Remix Auth](docs/remix-auth.md) with [Oslo](docs/oslo.md)
-7. Container: [Docker](docs/docker.md)
-8. Database ORM: [Prisma](docs/prisma.md) with [ZenStack](docs/zenstack.md)
-9. Database/DBMS: [PostgreSQL](docs/postgresql.md)
-10. Backend with Remix/Next.js built-in server-side features
+8. Auth: [Remix Auth](docs/remix-auth.md) with [Oslo](docs/oslo.md)
+9. Database ORM: [Prisma](docs/prisma.md) with [ZenStack](docs/zenstack.md)
+10. Database/DBMS: [PostgreSQL](docs/postgresql.md)
+11. Container: [Docker](docs/docker.md) with [Docker Compose](docs/docker-compose.md)
+
+### Alternative
+
+1. Frontend: [Svelte](docs/svelte.md) / [Vue.js](docs/vuejs.md) / [Angular](docs/angular.md) / [SolidJS](docs/solidjs.md) / [Qwik](docs/qwik.md)
+2. Frontend Meta Framework: [SvelteKit](docs/sveltekit.md), [Nuxt](docs/nuxt.md), [SolidStart](docs/solidstart.md), [Qwik City](docs/qwik-city.md)
 
 ### Deployment
 
@@ -86,24 +95,24 @@ Manual:
 3. JS-based Fully Featured: [RedwoodJS](docs/redwoodjs.md) / [AdonisJS](docs/adonisjs.md)
 4. Non-JS Fully Featured: [Laravel](docs/laravel.md) / [Rails](docs/rails.md) / [Django](docs/django.md)
 5. Non-JS Lightweight: [Gin](docs/gin.md) / [Fiber](docs/fiber.md) / [Echo](docs/echo.md)
-6. BaaS: [Supabase](docs/supabase.md) / [PocketBase](docs/pocketbase.md) / [Firebase](docs/firebase.md) / [Strapi](docs/strapi.md) / [Payload](docs/payload.md)
+6. BaaS: [Supabase](docs/supabase.md) / [PocketBase](docs/pocketbase.md) / [Firebase](docs/firebase.md) / [Strapi](docs/strapi.md) / [Payload](docs/payload.md) / [Keel](docs/keel.md)
 
 ### Features
 
-1. CLI Prompt: [Clack](docs/clack.md) / [Commander.js](docs/commanderjs.md)
+1. Monorepo: [moonrepo](docs/moonrepo.md) with [Changesets](docs/changesets.md)
 2. Secrets & Environment Variables: [.env](docs/env.md) / [t3-env](docs/t3-env.md) / [unplugin-environment](docs/unplugin-environment.md)
 3. Data Validation: [Zod](docs/zod.md)
 4. Form Validation: [Conform](docs/conform.md)
-5. Monorepo: [moonrepo](docs/moonrepo.md) with [Changesets](docs/changesets.md)
-6. Testing: [Vitest](docs/vitest.md) with [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
-7. CLI & Prompt: [oclif](docs/oclif.md) / [Inquirer](docs/inquirer.md)
+5. Testing: [Vitest](docs/vitest.md) with [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
+6. CLI & Prompt: [Term.Ink](docs/term-ink.md) / [Clack](docs/clack.md) / [Commander.js](docs/commanderjs.md) / [oclif](docs/oclif.md) / [Inquirer](docs/inquirer.md)
+7. Performance: [Million.js](docs/millionjs.md)
 8. Search: [Meilisearch](docs/meilisearch.md) / [Typesense](docs/typesense.md)
 9. Process: [Effect](docs/effect.md)
 10. Dependency: [Knip](docs/knip.md)
 11. Logging: [pino](docs/pino.md)
 12. Internationalization (i18n): [Lingui](docs/lingui.md)
 13. Accessibility (a11y): [Lighthouse](docs/lighthouse.md)
-14. Realtime: [SSE](docs/sse.md) / [Socket.IO](docs/socket-io.md) / [InstantDB](docs/instantdb.md) / [Electric](docs/electric.md)
+14. Realtime: [SSE](docs/sse.md) / [Socket.IO](docs/socket-io.md) / [Liveblocks](docs/liveblocks.md) / [InstantDB](docs/instantdb.md) / [Electric](docs/electric.md)
 15. Cache & Message Queues: [Redis](docs/redis.md) / [BullMQ](docs/bullmq.md) / In-Memory
 16. Mobile: [React Native](docs/react-native.md) with [Expo](docs/expo.md)
 17. Storage: Unix File System
@@ -126,19 +135,23 @@ Manual:
 12. Documentation: [Mintlify](docs/mintlify.md)
 13. Payment: [Polar](docs/polar.md) / [Lemon Squeezy](docs/lemonsqueezy.md) / [Stripe](docs/stripe.md)
 14. Automation: [n8n](docs/n8n.md)
+15. API Key Management: [Unkey](docs/unkey.md)
 
 ### Tools
 
-1. Credentials: [Bitwarden](docs/bitwarden.md) / [Passbolt](docs/passbolt.md)
-2. UI/UX Design: [Figma](docs/figma.md)
-3. Code Editor: [Cursor AI](docs/cursor.md) / [VS Code](docs/vscode.md)
-4. Communication & Community: [Telegram](docs/telegram.md) / [Discord](docs/discord.md) / [X](docs/x.md)
+1. Email: [Gmail](docs/gmail.md) / [HEY](docs/hey.md) / [ProtonMail](docs/protonmail.md)
+2. Credentials: [Bitwarden](docs/bitwarden.md) / [Passbolt](docs/passbolt.md)
+3. UI/UX Design: [Figma](docs/figma.md)
+4. Communication & Community: [Telegram](docs/telegram.md) / [Discord](docs/discord.md) / [X (Twitter)](docs/x.md)
 5. Business Database & MVP Builder: [Airtable](docs/airtable.md) / [Baserow](docs/baserow.md) / [NocoDB](docs/nocodb.md)
-6. Project/Product Management: [Linear](docs/linear.md) / [Plane.so](docs/plane.md)
-7. Social Media Management: [Buffer](docs/buffer.md) / [Mixpost](docs/mixpost.md)
-8. Container: [OrbStack](docs/orbstack.md)
-9. Launcher: [Raycast](docs/raycast.md)
-10. AI: [Supermaven](docs/supermaven.md) / [Tabnine](docs/tabnine.md) / [GitHub CoPilot](docs/github-copilot.md) / [ChatGPT](docs/chatgpt.md) / [Claude](docs/claude.md) / [Perplexity](docs/perplexity.md) / [Galileo](docs/galileo.md) / [Marblism](docs/marblism.md)
+6. Project/Product Management: [Linear](docs/linear.md) / [Plane.so](docs/plane.md) / [Basecamp](docs/basecamp.md)
+7. Social Media Management: [Buffer](docs/buffer.md) / [Mixpost](docs/mixpost.md) / [Postiz](docs/postiz.md)
+8. Blog: [Hashnode](docs/hashnode.md) / [Ghost](docs/ghost.md)
+9. Container: [OrbStack](docs/orbstack.md)
+10. Launcher: [Raycast](docs/raycast.md)
+11. Code Editor: [VS Code](docs/vscode.md) / [NeoVim](docs/neovim.md)
+12. AI Code Editor: [Cursor AI](docs/cursor.md) / [Supermaven](docs/supermaven.md) / [GitHub CoPilot](docs/github-copilot.md) / [Tabnine](docs/tabnine.md)
+13. AI Tool: [ChatGPT](docs/chatgpt.md) / [Claude](docs/claude.md) / [Perplexity](docs/perplexity.md) / [Galileo](docs/galileo.md) / [Marblism](docs/marblism.md)
 
 ## Guides
 
@@ -166,7 +179,7 @@ Manual:
 
 ## Credits
 
-The codename ["Akita" comes from a Japanese dog breed](https://www.britannica.com/animal/Akita-dog) of large size, originating from the mountains of northern Japan.
+The codename ["Akita" comes from a Japanese dog breed](https://britannica.com/animal/Akita-dog) of large size, originating from the mountains of northern Japan.
 
 Originally created by [🦁Haidar](https://github.com/mhaidarhanif)
 
