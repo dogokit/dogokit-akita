@@ -59,7 +59,7 @@
    - Icon: [unplugin-icons](docs/unplugin-icons.md)
    - Email: [React Email](docs/react-email.md)
    - Test: [Storybook](docs/storybook.md)
-8. Auth: [Remix Auth](docs/remix-auth.md) with [Oslo](docs/oslo.md)
+8. Auth: [Better Auth](docs/better-auth.md)
 9. Database ORM: [Prisma](docs/prisma.md) with [ZenStack](docs/zenstack.md)
 10. Database/DBMS: [PostgreSQL](docs/postgresql.md)
 11. Container: [Docker](docs/docker.md) with [Docker Compose](docs/docker-compose.md)
