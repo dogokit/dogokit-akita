@@ -4,42 +4,56 @@ Basic workflow of building a profitable software:
 
 1. Understand the stack, tools, opinions, decisions, and architecture.
 2. Setup development environment.
-3. Run app and test.
-4. Implement features.
-5. Deploy to production.
-6. Maintain, monitor, improve the app.
-7. Promote, sell, increase visibility.
-8. Run business with paying customers.
+3. Run applications.
+4. Test with real data and users.
+5. Implement features.
+6. Deploy to production.
+7. Maintain, monitor, improve the app.
+8. Promote, sell, increase visibility.
+9. Run business with paying customers.
 
-Future expectations for truly comparable with Laravel, Rails, Django, RedwoodJS:
+## Packages
 
-- Beginner-friendly yet comprehensive documentation and learning resources.
-- Links to ecosystem of packages and extensions.
-- CLI tool for scaffolding and code generation.
+Future expectations for JavaScript/TypeScript full stack frameworks to be truly comparable with Laravel, Rails, Django, Spring:
+
+- Straightforward tutorials.
+- Beginner-friendly learning resources.
+- Comprehensive documentation.
 - Predefined packages ready to use.
+- Links to existing ecosystem of packages and extensions.
+- CLI tool for scaffolding and code generation.
+- Well-funded development.
 
-For Dogokit (`dk`), if Animal objects or safari theme are being used, similar to [Laravel](../laravel.md) products and [RedwoodJS](../redwoodjs.md) CLI tools:
+For Dogokit (`dk`), if Animal objects or safari theme are being used, similar to [Laravel](../laravel.md) products and [RedwoodJS](../redwoodjs.md) CLI tools, these are the codenames.
 
-1. `compass`: App Routing with Remix/Next.js
-2. `habitat`: UI Templates with Tailwind CSS, Form Handling, Storybook
-3. `brush`: Formatter, Linter
-4. `den`: Development Environment, Container, Deployment, CI/CD
-5. `cave`: Secrets/Credential Management, Environment Variables, Secure Notes
-6. `fin`: Code Generator, CLI, Prompt, Utility, Bundler, Monorepo
-7. `paw`: Database ORM, Migration
-8. `claw`: Authentication, Authorization, RBAC, Security
-9. `snout`: API Docs, Database ERD
-10. `fur`: File/Assets Storage/Upload/Management, Fonts, Icons, Placeholder
-11. `tracker`: Search, Filter
-12. `mane`: Metadata, Open Graph, SEO
-13. `howl`: Email
-14. `burrow`: Background Jobs, Queue
-15. `sonar`: Realtime, Notification, Broadcast, Webhook
-16. `hop`: Link/URL Shortener/Management
-17. `eye`: Product Analytics, Conversion Tracking, Feature Flags, A/B Testing
-18. `tail`: Logging, Monitoring, Observability, Error Tracking
-19. `scent`: Performance Optimization, Caching
-20. `pouch`: Payment, Billing, Subscription
-21. `bark`: Internationalization (i18n), Localization (l10n)
-22. `cage`: Unit Testing, Functional Testing, E2E Testing
-23. Field Guide: Learning Resources
+All packages would be published to <https://jsr.io/@dogokit> by default,
+
+1.  Field Guide: Learning Resources
+2.  `@dogokit/starter`: The starter kit app
+    - Breeze / Jetstream
+3.  `@dogokit/compass`: Application Routing with React Router / Remix / Next.js
+    - Inertia
+4.  `@dogokit/habitat`: UI Templates with Tailwind CSS, Form Handling, Dashboard, Storybook
+    - shadcn UI / justd
+5.  `@dogokit/brush`: Formatter, Linter
+6.  `@dogokit/den`: Development Environment, Container, Deployment, CI/CD
+7.  `@dogokit/fin`: Code Generator, CLI, Prompt, Utility, Bundler, Monorepo
+8.  `@dogokit/cave`: Secrets/Credential Management, Environment Variables, Secure Notes
+9.  `@dogokit/paw`: Database ORM, Migration
+10. `@dogokit/claw`: Authentication, Authorization, RBAC, Security
+11. `@dogokit/snout`: API Docs/Specification, Database ERD/Visualization
+12. `@dogokit/hop`: Link/URL Shortener/Management
+13. `@dogokit/fur`: File/Assets Storage/Upload/Management, Fonts, Icons, Placeholder
+14. `@dogokit/tracker`: Search, Filter, Pagination Helper
+15. `@dogokit/mane`: Metadata, Open Graph, SEO
+16. `@dogokit/howl`: Email Transaction & Marketing
+17. `@dogokit/burrow`: Background Jobs, Queue
+18. `@dogokit/sonar`: Real-time, Notification, Broadcast, Webhook
+19. `@dogokit/eye`: Product Analytics, Conversion Tracking, Feature Flags, A/B Testing
+20. `@dogokit/tail`: Logging, Monitoring, Observability, Error Tracking
+21. `@dogokit/pouch`: Payment, Billing, Subscription with Stripe, Lemonsqueezey, Xendit
+    - Cashier
+22. `@dogokit/cage`: Unit Testing, Functional Testing, E2E Testing
+    - Dusk
+23. `@dogokit/bark`: Internationalization (i18n), Localization (l10n)
+24. `@dogokit/scent`: Performance Optimization, Caching
