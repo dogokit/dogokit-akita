@@ -6,4 +6,4 @@ Default configuration:
 - React
 - Remix
 - Tailwind CSS
-- shadcn UI
+- shadcn/ui

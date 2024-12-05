@@ -248,7 +248,7 @@ bun dev
 
 ## Change Theme Colors
 
-Use [`kiliman/shadcn-custom-theme`](https://github.com/kiliman/shadcn-custom-theme) to generate shadcn UI CSS variables with Tailwind CSS colors.
+Use [`kiliman/shadcn-custom-theme`](https://github.com/kiliman/shadcn-custom-theme) to generate shadcn/ui CSS variables with Tailwind CSS colors.
 
 For example:
 

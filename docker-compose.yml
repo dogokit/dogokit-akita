@@ -1,18 +1,15 @@
-# Docker Compose
-# https://docs.docker.com/engine/reference/commandline/compose_up
-
 services:
   postgres:
-    image: postgres:alpine
-    container_name: dogokit-akita-postgres
-    hostname: database
+    container_name: example-postgres
+    image: postgres:alpine  # latest = postgres:14.15-alpine3.20
     restart: no
     volumes:
       - postgres_data:/var/lib/postgres
     ports:
-      - ${POSTGRES_HOST_PORT}:${POSTGRES_CONTAINER_PORT}
+      - "5432:5432"
     env_file:
-      - .env
+      - path: .env
+        required: true
 
 volumes:
   postgres_data:

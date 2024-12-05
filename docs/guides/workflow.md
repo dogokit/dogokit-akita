@@ -31,29 +31,30 @@ All packages would be published to <https://jsr.io/@dogokit> by default,
 1.  Field Guide: Learning Resources
 2.  `@dogokit/starter`: The starter kit app
     - Breeze / Jetstream
-3.  `@dogokit/compass`: Application Routing with React Router / Remix / Next.js
+3.  `@dogokit/compass`: Application Routing with React Router (Remix) or Next.js
     - Inertia
 4.  `@dogokit/habitat`: UI Templates with Tailwind CSS, Form Handling, Dashboard, Storybook
-    - shadcn UI / justd
-5.  `@dogokit/brush`: Formatter, Linter
-6.  `@dogokit/den`: Development Environment, Container, Deployment, CI/CD
-7.  `@dogokit/fin`: Code Generator, CLI, Prompt, Utility, Bundler, Monorepo
-8.  `@dogokit/cave`: Secrets/Credential Management, Environment Variables, Secure Notes
-9.  `@dogokit/paw`: Database ORM, Migration
-10. `@dogokit/claw`: Authentication, Authorization, RBAC, Security
-11. `@dogokit/snout`: API Docs/Specification, Database ERD/Visualization
-12. `@dogokit/hop`: Link/URL Shortener/Management
-13. `@dogokit/fur`: File/Assets Storage/Upload/Management, Fonts, Icons, Placeholder
-14. `@dogokit/tracker`: Search, Filter, Pagination Helper
-15. `@dogokit/mane`: Metadata, Open Graph, SEO
-16. `@dogokit/howl`: Email Transaction & Marketing
-17. `@dogokit/burrow`: Background Jobs, Queue
-18. `@dogokit/sonar`: Real-time, Notification, Broadcast, Webhook
-19. `@dogokit/eye`: Product Analytics, Conversion Tracking, Feature Flags, A/B Testing
-20. `@dogokit/tail`: Logging, Monitoring, Observability, Error Tracking
-21. `@dogokit/pouch`: Payment, Billing, Subscription with Stripe, Lemonsqueezey, Xendit
+    - shadcn/ui / justd
+5.  `@dogokit/move`: UI Animations with Motion.dev
+6.  `@dogokit/brush`: Formatter, Linter
+7.  `@dogokit/den`: Development Environment, Container, Deployment, CI/CD
+8.  `@dogokit/fin`: Code Generator, CLI, Prompt, Utility, Bundler, Monorepo
+9.  `@dogokit/cave`: Secrets/Credential Management, Environment Variables, Secure Notes
+10. `@dogokit/paw`: Database ORM, Migration
+11. `@dogokit/claw`: Authentication, Authorization, RBAC, Security
+12. `@dogokit/snout`: API Docs/Specification, Database ERD/Visualization
+13. `@dogokit/hop`: Link/URL Shortener/Management
+14. `@dogokit/fur`: File/Assets Storage/Upload/Management, Fonts, Icons, Placeholder
+15. `@dogokit/tracker`: Search, Filter, Pagination Helper
+16. `@dogokit/mane`: Metadata, Open Graph, SEO
+17. `@dogokit/howl`: Email Transaction & Marketing
+18. `@dogokit/burrow`: Background Jobs, Queue
+19. `@dogokit/sonar`: Real-time, Notification, Broadcast, Webhook
+20. `@dogokit/eye`: Product Analytics, Conversion Tracking, Feature Flags, A/B Testing
+21. `@dogokit/tail`: Logging, Monitoring, Observability, Error Tracking
+22. `@dogokit/pouch`: Payment, Billing, Subscription with Stripe, Lemonsqueezey, Xendit
     - Cashier
-22. `@dogokit/cage`: Unit Testing, Functional Testing, E2E Testing
+23. `@dogokit/cage`: Unit Testing, Functional Testing, E2E Testing
     - Dusk
-23. `@dogokit/bark`: Internationalization (i18n), Localization (l10n)
-24. `@dogokit/scent`: Performance Optimization, Caching
+24. `@dogokit/bark`: Internationalization (i18n), Localization (l10n)
+25. `@dogokit/scent`: Performance Optimization, Caching

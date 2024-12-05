@@ -162,7 +162,7 @@ But if install the packages manually:
 bun install @radix-ui/react-slot
 ```
 
-## shadcn UI
+## shadcn/ui
 
 > Skip this if not prefer to use it.
 
@@ -197,7 +197,7 @@ pnpx shadcn-ui@latest add component-name
 
 ## Icons
 
-shadcn UI install Lucide React icons by default, which can be removed and replaced.
+shadcn/ui install Lucide React icons by default, which can be removed and replaced.
 
 Use Iconify (`@iconify/react`) to get any popular icons via [Icônes](https://icones.js.org).
 

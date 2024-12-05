@@ -13,10 +13,11 @@
 
 ## Goal
 
-🐶Dogokit Akita is a comprehensive, opinionated full stack application development kit. Encompassing JavaScript, TypeScript, Node.js, Bun, and more. It serves as a versatile reference for constructing robust web applications, that can scale from zero to millions of users.
+🐶Dogokit Akita is a comprehensive and opinionated full stack application development kit. Encompassing JavaScript/TypeScript, Node.js/Deno/Bun, and more. It serves as a versatile reference for constructing robust web applications, that can scale from zero to millions of users.
 
 - Default frontend web with React and Tailwind CSS.
-- Optional backend API with GraphQL or REST API.
+- Optional full-stack web with Next.js or Remix (React Router).
+- Optional backend API with REST API or GraphQL.
 - Interchangeable ORM with Prisma or Drizzle.
 - Bring your own thing from non-JS ecosystem.
 
@@ -26,7 +27,7 @@
 2. Optionally scale API complexity with GraphQL/REST/tRPC.
 3. Customize architecture flexibly, with the defaults should not use any 3rd party services.
 4. Deploy anywhere from a single VPS to any cloud provider, no vendor lock-in.
-5. Demonstrate the JavaScript developer experience ecosystem capability, as alternative to existing one like RedwoodJS, and the others such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
+5. Demonstrate the JavaScript developer experience (DX) ecosystem capability. As an alternative to existing one like RedwoodJS, and the others such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
 
 ## Tech Stack
 
@@ -57,12 +58,15 @@
    - Icon: [unplugin-icons](docs/unplugin-icons.md)
    - Email: [React Email](docs/react-email.md)
    - Test: [Storybook](docs/storybook.md)
-6. Format and Lint: [Prettier](docs/prettier.md) / [ESLint](docs/eslint.md) / [Biome](docs/biome.md) / [Oxc](docs/oxc.md)
-7. Bundler: [Vite](docs/vite.md) / [Turbopack](docs/turbopack.md)
-8. Auth: [Better Auth](docs/better-auth.md)
-9. Database ORM: [Prisma](docs/prisma.md) with [ZenStack](docs/zenstack.md)
-10. Database/DBMS: [PostgreSQL](docs/postgresql.md)
-11. Container: [Docker](docs/docker.md) with [Docker Compose](docs/docker-compose.md), using [OrbStack](docs/orbstack.md) or [Docker Desktop](docs/docker-desktop.md)
+6. Format and Lint: [Biome](docs/biome.md) + [Ultracite](docs/ultracite.md) / [Prettier](docs/prettier.md) / [ESLint](docs/eslint.md) / [Oxc](docs/oxc.md)
+7. Release: [autorc](docs/autorc.md)
+8. Bundler: [Vite](docs/vite.md) / [Turbopack](docs/turbopack.md)
+9. Auth: [Better Auth](docs/better-auth.md)
+10. Database ORM: [Prisma](docs/prisma.md) + [ZenStack](docs/zenstack.md)
+11. Database/DBMS: [PostgreSQL](docs/postgresql.md)
+12. Database Management: [TablePlus](docs/tableplus.md)
+13. Container: [Docker](docs/docker.md) + [Docker Compose](docs/docker-compose.md)
+14. Container Management: [OrbStack](docs/orbstack.md) / [Docker Desktop](docs/docker-desktop.md)
 
 ### Optional: Alternative
 
@@ -81,7 +85,7 @@ Manual:
 
 1. Cloud: [Google Cloud](docs/google-cloud.md) / [Amazon Web Services](docs/amazon-web-services.md)
 2. PaaS in VPS: [Dokku](docs/dokku.md) / [Coolify](docs/coolify.md)
-3. VPS: [Linode](docs/linode.md) / [DigitalOcean](docs/digitalocean.md) / [Amazon Lightsail](docs/amazon-lightsail.md)
+3. VPS: [IONOS](docs/ionos.md) / [Linode](docs/linode.md) / [DigitalOcean](docs/digitalocean.md) / [Amazon Lightsail](docs/amazon-lightsail.md)
 4. Bare Metal: [Hetzner](docs/hetzner.md) / [Vultr](docs/vultr.md) / [Scaleway](docs/scaleway.md)
 5. Automation: [Kamal Deploy](docs/kamal-deploy.md) / [Ansible](docs/ansible.md)
 6. OS: [Debian](docs/debian.md) / [Ubuntu](docs/ubuntu.md)
@@ -103,56 +107,61 @@ Manual:
 2. Secrets and Environment Variables: [.env](docs/env.md) / [t3-env](docs/t3-env.md) / [unplugin-environment](docs/unplugin-environment.md)
 3. Data Validation: [Zod](docs/zod.md)
 4. Form Validation: [Conform](docs/conform.md)
-5. Testing: [Vitest](docs/vitest.md) with [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
-6. CLI and Prompt: [Term.Ink](docs/term-ink.md) / [Clack](docs/clack.md) / [Commander.js](docs/commanderjs.md) / [oclif](docs/oclif.md) / [Inquirer](docs/inquirer.md)
-7. Performance: [Million.js](docs/millionjs.md)
-8. Search: [Meilisearch](docs/meilisearch.md) / [Typesense](docs/typesense.md)
-9. Process: [Effect](docs/effect.md)
-10. Dependency: [Knip](docs/knip.md)
-11. Logging: [pino](docs/pino.md)
-12. Internationalization (i18n): [Lingui](docs/lingui.md)
-13. Accessibility (a11y): [Lighthouse](docs/lighthouse.md)
-14. Realtime: [SSE](docs/sse.md) / [Socket.IO](docs/socket-io.md) / [Liveblocks](docs/liveblocks.md) / [InstantDB](docs/instantdb.md) / [Electric](docs/electric.md)
-15. Cache and Message Queues: [Redis](docs/redis.md) / [BullMQ](docs/bullmq.md) / In-Memory
-16. Mobile: [React Native](docs/react-native.md) with [Expo](docs/expo.md)
-17. Storage: Unix File System
-18. Mailers: SMTP
-19. Documentation: [Nextra](docs/nextra.md)
+5. Utility: [es-toolkit](docs/es-toolkit.md)
+6. Testing: [Vitest](docs/vitest.md) with [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
+7. CLI and Prompt: [Term.Ink](docs/term-ink.md) / [Clack](docs/clack.md) / [Commander.js](docs/commanderjs.md) / [oclif](docs/oclif.md) / [Inquirer](docs/inquirer.md)
+8. Performance: [Million.js](docs/millionjs.md)
+9. Search: [Meilisearch](docs/meilisearch.md) / [Typesense](docs/typesense.md)
+10. Process: [Effect](docs/effect.md)
+11. Dependency: [Knip](docs/knip.md)
+12. Logging: [pino](docs/pino.md)
+13. Internationalization (i18n): [Lingui](docs/lingui.md)
+14. Accessibility (a11y): [Lighthouse](docs/lighthouse.md)
+15. Realtime: [SSE](docs/sse.md) / [Socket.IO](docs/socket-io.md) / [Liveblocks](docs/liveblocks.md) / [InstantDB](docs/instantdb.md) / [Electric](docs/electric.md)
+16. Cache and Message Queues: [Redis](docs/redis.md) / [BullMQ](docs/bullmq.md) / In-Memory
+17. Mobile: [React Native](docs/react-native.md) with [Expo](docs/expo.md)
+18. Storage: Unix File System
+19. Mailers: SMTP
+20. Documentation: [Nextra](docs/nextra.md)
 
 ### Optional: 3rd Party Services
 
 1. Secrets and Environment Variables: [Infisical](docs/infisical.md) / [Doppler](docs/doppler.md)
 2. Analytics: [PostHog](docs/posthog.md) / [Openpanel.dev](docs/openpanel.md) / [Simple Analytics](docs/simpleanalytics.md) / [Plausible](docs/plausible.md)
-3. Service Monitoring: [OpenStatus](docs/openstatus.md)
-4. APM, Observability, Error Tracking: [Sentry](docs/sentry.md) and [OpenTelemetry](docs/opentelemetry.md)
-5. Email: [Nodemailer](docs/nodemailer.md) / [Plunk](docs/plunk.md) / [Resend](docs/resend.md) / [Amazon SES](docs/amazon-ses.md)
-6. Auth: [WorkOS](docs/workos.md)
-7. File Storage/Upload: [Uploadcare](docs/uploadcare.md) / [Cloudinary](docs/cloudinary.md)
-8. Background Jobs: [Quirrel.dev](docs/quirrel-dev.md) / [Trigger.dev](docs/trigger-dev.md)
-9. Link/URL Shortener/Management: [Dub.co](docs/dub-co.md)
-10. Full-Text Search: [Meilisearch](docs/meilisearch.md)
-11. Notification: [Novu](docs/novu.md)
-12. Documentation: [Mintlify](docs/mintlify.md)
-13. Payment: [Polar](docs/polar.md) / [Lemon Squeezy](docs/lemonsqueezy.md) / [Stripe](docs/stripe.md)
-14. Automation: [n8n](docs/n8n.md)
-15. API Key Management: [Unkey](docs/unkey.md)
+3. Service Monitoring: [OpenStatus](docs/openstatus.md) / [BetterStack](docs/betterstack.md)
+4. File Storage/Upload: [Uploadcare](docs/uploadcare.md) / [Cloudinary](docs/cloudinary.md)
+5. Email Transactional: [Nodemailer](docs/nodemailer.md) / [Plunk](docs/plunk.md) / [Resend](docs/resend.md) / [Amazon SES](docs/amazon-ses.md)
+6. Email Marketing/Newsletter: [Loops.so](docs/loops.md) / [Beehiiv](docs/beehiiv.md) / [Bento](docs/bento.md)
+7. APM, Observability, Error Tracking: [Sentry](docs/sentry.md) + [OpenTelemetry](docs/opentelemetry.md)
+8. Payment: [Polar](docs/polar.md) / [Lemon Squeezy](docs/lemonsqueezy.md) / [Stripe](docs/stripe.md)
+9. Auth: [WorkOS](docs/workos.md) / [Clerk](docs/clerk.md)
+10. Business Intelligence (BI): [Metabase](docs/metabase.md) / [Index.app](docs/index-app.md)
+11. Webhook: [Svix](docs/svix.md)
+12. Background Jobs: [Quirrel.dev](docs/quirrel-dev.md) / [Trigger.dev](docs/trigger-dev.md)
+13. Link/URL Shortener/Management: [Dub.co](docs/dub-co.md)
+14. Full-Text Search: [Meilisearch](docs/meilisearch.md)
+15. Notification: [Novu](docs/novu.md)
+16. Documentation: [Mintlify](docs/mintlify.md)
+17. Automation: [n8n](docs/n8n.md)
+18. API Key Management: [Unkey](docs/unkey.md)
 
 ### Optional: Tools
 
 1. Email: [Gmail](docs/gmail.md) / [HEY](docs/hey.md) / [ProtonMail](docs/protonmail.md)
 2. Credentials: [Bitwarden](docs/bitwarden.md) / [Passbolt](docs/passbolt.md)
-3. UI/UX Design: [Figma](docs/figma.md)
-4. Communication & Community: [Telegram](docs/telegram.md) / [Discord](docs/discord.md) / [X (Twitter)](docs/x.md)
-5. Business Database & MVP Builder: [Airtable](docs/airtable.md) / [Baserow](docs/baserow.md) / [NocoDB](docs/nocodb.md)
-6. Project/Product Management: [Linear](docs/linear.md) / [Plane.so](docs/plane.md) / [Basecamp](docs/basecamp.md)
-7. Social Media Management: [Buffer](docs/buffer.md) / [Mixpost](docs/mixpost.md) / [Postiz](docs/postiz.md)
-8. Blog: [Hashnode](docs/hashnode.md) / [Ghost](docs/ghost.md)
-9. Document: [DocuSeal](docs/docuseal.md) / [Papermark](docs/papermark.md)
-10. Launcher: [Raycast](docs/raycast.md)
-11. Code Editor: [VS Code](docs/vscode.md) / [NeoVim](docs/neovim.md)
-12. AI Tool: [ChatGPT](docs/chatgpt.md) / [Claude](docs/claude.md) / [Perplexity](docs/perplexity.md) / [Galileo AI](docs/galileo-ai.md)
-13. AI Code Editor: [Cursor AI](docs/cursor.md) / [Supermaven](docs/supermaven.md) / [GitHub CoPilot](docs/github-copilot.md) / [Tabnine](docs/tabnine.md)
-14. AI Code Generator: [v0.dev](docs/v0.md) / [Marblism](docs/marblism.md)
+3. Code Editor: [VS Code](docs/vscode.md) / [NeoVim](docs/neovim.md)
+4. AI Tool: [ChatGPT](docs/chatgpt.md) / [Claude](docs/claude.md) / [Perplexity](docs/perplexity.md) / [Galileo AI](docs/galileo-ai.md)
+5. AI Code Editor: [Cursor AI](docs/cursor.md) / [Supermaven](docs/supermaven.md) / [GitHub CoPilot](docs/github-copilot.md) / [Tabnine](docs/tabnine.md)
+6. AI Code Generator: [v0.dev](docs/v0.md) / [Marblism](docs/marblism.md)
+7. UI/UX Design: [Figma](docs/figma.md)
+8. Communication & Community: [Telegram](docs/telegram.md) / [Discord](docs/discord.md) / [X (Twitter)](docs/x.md)
+9. Business Database & MVP Builder: [Airtable](docs/airtable.md) / [Baserow](docs/baserow.md) / [NocoDB](docs/nocodb.md)
+10. Project/Product Management: [Linear](docs/linear.md) / [Plane.so](docs/plane.md) / [Basecamp](docs/basecamp.md)
+11. Social Media Management: [Buffer](docs/buffer.md) / [Mixpost](docs/mixpost.md) / [Postiz](docs/postiz.md)
+12. Blog: [Hashnode](docs/hashnode.md) / [Ghost](docs/ghost.md)
+13. Document: [DocuSeal](docs/docuseal.md) / [Papermark](docs/papermark.md)
+14. Launcher: [Raycast](docs/raycast.md)
+15. Accounting: [Bigcapital](docs/bigcapital.md)
 
 ## Guides
 
@@ -173,11 +182,12 @@ Manual:
 - [Blitz.js](https://blitzjs.com)
 - [T3 Stack](https://create.t3.gg)
 - [Built At Lightspeed](https://builtatlightspeed.com)
+- [Next-Forge](https://next-forge.com)
+- [LaunchFast](https://launchfa.st)
 - [`lmsqueezy/nextjs-billing`](https://github.com/lmsqueezy/nextjs-billing)
 - [`midday-ai/v1`](https://github.com/midday-ai/v1)
 - [`ixahmedxi/orbitkit`](https://github.com/ixahmedxi/orbitkit)
 - [`shadcn-ui/taxonomy`](https://github.com/shadcn-ui/taxonomy)
-- [LaunchFast — Astro, Next.js and SvelteKit Starter Kits](https://launchfa.st)
 
 ## Credits
 

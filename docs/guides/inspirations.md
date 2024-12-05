@@ -10,7 +10,7 @@ Links:
   - [Stripe Stack by Daniel Kanem](https://github.com/dev-xo/stripe-stack)
   - [Synthwave Stack by I4O Open Source](https://github.com/i4o-oss/synthwave-stack)
 - [Ship Fast](https://shipfa.st)
-- [shadcn UI](https://github.com/shadcn/ui)
+- [shadcn/ui](https://github.com/shadcn-ui/ui)
   - [Taxonomy](https://tx.shadcn.com)
 - [MakerKit - SaaS Starter Kits based on React](https://makerkit.dev)
 - [SaasRock - The One-Man SaaS Framework](https://saasrock.com)

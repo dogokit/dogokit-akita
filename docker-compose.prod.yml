@@ -1,0 +1,26 @@
+services:
+  postgres:
+    container_name: example-postgres
+    image: postgres:alpine
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgres
+    ports:
+      - ${POSTGRES_HOST_PORT}:${POSTGRES_CONTAINER_PORT}
+    env_file:
+      - path: .env
+        required: true
+  api:
+    image: example-api:latest
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    env_file:
+      - path: .env
+        required: true
+
+volumes:
+  postgres_data:

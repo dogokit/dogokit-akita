@@ -3,7 +3,7 @@
 Links:
 
 - [React Transition Group](https://reactcommunity.org/react-transition-group)
-- [Framer Motion](https://framer.com/motion)
+- [Motion](https://motion.dev)
 - [React Spring](https://react-spring.dev)
 - [Remotion](https://remotion.dev)
 - [React-Move](https://github.com/sghall/react-move)

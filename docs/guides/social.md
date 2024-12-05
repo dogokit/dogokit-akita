@@ -2,7 +2,7 @@
 
 This is 🐶 Dogokit Akita
 
-A full featured web app template kit with moonrepo, Remix, React, Tailwind CSS, Radix UI, shadcn UI, Drizzle ORM, and more
+A full featured web app template kit with moonrepo, Remix, React, Tailwind CSS, Radix UI, shadcn/ui, Drizzle ORM, and more
 
 Open source and free
 
@@ -20,7 +20,7 @@ The stack:
 
 ✅ @remix_run – Full stack web framework
 ✅ @tailwindcss – Styling
-✅ @shadcn UI @radix_ui – Interactive UI components
+✅ @shadcn/ui @radix_ui – Interactive UI components
 ✅ @typescript – Language and type safety
 ✅ @vercel – Deployment
 ✅ @drizzle – Database ORM
