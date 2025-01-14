@@ -1,12 +1,13 @@
 # Tailwind
 
-Tailwind is a utility-first CSS framework for rapid UI development.
+Tailwind is a suite of UI framework for rapid UI development.
 
 ## Tailwind CSS
 
-Tailwind CSS is a utility-first CSS framework for rapid UI development.
+Tailwind CSS is a utility-first CSS framework.
 
-Latest version: v3
+- Latest version: v3
+- Upcoming version: v4
 
 Links:
 

@@ -15,8 +15,10 @@ Links:
 
 Complementaries:
 
+- [OriginUI](https://originui.com)
 - [JollyUI](https://jollyui.dev)
 - [SyntaxUI](https://syntaxui.com)
+- [21st.dev](https://21st.dev)
 - [Justd](https://getjustd.com)
 - [Tremor](https://tremor.so) dashboard components
 - [cult/ui](https://cult-ui.com)
@@ -28,7 +30,6 @@ Complementaries:
 - [`enhanced-button`](https://enhanced-button.vercel.app)
 - [`fancy-multi-select`](https://craft.mxkaske.dev/post/fancy-multi-select)
 - [Shadcn Tiptap + Search & Replace](https://tiptap.niazmorshed.dev)
-- [`shadcn-minimal-tiptap`](https://github.com/Aslam97/shadcn-minimal-tiptap)
 - [`shadcn-minimal-tiptap`](https://github.com/Aslam97/shadcn-minimal-tiptap)
 - [`jacobparis/ui`](https://jacobparis.com/ui) for Combobox and Combobox Multiple
 - [Sortable](https://github.com/sadmann7/sortable) with dnd kit (drag & drop)

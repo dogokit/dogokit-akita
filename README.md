@@ -17,8 +17,8 @@
 
 - Default frontend web with React and Tailwind CSS.
 - Optional full-stack web with Next.js or Remix (React Router).
-- Optional backend API with REST API or GraphQL.
-- Interchangeable ORM with Prisma or Drizzle.
+- Optional backend API with GraphQL or REST API.
+- Optional ORM with Drizzle or Prisma with ZenStack.
 - Bring your own thing from non-JS ecosystem.
 
 ## Benefits
@@ -149,19 +149,22 @@ Manual:
 
 1. Email: [Gmail](docs/gmail.md) / [HEY](docs/hey.md) / [ProtonMail](docs/protonmail.md)
 2. Credentials: [Bitwarden](docs/bitwarden.md) / [Passbolt](docs/passbolt.md)
-3. Code Editor: [VS Code](docs/vscode.md) / [NeoVim](docs/neovim.md)
-4. AI Tool: [ChatGPT](docs/chatgpt.md) / [Claude](docs/claude.md) / [Perplexity](docs/perplexity.md) / [Galileo AI](docs/galileo-ai.md)
-5. AI Code Editor: [Cursor AI](docs/cursor.md) / [Supermaven](docs/supermaven.md) / [GitHub CoPilot](docs/github-copilot.md) / [Tabnine](docs/tabnine.md)
-6. AI Code Generator: [v0.dev](docs/v0.md) / [Marblism](docs/marblism.md)
-7. UI/UX Design: [Figma](docs/figma.md)
-8. Communication & Community: [Telegram](docs/telegram.md) / [Discord](docs/discord.md) / [X (Twitter)](docs/x.md)
-9. Business Database & MVP Builder: [Airtable](docs/airtable.md) / [Baserow](docs/baserow.md) / [NocoDB](docs/nocodb.md)
-10. Project/Product Management: [Linear](docs/linear.md) / [Plane.so](docs/plane.md) / [Basecamp](docs/basecamp.md)
-11. Social Media Management: [Buffer](docs/buffer.md) / [Mixpost](docs/mixpost.md) / [Postiz](docs/postiz.md)
-12. Blog: [Hashnode](docs/hashnode.md) / [Ghost](docs/ghost.md)
-13. Document: [DocuSeal](docs/docuseal.md) / [Papermark](docs/papermark.md)
-14. Launcher: [Raycast](docs/raycast.md)
-15. Accounting: [Bigcapital](docs/bigcapital.md)
+3. Dotfiles: [Chezmoi](docs/chezmoi.md) / [Dotbot](docs/dotbot.md)
+4. Code Editor: [VS Code](docs/vscode.md) / [NeoVim](docs/neovim.md)
+5. AI Tool: [ChatGPT](docs/chatgpt.md) / [Claude](docs/claude.md) / [Perplexity](docs/perplexity.md) / [Galileo AI](docs/galileo-ai.md)
+6. AI Code Editor: [GitHub Copilot](docs/github-copilot.md) / [Cursor AI](docs/cursor.md) / [Codeium](docs/codeium.md) / [Supermaven](docs/supermaven.md) / [Tabnine](docs/tabnine.md)
+7. AI Code Generator: [v0.dev](docs/v0.md) / [Marblism](docs/marblism.md)
+8. UI/UX Design: [Figma](docs/figma.md)
+9. Communication & Community: [Telegram](docs/telegram.md) / [Discord](docs/discord.md) / [X (Twitter)](docs/x.md)
+10. CRM: [Attio](docs/attio.md)
+11. Business Database & MVP Builder: [Airtable](docs/airtable.md) / [Baserow](docs/baserow.md) / [NocoDB](docs/nocodb.md)
+12. Project/Product Management: [Linear](docs/linear.md) / [Plane.so](docs/plane.md) / [Eververse](docs/eververse.md) / [Basecamp](docs/basecamp.md)
+13. Docs: [Outline](docs/outline.md) / [Notion](docs/notion.md)
+14. Social Media Management: [Buffer](docs/buffer.md) / [Mixpost](docs/mixpost.md) / [Postiz](docs/postiz.md)
+15. Blog: [Hashnode](docs/hashnode.md) / [Ghost](docs/ghost.md)
+16. Document: [DocuSeal](docs/docuseal.md) / [Papermark](docs/papermark.md)
+17. Launcher: [Raycast](docs/raycast.md)
+18. Accounting: [Bigcapital](docs/bigcapital.md)
 
 ## Guides
 
@@ -174,6 +177,7 @@ Manual:
 ## Inspirations
 
 - [OpenAlternative](https://openalternative.co): Open Source Alternatives to Popular Software
+- [OpenSourceAlternative.to](https://opensourcealternative.to): Open Source Alternatives to Proprietary Software
 - [Best of JS](https://bestofjs.org)
 - [Laravel](https://laravel.com)
 - [Ruby on Rails](https://rubyonrails.org)

@@ -1,4 +1,4 @@
-# Components
+# UI Components
 
 Required UI components for various applications.
 
@@ -28,3 +28,9 @@ Required UI components for various applications.
 - Chart
 - Stepperize
 - Carousel
+
+## Blocks
+
+- Form
+- Dashboard
+- Chart
