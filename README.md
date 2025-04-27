@@ -15,19 +15,18 @@
 
 🐶Dogokit Akita is a comprehensive and opinionated full stack application development kit. Encompassing JavaScript/TypeScript, Node.js/Deno/Bun, and more. It serves as a versatile reference for constructing robust web applications, that can scale from zero to millions of users.
 
-- Default frontend web with React and Tailwind CSS.
-- Optional full-stack web with Next.js or Remix (React Router).
-- Optional backend API with GraphQL or REST API.
-- Optional ORM with Drizzle or Prisma with ZenStack.
-- Bring your own thing from non-JS ecosystem.
+- Default frontend web with React, React Router, Tailwind CSS.
+- Optional full-stack web framework
+- Optional backend API and database ORM
 
 ## Benefits
 
-1. Build website or web app quickly with pre-built modules.
-2. Optionally scale API complexity with GraphQL/REST/tRPC.
-3. Customize architecture flexibly, with the defaults should not use any 3rd party services.
-4. Deploy anywhere from a single VPS to any cloud provider, no vendor lock-in.
-5. Demonstrate the JavaScript developer experience (DX) ecosystem capability. As an alternative to existing one like RedwoodJS, and the others such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
+1. Build website or web app quickly, with pre-built modules.
+2. Use rich UI components and templates.
+3. Customize tech stack, defaults without 3rd party services.
+4. Deploy anywhere, no vendor lock-in.
+5. Develop with better AI workflow.
+6. Demonstrate the JavaScript developer experience (DX) ecosystem capability. As an alternative to existing one such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
 
 ## Features
 
@@ -101,13 +100,14 @@ Things that are the primary default.
 7. Bundler: [Vite](docs/vite.md)
 8. Data Validation: [Zod](docs/zod.md)
 9. Form Validation: [Conform](docs/conform.md)
-10. Auth: [Better Auth](docs/better-auth.md)
-11. Database ORM: [Prisma](docs/prisma.md) + [ZenStack](docs/zenstack.md)
-12. Database/DBMS: [PostgreSQL](docs/postgresql.md)
-13. Database GUI: [TablePlus](docs/tableplus.md)
-14. Container: [Docker](docs/docker.md) + [Docker Compose](docs/docker-compose.md)
-15. Container Management: [OrbStack](docs/orbstack.md) / [Docker Desktop](docs/docker-desktop.md)
-16. Testing: [Vitest](docs/vitest.md), [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
+10. API: [Hono](docs/hono.md) + [tRPC](docs/trpc.md)
+11. Auth: [Better Auth](docs/better-auth.md)
+12. Database ORM: [Prisma](docs/prisma.md) + [ZenStack](docs/zenstack.md)
+13. Database/DBMS: [PostgreSQL](docs/postgresql.md)
+14. Database GUI: [TablePlus](docs/tableplus.md)
+15. Container: [Docker](docs/docker.md) + [Docker Compose](docs/docker-compose.md)
+16. Container Management: [OrbStack](docs/orbstack.md) / [Docker Desktop](docs/docker-desktop.md)
+17. Testing: [Vitest](docs/vitest.md), [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
 
 Deployment:
 
