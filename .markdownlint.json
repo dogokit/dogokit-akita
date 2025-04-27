@@ -1,8 +1,0 @@
-{
-  "extends": "markdownlint/style/prettier",
-  "code-block-style": false,
-  "first-line-h1": false,
-  "no-duplicate-heading": false,
-  "no-inline-html": false,
-  "no-space-in-emphasis": false
-}

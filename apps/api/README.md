@@ -1,9 +1,11 @@
-# API: GraphQL
+# API
 
-Default configuration:
+Default config:
 
 - TypeScript
-- GraphQL
-- Apollo
-- Pothos
+- Bun
+- Hono
 - Prisma
+- PostgreSQL
+- tRPC
+- Better Auth

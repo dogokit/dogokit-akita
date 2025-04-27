@@ -1,9 +1,12 @@
-# Web: Remix
+# Web
 
-Default configuration:
+Default config:
 
 - TypeScript
+- Bun
 - React
-- Remix
+- React Router v7 Framework
 - Tailwind CSS
 - shadcn/ui
+- tRPC
+- Better Auth

@@ -4,6 +4,10 @@
   "type": "module",
   "scripts": {
     "check": "echo Check",
+    "setup-env": "cp -i .env.example .env.local && cp -i .env.example .env.production",
+    "setup-db": "docker compose up -d",
+    "generate-secret": "openssl rand -base64 32",
+    "check-links": "bunx linkinator *.md",
     "lint:md": "markdownlint \"**/*.md\" --dot --ignore node_modules --ignore .changeset"
   },
   "devDependencies": {
