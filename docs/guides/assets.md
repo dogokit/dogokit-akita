@@ -4,10 +4,10 @@
 
 Get through Iconify + Icones
 
-- Phosphor Icons
-- Tabler Icons
 - Lucide Icons
 - Radix Icons
+- Phosphor Icons
+- Tabler Icons
 
 ## Colors
 

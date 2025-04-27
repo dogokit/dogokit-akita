@@ -1,4 +1,4 @@
-# Tech Stack Considerations
+# Tech Stack
 
 Feel free to adjust the tech stack as you need and prefer.
 
@@ -7,42 +7,40 @@ These are the complete things that can be used and recommended, with more focus 
 ## General
 
 - Browser: Chromium / Google Chrome / Arc Browser / Brave Browser
-- Code editor: [VS Code](vscode.md) / [Cursor](cursor.md) / WebStorm / Neovim
-- Terminal emulator: Kitty / Alacritty / iTerm / Warp / Hyper
-- Links: [Markdown](markdown.md)
+- Code editor: [Cursor](cursor.md) / [Windsurf](windsurf.md) / [VS Code](vscode.md) / WebStorm / Neovim
+- Terminal emulator: [Ghostty](ghostty.md) / [Warp](warp.md) / Kitty / Alacritty / iTerm
+- Documentation: [Markdown](markdown.md) with [Mermaid](mermaid.md)
 - Markup: [HTML](html.md)
 - Styling: [CSS](css.md)
-- Programming: [JavaScript](javascript.md) with [TypeScript](typescript.md) 👍
+- Programming: [TypeScript](typescript.md) & [JavaScript](javascript.md) 👍
 - Runtime version manager: [proto](proto.md) 👍, alternative to nvm / asdf
 - Runtime: [Bun](bun.md) 👍, alternative to [Node.js](nodejs.md) / [Deno](deno.md)
   - Package manager: [Bun](bun.md) 👍, alternative to [npm](npm.md) / [yarn](yarn.md) / [pnpm](pnpm.md)
-- Monorepo: [moonrepo](moonrepo.md) 👍, alternative to [Turborepo](turborepo.md) / [Nx](nx.md)
 
 ## Frontend
 
-- UI library: [React](react.md) v18/v19 👍
+- UI library: [React](react.md) v19 👍
   - Optimization: [Million.js](millionjs.md)
-- Meta-framework: [Remix](remix.md) v2 👍 ([React Router](react-router.md) v6), alternative to [Next.js](nextjs.md)
+- Meta-framework: [React Router](react-router.md) v7 / [Remix](remix.md) v2 / [Next.js](nextjs.md) v15
   - Bundler: [Vite](vite.md) 👍
-  - PWA: Vite PWA Plugin for Remix
-  - Extension: Remix Forge for VS Code
-- GraphQL client: [Apollo Client](apollo.md) v3 👍
-- Auth: [Remix Auth](remix-auth.md) / [Lucia Auth](lucia-auth.md)
+  - PWA: Vite PWA Plugin
+- Auth: [Better Auth](better-auth.md) / [Remix Auth](remix-auth.md) / [Lucia Auth](lucia-auth.md)
+- Form management: [Conform](conform.md), alternative to React Hook Form / Formik
 
 ## Frontend Styling
 
 - CSS framework: [Tailwind CSS](tailwind.md) v4 👍
 - Fonts: [Fontsource](fontsource.md) 👍
-- UI components: [shadcn/ui](shadcn-ui.md) 👍, [Radix UI](radix-ui.md), SyntaxUI, Tremor.so, Aceternity UI, React Aria, Ariakit, Ark UI, Catalyst UI Kit, etc
-- UI development: [Storybook](storybook.md) v8
-- UI variants: [Class Variance Authority (cva)](cva.md) 👍
-- UI [icons](icons.md): React Icons, Lucide, Tabler Icons, Remix Icon, etc
+- UI components: [shadcn/ui](shadcn-ui.md) 👍 with [Radix UI](radix-ui.md), React Aria, Ariakit, SyntaxUI, Tremor.so, Aceternity UI, Ark UI, Catalyst UI Kit, etc
+- UI animation: [Motion](motion.md)
+- UI development: [Storybook](storybook.md) v9
+- UI variants: [cva (Class Variance Authority)](cva.md) 👍
+- UI [icons](icons.md): [Sly CLI](sly-cli.md), React Icons, Lucide, Tabler Icons, Remix Icon, etc
 - UI interaction and animation with various [motion library](motion-library.md): Motion One / Framer Motion / React Native Skia / Rive
 
 ## Backend
 
-- API layer: [GraphQL](graphql.md) 👍, alternative to [REST API](rest-api.md)
-- API server: [Apollo Server](apollo.md) v4 👍
+- API layer: [tRPC](trpc.md), alternative to [REST API](rest-api.md) / [GraphQL](graphql.md)
 - Schema generator: [Pothos GraphQL](graphql-pothos.md) 👍 / [GraphQL Nexus](graphql-nexus.md)
 - ORM (Object Relational Mapper): [Prisma](prisma.md) 👍, alternative to [Drizzle](drizzle.md)
 - Database / DBMS (Database Management System): PostgreSQL 👍
@@ -50,6 +48,7 @@ These are the complete things that can be used and recommended, with more focus 
   - Utility: Snaplet
 - Key-value store: Redis
   - Hosted: Upstash
+- GrahpQL API server: [Apollo Server](apollo.md)
 
 ## Auth
 
@@ -70,7 +69,6 @@ These are the complete things that can be used and recommended, with more focus 
   - Mac-only: OrbStack
 - Data validation: Zod
 - Unique ID: nanoid
-- Form management: Conform / React Hook Form / Formiz
 - Auth utility: Oslo.js, alternative to jsonwebtoken, bcrypt/argon, etc
 - Email templating: React Email
 - Rich text editor: TipTap, BlockNote, Yjs
@@ -78,6 +76,7 @@ These are the complete things that can be used and recommended, with more focus 
 - Search utility: Fuse.js v7
 - Upgrade packages: Taze
 - Find unused stuffs: Knip
+- Monorepo: [moonrepo](moonrepo.md), alternative to [Turborepo](turborepo.md) / [Nx](nx.md)
 
 ## Testing
 

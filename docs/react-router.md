@@ -1,6 +1,6 @@
 # React Router
 
-React Router is the most popular routing library for React.
+React Router is the most popular routing library and framework for React.
 
 Latest version: v7
 

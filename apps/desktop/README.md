@@ -1,0 +1,5 @@
+# Desktop
+
+Default:
+
+- Packager: Tauri

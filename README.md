@@ -29,18 +29,57 @@
 4. Deploy anywhere from a single VPS to any cloud provider, no vendor lock-in.
 5. Demonstrate the JavaScript developer experience (DX) ecosystem capability. As an alternative to existing one like RedwoodJS, and the others such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
 
+## Features
+
+- [x] Landing Page That Converts
+- [x] Responsive UI Design and Components
+  - [x] WYSIWYG Editor
+  - [x] Theme and Dark Mode
+  - [ ] Optimistic UI/UX
+  - [ ] Lightweight Animation
+  - [ ] Command Palette/Bar
+  - [ ] Keyboard Shortcuts
+- [x] Web Analytics
+- [x] SEO (Search Engine Optimization) and Meta Tags
+- [x] SSR (Server-Side Rendering)
+- [x] Type-Safe CRUD (Create, Read, Update, Delete)
+- [x] Database and ORM
+- [x] Environment Variables for Local, Staging, Production
+- [x] Deployment with Docker & Docker Compose
+- [x] Authentication (AuthN) and Authorization (AuthZ)
+- [ ] Auth with Social Login
+- [x] User Management, Register, Login, Onboarding, Profile, Invite Users, Logout
+- [ ] Organization and Team Management
+- [ ] Role and Permission with Role-Based Access Control (RBAC)
+- [x] Assets Management with File/Image Upload
+- [x] User and Admin Dashboard/Panel
+- [x] Form Handling on Client and Server
+- [ ] Pagination on Client and Server
+- [x] Email Notification, Marketing, Verification
+- [x] Payment Integration
+- [ ] AI Integration
+- [ ] Blog, Release Notes
+- [ ] Scheduled/Cron Jobs
+- [ ] Background Jobs/Workers
+- [ ] Error Monitoring with Sentry
+- [ ] Timezone and Date/Time Picker
+- [ ] Internationalization (i18n) and Localization (l10n)
+- [ ] Accessibility (a11y)
+- [ ] Code Generator/Scaffolder
+
 ## Tech Stack
 
-- [Core](#core)
-- [Default](#default)
-- [Alternative](#alternative)
-- [Deployment](#deployment)
-- [Separated Backend](#separated-backend)
+- [Goal](#goal)
+- [Benefits](#benefits)
 - [Features](#features)
-- [3rd Party Services](#3rd-party-services)
-- [Tools](#tools)
+- [Tech Stack](#tech-stack)
+- [Guides](#guides)
+- [Inspirations](#inspirations)
+- [Credits](#credits)
 
 ### Core
+
+Things that are the primary default.
 
 - General: TypeScript, Bun
 - Frontend: React, Tailwind CSS
@@ -50,9 +89,8 @@
 
 1. Language: [TypeScript](docs/typescript.md), [JavaScript](docs/javascript.md), [HTML](docs/html.md), [CSS](docs/css.md)
 2. Runtime: [Bun](docs/bun.md) / [Deno](docs/deno.md) / [Node.js](docs/nodejs.md)
-3. Frontend: [React](docs/react.md)
-4. Frontend Meta Framework: [Remix](docs/remix.md) / [Next.js](docs/nextjs.md)
-   - Backend with built-in server-side features
+3. Frontend Library: [React](docs/react.md)
+4. Frontend Framework: [React Router](docs/react-router.md) ([Remix](docs/remix.md)) / [Next.js](docs/nextjs.md)
 5. Styling: [Tailwind CSS](docs/tailwind.md)
    - UI Component: [shadcn/ui](docs/shadcn-ui.md)
    - Icon: [unplugin-icons](docs/unplugin-icons.md)
@@ -60,7 +98,7 @@
    - Test: [Storybook](docs/storybook.md)
 6. Format and Lint: [Biome](docs/biome.md) + [Ultracite](docs/ultracite.md) / [Prettier](docs/prettier.md) / [ESLint](docs/eslint.md) / [Oxc](docs/oxc.md)
 7. Release: [autorc](docs/autorc.md)
-8. Bundler: [Vite](docs/vite.md) / [Turbopack](docs/turbopack.md)
+8. Bundler: [Vite](docs/vite.md)
 9. Auth: [Better Auth](docs/better-auth.md)
 10. Database ORM: [Prisma](docs/prisma.md) + [ZenStack](docs/zenstack.md)
 11. Database/DBMS: [PostgreSQL](docs/postgresql.md)
@@ -68,20 +106,13 @@
 13. Container: [Docker](docs/docker.md) + [Docker Compose](docs/docker-compose.md)
 14. Container Management: [OrbStack](docs/orbstack.md) / [Docker Desktop](docs/docker-desktop.md)
 
-### Optional: Alternative
-
-1. Frontend: [Svelte](docs/svelte.md) / [Vue.js](docs/vuejs.md) / [Angular](docs/angular.md) / [SolidJS](docs/solidjs.md) / [Qwik](docs/qwik.md)
-2. Frontend Meta Framework: [SvelteKit](docs/sveltekit.md), [Nuxt](docs/nuxt.md), [SolidStart](docs/solidstart.md), [Qwik City](docs/qwik-city.md)
-
-### Deployment
-
-Quick:
+Deployment:
 
 1. Frontend: [Vercel](docs/vercel.md)
 2. Backend: [Render](docs/render.md)
 3. Database: [Neon](docs/neon.md)
 
-Manual:
+### Optional: Manual Deployment
 
 1. Cloud: [Google Cloud](docs/google-cloud.md) / [Amazon Web Services](docs/amazon-web-services.md)
 2. PaaS in VPS: [Dokku](docs/dokku.md) / [Coolify](docs/coolify.md)
@@ -92,14 +123,20 @@ Manual:
 7. Web Server and Proxy: [Caddy](docs/caddy.md) / [Nginx](docs/nginx.md)
 8. SSL/TLS Certificate: [Let's Encrypt](docs/lets-encrypt.md)
 
+### Optional: Alternative Frameworks and Tools
+
+1. Non-JS Full Stack Framework: [Laravel](docs/laravel.md) / [Rails](docs/rails.md) / [Django](docs/django.md)
+2. Frontend Only: [Svelte](docs/svelte.md) / [Vue.js](docs/vuejs.md) / [Angular](docs/angular.md) / [SolidJS](docs/solidjs.md) / [Qwik](docs/qwik.md)
+3. Frontend Meta Framework: [SvelteKit](docs/sveltekit.md), [Nuxt](docs/nuxt.md), [SolidStart](docs/solidstart.md), [Qwik City](docs/qwik-city.md)
+4. Bundler: [Turbopack](docs/turbopack.md)
+
 ### Optional: Separated Backend
 
 1. BaaS: [Keel](docs/keel.md) / [Directus](docs/directus.md) / [Strapi](docs/strapi.md) / [Payload](docs/payload.md) / [PocketBase](docs/pocketbase.md) / [Supabase](docs/supabase.md) / [Firebase](docs/firebase.md)
 2. [REST API](docs/rest-api.md): [Hono](docs/hono.md) with [Swagger](docs/swagger.md) generated by [ZenStack](docs/zenstack.md) and [Scalar](docs/scalar.md) for refined UX
 3. [GraphQL](docs/graphql.md): [Apollo](docs/apollo.md), [Pothos](docs/pothos.md), [Sofa](docs/sofa.md)
 4. JS-based Fully Featured: [RedwoodJS](docs/redwoodjs.md) / [AdonisJS](docs/adonisjs.md)
-5. Non-JS Fully Featured: [Laravel](docs/laravel.md) / [Rails](docs/rails.md) / [Django](docs/django.md)
-6. Non-JS Lightweight: [Gin](docs/gin.md) / [Fiber](docs/fiber.md) / [Echo](docs/echo.md)
+5. Non-JS Lightweight: [Gin](docs/gin.md) / [Fiber](docs/fiber.md) / [Echo](docs/echo.md)
 
 ### Optional: Workflow and Features
 
@@ -126,14 +163,14 @@ Manual:
 
 ### Optional: 3rd Party Services
 
-1. Secrets and Environment Variables: [Infisical](docs/infisical.md) / [Doppler](docs/doppler.md)
-2. Analytics: [PostHog](docs/posthog.md) / [Openpanel.dev](docs/openpanel.md) / [Simple Analytics](docs/simpleanalytics.md) / [Plausible](docs/plausible.md)
+1. Analytics: [PostHog](docs/posthog.md) / [Openpanel.dev](docs/openpanel.md) / [Simple Analytics](docs/simpleanalytics.md) / [Plausible](docs/plausible.md)
+2. Payment: [Polar](docs/polar.md) / [Lemon Squeezy](docs/lemonsqueezy.md) / [Stripe](docs/stripe.md)
 3. Service Monitoring: [OpenStatus](docs/openstatus.md) / [BetterStack](docs/betterstack.md)
-4. File Storage/Upload: [Uploadcare](docs/uploadcare.md) / [Cloudinary](docs/cloudinary.md)
-5. Email Transactional: [Nodemailer](docs/nodemailer.md) / [Plunk](docs/plunk.md) / [Resend](docs/resend.md) / [Amazon SES](docs/amazon-ses.md)
-6. Email Marketing/Newsletter: [Loops.so](docs/loops.md) / [Beehiiv](docs/beehiiv.md) / [Bento](docs/bento.md)
-7. APM, Observability, Error Tracking: [Sentry](docs/sentry.md) + [OpenTelemetry](docs/opentelemetry.md)
-8. Payment: [Polar](docs/polar.md) / [Lemon Squeezy](docs/lemonsqueezy.md) / [Stripe](docs/stripe.md)
+4. Secrets and Environment Variables: [Infisical](docs/infisical.md) / [Doppler](docs/doppler.md)
+5. File Storage/Upload: [Uploadcare](docs/uploadcare.md) / [Cloudinary](docs/cloudinary.md)
+6. Email Transactional: [Nodemailer](docs/nodemailer.md) / [Plunk](docs/plunk.md) / [Resend](docs/resend.md) / [Amazon SES](docs/amazon-ses.md)
+7. Email Marketing/Newsletter: [Loops.so](docs/loops.md) / [Beehiiv](docs/beehiiv.md) / [Bento](docs/bento.md)
+8. APM, Observability, Error Tracking: [Sentry](docs/sentry.md) + [OpenTelemetry](docs/opentelemetry.md)
 9. Auth: [WorkOS](docs/workos.md) / [Clerk](docs/clerk.md)
 10. Business Intelligence (BI): [Metabase](docs/metabase.md) / [Index.app](docs/index-app.md)
 11. Webhook: [Svix](docs/svix.md)
@@ -176,22 +213,35 @@ Manual:
 
 ## Inspirations
 
-- [OpenAlternative](https://openalternative.co): Open Source Alternatives to Popular Software
-- [OpenSourceAlternative.to](https://opensourcealternative.to): Open Source Alternatives to Proprietary Software
-- [Best of JS](https://bestofjs.org)
+Templates:
+
+- [Next-Forge](https://next-forge.com)
+- [LaunchFast](https://launchfa.st)
+- [Indiflow](https://indiflow.app)
+- [Zero To Shipped](https://zerotoshipped.com)
+- [T3 Stack](https://create.t3.gg)
+- [Built At Lightspeed](https://builtatlightspeed.com)
+- [`midday-ai/v1`](https://github.com/midday-ai/v1)
+- [`ixahmedxi/orbitkit`](https://github.com/ixahmedxi/orbitkit)
+
+Frameworks:
+
 - [Laravel](https://laravel.com)
 - [Ruby on Rails](https://rubyonrails.org)
 - [RedwoodJS](https://redwoodjs.com)
 - [AdonisJS](https://adonisjs.com)
 - [Blitz.js](https://blitzjs.com)
-- [T3 Stack](https://create.t3.gg)
-- [Built At Lightspeed](https://builtatlightspeed.com)
-- [Next-Forge](https://next-forge.com)
-- [LaunchFast](https://launchfa.st)
+
+Demos:
+
 - [`lmsqueezy/nextjs-billing`](https://github.com/lmsqueezy/nextjs-billing)
-- [`midday-ai/v1`](https://github.com/midday-ai/v1)
-- [`ixahmedxi/orbitkit`](https://github.com/ixahmedxi/orbitkit)
 - [`shadcn-ui/taxonomy`](https://github.com/shadcn-ui/taxonomy)
+
+Directory:
+
+- [OpenAlternative](https://openalternative.co): Open Source Alternatives to Popular Software
+- [OpenSourceAlternative.to](https://opensourcealternative.to): Open Source Alternatives to Proprietary Software
+- [Best of JS](https://bestofjs.org)
 
 ## Credits
 
