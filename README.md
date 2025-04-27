@@ -38,25 +38,26 @@
   - [ ] Lightweight Animation
   - [ ] Command Palette/Bar
   - [ ] Keyboard Shortcuts
+- [x] AI Workflow Rules
 - [x] Web Analytics
 - [x] SEO (Search Engine Optimization) and Meta Tags
 - [x] SSR (Server-Side Rendering)
 - [x] Type-Safe CRUD (Create, Read, Update, Delete)
 - [x] Database and ORM
 - [x] Environment Variables for Local, Staging, Production
-- [x] Deployment with Docker & Docker Compose
+- [x] Deployment with Docker and Docker Compose
 - [x] Authentication (AuthN) and Authorization (AuthZ)
-- [ ] Auth with Social Login
+- [ ] Auth with OAuth or Social Login
 - [x] User Management, Register, Login, Onboarding, Profile, Invite Users, Logout
 - [ ] Organization and Team Management
 - [ ] Role and Permission with Role-Based Access Control (RBAC)
-- [x] Assets Management with File/Image Upload
+- [x] Assets Management with File/Image Upload on Cloudflare R2
 - [x] User and Admin Dashboard/Panel
 - [x] Form Handling on Client and Server
 - [ ] Pagination on Client and Server
-- [x] Email Notification, Marketing, Verification
-- [x] Payment Integration
-- [ ] AI Integration
+- [x] Email Templates, Notification, Marketing, Verification
+- [x] Payment Gateway Integration with Billing, Subscription, Invoice
+- [ ] Webhooks
 - [ ] Blog, Release Notes
 - [ ] Scheduled/Cron Jobs
 - [ ] Background Jobs/Workers
@@ -65,6 +66,8 @@
 - [ ] Internationalization (i18n) and Localization (l10n)
 - [ ] Accessibility (a11y)
 - [ ] Code Generator/Scaffolder
+- [ ] AI Integration
+- [ ] Community
 
 ## Tech Stack
 
@@ -95,8 +98,6 @@ Things that are the primary default.
    - Component: [shadcn/ui](docs/shadcn-ui.md)
    - Icon: [unplugin-icons](docs/unplugin-icons.md)
    - WYSIWYG: [Tiptap](docs/tiptap.md)
-   - Email: [React Email](docs/react-email.md)
-   - Test: [Storybook](docs/storybook.md)
 7. Bundler: [Vite](docs/vite.md)
 8. Data Validation: [Zod](docs/zod.md)
 9. Form Validation: [Conform](docs/conform.md)
@@ -107,7 +108,8 @@ Things that are the primary default.
 14. Database GUI: [TablePlus](docs/tableplus.md)
 15. Container: [Docker](docs/docker.md) + [Docker Compose](docs/docker-compose.md)
 16. Container Management: [OrbStack](docs/orbstack.md) / [Docker Desktop](docs/docker-desktop.md)
-17. Testing: [Vitest](docs/vitest.md), [Testing Library](docs/testing-library.md), [Playwright](docs/playwright.md), [MSW](docs/msw.md)
+17. Email: [Resend](docs/resend.md) + [React Email](docs/react-email.md)
+18. Testing: [Vitest](docs/vitest.md) + [Testing Library](docs/testing-library.md) + [Playwright](docs/playwright.md) + [Storybook](docs/storybook.md) + [MSW](docs/msw.md)
 
 Deployment:
 
