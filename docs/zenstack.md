@@ -6,10 +6,6 @@ Links:
 
 - [ZenStack](https://zenstack.dev)
 
-References:
-
-- [Marblism Documentation](https://dev.marblism.com)
-
 ## Welcome
 
 If you are using TypeScript to build APIs or web apps above a SQL database, you are in the right place. ZenStack is an open-source toolkit built above Prisma - the most popular ORM for Node.js. ZenStack pushes Prisma's power to a new level and boosts the development efficiency of every layer of your stack - from access control to API development, and all the way up to the frontend.
