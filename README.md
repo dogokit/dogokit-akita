@@ -91,25 +91,21 @@ Things that are the primary default.
 
 1. Language: [TypeScript](docs/typescript.md), [JavaScript](docs/javascript.md), [HTML](docs/html.md), [CSS](docs/css.md)
 2. Runtime & Package Manager: [Bun](docs/bun.md)
-3. Format and Lint: [Biome](docs/biome.md) + [Ultracite](docs/ultracite.md)
-4. Frontend Library: [React](docs/react.md)
-5. Frontend Framework: [React Router](docs/react-router.md)
-6. Styling: [Tailwind CSS](docs/tailwind.md)
-   - Component: [shadcn/ui](docs/shadcn-ui.md)
-   - Icon: [unplugin-icons](docs/unplugin-icons.md)
-   - WYSIWYG: [Tiptap](docs/tiptap.md)
-7. Bundler: [Vite](docs/vite.md)
+3. Format and Lint: [Biome](docs/biome.md)
+4. Bundler: [Vite](docs/vite.md)
+5. Frontend Library: [React](docs/react.md)
+6. Frontend Framework: [React Router](docs/react-router.md)
+7. Styling: [Tailwind CSS](docs/tailwind.md) + [shadcn/ui](docs/shadcn-ui.md) + [unplugin-icons](docs/unplugin-icons.md) + [Tiptap](docs/tiptap.md)
 8. Data Validation: [Zod](docs/zod.md)
-9. Form Validation: [Conform](docs/conform.md)
-10. API: [Hono](docs/hono.md) + [tRPC](docs/trpc.md)
-11. Auth: [Better Auth](docs/better-auth.md)
-12. Database ORM: [Prisma](docs/prisma.md) + [ZenStack](docs/zenstack.md)
-13. Database/DBMS: [PostgreSQL](docs/postgresql.md)
-14. Database GUI: [TablePlus](docs/tableplus.md)
-15. Container: [Docker](docs/docker.md) + [Docker Compose](docs/docker-compose.md)
-16. Container Management: [OrbStack](docs/orbstack.md) / [Docker Desktop](docs/docker-desktop.md)
-17. Email: [Resend](docs/resend.md) + [React Email](docs/react-email.md)
-18. Testing: [Vitest](docs/vitest.md) + [Testing Library](docs/testing-library.md) + [Playwright](docs/playwright.md) + [Storybook](docs/storybook.md) + [MSW](docs/msw.md)
+9. Form Handling: [Conform](docs/conform.md)
+10. Backend API Framework: [Hono](docs/hono.md) + [tRPC](docs/trpc.md)
+11. Auth Library: [Better Auth](docs/better-auth.md)
+12. Database ORM & RBAC: [Prisma](docs/prisma.md) + [ZenStack](docs/zenstack.md)
+13. Database/DBMS & GUI: [PostgreSQL](docs/postgresql.md) + [TablePlus](docs/tableplus.md)
+14. Container: [Docker](docs/docker.md) + [Docker Compose](docs/docker-compose.md) with [OrbStack](docs/orbstack.md) / [Docker Desktop](docs/docker-desktop.md)
+15. Email: [Resend](docs/resend.md) + [React Email](docs/react-email.md)
+16. Testing: [Vitest](docs/vitest.md) + [Testing Library](docs/testing-library.md) + [Playwright](docs/playwright.md) + [Storybook](docs/storybook.md) + [MSW](docs/msw.md)
+17. Payment: [Polar](docs/polar.md) + [Xendit](docs/xendit.md)
 
 Deployment:
 
@@ -119,14 +115,14 @@ Deployment:
 
 ### Optional: Manual Deployment
 
-1. Cloud: [Google Cloud](docs/google-cloud.md) / [Amazon Web Services](docs/amazon-web-services.md)
-2. PaaS in VPS: [Dokku](docs/dokku.md) / [Coolify](docs/coolify.md)
-3. VPS: [IONOS](docs/ionos.md) / [Linode](docs/linode.md) / [DigitalOcean](docs/digitalocean.md) / [Amazon Lightsail](docs/amazon-lightsail.md)
-4. Bare Metal: [Hetzner](docs/hetzner.md) / [Vultr](docs/vultr.md) / [Scaleway](docs/scaleway.md)
+1. OS: [Debian](docs/debian.md) / [Ubuntu](docs/ubuntu.md)
+2. Web Server and Proxy: [Caddy](docs/caddy.md) / [Nginx](docs/nginx.md)
+3. SSL/TLS Certificate: [Let's Encrypt](docs/lets-encrypt.md)
+4. Self-Host PaaS: [Coolify](docs/coolify.md) / [Dokku](docs/dokku.md)
 5. Automation: [Kamal Deploy](docs/kamal-deploy.md) / [Ansible](docs/ansible.md)
-6. OS: [Debian](docs/debian.md) / [Ubuntu](docs/ubuntu.md)
-7. Web Server and Proxy: [Caddy](docs/caddy.md) / [Nginx](docs/nginx.md)
-8. SSL/TLS Certificate: [Let's Encrypt](docs/lets-encrypt.md)
+6. Cloud: [Google Cloud](docs/google-cloud.md) / [Amazon Web Services](docs/amazon-web-services.md)
+7. VPS: [IONOS](docs/ionos.md) / [Linode](docs/linode.md) / [DigitalOcean](docs/digitalocean.md) / [Amazon Lightsail](docs/amazon-lightsail.md)
+8. Bare Metal: [Hetzner](docs/hetzner.md) / [Vultr](docs/vultr.md) / [Scaleway](docs/scaleway.md)
 
 ### Alternative: Frameworks
 
@@ -171,7 +167,9 @@ Deployment:
 
 1. Repo: [Git](docs/git.md) on [GitHub](docs/github.md) / [GitLab](docs/gitlab.md) / [Bitbucket](docs/bitbucket.md)
 2. Analytics: [PostHog](docs/posthog.md) / [Openpanel.dev](docs/openpanel.md) / [Simple Analytics](docs/simpleanalytics.md) / [Plausible](docs/plausible.md)
-3. Payment: [Polar](docs/polar.md) / [Lemon Squeezy](docs/lemonsqueezy.md) / [Stripe](docs/stripe.md)
+3. Payment:
+   - International: [Polar](docs/polar.md) / [Lemon Squeezy](docs/lemonsqueezy.md) / [Stripe](docs/stripe.md)
+   - Indonesia: [Xendit](docs/xendit.md) / [Midtrans](docs/midtrans.md)
 4. Service Monitoring: [OpenStatus](docs/openstatus.md) / [BetterStack](docs/betterstack.md)
 5. Secrets and Environment Variables: [Infisical](docs/infisical.md) / [Doppler](docs/doppler.md)
 6. File Storage/Upload: [Uploadcare](docs/uploadcare.md) / [Cloudinary](docs/cloudinary.md)
