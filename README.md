@@ -100,7 +100,7 @@ Things that are the primary default.
 9. Form Handling: [Conform](docs/conform.md)
 10. Backend API Framework: [Hono](docs/hono.md) + [tRPC](docs/trpc.md)
 11. Auth Library: [Better Auth](docs/better-auth.md)
-12. Database ORM & RBAC: [Prisma](docs/prisma.md) + [ZenStack](docs/zenstack.md)
+12. Database ORM & RBAC: [Prisma](docs/prisma.md) + [Permit.io](docs/permit-io.md)
 13. Database/DBMS & GUI: [PostgreSQL](docs/postgresql.md) + [TablePlus](docs/tableplus.md)
 14. Container: [Docker](docs/docker.md) + [Docker Compose](docs/docker-compose.md) with [OrbStack](docs/orbstack.md) / [Docker Desktop](docs/docker-desktop.md)
 15. Email: [Resend](docs/resend.md) + [React Email](docs/react-email.md)
