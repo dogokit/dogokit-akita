@@ -9,7 +9,7 @@ Links:
 - [Prisma](https://prisma.io)
 - [Prisma Markdown](https://github.com/samchon/prisma-markdown)
 
-References:
+Links:
 
 - [Prisma Blog](https://prisma.io/blog)
 - [Why Use Prisma to Build Your Data Layer in 2024? - Prisma Blog](https://prisma.io/blog/why-prisma-2024)

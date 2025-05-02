@@ -89,13 +89,13 @@ Things that are the primary default.
 
 ### Default
 
-1. Language: [TypeScript](docs/typescript.md), [JavaScript](docs/javascript.md), [HTML](docs/html.md), [CSS](docs/css.md)
+1. Language: [TypeScript](docs/typescript.md) + [JavaScript](docs/javascript.md) + [HTML](docs/html.md) + [CSS](docs/css.md)
 2. Runtime & Package Manager: [Bun](docs/bun.md)
 3. Format and Lint: [Biome](docs/biome.md)
 4. Bundler: [Vite](docs/vite.md)
 5. Frontend Library: [React](docs/react.md)
 6. Frontend Framework: [React Router](docs/react-router.md)
-7. Styling: [Tailwind CSS](docs/tailwind.md) + [shadcn/ui](docs/shadcn-ui.md) + [unplugin-icons](docs/unplugin-icons.md) + [Tiptap](docs/tiptap.md)
+7. Styling: [Tailwind CSS](docs/tailwind.md) + [shadcn/ui](docs/shadcn-ui.md) + [Kibo UI](docs/kibo-ui.md) + [unplugin-icons](docs/unplugin-icons.md) + [Tiptap](docs/tiptap.md)
 8. Data Validation: [Zod](docs/zod.md)
 9. Form Handling: [Conform](docs/conform.md)
 10. Backend API Framework: [Hono](docs/hono.md) + [tRPC](docs/trpc.md)
@@ -200,7 +200,7 @@ Deployment:
 9. Communication & Community: [Telegram](docs/telegram.md) / [Discord](docs/discord.md) / [X (Twitter)](docs/x.md)
 10. CRM: [Attio](docs/attio.md)
 11. Business Database & MVP Builder: [Airtable](docs/airtable.md) / [Baserow](docs/baserow.md) / [NocoDB](docs/nocodb.md)
-12. Project/Product Management: [Linear](docs/linear.md) / [Plane.so](docs/plane.md) / [Eververse](docs/eververse.md) / [Basecamp](docs/basecamp.md)
+12. Product/Project Management: [Linear](docs/linear.md) / [Plane.so](docs/plane.md) / [Eververse.ai](docs/eververse-ai.md) / [Basecamp](docs/basecamp.md)
 13. Docs: [Outline](docs/outline.md) / [Notion](docs/notion.md)
 14. Social Media Management: [Buffer](docs/buffer.md) / [Mixpost](docs/mixpost.md) / [Postiz](docs/postiz.md)
 15. Blog: [Hashnode](docs/hashnode.md) / [Ghost](docs/ghost.md)

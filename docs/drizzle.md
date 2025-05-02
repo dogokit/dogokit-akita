@@ -8,6 +8,6 @@ Links:
 
 - [Drizzle ORM](https://orm.drizzle.team)
 
-References:
+Links:
 
 - [Drizzle or Prisma? I Built an App Twice to Find Out Which Is Better - DEV Community](https://dev.to/zenstack/drizzle-or-prisma-i-built-an-app-twice-to-find-out-which-is-better-1f82)

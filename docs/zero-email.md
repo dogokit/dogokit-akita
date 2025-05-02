@@ -1,5 +1,5 @@
 # Zero Email / 0.email
 
-References:
+Links:
 
 - [Zero](https://0.email)

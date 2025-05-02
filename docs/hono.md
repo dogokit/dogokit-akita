@@ -15,7 +15,7 @@ export default app;
 
 Read the official [Get Started](https://hono.dev/docs) guide.
 
-References:
+Links:
 
 - [Hono Examples](https://hono.dev/guides/examples)
 - [Hono Best Practices](https://hono.dev/docs/guides/best-practices)
