@@ -220,11 +220,12 @@ Things that are the primary default.
 
 Templates:
 
+- [Better-T Stack](https://better-t-stack.amanv.dev)
+- [T3 Stack](https://create.t3.gg)
 - [Next-Forge](https://next-forge.com)
 - [LaunchFast](https://launchfa.st)
 - [Indiflow](https://indiflow.app)
 - [Zero To Shipped](https://zerotoshipped.com)
-- [T3 Stack](https://create.t3.gg)
 - [Built At Lightspeed](https://builtatlightspeed.com)
 - [`midday-ai/v1`](https://github.com/midday-ai/v1)
 - [`ixahmedxi/orbitkit`](https://github.com/ixahmedxi/orbitkit)
