@@ -16,7 +16,12 @@ Links:
 Complementaries:
 
 - [OriginUI](https://originui.com)
-- [JollyUI](https://jollyui.dev)
+- [Kibo UI](https://kibo-ui.com)
+- [shadcn Registries](https://shadcn-registries.vercel.app)
+- [registry.directory](https://registry.directory): a collection of shadcn/ui registries
+
+More:
+
 - [SyntaxUI](https://syntaxui.com)
 - [21st.dev](https://21st.dev)
 - [Justd](https://getjustd.com)

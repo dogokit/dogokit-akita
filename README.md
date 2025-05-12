@@ -88,7 +88,7 @@ Things that are the primary default.
 4. Bundler: [Vite](docs/vite.md)
 5. Frontend Library: [React](docs/react.md)
 6. Frontend Framework: [React Router](docs/react-router.md)
-7. Styling: [Tailwind CSS](docs/tailwind.md) + [shadcn/ui](docs/shadcn-ui.md) + [Kibo UI](docs/kibo-ui.md) + [unplugin-icons](docs/unplugin-icons.md) + [Tiptap](docs/tiptap.md)
+7. Styling: [Tailwind CSS](docs/tailwind.md) + [shadcn/ui](docs/shadcn-ui.md) + [unplugin-icons](docs/unplugin-icons.md) + [Tiptap](docs/tiptap.md)
 8. Data Validation: [Zod](docs/zod.md)
 9. Form Handling: [Conform](docs/conform.md)
 10. Backend API Framework: [Hono](docs/hono.md) + [tRPC](docs/trpc.md)
