@@ -91,7 +91,7 @@ Things that are the primary default.
 7. Styling: [Tailwind CSS](docs/tailwind.md) + [shadcn/ui](docs/shadcn-ui.md) + [unplugin-icons](docs/unplugin-icons.md) + [Tiptap](docs/tiptap.md)
 8. Data Validation: [Zod](docs/zod.md)
 9. Form Handling: [Conform](docs/conform.md)
-10. Backend API Framework: [Hono](docs/hono.md) + [tRPC](docs/trpc.md)
+10. Backend API Framework: [Hono](docs/hono.md) + [tRPC](docs/trpc.md) or [oRPC](docs/orpc.md)
 11. Auth Library: [Better Auth](docs/better-auth.md)
 12. Database ORM & RBAC: [Prisma](docs/prisma.md) + [Permit.io](docs/permit-io.md)
 13. Database/DBMS & GUI: [PostgreSQL](docs/postgresql.md) + [TablePlus](docs/tableplus.md)
@@ -99,6 +99,7 @@ Things that are the primary default.
 15. Email: [Resend](docs/resend.md) + [React Email](docs/react-email.md)
 16. Testing: [Vitest](docs/vitest.md) + [Testing Library](docs/testing-library.md) + [Playwright](docs/playwright.md) + [Storybook](docs/storybook.md) + [MSW](docs/msw.md)
 17. Payment: [Polar](docs/polar.md) + [Xendit](docs/xendit.md)
+18. Documentation: [Fumadocs](docs/fumadocs.md)
 
 ### Development Tools
 
@@ -143,31 +144,32 @@ Things that are the primary default.
 
 ### Alternative: Workflow and Features
 
-1. Runtime: [Node.js](docs/nodejs.md) / [Deno](docs/deno.md)
-2. Format and Lint: [Biome](docs/biome.md) + [Ultracite](docs/ultracite.md) / [Prettier](docs/prettier.md) / [ESLint](docs/eslint.md) / [Oxc](docs/oxc.md)
-3. Bundler: [Turbopack](docs/turbopack.md)
-4. Monorepo: [moonrepo](docs/moonrepo.md) with [Changesets](docs/changesets.md)
-5. Release: [autorc](docs/autorc.md)
-6. Secrets and Environment Variables: [.env](docs/env.md) / [t3-env](docs/t3-env.md) / [unplugin-environment](docs/unplugin-environment.md)
-7. Utility: [es-toolkit](docs/es-toolkit.md)
-8. CLI and Prompt: [Term.Ink](docs/term-ink.md) / [Clack](docs/clack.md) / [Commander.js](docs/commanderjs.md) / [oclif](docs/oclif.md) / [Inquirer](docs/inquirer.md)
-9. Performance: [Million.js](docs/millionjs.md)
-10. Search: [Meilisearch](docs/meilisearch.md) / [Typesense](docs/typesense.md)
-11. Process: [Effect](docs/effect.md)
-12. Dependency: [Knip](docs/knip.md)
-13. Logging: [pino](docs/pino.md)
-14. Internationalization (i18n): [Lingui](docs/lingui.md)
-15. Accessibility (a11y): [Lighthouse](docs/lighthouse.md)
-16. Realtime: [SSE](docs/sse.md) / [Socket.IO](docs/socket-io.md) / [Liveblocks](docs/liveblocks.md) / [InstantDB](docs/instantdb.md) / [Electric](docs/electric.md)
-17. Cache and Message Queues: [Redis](docs/redis.md) / [BullMQ](docs/bullmq.md) / In-Memory
-18. Mobile: [React Native](docs/react-native.md) with [Expo](docs/expo.md)
-19. Storage: Unix File System
-20. Mailers: SMTP
-21. Documentation: [Nextra](docs/nextra.md)
+1. VCS/SCM: [Git](docs/git.md)
+2. Runtime: [Node.js](docs/nodejs.md) / [Deno](docs/deno.md)
+3. Format and Lint: [Biome](docs/biome.md) + [Ultracite](docs/ultracite.md) / [Prettier](docs/prettier.md) / [ESLint](docs/eslint.md) / [Oxc](docs/oxc.md)
+4. Bundler: [Turbopack](docs/turbopack.md)
+5. Monorepo: [moonrepo](docs/moonrepo.md) with [Changesets](docs/changesets.md)
+6. Release: [autorc](docs/autorc.md)
+7. Secrets and Environment Variables: [.env](docs/env.md) / [t3-env](docs/t3-env.md) / [unplugin-environment](docs/unplugin-environment.md)
+8. Utility: [es-toolkit](docs/es-toolkit.md)
+9. CLI and Prompt: [Term.Ink](docs/term-ink.md) / [Clack](docs/clack.md) / [Commander.js](docs/commanderjs.md) / [oclif](docs/oclif.md) / [Inquirer](docs/inquirer.md)
+10. Performance: [Million.js](docs/millionjs.md)
+11. Search: [Meilisearch](docs/meilisearch.md) / [Typesense](docs/typesense.md)
+12. Process: [Effect](docs/effect.md)
+13. Dependency: [Knip](docs/knip.md)
+14. Logging: [pino](docs/pino.md)
+15. Internationalization (i18n): [Lingui](docs/lingui.md)
+16. Accessibility (a11y): [Lighthouse](docs/lighthouse.md)
+17. Realtime: [SSE](docs/sse.md) / [Socket.IO](docs/socket-io.md) / [Liveblocks](docs/liveblocks.md) / [InstantDB](docs/instantdb.md) / [Electric](docs/electric.md)
+18. Cache and Message Queues: [Redis](docs/redis.md) / [BullMQ](docs/bullmq.md) / In-Memory
+19. Mobile: [React Native](docs/react-native.md) with [Expo](docs/expo.md)
+20. Storage: Unix File System
+21. Mailers: SMTP
+22. Documentation: [Nextra](docs/nextra.md)
 
 ### Alternative: 3rd Party Services
 
-1. Repo: [Git](docs/git.md) on [GitHub](docs/github.md) / [GitLab](docs/gitlab.md) / [Bitbucket](docs/bitbucket.md)
+1. Repo: [GitHub](docs/github.md) / [GitLab](docs/gitlab.md) / [Bitbucket](docs/bitbucket.md)
 2. Analytics: [PostHog](docs/posthog.md) / [Openpanel.dev](docs/openpanel.md) / [Simple Analytics](docs/simpleanalytics.md) / [Plausible](docs/plausible.md)
 3. Payment:
    - International: [Polar](docs/polar.md) / [Lemon Squeezy](docs/lemonsqueezy.md) / [Stripe](docs/stripe.md)
@@ -190,6 +192,7 @@ Things that are the primary default.
 19. Documentation: [Mintlify](docs/mintlify.md)
 20. Automation: [n8n](docs/n8n.md)
 21. API Key Management: [Unkey](docs/unkey.md)
+22. WhatsApp: [Qontak](docs/qontak.md) / [Twilio](docs/twilio.md)
 
 ### Alternative: Communication Tools
 
