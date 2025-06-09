@@ -9,6 +9,7 @@ Links:
 - [`sergiodxa/react-router-color-scheme-example`](https://github.com/sergiodxa/react-router-color-scheme-example): React Router + Color Scheme Example
 - [Remix v2](https://remix.run)
 - [Remix Utils v8](https://sergiodxa.github.io/remix-utils)
+- [How to Get React Router v7 to Work with AI - React Tips with Brooks Lybrand on YouTube](https://www.youtube.com/watch?v=gkBjxB_3kDs)
 
 ## Special Files: Entry Client/Server
 
