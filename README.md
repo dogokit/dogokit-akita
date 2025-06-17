@@ -40,7 +40,7 @@
   - [ ] Keyboard Shortcuts
 - [x] Web Analytics
 - [x] AI Workflow Rules
-- [ ] AI Integration
+- [ ] AI Management & Agent Configuration
 - [x] SEO (Search Engine Optimization) and Meta Tags
 - [x] SSR (Server-Side Rendering)
 - [x] Type-Safe CRUD (Create, Read, Update, Delete)
@@ -97,35 +97,37 @@ Things that are the primary default.
 13. Database/DBMS & GUI: [PostgreSQL](docs/postgresql.md) + [TablePlus](docs/tableplus.md)
 14. Container: [Docker](docs/docker.md) + [Docker Compose](docs/docker-compose.md) with [OrbStack](docs/orbstack.md) / [Docker Desktop](docs/docker-desktop.md)
 15. Email: [Resend](docs/resend.md) + [React Email](docs/react-email.md)
-16. Testing: [Vitest](docs/vitest.md) + [Testing Library](docs/testing-library.md) + [Playwright](docs/playwright.md) + [Storybook](docs/storybook.md) + [MSW](docs/msw.md)
-17. Payment: [Polar](docs/polar.md) + [Xendit](docs/xendit.md)
-18. Documentation: [Fumadocs](docs/fumadocs.md)
+16. File Upload: [Uploadcare](docs/uploadcare.md) or [Cloudflare R2](docs/cloudflare-r2.md)
+17. Testing: [Vitest](docs/vitest.md) + [Testing Library](docs/testing-library.md) + [Playwright](docs/playwright.md) + [Storybook](docs/storybook.md) + [MSW](docs/msw.md)
+18. Payment: [Polar](docs/polar.md) + [Xendit](docs/xendit.md)
+19. Security: [Arcjet](docs/arcjet.md)
+20. Documentation: [Fumadocs](docs/fumadocs.md)
 
 ### Development Tools
 
 1. Code Editor: [VS Code](docs/vscode.md) / [NeoVim](docs/neovim.md)
-2. AI Model: [ChatGPT](docs/chatgpt.md) / [Claude](docs/claude.md) / [Perplexity](docs/perplexity.md) / [Galileo AI](docs/galileo-ai.md)
-3. AI Code Editor: [GitHub Copilot](docs/github-copilot.md) / [Cursor AI](docs/cursor.md) / [Codeium](docs/codeium.md) / [Supermaven](docs/supermaven.md) / [Tabnine](docs/tabnine.md)
-4. AI Code Generator: [v0.dev](docs/v0.md) / [Marblism](docs/marblism.md)
+2. AI Code Editor: [GitHub Copilot](docs/github-copilot.md) / [Cursor](docs/cursor.md) / [Windsurf](docs/windsurf.md)
+3. AI Model: [GPT by OpenAI](docs/gpt.md) / [Claude by Anthropic](docs/claude.md) / [Gemini by Google](docs/gemini.md) / [Perplexity](docs/perplexity.md)
+4. AI Code Generator: [v0 by Vercel](docs/v0.md) / [Stitch by Google](docs/stitch-google.md)
 5. AI Docs: [Context7](docs/context7.md)
 
-### Deployment Platforms
+### Deployment: PaaS and Services
 
 1. General: [Render](docs/render.md) / [Railway](docs/railway.md) / [Fly.io](docs/flyio.md) / [Cloudflare Workers](docs/cloudflare-workers.md)
 2. Frontend: [Vercel](docs/vercel.md) / [Netlify](docs/netlify.md) / [Cloudflare Pages](docs/cloudflare-pages.md)
-3. Database: [Neon](docs/neon.md) / [Supabase](docs/supabase.md)
+3. Database: [Prisma Postgres](docs/prisma-postgres.md) / [Neon](docs/neon.md) / [Supabase](docs/supabase.md)
 4. Storage: [Cloudflare R2](docs/cloudflare-r2.md) / [Amazon S3](docs/amazon-s3.md)
+5. Self-Host: [Coolify](docs/coolify.md) / [Dokku](docs/dokku.md)
 
 ### Alternative: Manual Deployment
 
 1. OS: [Debian](docs/debian.md) / [Ubuntu](docs/ubuntu.md)
 2. Web Server and Proxy: [Caddy](docs/caddy.md) / [Nginx](docs/nginx.md)
 3. SSL/TLS Certificate: [Let's Encrypt](docs/lets-encrypt.md)
-4. Self-Host PaaS: [Coolify](docs/coolify.md) / [Dokku](docs/dokku.md)
-5. Automation: [Kamal Deploy](docs/kamal-deploy.md) / [Ansible](docs/ansible.md)
-6. Cloud: [Google Cloud](docs/google-cloud.md) / [Amazon Web Services](docs/amazon-web-services.md)
-7. VPS: [IONOS](docs/ionos.md) / [Linode](docs/linode.md) / [DigitalOcean](docs/digitalocean.md) / [Amazon Lightsail](docs/amazon-lightsail.md)
-8. Bare Metal: [Hetzner](docs/hetzner.md) / [Vultr](docs/vultr.md) / [Scaleway](docs/scaleway.md)
+4. Automation: [Kamal Deploy](docs/kamal-deploy.md) / [Ansible](docs/ansible.md)
+5. Cloud: [Google Cloud](docs/google-cloud.md) / [Amazon Web Services](docs/amazon-web-services.md)
+6. VPS: [IONOS](docs/ionos.md) / [Linode](docs/linode.md) / [DigitalOcean](docs/digitalocean.md) / [Amazon Lightsail](docs/amazon-lightsail.md)
+7. Bare Metal: [Hetzner](docs/hetzner.md) / [Vultr](docs/vultr.md) / [Scaleway](docs/scaleway.md)
 
 ### Alternative: Web Frameworks
 
@@ -178,8 +180,8 @@ Things that are the primary default.
 5. Secrets and Environment Variables: [Infisical](docs/infisical.md) / [Doppler](docs/doppler.md)
 6. File Storage/Upload: [Uploadcare](docs/uploadcare.md) / [Cloudinary](docs/cloudinary.md)
 7. Avatar: [DiceBear](docs/dicebear.md) / [Gravatar](docs/gravatar.md)
-8. Email Transactional: [Nodemailer](docs/nodemailer.md) / [Plunk](docs/plunk.md) / [Resend](docs/resend.md) / [Amazon SES](docs/amazon-ses.md)
-9. Email Marketing/Newsletter: [Loops.so](docs/loops.md) / [Beehiiv](docs/beehiiv.md) / [Bento](docs/bento.md)
+8. Email Transactional: [Amazon SES](docs/amazon-ses.md) / [Resend](docs/resend.md) / [Nodemailer](docs/nodemailer.md) / [Plunk](docs/plunk.md)
+9. Email Marketing/Newsletter: [Loops.so](docs/loops.md) / [Bento](docs/bento.md) / [Beehiiv](docs/beehiiv.md)
 10. Email Tool: [VerifyRight](docs/verifyright.md)
 11. APM, Observability, Error Tracking: [Sentry](docs/sentry.md) + [OpenTelemetry](docs/opentelemetry.md)
 12. Auth: [WorkOS](docs/workos.md) / [Clerk](docs/clerk.md)

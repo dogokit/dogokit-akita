@@ -11,11 +11,7 @@
     "mikestead.dotenv",
     "moalamri.inline-fold",
     "prisma.prisma",
-    "stylelint.vscode-stylelint",
     "usernamehw.errorlens",
     "yoavbls.pretty-ts-errors",
-    "yzhang.markdown-all-in-one",
-    "zenstack.zenstack",
-    "supermaven.supermaven"
   ]
 }

@@ -1,4 +1,4 @@
-# Marblism
+# Marblism (Deprecated)
 
 Marblism is a generative AI platform that uses LLMs to generate code, documentation, and more.
 
