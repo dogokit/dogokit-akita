@@ -17,6 +17,7 @@ Complementaries:
 
 - [OriginUI](https://originui.com)
 - [Kibo UI](https://kibo-ui.com)
+- [Launch UI](https://launchuicomponents.com)
 - [shadcn Registries](https://shadcn-registries.vercel.app)
 - [registry.directory](https://registry.directory): a collection of shadcn/ui registries
 
