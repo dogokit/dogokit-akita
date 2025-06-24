@@ -28,46 +28,46 @@
 5. Develop with better AI workflow.
 6. Demonstrate the JavaScript developer experience (DX) ecosystem capability. As an alternative to existing one such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
 
-## Features
+## Primary Features
 
-- [x] Landing Page That Converts
-- [x] Responsive UI Design and Components
-  - [x] WYSIWYG Editor
-  - [x] Theme and Dark Mode
-  - [ ] Optimistic UI/UX
-  - [ ] Lightweight Animation
-  - [ ] Command Palette/Bar
-  - [ ] Keyboard Shortcuts
-- [x] Web Analytics
-- [x] AI Workflow Rules
-- [ ] AI Management & Agent Configuration
-- [x] SEO (Search Engine Optimization) and Meta Tags
-- [x] SSR (Server-Side Rendering)
-- [x] Type-Safe CRUD (Create, Read, Update, Delete)
-- [x] Database and ORM
-- [x] Environment Variables for Local, Staging, Production
-- [x] Deployment with Docker and Docker Compose
-- [x] Authentication (AuthN) and Authorization (AuthZ)
-- [ ] Auth with OAuth or Social Login
-- [x] User Management, Register, Login, Onboarding, Profile, Invite Users, Logout
-- [ ] Organization and Team Management
-- [ ] Role and Permission with Role-Based Access Control (RBAC)
-- [x] Assets Management with File/Image Upload on Cloudflare R2
-- [x] User and Admin Dashboard/Panel
-- [x] Form Handling on Client and Server
-- [ ] Pagination on Client and Server
-- [x] Email Templates, Notification, Marketing, Verification
-- [x] Payment Gateway Integration with Billing, Subscription, Invoice
-- [ ] Blog, Release Notes
-- [ ] Scheduled/Cron Jobs
-- [ ] Background Jobs/Workers
-- [ ] Error Monitoring with Sentry
-- [ ] Timezone and Date/Time Picker
-- [ ] Internationalization (i18n) and Localization (l10n)
-- [ ] Accessibility (a11y)
-- [ ] Code Generator/Scaffolder
-- [ ] Webhooks
-- [ ] Community
+- Landing Page That Converts
+- Responsive UI Design and Components
+  - WYSIWYG Editor
+  - Theme and Dark Mode
+  - Optimistic UI/UX
+  - Lightweight Animation
+  - Command Palette/Bar
+  - Keyboard Shortcuts
+- Web Analytics
+- AI Workflow Rules
+- AI Management & Agent Configuration
+- SEO (Search Engine Optimization) and Meta Tags
+- SSR (Server-Side Rendering)
+- Type-Safe CRUD (Create, Read, Update, Delete)
+- Database and ORM
+- Environment Variables for Local, Staging, Production
+- Deployment with Docker and Docker Compose
+- Authentication (AuthN) and Authorization (AuthZ)
+- Auth with OAuth or Social Login
+- User Management, Register, Login, Onboarding, Profile, Invite Users, Logout
+- Organization and Team Management
+- Role and Permission with Role-Based Access Control (RBAC)
+- Assets Management with File/Image Upload on Cloudflare R2
+- User and Admin Dashboard/Panel
+- Form Handling on Client and Server
+- Pagination on Client and Server
+- Email Templates, Notification, Marketing, Verification
+- Payment Gateway Integration with Billing, Subscription, Invoice
+- Blog, Release Notes
+- Scheduled/Cron Jobs
+- Background Jobs/Workers
+- Error Monitoring with Sentry
+- Timezone and Date/Time Picker
+- Internationalization (i18n) and Localization (l10n)
+- Accessibility (a11y)
+- Code Generator/Scaffolder
+- Webhooks
+- Community
 
 ## Tech Stack
 
@@ -106,10 +106,12 @@ Things that are the primary default.
 ### Development Tools
 
 1. Code Editor: [VS Code](docs/vscode.md) / [NeoVim](docs/neovim.md)
-2. AI Code Editor: [GitHub Copilot](docs/github-copilot.md) / [Cursor](docs/cursor.md) / [Windsurf](docs/windsurf.md)
-3. AI Model: [GPT by OpenAI](docs/gpt.md) / [Claude by Anthropic](docs/claude.md) / [Gemini by Google](docs/gemini.md) / [Perplexity](docs/perplexity.md)
-4. AI Code Generator: [v0 by Vercel](docs/v0.md) / [Stitch by Google](docs/stitch-google.md)
-5. AI Docs: [Context7](docs/context7.md)
+2. Code Review: [CodeRabbit](docs/coderabbit.md)
+3. AI Code Editor: [Cursor](docs/cursor.md) / [Windsurf](docs/windsurf.md)
+4. AI Model: [GPT by OpenAI](docs/gpt.md) / [Claude by Anthropic](docs/claude.md) / [Gemini by Google](docs/gemini.md) / [Perplexity](docs/perplexity.md)
+5. AI Agent: [GitHub Copilot](docs/github-copilot.md) / [Augment Code](docs/augment-code.md) / [Kilo Code](docs/kilo-code.md) / [Roo Code](docs/roocode.md) / [Cline](docs/cline.md) / [Codegen](docs/codegen.md)
+6. AI Code Generator: [v0 by Vercel](docs/v0.md) / [Stitch by Google](docs/stitch-google.md)
+7. AI Docs: [Context7](docs/context7.md)
 
 ### Deployment: PaaS and Services
 
@@ -226,13 +228,13 @@ Things that are the primary default.
 
 Templates:
 
+- [Built At Lightspeed](https://builtatlightspeed.com)
 - [Better-T Stack](https://better-t-stack.amanv.dev)
 - [T3 Stack](https://create.t3.gg)
 - [Next-Forge](https://next-forge.com)
 - [LaunchFast](https://launchfa.st)
 - [Indiflow](https://indiflow.app)
 - [Zero To Shipped](https://zerotoshipped.com)
-- [Built At Lightspeed](https://builtatlightspeed.com)
 - [`midday-ai/v1`](https://github.com/midday-ai/v1)
 - [`ixahmedxi/orbitkit`](https://github.com/ixahmedxi/orbitkit)
 
