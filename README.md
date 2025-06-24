@@ -101,7 +101,8 @@ Things that are the primary default.
 17. Testing: [Vitest](docs/vitest.md) + [Testing Library](docs/testing-library.md) + [Playwright](docs/playwright.md) + [Storybook](docs/storybook.md) + [MSW](docs/msw.md)
 18. Payment: [Polar](docs/polar.md) + [Xendit](docs/xendit.md)
 19. Security: [Arcjet](docs/arcjet.md)
-20. Documentation: [Fumadocs](docs/fumadocs.md)
+20. Image Optimization: [Unpic](docs/unpic.md)
+21. Documentation: [Fumadocs](docs/fumadocs.md)
 
 ### Development Tools
 
