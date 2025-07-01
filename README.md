@@ -175,10 +175,10 @@ Things that are the primary default.
 ### Alternative: 3rd Party Services
 
 1. Repo: [GitHub](docs/github.md) / [GitLab](docs/gitlab.md) / [Bitbucket](docs/bitbucket.md)
-2. Analytics: [PostHog](docs/posthog.md) / [Openpanel.dev](docs/openpanel.md) / [Simple Analytics](docs/simpleanalytics.md) / [Plausible](docs/plausible.md)
-3. Payment:
+2. Payment:
    - International: [Polar](docs/polar.md) / [Lemon Squeezy](docs/lemonsqueezy.md) / [Stripe](docs/stripe.md)
    - Indonesia: [Xendit](docs/xendit.md) / [Midtrans](docs/midtrans.md)
+3. Analytics: [DataFast](docs/datafast.md) / [PostHog](docs/posthog.md) / [Openpanel.dev](docs/openpanel.md) / [Simple Analytics](docs/simpleanalytics.md) / [Plausible](docs/plausible.md)
 4. Service Monitoring: [OpenStatus](docs/openstatus.md) / [BetterStack](docs/betterstack.md)
 5. Secrets and Environment Variables: [Infisical](docs/infisical.md) / [Doppler](docs/doppler.md)
 6. File Storage/Upload: [Uploadcare](docs/uploadcare.md) / [Cloudinary](docs/cloudinary.md)
