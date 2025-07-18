@@ -28,7 +28,20 @@
 5. Develop with better AI workflow.
 6. Demonstrate the JavaScript developer experience (DX) ecosystem capability. As an alternative to existing one such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
 
-## Primary Features
+## Features
+
+### Primary
+
+1. Frontend: UI/UX
+2. Backend: APIs and logic
+3. Database: store user actions
+4. Auth: sign up, sign in, sign out
+5. Security: protect your data
+6. Analytics: track usage
+7. Payments: get paid
+8. Notifications: email, push
+
+### Details
 
 - Landing Page That Converts
 - Responsive UI Design and Components
