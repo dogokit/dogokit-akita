@@ -1,0 +1,3 @@
+# dotenvx
+
+- <https://dotenvx.com>
