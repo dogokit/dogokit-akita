@@ -32,18 +32,20 @@
 
 ### Primary
 
-1. Frontend: UI/UX
-2. Backend: APIs and logic
-3. Database: store user actions
-4. Auth: sign up, sign in, sign out
-5. Security: protect your data
-6. Analytics: track usage
+1. Frontend: UI/UX, web, mobile
+2. Backend: API, logic
+3. Database: store data
+4. Security: protect data
+5. Auth: sign up/in/out, role
+6. Storage: upload/download files
 7. Payments: get paid
-8. Notifications: email, push
+8. Analytics: track usage
+9. Notifications: email, push
 
 ### Details
 
 - Landing Page That Converts
+  - Call to Action (CTA)
 - Responsive UI Design and Components
   - WYSIWYG Editor
   - Theme and Dark Mode
