@@ -19,6 +19,13 @@
 - Optional full-stack web framework
 - Optional backend API and database ORM
 
+## Variants
+
+- [Demo at dogokit.allnimal.com](https://dogokit.allnimal.com)
+- [Dogokit Akita](https://github.com/dogokit/dogokit-akita)
+- [Dogokit Beagle](https://github.com/dogokit/dogokit-beagle)
+- [Dogokit Corgi](https://github.com/dogokit/dogokit-corgi)
+
 ## Benefits
 
 1. Build website or web app quickly, with pre-built modules.
