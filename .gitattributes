@@ -1,0 +1,5 @@
+* linguist-language=TypeScript
+*.svg binary
+*.png binary
+*.jpg binary
+*.jpeg binary
