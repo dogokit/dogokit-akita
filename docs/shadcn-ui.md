@@ -18,6 +18,7 @@ Complementaries:
 - [OriginUI](https://originui.com)
 - [Kibo UI](https://kibo-ui.com)
 - [Launch UI](https://launchuicomponents.com)
+- [Auth CN](https://auth.uprizing.me)
 - [shadcn Registries](https://shadcn-registries.vercel.app)
 - [registry.directory](https://registry.directory): a collection of shadcn/ui registries
 
@@ -25,7 +26,6 @@ More:
 
 - [SyntaxUI](https://syntaxui.com)
 - [21st.dev](https://21st.dev)
-- [Justd](https://getjustd.com)
 - [Tremor](https://tremor.so) dashboard components
 - [cult/ui](https://cult-ui.com)
 - [v0 by Vercel](https://v0.dev)
