@@ -101,6 +101,7 @@ Things that are the primary default.
 - Frontend: React, Tailwind CSS
 - Backend: Hono, tRPC
 - Database: SQL, ORM
+- Mobile: React Native with Expo, Uniwind
 
 ### Default Stack
 
