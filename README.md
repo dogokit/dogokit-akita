@@ -11,6 +11,11 @@
   </p>
 </div>
 
+> [!NOTE]
+> This repository is **documentation only**. It is a curated reference of tools, stack choices and guides. It contains **no actual implementation** of the features listed below (auth, payments, storage, etc.). Treat the content as notes and recommendations to build from.
+>
+> Releases are tagged as `akita-1`, `akita-2`, and so on.
+
 ## Goal
 
 🐶Dogokit Akita is a comprehensive and opinionated full stack application development kit. Encompassing JavaScript/TypeScript, Node.js/Deno/Bun, and more. It serves as a versatile reference for constructing robust web applications, that can scale from zero to millions of users.
