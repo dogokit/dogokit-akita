@@ -2,4 +2,4 @@
 
 Default:
 
-- Framework: Fumadocs with React Router
+- Framework: Fumadocs

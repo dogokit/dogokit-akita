@@ -5,7 +5,6 @@ Default:
 - Language: TypeScript
 - Runtime: Bun
 - Framework: React
-- Routing: React Router v7 Framework
 - Styling: Tailwind CSS
 - UI Components: shadcn/ui
 - API: tRPC

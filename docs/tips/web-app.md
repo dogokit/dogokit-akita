@@ -89,7 +89,6 @@ Tool:
 Client, Web:
 
 - [React](../react.md)
-- [React Router Framework](../react-router.md)
 
 Styling, UI:
 

@@ -21,7 +21,7 @@ These are the complete things that can be used and recommended, with more focus 
 
 - UI library: [React](react.md) v19 👍
   - Optimization: [Million.js](millionjs.md)
-- Meta-framework: [React Router](react-router.md) v7 / [Remix](remix.md) v2 / [Next.js](nextjs.md) v15
+- Meta-framework: [Remix](remix.md) v2 / [Next.js](nextjs.md) v15
   - Bundler: [Vite](vite.md) 👍
   - PWA: Vite PWA Plugin
 - Auth: [Better Auth](better-auth.md) / [Remix Auth](remix-auth.md) / [Lucia Auth](lucia-auth.md)

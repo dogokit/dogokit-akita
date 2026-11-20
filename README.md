@@ -20,7 +20,7 @@
 
 🐶Dogokit Akita is a comprehensive and opinionated full stack application development kit. Encompassing JavaScript/TypeScript, Node.js/Deno/Bun, and more. It serves as a versatile reference for constructing robust web applications, that can scale from zero to millions of users.
 
-- Default frontend web with React, React Router, Tailwind CSS.
+- Default frontend web with React, Tailwind CSS.
 - Optional full-stack web framework
 - Optional backend API and database ORM
 
@@ -115,22 +115,21 @@ Things that are the primary default.
 3. Format and Lint: [Biome](stacks/biome.md)
 4. Bundler: [Vite](stacks/vite.md)
 5. Frontend Library: [React](stacks/react.md)
-6. Frontend Framework: [React Router](stacks/react-router.md)
-7. Styling: [Tailwind CSS](stacks/tailwind.md) + [shadcn/ui](stacks/shadcn-ui.md) + [unplugin-icons](stacks/unplugin-icons.md) + [Tiptap](stacks/tiptap.md)
-8. Data Validation: [Zod](stacks/zod.md)
-9. Form Handling: [Conform](stacks/conform.md)
-10. Backend API Framework: [Hono](stacks/hono.md) + [tRPC](stacks/trpc.md) or [oRPC](stacks/orpc.md)
-11. Auth Library: [Better Auth](stacks/better-auth.md)
-12. Database ORM & RBAC: [Prisma](stacks/prisma.md) + [Permit.io](stacks/permit-io.md)
-13. Database/DBMS & GUI: [PostgreSQL](stacks/postgresql.md) + [TablePlus](stacks/tableplus.md)
-14. Container: [Docker](stacks/docker.md) + [Docker Compose](stacks/docker-compose.md) with [OrbStack](stacks/orbstack.md) / [Docker Desktop](stacks/docker-desktop.md)
-15. Email: [Resend](stacks/resend.md) + [React Email](stacks/react-email.md)
-16. File Upload: [Uploadcare](stacks/uploadcare.md) or [Cloudflare R2](stacks/cloudflare-r2.md)
-17. Testing: [Vitest](stacks/vitest.md) + [Testing Library](stacks/testing-library.md) + [Playwright](stacks/playwright.md) + [Storybook](stacks/storybook.md) + [MSW](stacks/msw.md)
-18. Payment: [Polar](stacks/polar.md) + [Xendit](stacks/xendit.md)
-19. Security: [Arcjet](stacks/arcjet.md)
-20. Image Optimization: [Unpic](stacks/unpic.md)
-21. Documentation: [Fumadocs](stacks/fumadocs.md)
+6. Styling: [Tailwind CSS](stacks/tailwind.md) + [shadcn/ui](stacks/shadcn-ui.md) + [unplugin-icons](stacks/unplugin-icons.md) + [Tiptap](stacks/tiptap.md)
+7. Data Validation: [Zod](stacks/zod.md)
+8. Form Handling: [Conform](stacks/conform.md)
+9. Backend API Framework: [Hono](stacks/hono.md) + [tRPC](stacks/trpc.md) or [oRPC](stacks/orpc.md)
+10. Auth Library: [Better Auth](stacks/better-auth.md)
+11. Database ORM & RBAC: [Prisma](stacks/prisma.md) + [Permit.io](stacks/permit-io.md)
+12. Database/DBMS & GUI: [PostgreSQL](stacks/postgresql.md) + [TablePlus](stacks/tableplus.md)
+13. Container: [Docker](stacks/docker.md) + [Docker Compose](stacks/docker-compose.md) with [OrbStack](stacks/orbstack.md) / [Docker Desktop](stacks/docker-desktop.md)
+14. Email: [Resend](stacks/resend.md) + [React Email](stacks/react-email.md)
+15. File Upload: [Uploadcare](stacks/uploadcare.md) or [Cloudflare R2](stacks/cloudflare-r2.md)
+16. Testing: [Vitest](stacks/vitest.md) + [Testing Library](stacks/testing-library.md) + [Playwright](stacks/playwright.md) + [Storybook](stacks/storybook.md) + [MSW](stacks/msw.md)
+17. Payment: [Polar](stacks/polar.md) + [Xendit](stacks/xendit.md)
+18. Security: [Arcjet](stacks/arcjet.md)
+19. Image Optimization: [Unpic](stacks/unpic.md)
+20. Documentation: [Fumadocs](stacks/fumadocs.md)
 
 ### Development Tools
 

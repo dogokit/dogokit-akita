@@ -31,7 +31,7 @@ All packages would be published to <https://jsr.io/@dogokit> by default,
 1.  Field Guide: Learning Resources
 2.  `@dogokit/starter`: The starter kit app
     - Breeze / Jetstream
-3.  `@dogokit/compass`: Application Routing with React Router (Remix) or Next.js
+3.  `@dogokit/compass`: Application Routing with Remix or Next.js
     - Inertia
 4.  `@dogokit/habitat`: UI Templates with Tailwind CSS, Form Handling, Dashboard, Storybook
     - shadcn/ui / justd

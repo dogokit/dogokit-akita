@@ -1,6 +1,6 @@
 # Conform
 
-Conform, created by Edmund Hung, is a type-safe form validation library utilizing web fundamentals to progressively enhance HTML Forms with full support for server frameworks like Remix, React Router, Next.js.
+Conform, created by Edmund Hung, is a type-safe form validation library utilizing web fundamentals to progressively enhance HTML Forms with full support for server frameworks like Remix, Next.js.
 
 Links:
 
