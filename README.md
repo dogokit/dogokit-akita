@@ -113,84 +113,72 @@ Things that are the primary default.
 7. Data Validation: [Zod](stacks/zod.md)
 8. Form Handling: [Conform](stacks/conform.md)
 9. Backend API Framework: [Hono](stacks/hono.md) + [tRPC](stacks/trpc.md) or [oRPC](stacks/orpc.md)
-10. Auth Library: [Better Auth](stacks/better-auth.md)
-11. Database ORM & RBAC: [Prisma](stacks/prisma.md) + [Permit.io](stacks/permit-io.md)
-12. Database/DBMS & GUI: [PostgreSQL](stacks/postgresql.md) + [TablePlus](stacks/tableplus.md)
-13. Container: [Docker](stacks/docker.md) + [Docker Compose](stacks/docker-compose.md) with [OrbStack](stacks/orbstack.md) / [Colima](stacks/colima.md) / [Kiri](stacks/kiri.md) / [Docker Desktop](stacks/docker-desktop.md)
-14. Email: [Resend](stacks/resend.md) + [React Email](stacks/react-email.md)
-15. File Upload: [Uploadcare](stacks/uploadcare.md) or [Cloudflare R2](stacks/cloudflare-r2.md)
-16. Testing: [Vitest](stacks/vitest.md) + [Testing Library](stacks/testing-library.md) + [Playwright](stacks/playwright.md) + [Storybook](stacks/storybook.md) + [MSW](stacks/msw.md)
-17. Payment: [Polar](stacks/polar.md) + [Xendit](stacks/xendit.md)
-18. Security: [Arcjet](stacks/arcjet.md)
-19. Image Optimization: [Unpic](stacks/unpic.md)
-20. Documentation: [Fumadocs](stacks/fumadocs.md)
+10. Database (DBMS): [PostgreSQL](stacks/postgresql.md)
+11. Database Clients: [psql](stacks/postgresql.md) [TablePlus](stacks/tableplus.md)
+12. Database ORM: [Prisma](stacks/prisma.md)
+13. Auth and RBAC: [Better Auth](stacks/better-auth.md) / [Permit.io](stacks/permit-io.md) / [ZenStack](stacks/zenstack.md)
+14. Container: [Docker](stacks/docker.md) + [Docker Compose](stacks/docker-compose.md) with [OrbStack](stacks/orbstack.md) / [Colima](stacks/colima.md) / [Kiri](stacks/kiri.md) / [Docker Desktop](stacks/docker-desktop.md)
+15. Email: [Resend](stacks/resend.md) + [React Email](stacks/react-email.md)
+16. File Upload: [Uploadcare](stacks/uploadcare.md) or [Cloudflare R2](stacks/cloudflare-r2.md)
+17. Testing: [Vitest](stacks/vitest.md) + [Testing Library](stacks/testing-library.md) + [Playwright](stacks/playwright.md) + [Storybook](stacks/storybook.md) + [MSW](stacks/msw.md)
+18. Payment: [Polar](stacks/polar.md)
+19. Security: [Arcjet](stacks/arcjet.md)
+20. Image Optimization: [Unpic](stacks/unpic.md)
+21. Documentation: [Fumadocs](stacks/fumadocs.md)
 
 ### Development Tools
 
-1. Code Editor: [VS Code](stacks/vscode.md) / [NeoVim](stacks/neovim.md) / [Zed](stacks/zed.md)
-2. Code Review: [CodeRabbit](stacks/coderabbit.md)
-3. AI Code Editor: [Cursor](stacks/cursor.md) / [Windsurf](stacks/windsurf.md)
-4. AI Model: [GPT by OpenAI](stacks/gpt.md) / [Claude by Anthropic](stacks/claude.md) / [Gemini by Google](stacks/gemini.md) / [Perplexity](stacks/perplexity.md)
-5. AI Agent: [GitHub Copilot](stacks/github-copilot.md) / [Augment Code](stacks/augment-code.md) / [Kilo Code](stacks/kilo-code.md) / [Roo Code](stacks/roocode.md) / [Cline](stacks/cline.md) / [Codegen](stacks/codegen.md)
-6. AI Code Generator: [v0 by Vercel](stacks/v0.md) / [Stitch by Google](stacks/stitch-google.md)
+1. Terminal: [Ghostty](stacks/ghostty.md) / [Rex](stacks/rex.md)
+2. Code Editor: [Zed](stacks/zed.md) / [NeoVim](stacks/neovim.md)
+3. Code Review: [Gitar](stacks/gitar.md)
+4. AI Code Editor: [Cursor](stacks/cursor.md)
+5. AI Model: [Claude by Anthropic](stacks/claude.md) / [GPT by OpenAI](stacks/gpt.md) / [Gemini by Google](stacks/gemini.md)
+6. AI Code Generator: [v0 by Vercel](stacks/v0.md)
 7. AI Docs: [Context7](stacks/context7.md)
-8. Terminal: [Ghostty](stacks/ghostty.md)
-9. AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md) by Google
-
-### Development Tools: Agentic Development Environments (ADE)
-
-Apps where you run many coding agents side by side. Our top three:
-
-1. [Orca](stacks/orca.md)
-2. [T3 Code](stacks/t3-code.md)
-3. [Paseo](https://paseo.sh)
-
-Alternatives:
-
-- [Delta](stacks/delta.md): multiplayer environment for coding with agents
-- [Herdr](stacks/herdr.md)
-- [Conductor](https://www.conductor.build): Mac only
-- [Superset](https://superset.sh): works with many agents
+8. AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md)
+9. Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md)
+10. Bots: [Grok Bot](stacks/grok-bot.md)
+11. Misc: [Delta](stacks/delta.md) / [Herdr](stacks/herdr.md) / [Paradev](stacks/paradev.md)
 
 ### Deployment: PaaS and Services
 
-1. General: [Render](stacks/render.md) / [Railway](stacks/railway.md) / [Fly.io](stacks/flyio.md) / [Cloudflare Workers](stacks/cloudflare-workers.md) / [Cloudflare Containers](stacks/cloudflare-containers.md)
+1. General: [Railway](stacks/railway.md) / [Render](stacks/render.md) / [Fly.io](stacks/flyio.md) / [Cloudflare Workers](stacks/cloudflare-workers.md) / [Cloudflare Containers](stacks/cloudflare-containers.md)
 2. Frontend: [Vercel](stacks/vercel.md) / [Netlify](stacks/netlify.md) / [Cloudflare Pages](stacks/cloudflare-pages.md)
-3. Database: [Prisma Postgres](stacks/prisma-postgres.md) / [Neon](stacks/neon.md) / [Supabase](stacks/supabase.md)
+3. Database: [Prisma Postgres](stacks/prisma-postgres.md) / [Supabase](stacks/supabase.md) / [Neon](stacks/neon.md)
 4. Storage: [Cloudflare R2](stacks/cloudflare-r2.md) / [Amazon S3](stacks/amazon-s3.md)
 5. Self-Host: [Coolify](stacks/coolify.md) / [Dokku](stacks/dokku.md)
 
-### Alternative: Manual Deployment
+### Deployment: Manual Server Deployment
 
-1. OS: [Debian](stacks/debian.md) / [Ubuntu](stacks/ubuntu.md)
-2. Web Server and Proxy: [Caddy](stacks/caddy.md) / [Nginx](stacks/nginx.md)
-3. SSL/TLS Certificate: [Let's Encrypt](stacks/lets-encrypt.md)
-4. Automation: [Kamal Deploy](stacks/kamal-deploy.md) / [Ansible](stacks/ansible.md)
-5. Cloud: [Google Cloud](stacks/google-cloud.md) / [Amazon Web Services](stacks/amazon-web-services.md)
-6. VPS: [IONOS](stacks/ionos.md) / [Linode](stacks/linode.md) / [DigitalOcean](stacks/digitalocean.md) / [Amazon Lightsail](stacks/amazon-lightsail.md)
-7. Bare Metal: [Hetzner](stacks/hetzner.md) / [Vultr](stacks/vultr.md) / [Scaleway](stacks/scaleway.md)
+1. Cloud: [Amazon Web Services](stacks/amazon-web-services.md) / [Google Cloud](stacks/google-cloud.md)
+2. VPS: [Amazon Lightsail](stacks/amazon-lightsail.md) / [IONOS](stacks/ionos.md) / [Linode](stacks/linode.md) / [DigitalOcean](stacks/digitalocean.md)
+3. OS: [Debian](stacks/debian.md) / [Ubuntu](stacks/ubuntu.md)
+4. Web Server and Proxy: [Caddy](stacks/caddy.md) / [Nginx](stacks/nginx.md)
+5. SSL/TLS Certificate: [Let's Encrypt](stacks/lets-encrypt.md)
+6. Automation: [Ansible](stacks/ansible.md) / [Kamal Deploy](stacks/kamal-deploy.md)
+7. Bare Metal: [Vultr](stacks/vultr.md) / [Scaleway](stacks/scaleway.md) / [Hetzner](stacks/hetzner.md)
 
-### Alternative: Web Frameworks
-
-1. Frontend Framework: [Remix](stacks/remix.md) / [Next.js](stacks/nextjs.md)
-2. Frontend Library Only: [Svelte](stacks/svelte.md) / [Vue.js](stacks/vuejs.md) / [Angular](stacks/angular.md) / [SolidJS](stacks/solidjs.md) / [Qwik](stacks/qwik.md)
-3. Frontend Meta Framework: [SvelteKit](stacks/sveltekit.md), [Nuxt](stacks/nuxt.md), [SolidStart](stacks/solidstart.md), [Qwik City](stacks/qwik-city.md)
-4. Non-JS Full Stack Framework: [Laravel](stacks/laravel.md) / [Rails](stacks/rails.md) / [Django](stacks/django.md)
-
-### Alternative: Separated Backend
+### Backend-Only Web Frameworks
 
 1. BaaS: [Keel](stacks/keel.md) / [Directus](stacks/directus.md) / [Strapi](stacks/strapi.md) / [Payload](stacks/payload.md) / [PocketBase](stacks/pocketbase.md) / [Supabase](stacks/supabase.md) / [Firebase](stacks/firebase.md)
-2. [REST API](stacks/rest-api.md): [Hono](stacks/hono.md) with [Swagger](stacks/swagger.md) generated by [ZenStack](stacks/zenstack.md) and [Scalar](stacks/scalar.md) for refined UX
+2. [REST API](stacks/rest-api.md): [Hono](stacks/hono.md) with [OpenAPI Swagger](stacks/openapi-swagger.md) generated by [Scalar](stacks/scalar.md)
 3. [GraphQL](stacks/graphql.md): [Apollo](stacks/apollo.md), [Pothos](stacks/pothos.md), [Sofa](stacks/sofa.md)
-4. JS-based Fully Featured: [RedwoodJS](stacks/redwoodjs.md) / [AdonisJS](stacks/adonisjs.md) / [NestJS](stacks/nestjs.md)
-5. Non-JS Lightweight: [Gin](stacks/gin.md) / [Fiber](stacks/fiber.md) / [Echo](stacks/echo.md)
-6. JS Lightweight: [Fastify](stacks/fastify.md)
+4. JS-Based Fully Featured: [NestJS](stacks/nestjs.md) / [AdonisJS](stacks/adonisjs.md)
+5. Non-JS: [Fastify](stacks/fastify.md) / [Fiber](stacks/fiber.md) / [Echo](stacks/echo.md)
 
-### Alternative: Workflow and Features
+### Frontend-Included Web Frameworks
+
+1. Frontend Framework: [Next.js](stacks/nextjs.md)
+2. Frontend Library Only: [Svelte](stacks/svelte.md) / [Vue.js](stacks/vuejs.md) / [Angular](stacks/angular.md) / [SolidJS](stacks/solidjs.md) / [Qwik](stacks/qwik.md)
+3. Frontend Meta Framework: [Nuxt](stacks/nuxt.md) / [SolidStart](stacks/solidstart.md) / [SvelteKit](stacks/sveltekit.md)
+4. JS-Based Full Stack: [Remix](stacks/remix.md) / [RedwoodJS](stacks/redwoodjs.md)
+5. Non-JS Full Stack: [Laravel](stacks/laravel.md) / [Rails](stacks/rails.md) / [Django](stacks/django.md)
+
+### Optional: Workflow and Features
 
 1. VCS/SCM: [Git](stacks/git.md)
 2. Runtime: [Node.js](stacks/nodejs.md) / [Deno](stacks/deno.md)
-3. Format and Lint: [Biome](stacks/biome.md) + [Ultracite](stacks/ultracite.md) / [Prettier](stacks/prettier.md) / [ESLint](stacks/eslint.md) / [Oxc](stacks/oxc.md)
+3. Format and Lint: [Oxc/Oxlint](stacks/oxc.md) / [Ultracite](stacks/ultracite.md) / [Prettier](stacks/prettier.md) / [Biome](stacks/biome.md)
 4. Bundler: [Turbopack](stacks/turbopack.md)
 5. Monorepo: [moonrepo](stacks/moonrepo.md) with [Changesets](stacks/changesets.md)
 6. Release: [autorc](stacks/autorc.md)
@@ -217,13 +205,11 @@ Alternatives:
 27. HTTP Client: [ky](stacks/ky.md) / [Better Fetch](stacks/better-fetch.md)
 28. Icons: [Kubai Icons](stacks/kubai-icons.md)
 
-### Alternative: 3rd Party Services
+### Optional: 3rd Party Services
 
-1. Repo: [GitHub](stacks/github.md) / [GitLab](stacks/gitlab.md) / [Bitbucket](stacks/bitbucket.md)
-2. Payment:
-   - International: [Polar](stacks/polar.md) / [Lemon Squeezy](stacks/lemonsqueezy.md) / [Stripe](stacks/stripe.md) / [Whop](stacks/whop.md)
-   - Indonesia: [Xendit](stacks/xendit.md) / [Midtrans](stacks/midtrans.md)
-3. Analytics: [DataFast](stacks/datafast.md) / [PostHog](stacks/posthog.md) / [Openpanel.dev](stacks/openpanel.md) / [Simple Analytics](stacks/simpleanalytics.md) / [Plausible](stacks/plausible.md)
+1. Repo: [GitHub](stacks/github.md) / [GitLab](stacks/gitlab.md)
+2. Payment: [Polar](stacks/polar.md) / [Stripe](stacks/stripe.md) / [Whop](stacks/whop.md)
+3. Analytics: [PostHog](stacks/posthog.md) / [Openpanel.dev](stacks/openpanel.md) / [Simple Analytics](stacks/simpleanalytics.md) / [Plausible](stacks/plausible.md)
 4. Service Monitoring: [OpenStatus](stacks/openstatus.md) / [BetterStack](stacks/betterstack.md)
 5. Secrets and Environment Variables: [Infisical](stacks/infisical.md) / [Doppler](stacks/doppler.md)
 6. File Storage/Upload: [Uploadcare](stacks/uploadcare.md) / [Cloudinary](stacks/cloudinary.md)
@@ -248,7 +234,7 @@ Alternatives:
 25. Networking: [Tailscale](stacks/tailscale.md)
 26. Infrastructure as Code: [SST](stacks/sst.md) / [Encore](stacks/encore.md)
 
-### Alternative: Communication Tools
+### Optional: Communication Tools
 
 1. Email: [Gmail](stacks/gmail.md) / [Zero Email](stacks/zero-email.md) / [HEY](stacks/hey.md) / [ProtonMail](stacks/protonmail.md)
 2. Credentials: [Bitwarden](stacks/bitwarden.md) / [Passbolt](stacks/passbolt.md) / [LastPass](stacks/lastpass.md) / [1Password](stacks/1password.md)
