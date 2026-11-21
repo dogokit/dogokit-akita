@@ -1,0 +1,19 @@
+node_modules
+.changeset
+
+# AI agent folders and instruction files
+.agents
+.claude
+.codex
+.cursor
+.gemini
+.windsurf
+.opencode
+.aider*
+.github/copilot-instructions.md
+.github/instructions
+.github/prompts
+.github/agents
+AGENTS.md
+CLAUDE.md
+GEMINI.md
