@@ -76,8 +76,8 @@ shared/
 - Implement proper message passing between components:
   ```typescript
   interface MessagePayload {
-    type: string;
-    data: unknown;
+    type: string
+    data: unknown
   }
   ```
 - Handle permissions properly in manifest.json

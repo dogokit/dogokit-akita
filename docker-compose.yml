@@ -1,7 +1,7 @@
 services:
   postgres:
     container_name: example-postgres
-    image: postgres:alpine  # latest = postgres:14.15-alpine3.20
+    image: postgres:alpine # latest = postgres:14.15-alpine3.20
     restart: no
     volumes:
       - postgres_data:/var/lib/postgres

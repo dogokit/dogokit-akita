@@ -199,7 +199,7 @@ export const dataUsers = [
     password: "exampleexample",
     roleSymbol: "ROOT",
   },
-];
+]
 ```
 
 Then seed the initial data when needed:

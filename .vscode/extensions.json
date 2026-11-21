@@ -1,16 +1,15 @@
 {
   "recommendations": [
     "artdiniz.quitcontrol-vscode",
-    "biomejs.biome",
+    "oxc.oxc-vscode",
     "bradlc.vscode-tailwindcss",
     "davidanson.vscode-markdownlint",
-    "esbenp.prettier-vscode",
     "johnpapa.vscode-peacock",
     "mhutchie.git-graph",
     "mikestead.dotenv",
     "moalamri.inline-fold",
     "prisma.prisma",
     "usernamehw.errorlens",
-    "yoavbls.pretty-ts-errors",
+    "yoavbls.pretty-ts-errors"
   ]
 }

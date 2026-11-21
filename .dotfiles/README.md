@@ -2,6 +2,5 @@
 
 - Commitlint
 - EditorConfig
-- ESLint
 - Markdownlint
 - Stylelint
