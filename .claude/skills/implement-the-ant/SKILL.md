@@ -11,13 +11,11 @@ Read [`human-friendly`](../human-friendly/SKILL.md) before chat handoffs and any
 
 ## Related skills
 
-| Situation                                   | Skill |
-| ------------------------------------------- | ----- |
-| Plan or refine issues before building       | [`plan-the-lion`](../plan-the-lion/SKILL.md) |
-| Commit, push, open the PR                   | [`release-the-kraken`](../release-the-kraken/SKILL.md) |
-| Fix review threads on an open PR            | [`address-the-elephant`](../address-the-elephant/SKILL.md) |
-| One-off data fix the human runs as SQL      | [`db-the-bee`](../db-the-bee/SKILL.md) |
-| Many states, retries or async steps (suggest only) | [`statechart-the-hart`](../statechart-the-hart/SKILL.md) |
+- [`plan-the-lion`](../plan-the-lion/SKILL.md): plan or refine issues before building
+- [`release-the-kraken`](../release-the-kraken/SKILL.md): commit, push, open the PR
+- [`address-the-elephant`](../address-the-elephant/SKILL.md): fix review threads on an open PR
+- [`db-the-bee`](../db-the-bee/SKILL.md): one-off data fix the human runs as SQL
+- [`statechart-the-hart`](../statechart-the-hart/SKILL.md): many states, retries or async steps (suggest only)
 
 ## Workflow
 
