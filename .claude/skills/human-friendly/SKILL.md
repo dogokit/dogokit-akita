@@ -1,5 +1,5 @@
 ---
-name: __human-friendly
+name: human-friendly
 description: Rewrite text in very simple words for a newbie human reader, and keep it short. Use for chat, docs, tickets, PRs, comments, and user-facing strings. Not for agent prompts, tool specs, or runbooks (use asd-ste100). Never drop critical facts.
 ---
 
@@ -18,7 +18,7 @@ Write for a common human or newbie who is in a hurry. Use simple words. Keep it 
 7. Cut filler, repeats, background, and "nice to know". Keep only what the reader must know or do
 8. No `—`, no semicolons, no canned openings. Use a colon or comma instead
 9. Drop the final period of each paragraph and list item
-10. Use `##` for structure. Use bold only for a must-not-miss warning
+10. Use `##` for structure. Use bold only for a must-not-miss warning. Do not bold list labels, step names, or key terms: write "Inspect: ...", not "**Inspect**: ...". Too much bold hides the real warnings
 11. Use the plain verb form, without the `s` ending. Write "use", "send", and "log", not "uses", "sends", and "logs". Plural nouns keep their `s`, such as "logs" or "retries"
 
 ## Never drop
@@ -53,3 +53,4 @@ Agent prompts, tool specs, error templates, runbooks (use `asd-ste100`). Marketi
 - Main point is in the first line
 - A newbie needs no guesswork on acronyms
 - Every sentence earns its place. Nothing critical is missing
+- Bold appears only on real warnings

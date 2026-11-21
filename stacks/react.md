@@ -7,6 +7,7 @@ React is a JavaScript library for building user interfaces.
 Links:
 
 - <https://react.dev>
+- [React Quick Start](https://react.dev/learn)
 
 Links:
 
