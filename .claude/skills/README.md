@@ -16,6 +16,7 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 - [release-the-kraken](release-the-kraken/SKILL.md): commit, push, and open a short, scannable PR
 - [review-the-kangaroo](review-the-kangaroo/SKILL.md): deep-review a PR or a local diff, with checked findings
 - [address-the-elephant](address-the-elephant/SKILL.md): fix PR review comments, red checks, and merge conflicts
+- [dependabot-the-bat](dependabot-the-bat/SKILL.md): clear open Dependabot PRs onto the latest versions and merge them
 
 ## Design and explain
 
