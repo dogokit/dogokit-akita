@@ -15,7 +15,7 @@ claude plugin marketplace add google/elephant-goldfish-model
 claude plugin install egm@egm
 ```
 
-Skills: `egm-brainstorm`, `egm-draft`, `egm-review`, `egm-resolve`, `egm-lite`, `egm-review-loop`, `egm-bootstrap`, `egm-drift-report`. See the project skill [`egm`](../.claude/skills/egm/SKILL.md) for how we use them
+Skills: `egm-brainstorm`, `egm-draft`, `egm-review`, `egm-resolve`, `egm-lite`, `egm-review-loop`, `egm-bootstrap`, `egm-drift-report`. Vendored in this repo as project skills `.claude/skills/egm-*`, with the index at [`egm`](../.claude/skills/egm/SKILL.md) and shared files in [`.claude/egm/`](../.claude/egm/README.md)
 
 Links:
 
