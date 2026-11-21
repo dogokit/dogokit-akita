@@ -2,7 +2,6 @@ __*
 .DS_Store
 .env
 .env.production
-.eslintcache
 .moon/cache
 .moon/docker
 .react-email

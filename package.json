@@ -3,19 +3,23 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "check": "bun run lint:md",
+    "check": "bun run lint && bun run lint:md",
     "setup-env": "cp -i .env.example .env.local && cp -i .env.example .env.production",
     "setup-db": "docker compose up -d",
     "generate-secret": "openssl rand -base64 32",
     "check-links": "bunx linkinator *.md --markdown --retry-errors",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint --deny-warnings .",
     "lint:md": "markdownlint \"**/*.md\" --dot"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.6.8",
     "@moonrepo/cli": "^2.6.5",
     "@types/bun": "latest",
     "markdownlint": "^0.42.2",
-    "markdownlint-cli": "^0.50.0"
+    "markdownlint-cli": "^0.50.0",
+    "oxfmt": "^0.79.0",
+    "oxlint": "^1.94.0"
   },
   "peerDependencies": {
     "typescript": "^5.5.4"
