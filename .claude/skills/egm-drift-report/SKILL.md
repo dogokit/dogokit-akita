@@ -11,58 +11,39 @@ description: >-
 
 # Detect Drift In Designs and Code
 
-When running in Codex or ChatGPT Work, first read [Codex integration](../../egm/docs/codex.md).
-In Claude Code or Cowork, read [Claude Code integration](../../egm/docs/claude.md) first.
-In this repo the EGM root is `.claude/egm/` (`../../egm/` from here): `agents/`, `resources/` and `docs/` in this skill mean the folders there. Skills run as `/egm-review` and so on, without the `/egm:` prefix.
+Read the harness guide first:
 
-When the user asks to detect drift across all designs or a set of READMEs, the
-goal is to identify all instances where the codebase has diverged or failed to
-implement the specifications described by those designs or READMEs.
+- Codex or ChatGPT Work: [Codex integration](../../egm/docs/codex.md)
+- Claude Code or Cowork: [Claude Code integration](../../egm/docs/claude.md)
 
-1.  **Check Input**: Verify a directory containing design documents or READMEs
-    is provided. If not provided, ask the user to specify the target directory.
-2.  **List Documents**: List all files in the design directory.
-3.  **Analyze**: For EACH design document:
+In this repo the EGM root is `.claude/egm/` (`../../egm/` from here). The `agents/`, `resources/` and `docs/` folders named in this skill are the folders there. Skills run as `/egm-review` and so on, without the `/egm:` prefix
 
-    *   **Contextualize**: Read the design document. Identify the intent,
-        proposed changes, and specific filenames/symbols mentioned.
-    *   **Locate Source**: Find the corresponding source code files in the
-        source tree. If paths aren't explicit, use code search or grep to
-        locate the relevant classes, functions, or API endpoints mentioned in
-        the doc. Prompt the user to add missing links to the document to make
-        future detection cheaper.
-    *   **Verify**: Read the current state of those source files.
-    *   **Detect Drift**: Compare the design vs. reality. Look specifically for:
-        *   Missing Features: Logic described in the doc but absent in the code.
-        *   Incomplete Models: Dataclasses/Classes/Structs/Protos missing fields
-            specified in the design.
-        *   Logic Shortcuts: Hardcoded values where dynamic logic was planned.
-        *   Architectural Divergence: Implementation using different
-            patterns/libraries than proposed.
-    *   **Filter**: Report ONLY the differences. Do not describe what is working
-        or what matches. If the code matches the design perfectly, output "No
-        drift detected."
+When the user asks to detect drift across all designs or a set of READMEs, find every place where the codebase has moved away from, or failed to build, what those designs or READMEs describe
 
-4.  **Report**: Produce a single report listing all discrepancies found.
+1. Check the input: check that the user gave a directory with design documents or READMEs. If not, ask the user for the target directory
+2. List the documents: list all files in the design directory
+3. Analyze: for EACH design document:
+   - Understand it: read the design document. Find the intent, the proposed changes, and the specific filenames and symbols it names
+   - Find the source: find the matching source code files in the source tree. If paths are not explicit, use code search or grep to find the classes, functions or API endpoints the doc names. Ask the user to add the missing links to the document, so future detection is cheaper
+   - Verify: read the current state of those source files
+   - Detect drift: compare the design with reality. Look for:
+     - Missing features: logic described in the doc but absent from the code
+     - Incomplete models: dataclasses, classes, structs or protos that lack fields the design specifies
+     - Logic shortcuts: hardcoded values where dynamic logic was planned
+     - Architecture differences: the code uses different patterns or libraries than the design proposed
+   - Filter: report ONLY the differences. Do not describe what works or what matches. If the code matches the design exactly, write "No drift detected."
+4. Report: write one report that lists all discrepancies
+   - Append the analysis for each file to `{YYYY-MM-DD}_DRIFT_REPORT.md` with your file-writing tool
+   - Strict format:
 
-    *   Append the analysis for each file to `{YYYY-MM-DD}_DRIFT_REPORT.md`
-        using your file-writing tool.
-    *   Strict Format:
+     ```markdown
+     ## <DESIGN_DOC_NAME>
 
-        ```markdown
-        ## <DESIGN_DOC_NAME>
+     <Bulleted list of specific divergences found>
+     <Or "No drift detected">
+     ```
 
-        <Bulleted list of specific divergences found>
-        <Or "No drift detected">
-        ```
-
-5.  **Guidance**
-
-    -   Be rigorous. If a design doc mentions a specific object, field or file
-        name and the code doesn't have it, that is a reportable drift. Double
-        check for coverage. If there is some part of the logic that is not
-        referenced in a design or README, this is a reportable drift.
-    -   Read files liberally to ensure you are looking at the current state
-        of the code, not relying on memory.
-    -   Process the files sequentially to ensure the tool output buffer doesn't
-        overflow.
+5. Guidance
+   - Be rigorous. If a design doc names a specific object, field or file and the code does not have it, that is drift you must report. Check coverage twice. If some part of the logic is not referenced in any design or README, that is also drift you must report
+   - Read files freely, so you look at the current state of the code and do not rely on memory
+   - Process the files one at a time, so the tool output buffer does not overflow

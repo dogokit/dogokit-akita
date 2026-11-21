@@ -17,8 +17,9 @@ Shared files for the vendored [Elephant-Goldfish Model](https://github.com/googl
 
 - Dropped plugin packaging, skill icons, `TEST.md`, `test_scenarios.yaml` and `agents/openai.yaml`
 - In each `SKILL.md`, the Claude and Codex guide paths and the `docs/harnesses.md` link now point here, and one line names this folder as the EGM root
-- All other text is unchanged
+- The 8 working `egm-*` `SKILL.md` files are rewritten in plain, short English, using the `human-friendly` skill. Steps, gates, option labels, file names, JSON payloads and templates are kept. `egm` is our own index
+- Everything else (`agents/`, `docs/`, `resources/`, `references/`) is unchanged
 
 ## Update
 
-Copy the new upstream files over the old ones, redo the path changes above, then update the commit in this file
+Do not copy upstream `SKILL.md` files over ours: they would undo the rewrite. Copy the unchanged files (`agents/`, `docs/`, `resources/`, `references/`) over the old ones. Diff each upstream `SKILL.md` against the commit below, port the changes by hand in the same plain style, then update the commit in this file
