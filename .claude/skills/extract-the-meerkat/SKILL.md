@@ -1,6 +1,6 @@
 ---
 name: extract-the-meerkat
-description: Extract someone else's open-source stack or skills into this repo on a new branch and PR based on main. Checks the license, copies the skills with a pinned upstream commit, records source and changes, adds an index skill, a stack note and README links, then commits and opens the PR. Use when the user asks to extract, vendor, import, copy or bring in a skill set, plugin or stack from another repo.
+description: Extract someone else's open-source stack or skills into this repo on a new branch and PR based on main. Checks the license, copies the skills with a pinned upstream commit, records source and changes, adds an index, a stack note and README links, all in a separate folder, then commits and opens the PR. Use when the user asks to extract, vendor, import, copy or bring in a skill set, plugin or stack from another repo.
 ---
 
 # Extract the Meerkat
@@ -46,12 +46,12 @@ git worktree add -b docs/add-<stack>-skills ../<repo>-extract-<stack> origin/mai
 
 ## 4. Plan the layout and show it
 
-Default layout, the same one used to vendor pstack:
+Default layout. Keep the copy apart from our own skills. Do not put vendored skills in `.claude/skills/`, so they do not clutter it or clash with our names. The cost: they are not found by slash command until the user links or moves them:
 
 | Upstream            | Here                                  |
 | ------------------- | ------------------------------------- |
-| `skills/<name>/`    | `.claude/skills/<name>/`              |
-| agents, docs, guide | `.claude/<stack>/`                    |
+| `skills/<name>/`    | `.claude/<stack>/skills/<name>/`      |
+| agents, docs, guide | `.claude/<stack>/` (next to `skills/`) |
 | `LICENSE`, README   | `.claude/<stack>/LICENSE`, `UPSTREAM_README.md` |
 | manifest            | `.claude/<stack>/plugin.json` or similar |
 
@@ -69,10 +69,10 @@ Show the user: source and commit, license, skill count, what you will skip, and 
 Keep these separate from the copy
 
 - `.claude/<stack>/README.md`: what the shared files are, the Source (URL, folder, commit, version, author, license), Changes from upstream, and Update (the exact steps and the link fix command)
-- `.claude/skills/<stack>/SKILL.md`: an index skill with a table or short list of the skills and when to use each. Skip it when the stack has fewer than 4 skills
+- `.claude/<stack>/skills/README.md`: an index with a table or short list of the skills and when to use each. Link it from `.claude/<stack>/README.md`. Do not add an index skill to `.claude/skills/`
 - `stacks/<stack>.md`: a short stack note with the idea, the install line, and links to the upstream and to the vendored copy. Follow the shape of [`stacks/egm.md`](../../../stacks/egm.md)
 - `README.md`: add the stack to the matching list, and keep the numbering right
-- [`.claude/skills/README.md`](../README.md): add the index skill, or each skill when there is no index
+- Do not edit [`.claude/skills/README.md`](../README.md). It lists only our own skills. In `.claude/<stack>/README.md`, tell the user how to enable a skill: copy or symlink its folder into `.claude/skills/`
 
 ## 7. Verify
 
@@ -87,7 +87,7 @@ Keep these separate from the copy
 Follow [`commit-good`](../commit-good/SKILL.md) and push. Use at least two commits:
 
 1. `docs(skills): extract <stack> skills from <upstream>`: the copy and the link fix. Put source, commit, license and count in the body
-2. `docs: add <stack> index skill and stack note`: our own files and README links
+2. `docs: add <stack> index and stack note`: our own files and README links
 
 Then follow [`release-the-kraken`](../release-the-kraken/SKILL.md) for the PR against `main`. In the PR body, name the upstream, the pinned commit, the license, and what was skipped. Remove the worktree only after the PR merges, with [`merge-good`](../merge-good/SKILL.md)
 
