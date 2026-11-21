@@ -37,18 +37,15 @@ Expected behaviour (a poll, not a webhook; a filter that excludes an item; a del
 
 ## Workflow
 
-```text
-Task progress:
-- [ ] Ask type, and a one-line question: broken, working as designed, unknown, or "want different"
-- [ ] Read the full thread or issue, to the latest reply
-- [ ] Read the docs and the code for that behaviour, with path:line citations
-- [ ] Gather read-only data and log evidence
-- [ ] Run the checklist (tenant, environment, config, flags, timing, access, data)
-- [ ] Classify the cause
-- [ ] Verdict first, then evidence, then next steps by owner
-- [ ] One Mermaid diagram of the path, with the stop point marked
-- [ ] Issue draft (unless the user asked for chat only)
-```
+1. Ask type, and a one-line question: broken, working as designed, unknown, or "want different"
+2. Read the full thread or issue, to the latest reply
+3. Read the docs and the code for that behaviour, with path:line citations
+4. Gather read-only data and log evidence
+5. Run the checklist (tenant, environment, config, flags, timing, access, data)
+6. Classify the cause
+7. Verdict first, then evidence, then next steps by owner
+8. One Mermaid diagram of the path, with the stop point marked
+9. Issue draft (unless the user asked for chat only)
 
 ### 1. Intake
 

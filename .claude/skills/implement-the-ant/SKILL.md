@@ -19,20 +19,18 @@ Read [`human-friendly`](../human-friendly/SKILL.md) before chat handoffs and any
 
 ## Workflow
 
-```text
-- [ ] Assess issue and branch state
-- [ ] Route: code change, data-only fix, both, or no change
-- [ ] Read the full issue thread (description, acceptance criteria, every comment)
-- [ ] Scope check: split or keep one issue when it spans several deliverables
-- [ ] Branch: create a dedicated branch if missing
-- [ ] Plan first: plain-language issue, cause, solution and diagram, then wait for approval
-- [ ] Orient and research
-- [ ] Implement the minimal diff (review-ready patterns below)
-- [ ] Self-pass and diff hygiene
-- [ ] Queries and indexes, seed data, docs and config recheck
-- [ ] Verify
-- [ ] Hand off (no commit or push unless asked)
-```
+1. Assess issue and branch state
+2. Route: code change, data-only fix, both, or no change
+3. Read the full issue thread (description, acceptance criteria, every comment)
+4. Scope check: split or keep one issue when it spans several deliverables
+5. Branch: create a dedicated branch if missing
+6. Plan first: plain-language issue, cause, solution and diagram, then wait for approval
+7. Orient and research
+8. Implement the minimal diff (review-ready patterns below)
+9. Self-pass and diff hygiene
+10. Queries and indexes, seed data, docs and config recheck
+11. Verify
+12. Hand off (no commit or push unless asked)
 
 ## 1. Assess state (always first)
 

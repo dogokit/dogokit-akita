@@ -113,16 +113,13 @@ Never approve only because the diff looks clean. "No findings" still defaults to
 
 ## Workflow
 
-```text
-Task progress:
-- [ ] Resolve target (PR or local scope) and HEAD SHA
-- [ ] Fetch metadata and diff
-- [ ] Orient in the touched code
-- [ ] Analyse (optionally with one review subagent)
-- [ ] Verify every finding against the review head
-- [ ] Draft verdict, top comment and findings table
-- [ ] PR mode only: posting gate, then submit and verify
-```
+1. Resolve target (PR or local scope) and HEAD SHA
+2. Fetch metadata and diff
+3. Orient in the touched code
+4. Analyse (optionally with one review subagent)
+5. Verify every finding against the review head
+6. Draft verdict, top comment and findings table
+7. PR mode only: posting gate, then submit and verify
 
 ### 1. Resolve target
 

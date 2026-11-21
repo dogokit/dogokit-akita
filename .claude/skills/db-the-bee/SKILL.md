@@ -21,15 +21,12 @@ Read [`human-friendly`](../human-friendly/SKILL.md) before writing the short pro
 
 ## Workflow
 
-```text
-Task progress:
-- [ ] Gather enough context (ask if needed)
-- [ ] Print full row values
-- [ ] Print preflight SELECTs
-- [ ] Print change script
-- [ ] Print verify SELECTs
-- [ ] Print optional follow-up (if any)
-```
+1. Gather enough context (ask if needed)
+2. Print full row values
+3. Print preflight SELECTs
+4. Print change script
+5. Print verify SELECTs
+6. Print optional follow-up (if any)
 
 ### 1. Ask first
 

@@ -30,17 +30,6 @@ Always include the core sections from [template.md](template.md). Add only the o
 
 ## Workflow
 
-```text
-Task progress:
-- [ ] Gather sources (product doc, issue, discussions, decisions)
-- [ ] Check the code (code topics only)
-- [ ] Draft from template.md
-- [ ] Add diagrams
-- [ ] Cut pass
-- [ ] Self-check
-- [ ] Save the file
-```
-
 1. Gather the product doc, related issues and discussions, and decisions already made
 2. For code topics, read the real code paths before you describe them. Cite `path:line` only where a claim depends on it
 3. Copy [template.md](template.md). Keep the core sections. Add optional sections only when this type needs them
