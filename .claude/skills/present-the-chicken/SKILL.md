@@ -1,11 +1,11 @@
 ---
 name: present-the-chicken
-description: Turns a TDD or design doc into a team presentation kit, a facilitator guide of 20 minutes or less in chat, then a visual slide deck with speaker notes and an optional source tag on every fact. Use when the user asks to present a doc, walk the team through it, or make slides from a TDD.
+description: Turns a documentation into a team presentation kit, a facilitator guide of 20 minutes or less in chat, then a visual slide deck with speaker notes and an optional source tag on every fact. Use when the user asks to present a doc, walk the team through it, or make slides from a TDD.
 ---
 
 # Present the Chicken
 
-Turn one TDD (or a similar design doc) into a way to present it: a short run sheet first, then a deck. Read-only on the repo. Nothing is written to the repo, committed or sent to anyone.
+Turn any documentation into a way to present it: a short run sheet first, then a deck. Read-only on the repo. Nothing is written to the repo, committed or sent to anyone.
 
 ## Input
 
