@@ -1,5 +1,5 @@
 ---
-name: writing-technical-design
+name: design-docs
 description: 'Use when creating or revising a TDD, spike, plan, integration doc or QA test plan in docs/technical-design/, docs/spikes/, docs/plans/ or docs/integrations/, or when an implementation PR changes a feature that has a TDD.'
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: __human-friendly
+name: human-friendly
 description: Rewrite text in very simple words for a newbie human reader, and keep it short. Use for chat, docs, tickets, PRs, comments, and user-facing strings. Not for agent prompts, tool specs, or runbooks (use asd-ste100). Never drop critical facts.
 ---
 
