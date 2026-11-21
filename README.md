@@ -141,6 +141,19 @@ Things that are the primary default.
 6. AI Code Generator: [v0 by Vercel](stacks/v0.md) / [Stitch by Google](stacks/stitch-google.md)
 7. AI Docs: [Context7](stacks/context7.md)
 
+### Development Tools: Agentic Environments
+
+Apps where you run many coding agents side by side. Our top three:
+
+1. [Orca](https://orca.dev)
+2. [T3 Code](https://github.com/pingdotgg/t3code)
+3. [Paseo](https://paseo.sh)
+
+Alternatives:
+
+- [Conductor](https://www.conductor.build): Mac only
+- [Superset](https://superset.sh): works with many agents
+
 ### Deployment: PaaS and Services
 
 1. General: [Render](stacks/render.md) / [Railway](stacks/railway.md) / [Fly.io](stacks/flyio.md) / [Cloudflare Workers](stacks/cloudflare-workers.md)
@@ -257,3 +270,38 @@ Things that are the primary default.
 
 - [Inspirations](docs/references/inspirations.md)
 - [Credits](docs/references/credits.md)
+
+## Skills
+
+Agent skills for Claude Code and similar AI agents live in [`.claude/skills`](.claude/skills). Each one is a `SKILL.md` that the agent loads when the task fits, or when you type `/<skill-name>`.
+
+### Plan and build
+
+- [plan-the-lion](.claude/skills/plan-the-lion/SKILL.md): plan issues at the right depth, from one issue to a full backlog, and refine old ones
+- [implement-the-ant](.claude/skills/implement-the-ant/SKILL.md): plan first, then land a small, review-ready change
+- [investigate-the-cat](.claude/skills/investigate-the-cat/SKILL.md): triage a bug report or question into a verdict, a cause, and next steps
+- [db-the-bee](.claude/skills/db-the-bee/SKILL.md): print safe, copy-paste SQL for a person to run
+
+### Review and release
+
+- [commit-good](.claude/skills/commit-good/SKILL.md): make atomic commits with Conventional Commits messages
+- [release-the-kraken](.claude/skills/release-the-kraken/SKILL.md): commit, push, and open a short, scannable PR
+- [review-the-kangaroo](.claude/skills/review-the-kangaroo/SKILL.md): deep-review a PR or a local diff, with checked findings
+- [address-the-elephant](.claude/skills/address-the-elephant/SKILL.md): fix PR review comments, red checks, and merge conflicts
+
+### Design and explain
+
+- [tdd-the-barramundi](.claude/skills/tdd-the-barramundi/SKILL.md): write or simplify a technical design doc (TDD) in plain English
+- [design-docs](.claude/skills/design-docs/SKILL.md): rules for where design docs live and what they must contain
+- [present-the-chicken](.claude/skills/present-the-chicken/SKILL.md): turn a TDD into a talk guide and a slide deck
+- [draw-the-owl](.claude/skills/draw-the-owl/SKILL.md): explain a topic with diagrams, code sketches, and small HTML pages
+- [statechart-the-hart](.claude/skills/statechart-the-hart/SKILL.md): draw states and moves as a Mermaid statechart
+
+### Write
+
+- [human-friendly](.claude/skills/human-friendly/SKILL.md): rewrite text in simple, short words for people
+- [technical-english](.claude/skills/technical-english/SKILL.md): rewrite text so an agent or parser cannot misread it
+
+### Maintain
+
+- [clean-the-garden-opus](.claude/skills/clean-the-garden-opus/SKILL.md), [clean-the-garden-sonnet](.claude/skills/clean-the-garden-sonnet/SKILL.md), [clean-the-garden-haiku](.claude/skills/clean-the-garden-haiku/SKILL.md): find and fix small rot across the repo, tuned for each model
