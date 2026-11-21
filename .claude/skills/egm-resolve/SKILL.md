@@ -11,82 +11,58 @@ description: >-
 
 # Goldfish Review: Resolve
 
-When running in Codex or ChatGPT Work, first read [Codex integration](../../egm/docs/codex.md).
-In Claude Code or Cowork, read [Claude Code integration](../../egm/docs/claude.md) first.
-In this repo the EGM root is `.claude/egm/` (`../../egm/` from here): `agents/`, `resources/` and `docs/` in this skill mean the folders there. Skills run as `/egm-review` and so on, without the `/egm:` prefix.
+Read the harness guide first:
+
+- Codex or ChatGPT Work: [Codex integration](../../egm/docs/codex.md)
+- Claude Code or Cowork: [Claude Code integration](../../egm/docs/claude.md)
+
+In this repo the EGM root is `.claude/egm/` (`../../egm/` from here). The `agents/`, `resources/` and `docs/` folders named in this skill are the folders there. Skills run as `/egm-review` and so on, without the `/egm:` prefix
 
 ## Overview
 
-This skill instructs the agent on how to operate within the primary Elephant
-context window to parse flat deficiency reports from concurrent Goldfish
-reviewers. It defends accurate design choices, applies automated textual
-repairs, and manages interactive negotiation checkpoints.
+Use this skill in the main Elephant context window. You read the flat deficiency reports from the Goldfish reviewers that ran at the same time. You defend design choices that are right, apply automatic text fixes, and run negotiation checkpoints with the user
 
-## Prerequisites & Context Strategy
+## Prerequisites and context
 
-*   **Context Recommendation (Elephant Memory)**: This skill should be run in
-    the persistent conversation session that generated the target document (the
-    Elephant) to recall earlier reasoning and craft higher-quality fixes.
+- Run this skill in the long-lived conversation session that wrote the target document (the Elephant). It remembers the earlier reasoning, so it makes better fixes
 
 ## Inputs
 
-The caller or orchestration driver provides exactly these parameters:
+The caller or orchestration driver gives exactly these parameters:
 
-*   **`TargetFile`**: Absolute or relative path to target document.
-*   **`LineRange`**: Exact line numbers (or `full file`).
-*   **`FindingsList`**: Aggregated flat list of findings from Goldfish
-    reviewers.
+- `TargetFile`: path to the target document, absolute or relative
+- `LineRange`: exact line numbers (or `full file`)
+- `FindingsList`: the merged flat list of findings from the Goldfish reviewers
 
-## Execution Workflow
+## Workflow
 
-### Step 1: Intake Validation & Gather Context
+### Step 1: Check the input and gather context
 
-1.  **Hybrid Execution UX**: Detect if execution arguments are present:
+1. Pick the mode by checking whether arguments are present:
+   - Automated mode: if all parameters are given, run silently as a subprocess
+   - Standalone human mode: if parameters are missing, start a friendly intro. Ask for one input at a time and wait for the user's reply after each turn. When all inputs are set, show the final setup and check that the user is ready to continue
+2. Read `TargetFile` at `LineRange` and parse the `FindingsList`
 
-    *   *Automated Mode*: If all parameters are provided, execute silently as a
-        subprocess.
-    *   *Standalone Human Mode*: If parameters are omitted, trigger a friendly
-        onboarding flow. Prompt for one piece of input at a time, waiting for
-        the user's response after each turn. Once all inputs are specified,
-        display the final setup and verify the user is ready to continue.
-
-2.  Read `TargetFile` at `LineRange` by reading it and parse the `FindingsList`.
-
-### Step 2: Evaluate & Categorize
+### Step 2: Evaluate and sort
 
 Give each finding exactly one category:
 
-*   **CONTEST**: The critique is inaccurate or relies on a misunderstanding of
-    the codebase. Cite evidence that the reviewer could read: a file and
-    symbol, or a decision recorded in the document.
-*   **ESCALATE**: The critique is inaccurate, but the evidence is outside every
-    file the reviewer could read (for example, a team convention or a verbal
-    decision). State that fact. Do not fix the finding. Give it to the user.
-*   **PROPOSE FIX**: The critique is valid. Define precise textual replacements
-    or structural formatting adjustments to resolve the gap.
-*   **DECLINE**: The finding is a Nit. Record it. Do not fix it. You can use
-    PROPOSE FIX for a Nit if the fix is worth it.
+- `CONTEST`: the critique is wrong or rests on a misreading of the codebase. Cite evidence the reviewer could read: a file and symbol, or a decision recorded in the document
+- `ESCALATE`: the critique is wrong, but the evidence is outside every file the reviewer could read (for example a team convention or a spoken decision). Say so. Do not fix the finding. Give it to the user
+- `PROPOSE FIX`: the critique is valid. Write exact text replacements or structure changes to close the gap
+- `DECLINE`: the finding is a Nit. Record it. Do not fix it. You may use `PROPOSE FIX` for a Nit if the fix is worth it
 
-Apply these rules:
+Rules:
 
-*   **A contest must be checkable.** "This was intentional" is not evidence.
-    If you cannot cite evidence the reviewer could read, use ESCALATE or
-    PROPOSE FIX.
-*   **Do not add context only to satisfy a reviewer.** Add context when a human
-    reader of the document needs it. If only a zero-context subagent needs it,
-    use ESCALATE.
-*   **Do not contest a comprehension gap.** If a fresh reader could not follow
-    the document, the document is missing context.
-*   **Do not change a severity.** If you think a Blocker is a Nit, CONTEST it
-    and state the reason.
-*   You wrote the document under review. A wish to contest is not evidence
-    that the reviewer is wrong.
+- A contest must be checkable. "This was intentional" is not evidence. If you cannot cite evidence the reviewer could read, use `ESCALATE` or `PROPOSE FIX`
+- Do not add context only to satisfy a reviewer. Add context when a human reader of the document needs it. If only a zero-context subagent needs it, use `ESCALATE`
+- Do not contest a comprehension gap. If a fresh reader could not follow the document, the document is missing context
+- Do not change a severity. If you think a Blocker is a Nit, `CONTEST` it and give the reason
+- You wrote the document under review. Wanting to contest is not evidence that the reviewer is wrong
 
-### Step 3: Report Fixes
+### Step 3: Write the fix report
 
-Construct the final report and save it named
-`goldfish_review_report.md` in the working directory (or your harness's artifact directory, if it has one)
-using your file-writing tool. Use this layout:
+Build the final report and save it as `goldfish_review_report.md` in the working directory (or your harness's artifact directory) with your file-writing tool. Use this layout:
 
 ```markdown
 # Goldfish Annotated Review Report
@@ -108,81 +84,47 @@ using your file-writing tool. Use this layout:
 {{end}}
 ```
 
-### Step 4: Interactive Resolution Gate
+### Step 4: Resolution gate
 
-If any finding is `ESCALATE`, list those findings first in the chat message.
-They need the user's knowledge, not only approval.
+If any finding is `ESCALATE`, list those findings first in the chat message. They need the user's knowledge, not only approval
 
-Before proceeding, output a visible chat message to the user: *"I have compiled
-the audit findings into `goldfish_review_report.md`. Please review the findings there and choose how you would like to
-proceed:
+Before you go on, write this visible chat message to the user: *"I have compiled the audit findings into `goldfish_review_report.md`. Please review the findings there and choose how you would like to proceed:*
 
--   **Comment directly on the file**: Review `goldfish_review_report.md` in
-    chat or the file and leave comments/edits to approve, reject, or contest
-    specific items.
--   **Auto accept**: Reply "auto accept" to batch-apply all proposed fixes
-    (skipping contested items).
--   **Continue to next phase**: Reply "continue" or "no changes" to proceed
-    without applying fixes.
--   **Interactive breakdown**: Reply "interactive breakdown" for a guided,
-    item-by-item walkthrough in chat with detailed explanations for each
-    proposed edit or contested finding before making decisions.
--   **Custom instruction / Wildcard request**: Reply with any custom
-    instruction, question, or out-of-band request."*
+- *Comment directly on the file: review `goldfish_review_report.md` in chat or the file, and leave comments or edits to approve, reject, or contest specific items*
+- *Auto accept: reply "auto accept" to apply all proposed fixes at once (contested items are skipped)*
+- *Continue to next phase: reply "continue" or "no changes" to go on without applying fixes*
+- *Interactive breakdown: reply "interactive breakdown" for a guided, item-by-item walkthrough in chat, with a detailed explanation of each proposed edit or contested finding before you decide*
+- *Custom instruction or wildcard request: reply with any custom instruction, question, or out-of-band request."*
 
-You **MUST** immediately yield active execution by calling **zero tools** in
-this turn payload. You must stop execution and go idle, waiting for the human
-developer to comment on/edit the artifact or reply in the chat.
+Then yield right away: call zero tools in this turn. Stop and go idle until the human developer comments on or edits the file, or replies in chat
 
-Interpret the user's action/response as follows:
+Read the user's action or reply like this:
 
--   **"Auto accept" / "Accept all suggestions" / User clicks "Proceed" without
-    contesting**: Apply all fixes where the AI suggestion was `PROPOSE FIX`
-    directly to `TargetFile` at `LineRange` in a single batch using
-    your file-editing tool. Any items categorized as `CONTEST`, `ESCALATE`, or
-    `DECLINE` are explicitly bypassed. Then proceed to Step 5.
--   **"Continue to next phase" / "No changes"**: Do not apply any automated
-    fixes. Then proceed to Step 5.
--   **"Interactive breakdown"**: Enter a sequential breakdown loop over ALL
-    finding items (all categories except `DECLINE`):
+- "Auto accept", "Accept all suggestions", or the user clicks "Proceed" without contesting: apply all fixes where the AI suggestion was `PROPOSE FIX` straight to `TargetFile` at `LineRange` in one batch with your file-editing tool. Skip every item marked `CONTEST`, `ESCALATE` or `DECLINE`. Then go to Step 5
+- "Continue to next phase" or "No changes": do not apply any automatic fixes. Then go to Step 5
+- "Interactive breakdown": run a one-by-one loop over ALL finding items (every category except `DECLINE`):
+  1. For each item `i`, write a visible chat message with the full finding details and explanation in rich markdown:
 
-    1.  For each item `i`, output a visible chat message formatting the full
-        finding details and explanation in rich markdown:
+     ```markdown
+     ### Breakdown Item [i]: [Issue Title] [`[ReviewerPersona]`]
+     * **Scope:** [Lines Start-End]([RelativePath]#L[Start]-L[End]) ([Sub-header])
+     * **Description:** [Description]
+     * **AI Suggestion:** [CONTEST | ESCALATE | PROPOSE FIX]
+     * **Explanation & Justification:** [Detailed reason and background explaining why the fix is proposed or why the finding is contested]
+     * **Proposed Edit:** [Precise replacement text or deletion note]
+     ```
 
-        ```markdown
-        ### Breakdown Item [i]: [Issue Title] [`[ReviewerPersona]`]
-        * **Scope:** [Lines Start-End]([RelativePath]#L[Start]-L[End]) ([Sub-header])
-        * **Description:** [Description]
-        * **AI Suggestion:** [CONTEST | ESCALATE | PROPOSE FIX]
-        * **Explanation & Justification:** [Detailed reason and background explaining why the fix is proposed or why the finding is contested]
-        * **Proposed Edit:** [Precise replacement text or deletion note]
-        ```
+     Then ask the user in chat for a decision on this item (call zero tools and go idle):
 
-        Then prompt the user in chat for their decision on this item (calling
-        **zero tools** and going idle):
+     - `PROPOSE FIX`: ask the user to reply "Accept proposed fix", "Skip / ignore", or "Discuss"
+     - `CONTEST`: ask the user to reply "Skip / agree with contest", "Overrule contest (propose fix)", or "Discuss"
+     - `ESCALATE`: ask the user to reply "Confirm (no change)", "Add the fact to the document", or "Discuss"
+  2. Record the user's decisions in an internal checklist (for example *Item 1: Accepted*, *Item 2: Ignored*, *Item 3: Overruled*). Do not call any file-editing tool during this loop
+  3. When every item has a decision, sum up the accepted edits, apply them with your file-editing tool, and go to Step 5
+- Custom instruction or out-of-band edit: if the user gives specific instructions, apply them and go to Step 5
 
-        *   If `PROPOSE FIX`: Ask the user to reply with **Accept proposed
-            fix**, **Skip / ignore**, or **Discuss**.
-        *   If `CONTEST`: Ask the user to reply with **Skip / agree with
-            contest**, **Overrule contest (propose fix)**, or **Discuss**.
-        *   If `ESCALATE`: Ask the user to reply with **Confirm (no change)**,
-            **Add the fact to the document**, or **Discuss**.
+### Step 5: Sync after resolution and exit
 
-    2.  Record the user's decisions in an internal memory checklist (e.g., *Item
-        1: Accepted*, *Item 2: Ignored*, *Item 3: Overruled*). **Do NOT call any
-        file editing tools during this sequential loop.**
-
-    3.  Once all items have been decided, summarize the accepted edits, execute
-        them using your file-editing tool, and proceed to Step 5.
-
--   **Custom instruction / Out-of-band edit**: If the user provides targeted
-    instructions, apply them and proceed.
-
-### Step 5: Post-Resolution Synchronization & Exit
-
-1.  **Re-verify Lines**: If changes were made to `TargetFile`, verify that the
-    file remains structurally coherent and valid markdown.
-2.  Mark the report as resolved (add a `Status: resolved` line at the top).
-3.  **Handoff**: Exit cleanly back to the caller (such as `egm-review-loop`)
-    with the count of accepted fixes, contested items, escalated items,
-    declined items, and remaining unaddressed issues.
+1. Re-check lines: if you changed `TargetFile`, check that the file is still coherent and valid markdown
+2. Mark the report as resolved: add a `Status: resolved` line at the top
+3. Hand off: exit cleanly to the caller (such as `egm-review-loop`) with these counts: accepted fixes, contested items, escalated items, declined items, and issues still open
