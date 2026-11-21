@@ -5,3 +5,4 @@ Vite is next generation frontend tooling for building frontend applications in a
 Links:
 
 - [Vite](https://vitejs.dev)
+- [Vite](https://vite.dev/)

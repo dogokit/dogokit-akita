@@ -6,3 +6,4 @@ Links:
 
 - [BullMQ](https://github.com/taskforcesh/bullmq)
 - [Bull Dashboard (bull-board)](https://github.com/felixmosh/bull-board)
+- [BullMQ](https://bullmq.io/): background jobs and message queues

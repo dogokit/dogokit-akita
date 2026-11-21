@@ -10,6 +10,7 @@ Effect is the best way to build robust apps in TypeScript.
 Links:
 
 - [Effect](https://effect.dev)
+- [Effect](https://effect.website/)
 
 ## Features
 
