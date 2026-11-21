@@ -11,11 +11,9 @@ This skill only points to the others. Read the chosen skill's `SKILL.md` and fol
 
 ## Start here
 
-| Need                                  | Skill                                              |
-| ------------------------------------- | -------------------------------------------------- |
-| Any task that needs rigor             | [`poteto-mode`](../../pstack/skills/poteto-mode/SKILL.md)           |
-| Pick a pstack model per role          | [`setup-pstack`](../../pstack/skills/setup-pstack/SKILL.md)         |
-| Not sure which skill fits             | [`poteto-help`](../../pstack/skills/poteto-help/SKILL.md)           |
+- [`poteto-mode`](../../pstack/skills/poteto-mode/SKILL.md): the main entry for any task that needs rigor
+- [`setup-pstack`](../../pstack/skills/setup-pstack/SKILL.md): pick a model per role and a budget
+- [`poteto-help`](../../pstack/skills/poteto-help/SKILL.md): find the right skill when you are not sure
 
 ## Understand
 
