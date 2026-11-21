@@ -1,6 +1,6 @@
 ---
 name: commit-good
-description: Make good git commits. Each commit is atomic (one logical change that passes checks) and has a Conventional Commits message. Use when the user asks to commit, save work to git, split changes into commits, or clean up a mixed working tree. Pushes only when asked.
+description: Make good git commits. Each commit is atomic (one logical change that passes checks) and has a Conventional Commits message. Use when the user asks to commit, save work to git, split changes into commits, or clean up a mixed working tree. Pushes when asked, and keeps pushing on later commits in the same session.
 ---
 
 # Commit good
@@ -15,9 +15,19 @@ Commits are atomic (one logical change, repo works after it) and follow [Convent
 4. Keep refactors, formatting, and renames in their own commits.
 5. Stage by path or hunk. No `git add .` or `-A` on a mixed tree.
 6. Never stage secrets (`.env`, keys, tokens).
-7. Push, amend, rebase, or force only when the user asks.
-8. Never use `--no-verify`. Fix the hook instead.
-9. Stay short. No long bodies, no long reports.
+7. Amend, rebase, or force only when the user asks.
+8. Push only when the user asks, or when auto-push is on (see below). Never force-push.
+9. Never use `--no-verify`. Fix the hook instead.
+10. Stay short. No long bodies, no long reports.
+
+## Auto-push
+
+Auto-push is on after any of these in the session:
+
+- The user asks to commit and push
+- `release-the-kraken` has run
+
+While it is on, every later commit request ends with a push to the current branch. Do not ask again. Work from `implement-the-ant` is the exception: it stays uncommitted for review until the user asks to commit or runs `release-the-kraken`
 
 ## Workflow
 

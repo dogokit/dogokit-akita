@@ -30,7 +30,7 @@ Read [`human-friendly`](../human-friendly/SKILL.md) before chat handoffs and any
 9. Self-pass and diff hygiene
 10. Queries and indexes, seed data, docs and config recheck
 11. Verify
-12. Hand off (no commit or push unless asked)
+12. Hand off (leave changes uncommitted for review, no commit or push unless asked)
 
 ## 1. Assess state (always first)
 
