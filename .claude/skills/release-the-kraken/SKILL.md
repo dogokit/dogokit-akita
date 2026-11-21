@@ -74,12 +74,12 @@ PR body, in this order:
 
 Reviewers scan the PR. Aim for about 200 words in the whole body, not counting the diagram.
 
-- **Description:** the `**Problem:**` and `**Fix:**` lines only. One idea per sentence. Design reasons and edge cases go in code comments or the issue
-- **Optional extra lines,** each one bold label and one sentence, only when needed:
+- Description: the `**Problem:**` and `**Fix:**` lines only. One idea per sentence. Design reasons and edge cases go in code comments or the issue
+- Optional extra lines, each one bold label and one sentence, only when needed:
   - `**Heads-up:**` for a behaviour change callers will notice
   - `**QA:**` when manual checks are still to do, with the steps in one line
-- **Changes:** one line per file, written as an action (`add X`, `split Y`). Do not repeat the Description
-- **No Verification section.** Do not list tests, lint, type checks or test counts in the body. CI shows them
+- Changes: one line per file, written as an action (`add X`, `split Y`). Do not repeat the Description
+- No Verification section. Do not list tests, lint, type checks or test counts in the body. CI shows them
 - Do not repeat facts across sections
 
 Before you create or edit the PR, reread the body and cut every sentence a reviewer does not need to approve it.
@@ -88,8 +88,8 @@ Before you create or edit the PR, reread the body and cut every sentence a revie
 
 | Change                                                                                                   | Diagram                                                   |
 | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| A new or changed validation, guard order, request path, job or retry path, state transition, integration call, or module boundary | **Required.** One diagram under `### Approach` |
-| Large rework of an existing flow, where readers must compare old and new                                 | **Required.** A small `Before` and `After` pair, stacked  |
+| A new or changed validation, guard order, request path, job or retry path, state transition, integration call, or module boundary | Required. One diagram under `### Approach` |
+| Large rework of an existing flow, where readers must compare old and new                                 | Required. A small `Before` and `After` pair, stacked  |
 | No flow change: rename, constant, copy text, config value, docs, test-only, dependency bump               | Optional. Leave out `### Approach` when it adds nothing   |
 
 Diagram rules:

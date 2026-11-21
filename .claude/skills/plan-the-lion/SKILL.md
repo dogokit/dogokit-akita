@@ -7,7 +7,7 @@ description: Plans issue-tracker work at the right depth (one issue to create or
 
 Read [`human-friendly`](../human-friendly/SKILL.md) before writing any text a person will read. Keep commands, paths, issue keys, numbers and dates exact.
 
-Plan issues before you create or edit them: **one issue**, **a few slices**, a **full backlog**, or a **refine** pass on existing issues. **Never create or edit issues until the user confirms the plan.**
+Plan issues before you create or edit them: one issue, a few slices, a full backlog, or a refine pass on existing issues. **Never create or edit issues until the user confirms the plan.**
 
 Use the tracker the repo uses. With GitHub: `gh issue list`, `gh issue view`, `gh issue create`, `gh issue edit`. With another tracker, use its CLI or MCP tool.
 
@@ -19,10 +19,10 @@ Pick once at the start. If it is unclear, ask once. Do not default to the bigges
 
 | Mode        | Use when                                                                 |
 | ----------- | ------------------------------------------------------------------------ |
-| **Simple**  | One issue: create it, or update a known one. One logical change          |
-| **Slice**   | 2 to 5 related issues under an existing epic, milestone or parent issue  |
-| **Backlog** | A TDD, spec or approved design to break into issues, a new initiative, or phased delivery |
-| **Refine**  | Existing issues that are old, vague, or missing context, and the user is about to work on them |
+| Simple  | One issue: create it, or update a known one. One logical change          |
+| Slice   | 2 to 5 related issues under an existing epic, milestone or parent issue  |
+| Backlog | A TDD, spec or approved design to break into issues, a new initiative, or phased delivery |
+| Refine  | Existing issues that are old, vague, or missing context, and the user is about to work on them |
 
 ## Do not
 
@@ -41,8 +41,8 @@ Every issue in one plan starts with the same topic, so the group reads and sorts
 
 `<Topic>: <action-led title>`
 
-- **Topic:** 2 to 4 words, the epic or feature name. Choose it once. Reuse the topic sibling issues already use
-- **Title:** starts with a verb. Do not repeat the topic
+- Topic: 2 to 4 words, the epic or feature name. Choose it once. Reuse the topic sibling issues already use
+- Title: starts with a verb. Do not repeat the topic
 - No issue key in the title. Keep the whole title under about 90 characters
 
 Example: `Demo data seed: add clock, faker and idempotent upsert`

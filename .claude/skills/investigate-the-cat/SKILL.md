@@ -5,17 +5,17 @@ description: Triages a bug report, support thread, or "is this broken?" question
 
 # Investigate the Cat
 
-Turn a report into **what kind of ask it is**, a **verdict**, a **cause** (when relevant), and **next checks**. Describing how things work today is not the same as reporting something broken. Assume nothing is a code defect until the simpler causes are ruled out.
+Turn a report into what kind of ask it is, a verdict, a cause (when relevant), and next checks. Describing how things work today is not the same as reporting something broken. Assume nothing is a code defect until the simpler causes are ruled out.
 
 Read [`human-friendly`](../human-friendly/SKILL.md) before the final answer, the issue draft, and any reply meant for a user or customer.
 
 ## Roles
 
-The user is usually the engineer. They own the **evidence** (code, data, logs, docs) and **engineering decisions** (is it a defect, what a fix costs). They do not own product, support, or customer decisions.
+The user is usually the engineer. They own the evidence (code, data, logs, docs) and engineering decisions (is it a defect, what a fix costs). They do not own product, support, or customer decisions.
 
 - Phrase each next step with its owner: "Support to …", "Product to …", "Engineering to …"
 - Decisions that belong to someone else stay open as "Decision needed from <role>"
-- Any message meant for a customer or partner is a **draft for the owner to send**. The engineer is never the sender
+- Any message meant for a customer or partner is a draft for the owner to send. The engineer is never the sender
 
 ## Do not
 
@@ -28,10 +28,10 @@ The user is usually the engineer. They own the **evidence** (code, data, logs, d
 
 | Ask type           | Signals                                                         | Default outcome |
 | ------------------ | --------------------------------------------------------------- | --------------- |
-| **Incident**       | Something failed, regressed, or differs from documented behaviour | Verdict, cause, gates |
-| **Clarification**  | "Why does it…?", "Is it normal that…?", with no claim it is wrong | Explain the behaviour and set expectations |
-| **Change request** | "We need…", "Can it…?", a new rule or timing                    | Confirm current behaviour, then hand to [`plan-the-lion`](../plan-the-lion/SKILL.md) if it is build work |
-| **Mixed**          | Describes today's behaviour **and** asks for something new      | Split: (A) working as designed or config, (B) new or changed. Do not call (A) a bug because (B) was asked |
+| Incident       | Something failed, regressed, or differs from documented behaviour | Verdict, cause, gates |
+| Clarification  | "Why does it…?", "Is it normal that…?", with no claim it is wrong | Explain the behaviour and set expectations |
+| Change request | "We need…", "Can it…?", a new rule or timing                    | Confirm current behaviour, then hand to [`plan-the-lion`](../plan-the-lion/SKILL.md) if it is build work |
+| Mixed          | Describes today's behaviour and asks for something new      | Split: (A) working as designed or config, (B) new or changed. Do not call (A) a bug because (B) was asked |
 
 Expected behaviour (a poll, not a webhook; a filter that excludes an item; a delay until the next scheduled run) supports clarification or a change request. It is not, by itself, proof of a bug.
 
@@ -52,7 +52,7 @@ Task progress:
 
 ### 1. Intake
 
-Restate the question in one line. Note the ask type and where it happens (UI, API, job, webhook, integration). Separate **current state** (what the app does now, with evidence) from **desired state** (what they want).
+Restate the question in one line. Note the ask type and where it happens (UI, API, job, webhook, integration). Separate current state (what the app does now, with evidence) from desired state (what they want).
 
 ### 2. Live context
 
@@ -80,17 +80,17 @@ Anything you cannot read from code, data or logs becomes "<Owner> to confirm".
 
 ### 5. Classify the cause
 
-For an incident or mixed (A), pick **one primary** cause, and note secondary factors:
+For an incident or mixed (A), pick one primary cause, and note secondary factors:
 
-1. **Expected behaviour.** Documented design. Often the full answer for a clarification
-2. **Config.** Flags, settings, filters, or a disabled feature
-3. **Wrong environment.** Wrong account, environment or credential
-4. **Timing.** The next scheduled run has not happened yet
-5. **Access.** Missing role or permission
-6. **Missing or bad data.** The record does not exist, or is in a state the code does not expect
-7. **Code defect.** The checks pass, and logs or a repro show the failure in code
-8. **Docs gap.** Behaviour matches the docs, but the docs or messages are unclear
-9. **Change scope.** Behaviour is correct, and the ask is for something new
+1. Expected behaviour. Documented design. Often the full answer for a clarification
+2. Config. Flags, settings, filters, or a disabled feature
+3. Wrong environment. Wrong account, environment or credential
+4. Timing. The next scheduled run has not happened yet
+5. Access. Missing role or permission
+6. Missing or bad data. The record does not exist, or is in a state the code does not expect
+7. Code defect. The checks pass, and logs or a repro show the failure in code
+8. Docs gap. Behaviour matches the docs, but the docs or messages are unclear
+9. Change scope. Behaviour is correct, and the ask is for something new
 
 ## Visualize the path
 

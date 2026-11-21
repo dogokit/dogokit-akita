@@ -5,7 +5,7 @@ description: Implements a scoped fix or feature with a plan-first flow. Assesses
 
 # Implement the Ant
 
-**Issue, branch, plan, then implement.**
+Issue, branch, plan, then implement.
 
 Read [`human-friendly`](../human-friendly/SKILL.md) before chat handoffs and any issue text. Keep paths, symbols, commands and issue keys exact. Change only the wording you were asked to write.
 
@@ -59,11 +59,11 @@ git log --oneline -5
 
 ## 3. Read the whole thread
 
-Read the description, acceptance criteria, and **every** comment before planning. Later comments often change scope or acceptance criteria. When a recent comment conflicts with the description, ask the user which one wins.
+Read the description, acceptance criteria, and every comment before planning. Later comments often change scope or acceptance criteria. When a recent comment conflicts with the description, ask the user which one wins.
 
 ## 4. Scope check
 
-When the work spans several deliverables (for example backend, web and mobile, or two repos), and the issue does not say how to cut it, ask once: **split** into linked issues, or **keep one** issue. Do not ask again in the same session. A backend-only change that adds a new type, enum value or field must also check the clients that validate it (for example a Zod schema in the web app), so they are not forgotten.
+When the work spans several deliverables (for example backend, web and mobile, or two repos), and the issue does not say how to cut it, ask once: split into linked issues, or keep one issue. Do not ask again in the same session. A backend-only change that adds a new type, enum value or field must also check the clients that validate it (for example a Zod schema in the web app), so they are not forgotten.
 
 ## 5. Branch
 
@@ -75,25 +75,25 @@ Write the plan before editing code, and wait for the user's approval. Use plan m
 
 | Section             | Answers                                                   | Length        |
 | ------------------- | --------------------------------------------------------- | ------------- |
-| **The issue**       | What is broken or missing, who feels it, why it matters   | 2–3 sentences |
-| **Why it happens**  | The root cause, with `path:line` evidence                 | 2–4 sentences |
-| **The fix**         | What changes, in plain words                              | 2–4 sentences |
-| **Files**           | Each file and its action                                  | One line each |
-| **Diagram**         | One Mermaid diagram of the changed flow                   | ~10 nodes     |
-| **Checks**          | Tests to add or run, and what proves each acceptance criterion | Short list |
-| **Out of scope**    | What this change does not do                              | Short list    |
+| The issue       | What is broken or missing, who feels it, why it matters   | 2–3 sentences |
+| Why it happens  | The root cause, with `path:line` evidence                 | 2–4 sentences |
+| The fix         | What changes, in plain words                              | 2–4 sentences |
+| Files           | Each file and its action                                  | One line each |
+| Diagram         | One Mermaid diagram of the changed flow                   | ~10 nodes     |
+| Checks          | Tests to add or run, and what proves each acceptance criterion | Short list |
+| Out of scope    | What this change does not do                              | Short list    |
 
 Diagram rules: pick the type that fits (`flowchart TD`, `sequenceDiagram`, `stateDiagram-v2`, `erDiagram`, `classDiagram`), draw top to bottom, use real symbol names, and mark `(new)` or `(changed)` nodes. For a large rework, stack a small `Before` and `After`. Reuse this diagram in the PR.
 
 ## 7. Implement
 
-1. **Orient.** Read the code paths the plan names, plus their callers and types. Read the canonical docs for the area in the same pass
-2. **Minimal diff.** The smallest safe change. No drive-by refactors
-3. **Self-pass.** Run the checklist below, then `git diff` and `git diff --check`
-4. **Queries and indexes.** For each new or changed database query, name the index it uses (existing or new, created in the same change). Capture `EXPLAIN` output against realistic data when the table is large. Write "no new or changed queries" when that is true
-5. **Seed data.** When tests or manual QA need data, add or extend the repo's seed scripts. Seeds are idempotent, deterministic, and hold no real secrets
-6. **Docs and config.** When behaviour, a contract, a config value, or an env variable changes, update the doc that describes it (for example `.env.example`, `README.md`, or the TDD), or note the gap in the handoff
-7. **Verify.** Run the smallest meaningful checks: focused tests and a type check of touched code. Say which acceptance criteria still need manual or post-deploy proof
+1. Orient. Read the code paths the plan names, plus their callers and types. Read the canonical docs for the area in the same pass
+2. Minimal diff. The smallest safe change. No drive-by refactors
+3. Self-pass. Run the checklist below, then `git diff` and `git diff --check`
+4. Queries and indexes. For each new or changed database query, name the index it uses (existing or new, created in the same change). Capture `EXPLAIN` output against realistic data when the table is large. Write "no new or changed queries" when that is true
+5. Seed data. When tests or manual QA need data, add or extend the repo's seed scripts. Seeds are idempotent, deterministic, and hold no real secrets
+6. Docs and config. When behaviour, a contract, a config value, or an env variable changes, update the doc that describes it (for example `.env.example`, `README.md`, or the TDD), or note the gap in the handoff
+7. Verify. Run the smallest meaningful checks: focused tests and a type check of touched code. Say which acceptance criteria still need manual or post-deploy proof
 
 ## Review-ready patterns
 
@@ -102,7 +102,7 @@ Diagram rules: pick the type that fits (`flowchart TD`, `sequenceDiagram`, `stat
 - No quick fix or workaround without saying so and getting the user's yes
 - No `TODO` without an issue link
 - Specific names for new functions, constants and files, not generic ones (`formatInvoiceDueDate`, not `formatDate2`)
-- Comments say **why**, in one or two lines. Never restate the code
+- Comments say why, in one or two lines. Never restate the code
 
 ### Types
 
@@ -113,7 +113,7 @@ Diagram rules: pick the type that fits (`flowchart TD`, `sequenceDiagram`, `stat
 ### Constants and order
 
 - Group related constants in one `as const` object, not loose exports
-- When adding to an existing list, map, enum or `switch`, **append**. Never reshuffle existing members
+- When adding to an existing list, map, enum or `switch`, append. Never reshuffle existing members
 
 ### Reuse
 

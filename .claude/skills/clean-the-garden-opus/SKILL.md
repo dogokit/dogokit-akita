@@ -11,7 +11,7 @@ Source: Yihan Zhu, "Codebase Gardening" (building on Lauren Tan's "your codebase
 
 Agents copy whatever they find nearby. Before a change, an agent reads the code around it, and whatever is there "looks like the way things are done here." Good patterns spread that way, and so do weeds, at the speed agents write. You keep the garden clean "so that agents are always copying the good stuff."
 
-So a round has two jobs: **pull the weeds, then put rules into the code that keep them out.** Weeding alone does not last.
+So a round has two jobs: pull the weeds, then put rules into the code that keep them out. Weeding alone does not last.
 
 ## When and how wide
 
@@ -27,19 +27,19 @@ Read the agent instruction files (CLAUDE.md, AGENTS.md, .cursor/rules, and so on
 
 Sweep the whole repo. Look for these kinds, most common first:
 
-1. **Unused code.** This is the clearest weed and it keeps coming back. Look for exports nothing imports, styles for removed features, settings or config keys nothing reads, and fallback code for old browsers or runtimes the project no longer supports. Run the type checker and linter, and **read their hints and warnings, not only errors.** A hint that only prints lets weeds through.
-2. **Bad comments.** Comments grow faster than code and go stale fast. Flag comments that:
+1. Unused code. This is the clearest weed and it keeps coming back. Look for exports nothing imports, styles for removed features, settings or config keys nothing reads, and fallback code for old browsers or runtimes the project no longer supports. Run the type checker and linter, and read their hints and warnings, not only errors. A hint that only prints lets weeds through.
+2. Bad comments. Comments grow faster than code and go stale fast. Flag comments that:
    - no longer match the code (for example, a test was rewritten but its comment was not);
    - say the opposite of the code (watch for this after anyone "shortens" comments);
    - explain a workaround in a way that makes it look intentional to the next agent;
    - just restate what the code does.
-   Keep a comment **only when it guards against a real mistake.**
-3. **Copies that bypass a shared place.** Look for hand-typed versions of things that already exist as shared code: a link written by hand instead of with the shared link component, a constant or regex range retyped in a file instead of imported. Shared code protects only the code that uses it.
-4. **Copied broken patterns.** When you find one bug, search the whole repo for the same shape. Look-alikes are a trap (for example, a Unicode range whose first character is a look-alike glyph, which then also matches the wrong script). Compare by code point or value, not by how it looks.
-5. **Unintended defaults that rode along.** Look for settings that were copied onto new code without anyone choosing them (for example, a referrer or target attribute on outside links).
-6. **Rot from outside the code.** Dead external links, outdated docs that describe removed behaviour.
+   Keep a comment only when it guards against a real mistake.
+3. Copies that bypass a shared place. Look for hand-typed versions of things that already exist as shared code: a link written by hand instead of with the shared link component, a constant or regex range retyped in a file instead of imported. Shared code protects only the code that uses it.
+4. Copied broken patterns. When you find one bug, search the whole repo for the same shape. Look-alikes are a trap (for example, a Unicode range whose first character is a look-alike glyph, which then also matches the wrong script). Compare by code point or value, not by how it looks.
+5. Unintended defaults that rode along. Look for settings that were copied onto new code without anyone choosing them (for example, a referrer or target attribute on outside links).
+6. Rot from outside the code. Dead external links, outdated docs that describe removed behaviour.
 
-For each finding, write down where it is, what kind of weed it is, and **how it got in**: copied from existing code, newly made by later work, or old and missed before. Most weeds are new ones from later work, not copies. Copying explains how a weed spreads, not how it gets in, so do not assume every weed is a copy.
+For each finding, write down where it is, what kind of weed it is, and how it got in: copied from existing code, newly made by later work, or old and missed before. Most weeds are new ones from later work, not copies. Copying explains how a weed spreads, not how it gets in, so do not assume every weed is a copy.
 
 ## Step 3. Pull the weeds
 
@@ -56,9 +56,9 @@ Add a short write-up to each change (in the PR or commit body, or as notes for t
 
 For every weed that could come back, add the strongest guard that fits, as close to the code as it can go. Use this order:
 
-1. **Design change (best).** Make the wrong choice impossible. Move a rule into one shared piece of code so a later change to the rule is one line. Keep a feature agents misuse out of product code. Write values as numbers (code points) so a look-alike shows up as a different number.
-2. **Check.** If an instruction for agents can become a check, make it a check. Options: a lint rule whose error message points to the real fix, a test that checks the real cases (for example, a range test with both the right and wrong script), a test that fails if any other file defines its own copy, or turning a type-checker hint into a failure that stops a change from going in.
-3. **Written rule (weakest).** Put it right next to the code it governs, for example a short comment beside shared styles saying how every hover effect must work. Put rules that apply everywhere in the file agents read before they start.
+1. Design change (best). Make the wrong choice impossible. Move a rule into one shared piece of code so a later change to the rule is one line. Keep a feature agents misuse out of product code. Write values as numbers (code points) so a look-alike shows up as a different number.
+2. Check. If an instruction for agents can become a check, make it a check. Options: a lint rule whose error message points to the real fix, a test that checks the real cases (for example, a range test with both the right and wrong script), a test that fails if any other file defines its own copy, or turning a type-checker hint into a failure that stops a change from going in.
+3. Written rule (weakest). Put it right next to the code it governs, for example a short comment beside shared styles saying how every hover effect must work. Put rules that apply everywhere in the file agents read before they start.
 
 Prefer encoding effort into the code and its checks over relying on human review.
 

@@ -9,24 +9,24 @@ Format: `.claude/rules/writing-markdown.md`. Plain wording: `human-friendly` ski
 
 ## Before you write
 
-- **PRD is the authority.** If the TDD changes a PRD scope item, metric definition, default or open item, add a decision row with the proposal, the owner and the PM approval, and cite the PRD open-item number. Otherwise label it "proposal, not approved". Never drop PRD scope silently.
-- **Verify every "today the code does X" claim on current `main`.** Grep, read, and cite the symbol (`OrderService.updateOrderStatus`). Check side effects of reused methods, existing roles and guards (`SALES_ROLE_NAME` in `libs/constants/role.constant.ts`), config names, cron and queue wiring, cron cadence and infra names. Say whether the design replaces, keeps or builds on each existing pipeline.
-- **Vendor facts come from the official source.** Copy field names, endpoints, enums, error codes, required flags and version floors exactly from the vendor schema or docs and cite them. Label behaviour you did not exercise live as "unverified". If the documented payload lacks a field the design needs, mark that decision blocked.
-- **Scope = the ticket's current use case.** Drop features with no consumer today. Move out-of-scope flows (for example inbound webhooks in an outbound-cancel TDD) to a separate doc.
+- PRD is the authority. If the TDD changes a PRD scope item, metric definition, default or open item, add a decision row with the proposal, the owner and the PM approval, and cite the PRD open-item number. Otherwise label it "proposal, not approved". Never drop PRD scope silently.
+- Verify every "today the code does X" claim on current `main`. Grep, read, and cite the symbol (`OrderService.updateOrderStatus`). Check side effects of reused methods, existing roles and guards (`SALES_ROLE_NAME` in `libs/constants/role.constant.ts`), config names, cron and queue wiring, cron cadence and infra names. Say whether the design replaces, keeps or builds on each existing pipeline.
+- Vendor facts come from the official source. Copy field names, endpoints, enums, error codes, required flags and version floors exactly from the vendor schema or docs and cite them. Label behaviour you did not exercise live as "unverified". If the documented payload lacks a field the design needs, mark that decision blocked.
+- Scope = the ticket's current use case. Drop features with no consumer today. Move out-of-scope flows (for example inbound webhooks in an outbound-cancel TDD) to a separate doc.
 
 ## Required sections
 
 Open with a metadata table: status, revision and date (bump on every revision), ticket, epic, parent TDD. Then:
 
-1. **Problem and proposal.**
-2. **Terminology.** Define every acronym and term, for example "today = UTC date captured once per run".
-3. **Current and proposed behaviour.** Symbol citations, state diagrams, FE access gates (user, role, client).
-4. **Data model.** Follows the `writing-migrations-entities` skill. The ER diagram shows the same unique keys and indexes as the tables. No FK test cases.
-5. **Contract.** Follows the `writing-api-endpoints` skill. For each param, state required or defaulted, PATCH mutability and the exact rejection status. Also state the empty-result response, and the enum values with their `*.constant.ts` path.
-6. **Risks** in the template format.
-7. **Open questions.** Numbered, each with an owner. No "may" or "decide at implementation" for a product rule. Record data gaps and non-default parameters (cache TTL, FX source) here.
-8. **Verification.** Given/when/then pass/fail checks for the happy path, auth or HMAC failure, boundary dates, duplicate delivery, fallback and stale paths, plus one concrete rollback step. Siblings: `tdd-gowarehouse-integration-feasibility.md` §9 "Validation plan", `freight-shipment/freight-shipment-management-tdd.md` §3.15 "Testing plan".
-9. **Rollout.** New env vars (`.env.example`, secrets for testing, production and ephemeral), migrations, deploy order.
+1. Problem and proposal.
+2. Terminology. Define every acronym and term, for example "today = UTC date captured once per run".
+3. Current and proposed behaviour. Symbol citations, state diagrams, FE access gates (user, role, client).
+4. Data model. Follows the `writing-migrations-entities` skill. The ER diagram shows the same unique keys and indexes as the tables. No FK test cases.
+5. Contract. Follows the `writing-api-endpoints` skill. For each param, state required or defaulted, PATCH mutability and the exact rejection status. Also state the empty-result response, and the enum values with their `*.constant.ts` path.
+6. Risks in the template format.
+7. Open questions. Numbered, each with an owner. No "may" or "decide at implementation" for a product rule. Record data gaps and non-default parameters (cache TTL, FX source) here.
+8. Verification. Given/when/then pass/fail checks for the happy path, auth or HMAC failure, boundary dates, duplicate delivery, fallback and stale paths, plus one concrete rollback step. Siblings: `tdd-gowarehouse-integration-feasibility.md` §9 "Validation plan", `freight-shipment/freight-shipment-management-tdd.md` §3.15 "Testing plan".
+9. Rollout. New env vars (`.env.example`, secrets for testing, production and ephemeral), migrations, deploy order.
 
 Mark a section that depends on an unapproved ticket "re-check when <KEY> is approved".
 

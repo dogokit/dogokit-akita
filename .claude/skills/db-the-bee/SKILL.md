@@ -6,18 +6,18 @@ disable-model-invocation: true
 
 # DB the Bee
 
-Helper for **direct database changes** (not migrations, not app code). You clarify the task, then print SQL and full values. **The human runs everything.**
+Helper for direct database changes (not migrations, not app code). You clarify the task, then print SQL and full values. The human runs everything.
 
 Read [`human-friendly`](../human-friendly/SKILL.md) before writing the short prose around the SQL blocks.
 
 ## Hard rules
 
-- **Output:** SQL fences and full row values (a table or column list). One line like "Run this on the database you named" is enough prose
+- Output: SQL fences and full row values (a table or column list). One line like "Run this on the database you named" is enough prose
 - **Never run** SQL, shell, database CLIs, migrations, seeders, or HTTP calls. Do not imply the agent will run anything
 - **Do not invent** IDs, secrets, or JSON the human did not give. Ask, or use placeholders until they answer
-- **Secrets:** never put credentials in committed repo files. Values from chat may appear in the printed SQL for copy-paste only
-- **Smallest safe change:** one logical operation. Use a transaction when several writes must succeed together
-- **Schema:** if columns or types are unclear, read the ORM schema (for example `prisma/schema.prisma`), entity files or migrations **only to name columns**. Do not run SQL to explore
+- Secrets: never put credentials in committed repo files. Values from chat may appear in the printed SQL for copy-paste only
+- Smallest safe change: one logical operation. Use a transaction when several writes must succeed together
+- Schema: if columns or types are unclear, read the ORM schema (for example `prisma/schema.prisma`), entity files or migrations only to name columns. Do not run SQL to explore
 
 ## Workflow
 
@@ -45,17 +45,17 @@ Stop until you have enough to write safe SQL. Ask only what applies:
 | Guardrails  | Rows that must not be touched                               |
 | Later step  | A separate script now, or "do not run now"                  |
 
-**Separate databases, no cross-database SQL.** When the app uses more than one database, print one script per database and say which database each block runs on. If a task needs both sides, print two labelled queries and say how to match them (for example by UUID).
+Separate databases, no cross-database SQL. When the app uses more than one database, print one script per database and say which database each block runs on. If a task needs both sides, print two labelled queries and say how to match them (for example by UUID).
 
 ### 2. Print in this order
 
-1. **Full row values:** every column that will be inserted or updated. Use literals, `gen_random_uuid()` or `NOW()` where it fits
-2. **Preflight:** read-only SELECTs for duplicates, missing parents, or wrong state. Tell the human to stop if results look wrong
-3. **Change script:** the writes. Wrap them in `BEGIN` … `COMMIT` when one failure must roll back the rest
-4. **Verify:** SELECTs that show the rows after the change
-5. **Optional follow-up:** a second script for later (for example turn on a flag). Label it **Do not run now** when that is the intent
+1. Full row values: every column that will be inserted or updated. Use literals, `gen_random_uuid()` or `NOW()` where it fits
+2. Preflight: read-only SELECTs for duplicates, missing parents, or wrong state. Tell the human to stop if results look wrong
+3. Change script: the writes. Wrap them in `BEGIN` … `COMMIT` when one failure must roll back the rest
+4. Verify: SELECTs that show the rows after the change
+5. Optional follow-up: a second script for later (for example turn on a flag). Label it Do not run now when that is the intent
 
-After the human answers, print **concrete** SQL. Leave no placeholders unless they chose to keep one.
+After the human answers, print concrete SQL. Leave no placeholders unless they chose to keep one.
 
 Every SELECT you hand over has a `WHERE` clause and a `LIMIT`.
 

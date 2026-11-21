@@ -66,15 +66,15 @@ These build on `human-friendly`.
 
 When a TDD proposes a database index:
 
-- **Index for performance.** List each index with the query it serves and why it is needed (a slow lookup, sort or poll)
-- **Mark each index row** `performance` or `unique`. A unique index must name the race or rule it protects. Drop any row that is neither
+- Index for performance. List each index with the query it serves and why it is needed (a slow lookup, sort or poll)
+- Mark each index row `performance` or `unique`. A unique index must name the race or rule it protects. Drop any row that is neither
 - Say where each business rule is enforced: in the database (constraint, unique index) or in the app (service check, upsert, lock), and why
 
 ## Keep references light
 
-- **Issues:** do not name issue keys in the body. Describe the work ("the payment webhook check"). Put issue links in the metadata table and Related links. Use a key in the body only when the reader must track that exact issue, such as a blocking dependency
-- **Code:** describe behaviour in words first. Link code only when a claim depends on it. Soft limit: 5 to 8 code links in the whole doc, collected in Related links. Paste code only when its shape is the point, such as an API payload or a config diff
-- **Other links:** link the product doc and main design pages once, in the metadata table
+- Issues: do not name issue keys in the body. Describe the work ("the payment webhook check"). Put issue links in the metadata table and Related links. Use a key in the body only when the reader must track that exact issue, such as a blocking dependency
+- Code: describe behaviour in words first. Link code only when a claim depends on it. Soft limit: 5 to 8 code links in the whole doc, collected in Related links. Paste code only when its shape is the point, such as an API payload or a config diff
+- Other links: link the product doc and main design pages once, in the metadata table
 
 ## Section references
 
@@ -121,7 +121,7 @@ Use `flowchart TD` with these conventions so it reads like a UML activity diagra
 
 - Every state named in the text appears in the state diagram
 - Keep each diagram to about 12 nodes. Split larger ones
-- **Draw top to bottom.** Use `flowchart TD`, never `LR`. Add `direction TB` in `stateDiagram-v2` and `classDiagram`. Keep a `sequenceDiagram` to about 5 participants
+- Draw top to bottom. Use `flowchart TD`, never `LR`. Add `direction TB` in `stateDiagram-v2` and `classDiagram`. Keep a `sequenceDiagram` to about 5 participants
 - No spaces in node IDs. Quote labels with special characters. No colours or `click`
 - Do not use reserved words (`end`, `graph`, `subgraph`) as IDs
 - Prefer stable types that GitHub renders. Avoid `-beta` and `C4*` types unless the user asks

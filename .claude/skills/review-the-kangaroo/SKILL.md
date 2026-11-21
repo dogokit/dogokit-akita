@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 Read [`human-friendly`](../human-friendly/SKILL.md) before writing any review text. Use plain words for a reader new to the code. Keep commands, paths, issue keys, numbers and dates exact.
 
-Author a deep review: **orient → analyse → verify → draft → (confirm → post)**.
+Author a deep review: orient → analyse → verify → draft → (confirm → post).
 
 Run the whole review in one session. Do not stop after a plan with empty checkboxes. The first deliverable is always the draft: a verdict, a top comment and a findings table.
 
@@ -18,10 +18,10 @@ Complement: [`address-the-elephant`](../address-the-elephant/SKILL.md) handles t
 
 | Mode      | Scope                                         | Diff source                                              | Deliverable                          | Posts to GitHub    |
 | --------- | --------------------------------------------- | -------------------------------------------------------- | ------------------------------------ | ------------------ |
-| **PR**    | PR number or URL                              | `gh pr diff`                                             | Top comment and inline comments      | Yes, after confirm |
-| **Local** | Branch name, or the working tree              | `git diff`, `git diff --cached`, or `git diff <base>...HEAD` | Verdict, summary, findings (`path:line`) | No, chat only   |
+| PR    | PR number or URL                              | `gh pr diff`                                             | Top comment and inline comments      | Yes, after confirm |
+| Local | Branch name, or the working tree              | `git diff`, `git diff --cached`, or `git diff <base>...HEAD` | Verdict, summary, findings (`path:line`) | No, chat only   |
 
-Choose **local** when `gh pr list --head <branch>` finds no PR, or the user says pre-PR, fix first, no GitHub post, or chat only. No PR is never a reason to stop.
+Choose local when `gh pr list --head <branch>` finds no PR, or the user says pre-PR, fix first, no GitHub post, or chat only. No PR is never a reason to stop.
 
 ## Format and wording
 
@@ -105,9 +105,9 @@ When you point at a place in a design doc, cite the section heading (and number,
 
 | `event`           | When                                                            |
 | ----------------- | --------------------------------------------------------------- |
-| `REQUEST_CHANGES` | **Default**, unless the user chose otherwise                    |
+| `REQUEST_CHANGES` | Default, unless the user chose otherwise                    |
 | `COMMENT`         | The user asked for feedback only, with no verdict               |
-| `APPROVE`         | The user **explicitly** asked to approve, and findings allow it |
+| `APPROVE`         | The user explicitly asked to approve, and findings allow it |
 
 Never approve only because the diff looks clean. "No findings" still defaults to `REQUEST_CHANGES` with a short note, or `COMMENT` if the user asked for comment only.
 
@@ -155,7 +155,7 @@ Read the changed files in full, plus the callers, callees and types they touch. 
 
 ### 3. Analyse
 
-Review for correctness first, then security, data safety, performance, tests, and readability. For a large diff, you may launch one review subagent with the diff, the file list, and the **Format and wording** rules, and ask it for findings with path, line, severity and body.
+Review for correctness first, then security, data safety, performance, tests, and readability. For a large diff, you may launch one review subagent with the diff, the file list, and the Format and wording rules, and ask it for findings with path, line, severity and body.
 
 Always spot-check subagent findings yourself with Read or Grep. Never post an unverified line number or an invented path.
 
@@ -163,27 +163,27 @@ Always spot-check subagent findings yourself with Read or Grep. Never post an un
 
 | Severity    | Meaning                                         | Where                 |
 | ----------- | ----------------------------------------------- | --------------------- |
-| **Blocker** | Must fix before merge                           | Top comment and inline |
-| **Major**   | Important gap, bug, inaccuracy or contradiction | Top comment and inline |
-| **Minor**   | Clarity, ops or test gap                        | Usually inline only   |
-| **Nit**     | Style or wording                                | Usually inline only   |
+| Blocker | Must fix before merge                           | Top comment and inline |
+| Major   | Important gap, bug, inaccuracy or contradiction | Top comment and inline |
+| Minor   | Clarity, ops or test gap                        | Usually inline only   |
+| Nit     | Style or wording                                | Usually inline only   |
 
 ### 5. Draft
 
 Present in chat:
 
-1. **Planned GitHub action** (default `REQUEST_CHANGES`) with a one-line reason
-2. **Top comment**, from the template
-3. **Findings table** and every inline comment
+1. Planned GitHub action (default `REQUEST_CHANGES`) with a one-line reason
+2. Top comment, from the template
+3. Findings table and every inline comment
 
-**PR mode posting gate.** Ask both in one message:
+PR mode posting gate. Ask both in one message:
 
 1. The planned action is `REQUEST_CHANGES`. Do you want comment only or approve instead?
 2. Should I post this review on GitHub?
 
 If they say post without naming an action, use `REQUEST_CHANGES`. If they decline, stop after the draft.
 
-**Local mode:** state the would-be verdict and end with next steps: apply the fixes, run focused tests, then open the PR.
+Local mode: state the would-be verdict and end with next steps: apply the fixes, run focused tests, then open the PR.
 
 ### 6. Submit (PR mode, after confirmation)
 
@@ -223,7 +223,7 @@ End with the review URL, the count of inline comments, the compact findings tabl
 - Do not claim tests, type checks or lint passed. They do not apply
 - Verify every cited path, line and symbol against the current code
 - For design docs, flag the same term used two ways, "required" versus a default, inclusive versus exclusive ranges, claims in the PR body that the doc does not make, and sections that contradict each other
-- An internal contradiction or undefined behaviour is **major** (or **blocker** if it blocks the build). Wording-only issues are **minor** or **nit**
+- An internal contradiction or undefined behaviour is major (or blocker if it blocks the build). Wording-only issues are minor or nit
 
 ## Guardrails
 

@@ -8,9 +8,9 @@ ASD-STE100 is a controlled natural language, first released in 1986 (as AECMA Do
 
 ## Structure
 
-- **53 writing rules across 9 sections** covering word choice, grammar, sentence structure, and style.
-- **A dictionary** of roughly 900 approved words, each restricted to one meaning and one part of speech, plus roughly 1,200 words to avoid with suggested replacements.
-- **A terminology allowance**: organizations may define their own dictionary of approved technical nouns and verbs beyond the base ~900 words, for domain-specific vocabulary the base dictionary can't cover.
+- 53 writing rules across 9 sections covering word choice, grammar, sentence structure, and style.
+- A dictionary of roughly 900 approved words, each restricted to one meaning and one part of speech, plus roughly 1,200 words to avoid with suggested replacements.
+- A terminology allowance: organizations may define their own dictionary of approved technical nouns and verbs beyond the base ~900 words, for domain-specific vocabulary the base dictionary can't cover.
 
 ## Rule Categories (Paraphrased)
 

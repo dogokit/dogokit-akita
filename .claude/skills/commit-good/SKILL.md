@@ -21,11 +21,11 @@ Commits are atomic (one logical change, repo works after it) and follow [Convent
 
 ## Workflow
 
-1. **Inspect**: `git status --short`, `git diff`, `git diff --cached`, `git log -5 --oneline`. Match the repo's style and scopes.
-2. **Plan**: group changes by purpose, then show a one-line-per-commit list. Order refactors and fixes before features. If a big batch cannot split cleanly, make one commit.
-3. **Check**: run the project checks (`package.json`, `CLAUDE.md`, CI). If one fails, stop and report. Do not commit.
-4. **Commit**, one at a time: `git restore --staged .`, stage the paths or hunks, read `git diff --cached`, commit, then `git status --short`.
-5. **Report**: `git log --oneline` for the new commits, check results, and anything left uncommitted. One or two lines.
+1. Inspect: `git status --short`, `git diff`, `git diff --cached`, `git log -5 --oneline`. Match the repo's style and scopes.
+2. Plan: group changes by purpose, then show a one-line-per-commit list. Order refactors and fixes before features. If a big batch cannot split cleanly, make one commit.
+3. Check: run the project checks (`package.json`, `CLAUDE.md`, CI). If one fails, stop and report. Do not commit.
+4. Commit, one at a time: `git restore --staged .`, stage the paths or hunks, read `git diff --cached`, commit, then `git status --short`.
+5. Report: `git log --oneline` for the new commits, check results, and anything left uncommitted. One or two lines.
 
 ## Message
 
@@ -56,9 +56,9 @@ Bad: `update files`, `Fixed bug.`, `wip`, `feat: Add Login Page`, `feat: add log
 
 ## Edge cases
 
-- **One file, two purposes**: `git add -p`, or `e` to edit a hunk
-- **Already staged**: check first, unstage what does not fit
-- **Untracked files**: add, ignore, or leave out. Ask when unsure
-- **Generated files** (lockfiles, snapshots): commit with the change that caused them
-- **No changes**: say so, no empty commit
-- **Unclear intent**: ask one short question
+- One file, two purposes: `git add -p`, or `e` to edit a hunk
+- Already staged: check first, unstage what does not fit
+- Untracked files: add, ignore, or leave out. Ask when unsure
+- Generated files (lockfiles, snapshots): commit with the change that caused them
+- No changes: say so, no empty commit
+- Unclear intent: ask one short question

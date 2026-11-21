@@ -19,20 +19,20 @@ Follow this order. Do not skip to step 4 because it looks like the easiest fix.
 
 Search the whole scope for each kind. Record every finding with its file and line before you fix anything.
 
-1. **Copies of an existing problem.** A bad pattern has been copied into new places. Find every instance of the pattern, not just the first one. Example from the article: a Unicode character range copied into new pages, where one character looked like a Chinese character but was not, and the range also matched Korean.
-2. **New leftovers from recent agent work.** Code that was added and then made unused, or code that was left behind by a change that replaced it. Check the most recently changed files first (`git log --since` and `git log -p` on recent commits).
-3. **Old problems that earlier rounds missed.** Look at everything, not just recent changes. Expect this to be the largest group.
-4. **Problems from outside the code.** Dead links, docs that name removed commands or flags, README steps that no longer run, and config examples that no longer match the config schema.
+1. Copies of an existing problem. A bad pattern has been copied into new places. Find every instance of the pattern, not just the first one. Example from the article: a Unicode character range copied into new pages, where one character looked like a Chinese character but was not, and the range also matched Korean.
+2. New leftovers from recent agent work. Code that was added and then made unused, or code that was left behind by a change that replaced it. Check the most recently changed files first (`git log --since` and `git log -p` on recent commits).
+3. Old problems that earlier rounds missed. Look at everything, not just recent changes. Expect this to be the largest group.
+4. Problems from outside the code. Dead links, docs that name removed commands or flags, README steps that no longer run, and config examples that no longer match the config schema.
 
 Within those four kinds, check these categories:
 
-- **Dead code.** Unused functions, exports, components, files, branches, feature flags that are always on or always off, and dependencies nothing imports. Use the type checker and linter for unused symbols, then confirm each one with a search. Search for dynamic references (string names, reflection, routes, config files) before deleting.
-- **Unused styles.** CSS, classes, and style tokens with no remaining users. Styles for removed features are a common case.
-- **Stale comments.** Comments that describe code that has changed, or that say the opposite of what the code does. Comments also grow fast when agents write them, so measure this: if comment lines are growing much faster than code, that is a finding.
-- **Stale docs.** README, docs, and examples that describe old behavior, old file paths, or old commands.
-- **Drift and inconsistency.** The same thing done two different ways in two places (two regexes for the same rule, two copies of a constant, a hand-typed link where a shared helper exists, a setting that differs between files without a reason).
-- **Accidental settings.** Defaults or options that were copied in and quietly change behavior, such as a privacy setting that leaked into new links.
-- **Dead links.** Internal and external links that no longer resolve. Check internal links with a script. Check external links only when the user allows network access.
+- Dead code. Unused functions, exports, components, files, branches, feature flags that are always on or always off, and dependencies nothing imports. Use the type checker and linter for unused symbols, then confirm each one with a search. Search for dynamic references (string names, reflection, routes, config files) before deleting.
+- Unused styles. CSS, classes, and style tokens with no remaining users. Styles for removed features are a common case.
+- Stale comments. Comments that describe code that has changed, or that say the opposite of what the code does. Comments also grow fast when agents write them, so measure this: if comment lines are growing much faster than code, that is a finding.
+- Stale docs. README, docs, and examples that describe old behavior, old file paths, or old commands.
+- Drift and inconsistency. The same thing done two different ways in two places (two regexes for the same rule, two copies of a constant, a hand-typed link where a shared helper exists, a setting that differs between files without a reason).
+- Accidental settings. Defaults or options that were copied in and quietly change behavior, such as a privacy setting that leaked into new links.
+- Dead links. Internal and external links that no longer resolve. Check internal links with a script. Check external links only when the user allows network access.
 
 ## 3. Fix small, and fix with a record
 
@@ -46,9 +46,9 @@ Within those four kinds, check these categories:
 
 After the fixes, ask which change would have stopped each kind of rot before it happened. Use the first option that works, and only move down the list when the one above is not possible:
 
-1. **Design that removes the wrong choice.** Move a repeated rule into one shared function, constant, or component. The article's example: an outbound-link setting moved into one shared piece of code, so a later change took one line. Agents copy the nearest code, so make the nearest code correct.
-2. **Automated checks that run on every change and can block it.** Turn the type checker's and linter's warnings for unused code into errors. Add a test that fails when a file defines its own copy of a shared rule. Add a test with the look-alike character or edge case that caused the bug. The article notes that a type checker hint that only prints a warning let the bad change go in for three days.
-3. **Written rules placed next to the code they govern.** Put the rule in the agent instruction file, such as `CLAUDE.md` or `AGENTS.md`, close to the area it covers. Example rule: keep a comment only when it guards against a real mistake. Only write rules you can also check later.
+1. Design that removes the wrong choice. Move a repeated rule into one shared function, constant, or component. The article's example: an outbound-link setting moved into one shared piece of code, so a later change took one line. Agents copy the nearest code, so make the nearest code correct.
+2. Automated checks that run on every change and can block it. Turn the type checker's and linter's warnings for unused code into errors. Add a test that fails when a file defines its own copy of a shared rule. Add a test with the look-alike character or edge case that caused the bug. The article notes that a type checker hint that only prints a warning let the bad change go in for three days.
+3. Written rules placed next to the code they govern. Put the rule in the agent instruction file, such as `CLAUDE.md` or `AGENTS.md`, close to the area it covers. Example rule: keep a comment only when it guards against a real mistake. Only write rules you can also check later.
 
 Report how many findings got a design fix, a check, or only a written rule. This tells the user how much of the rot is structurally prevented.
 
