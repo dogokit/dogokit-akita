@@ -30,6 +30,10 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 - [human-friendly](human-friendly/SKILL.md): rewrite text in simple, short words for people
 - [technical-english](technical-english/SKILL.md): rewrite text so an agent or parser cannot misread it
 
+## pstack
+
+- [pstack](pstack/SKILL.md): index of the vendored pstack skills by Lauren Tan, kept apart in [`.claude/pstack/skills`](../pstack/skills) with [poteto-mode](../pstack/skills/poteto-mode/SKILL.md) as the main entry. Not slash commands
+
 ## Maintain
 
 - [clean-the-garden-opus](clean-the-garden-opus/SKILL.md), [clean-the-garden-sonnet](clean-the-garden-sonnet/SKILL.md), [clean-the-garden-haiku](clean-the-garden-haiku/SKILL.md): find and fix small rot across the repo, tuned for each model
