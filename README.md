@@ -12,24 +12,18 @@
 </div>
 
 > [!NOTE]
-> This project is **documentation only**. It is a curated reference of tools, stack choices and guides. It contains **no actual implementation** of the features listed below (auth, payments, storage, etc.). Treat the content as notes and recommendations to build from.
+> This project is currently documentation only. It is a curated reference of tools, stack choices and guides. It contains no actual implementation of the features listed below (auth, payments, storage, etc.). Treat the content as notes and recommendations to build from.
 >
-> Example implementation releases are tagged as `akita-1`, `akita-2`, and so on.
+> Example implementation releases will be named/tagged as `akita-1`, `akita-2`, and so on, separated from this repo.
 
 ## Goal
 
 🐶Dogokit Akita is a comprehensive and opinionated full stack application development kit. Encompassing JavaScript/TypeScript, Node.js/Deno/Bun, and more. It serves as a versatile reference for constructing robust web applications, that can scale from zero to millions of users.
 
-- Default frontend web with React, Tailwind CSS.
+- Default frontend web with React and Tailwind CSS
 - Optional full-stack web framework
-- Optional backend API and database ORM
-
-## Variants
-
-- [Demo at dogokit.allnimal.com](https://dogokit.allnimal.com)
-- [Dogokit Akita](https://github.com/dogokit/dogokit-akita)
-- [Dogokit Beagle](https://github.com/dogokit/dogokit-beagle)
-- [Dogokit Corgi](https://github.com/dogokit/dogokit-corgi)
+- Optional backend API
+- Optional database ORM
 
 ## Benefits
 
@@ -280,43 +274,20 @@ Alternatives:
 - [Domain-Driven Design](docs/guides/domain-driven-design.md)
 - [UI Design System](docs/guides/ui-design-system.md)
 - [UI Component Library](docs/guides/ui-component-library.md)
+- [AI Agent Skills](.claude/skills/README.md)
+
+## Implementations (TBA)
+
+- [Akita 1](https://akita-1.dogokit.com)
+- [Akita 2](https://akita-2.dogokit.com)
+
+## Variants
+
+- [Dogokit Akita](https://github.com/dogokit/dogokit-akita)
+- [Dogokit Beagle](https://github.com/dogokit/dogokit-beagle)
+- [Dogokit Corgi](https://github.com/dogokit/dogokit-corgi)
 
 ## References
 
 - [Inspirations](docs/references/inspirations.md)
 - [Credits](docs/references/credits.md)
-
-## Skills
-
-Agent skills for Claude Code and similar AI agents live in [`.claude/skills`](.claude/skills). Each one is a `SKILL.md` that the agent loads when the task fits, or when you type `/<skill-name>`.
-
-### Plan and build
-
-- [plan-the-lion](.claude/skills/plan-the-lion/SKILL.md): plan issues at the right depth, from one issue to a full backlog, and refine old ones
-- [implement-the-ant](.claude/skills/implement-the-ant/SKILL.md): plan first, then land a small, review-ready change
-- [investigate-the-cat](.claude/skills/investigate-the-cat/SKILL.md): triage a bug report or question into a verdict, a cause, and next steps
-- [db-the-bee](.claude/skills/db-the-bee/SKILL.md): print safe, copy-paste SQL for a person to run
-
-### Review and release
-
-- [commit-good](.claude/skills/commit-good/SKILL.md): make atomic commits with Conventional Commits messages
-- [release-the-kraken](.claude/skills/release-the-kraken/SKILL.md): commit, push, and open a short, scannable PR
-- [review-the-kangaroo](.claude/skills/review-the-kangaroo/SKILL.md): deep-review a PR or a local diff, with checked findings
-- [address-the-elephant](.claude/skills/address-the-elephant/SKILL.md): fix PR review comments, red checks, and merge conflicts
-
-### Design and explain
-
-- [tdd-the-barramundi](.claude/skills/tdd-the-barramundi/SKILL.md): write or simplify a technical design doc (TDD) in plain English
-- [design-docs](.claude/skills/design-docs/SKILL.md): rules for where design docs live and what they must contain
-- [present-the-chicken](.claude/skills/present-the-chicken/SKILL.md): turn a TDD into a talk guide and a slide deck
-- [draw-the-owl](.claude/skills/draw-the-owl/SKILL.md): explain a topic with diagrams, code sketches, and small HTML pages
-- [statechart-the-hart](.claude/skills/statechart-the-hart/SKILL.md): draw states and moves as a Mermaid statechart
-
-### Write
-
-- [human-friendly](.claude/skills/human-friendly/SKILL.md): rewrite text in simple, short words for people
-- [technical-english](.claude/skills/technical-english/SKILL.md): rewrite text so an agent or parser cannot misread it
-
-### Maintain
-
-- [clean-the-garden-opus](.claude/skills/clean-the-garden-opus/SKILL.md), [clean-the-garden-sonnet](.claude/skills/clean-the-garden-sonnet/SKILL.md), [clean-the-garden-haiku](.claude/skills/clean-the-garden-haiku/SKILL.md): find and fix small rot across the repo, tuned for each model
