@@ -11,7 +11,8 @@ Run the commit-to-review handoff. Read [`human-friendly`](../human-friendly/SKIL
 
 - When the work has an issue (GitHub Issues, Linear, Jira, or similar), the PR body starts with the issue URL above `## Description`. Check this on every create and every edit
 - Never invent an issue key or number. If the repo requires one and it is missing, stop and ask
-- Never force-push. Never push to the default branch directly
+- Never force-push
+- Do not assume a branch and PR are needed, or that a direct push to the default branch is fine. Check the repo rules first (step 1). If they are unclear, ask the user
 - Do not request reviewers unless the user names them in this request
 - Keep the PR body template sections and their order exactly as given. Apply `human-friendly` only to the prose inside them
 - Do not run formatters or `lint --fix` over existing files before committing. Formatting new files is fine
@@ -22,7 +23,10 @@ Optional: when the change moves a status or queue flow that a reviewer must foll
 ## 1. Check the branch and base
 
 - Find the base: the repo's default branch (`gh repo view --json defaultBranchRef --jq .defaultBranchRef.name`), unless the user or the repo docs name another
-- Never open a PR from the default branch. If you are on it, create a branch first: `<type>/<issue-key>-short-slug` (for example `feat/123-export-csv` or `fix/PROJ-42-null-email`), or `<type>/short-slug` when there is no issue
+- Find the repo rules for the default branch: read `CONTRIBUTING.md`, `AGENTS.md` and `CLAUDE.md`, then check branch protection with `gh api repos/{owner}/{repo}/rules/branches/<default>`. A 404 or an empty list means no rule, but it does not mean the team allows direct pushes
+- If the rules say a PR is required, never open a PR from the default branch. If you are on it, create a branch first: `<type>/<issue-key>-short-slug` (for example `feat/123-export-csv` or `fix/PROJ-42-null-email`), or `<type>/short-slug` when there is no issue
+- If the rules allow direct pushes, or the user says to push to the default branch, commit and push there with no branch or PR, and skip steps 5 and 6
+- If the rules are unclear, ask the user: push to the default branch, or branch and PR
 - If the repo documents its own branch names or release flow (in `CONTRIBUTING.md`, `AGENTS.md` or `CLAUDE.md`), follow that instead
 
 ## 2. Read the issue (when there is one)
