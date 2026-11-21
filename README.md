@@ -141,6 +141,7 @@ Things that are the primary default.
 6. AI Code Generator: [v0 by Vercel](stacks/v0.md) / [Stitch by Google](stacks/stitch-google.md)
 7. AI Docs: [Context7](stacks/context7.md)
 8. Terminal: [Ghostty](stacks/ghostty.md)
+9. AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md) by Google
 
 ### Development Tools: Agentic Development Environments (ADE)
 

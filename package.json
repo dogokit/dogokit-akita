@@ -8,7 +8,7 @@
     "setup-db": "docker compose up -d",
     "generate-secret": "openssl rand -base64 32",
     "check-links": "bunx linkinator *.md --markdown --retry-errors",
-    "lint:md": "markdownlint \"**/*.md\" --dot --ignore node_modules --ignore .changeset --ignore .claude/skills"
+    "lint:md": "markdownlint \"**/*.md\" --dot"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
