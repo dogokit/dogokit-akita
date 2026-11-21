@@ -16,7 +16,7 @@ Install in Claude Code:
 /plugin install pstack@cursor-plugins
 ```
 
-Vendored in this repo as project skills in `.claude/skills/`, with the index at [`pstack`](../.claude/skills/pstack/SKILL.md) and shared files in [`.claude/pstack/`](../.claude/pstack/README.md)
+Vendored in this repo in [`.claude/pstack/`](../.claude/pstack/README.md), apart from our skills, with the index skill at [`pstack`](../.claude/skills/pstack/SKILL.md). Not slash commands: read the `SKILL.md` file
 
 Links:
 

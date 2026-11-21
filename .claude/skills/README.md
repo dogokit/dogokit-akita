@@ -31,7 +31,7 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 
 ## pstack
 
-- [pstack](pstack/SKILL.md): index of the vendored pstack skills by Lauren Tan, with [poteto-mode](poteto-mode/SKILL.md) as the main entry. See [`.claude/pstack`](../pstack/README.md)
+- [pstack](pstack/SKILL.md): index of the vendored pstack skills by Lauren Tan, kept apart in [`.claude/pstack/skills`](../pstack/skills) with [poteto-mode](../pstack/skills/poteto-mode/SKILL.md) as the main entry. Not slash commands
 
 ## Maintain
 
