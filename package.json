@@ -1,9 +1,9 @@
 {
   "name": "dogokit-akita",
-  "module": "index.ts",
   "type": "module",
+  "module": "index.ts",
   "scripts": {
-    "check": "bun run lint && bun run lint:md",
+    "check": "bun run format:check && bun run lint && bun run lint:md",
     "setup-env": "cp -i .env.example .env.local && cp -i .env.example .env.production",
     "setup-db": "docker compose up -d",
     "generate-secret": "openssl rand -base64 32",

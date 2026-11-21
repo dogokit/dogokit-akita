@@ -12,25 +12,25 @@ Links:
 Here is a login form example integrating with [Remix](https://remix.run).
 
 ```tsx
-import { getFormProps, getInputProps, useForm } from "@conform-to/react";
-import { parseWithZod } from "@conform-to/zod";
-import type { ActionArgs } from "@remix-run/node";
-import { json, redirect } from "@remix-run/node";
-import { Form, useActionData } from "@remix-run/react";
-import { z } from "zod";
+import { getFormProps, getInputProps, useForm } from "@conform-to/react"
+import { parseWithZod } from "@conform-to/zod"
+import type { ActionArgs } from "@remix-run/node"
+import { json, redirect } from "@remix-run/node"
+import { Form, useActionData } from "@remix-run/react"
+import { z } from "zod"
 
 const schema = z.object({
   email: z.string().email(),
   password: z.string(),
   remember: z.boolean().optional(),
-});
+})
 
 export async function action({ request }: ActionArgs) {
-  const formData = await request.formData();
-  const submission = parseWithZod(formData, { schema });
+  const formData = await request.formData()
+  const submission = parseWithZod(formData, { schema })
 
   if (submission.status !== "success") {
-    return json(submission.reply());
+    return json(submission.reply())
   }
 
   // ...
@@ -38,20 +38,20 @@ export async function action({ request }: ActionArgs) {
 
 export default function Login() {
   // Last submission returned by the server
-  const lastResult = useActionData<typeof action>();
+  const lastResult = useActionData<typeof action>()
   const [form, fields] = useForm({
     // Sync the result of last submission
     lastResult,
 
     // Reuse the validation logic on the client
     onValidate({ formData }) {
-      return parseWithZod(formData, { schema });
+      return parseWithZod(formData, { schema })
     },
 
     // Validate the form on blur event triggered
     shouldValidate: "onBlur",
     shouldRevalidate: "onInput",
-  });
+  })
 
   return (
     <Form method="post" id={form.id} onSubmit={form.onSubmit} noValidate>
@@ -93,7 +93,7 @@ export default function Login() {
 
       <button type="submit">Login</button>
     </Form>
-  );
+  )
 }
 ```
 
@@ -105,9 +105,9 @@ If the default value of the form comes from the loader and you are trying to res
 
 ```tsx
 export default function Example() {
-  const { defaultValue } = useLoaderData<typeof loader>();
-  const lastResult = useActionData<typeof action>();
-  const navigation = useNavigation();
+  const { defaultValue } = useLoaderData<typeof loader>()
+  const lastResult = useActionData<typeof action>()
+  const navigation = useNavigation()
   const [form, fields] = useForm({
     // If the default value comes from loader
     defaultValue,
@@ -119,7 +119,7 @@ export default function Example() {
     // lastResult: fetcher.state === 'idle' ? lastResult : null,
 
     // ...
-  });
+  })
 
   // ...
 }
