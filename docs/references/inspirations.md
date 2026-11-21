@@ -30,3 +30,16 @@ Directory:
 - [OpenAlternative](https://openalternative.co): Open Source Alternatives to Popular Software
 - [OpenSourceAlternative.to](https://opensourcealternative.to): Open Source Alternatives to Proprietary Software
 - [Best of JS](https://bestofjs.org)
+
+Tools:
+
+- [Mainframe](https://mainframe.app/)
+
+Standards and updates:
+
+- [ASD-STE100](https://www.asd-ste100.org/): official site of the Simplified Technical English standard for technical documentation
+- [Superlogical public testing](https://www.superlogical.com/updates/public-testing-beginning): update on the start of public testing
+
+Sites:
+
+- [Allo?](https://allo.joshpuckett.me/)
