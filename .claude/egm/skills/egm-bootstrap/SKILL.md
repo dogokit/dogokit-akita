@@ -9,10 +9,10 @@ description: Bootstrap directory README.md files across a repository subtree.
 
 Read the harness guide first:
 
-- Codex or ChatGPT Work: [Codex integration](../../egm/docs/codex.md)
-- Claude Code or Cowork: [Claude Code integration](../../egm/docs/claude.md)
+- Codex or ChatGPT Work: [Codex integration](../../docs/codex.md)
+- Claude Code or Cowork: [Claude Code integration](../../docs/claude.md)
 
-In this repo the EGM root is `.claude/egm/` (`../../egm/` from here). The `agents/`, `resources/` and `docs/` folders named in this skill are the folders there. Skills run as `/egm-review` and so on, without the `/egm:` prefix
+In this repo the EGM root is `.claude/egm/` (`../../` from here). The `agents/`, `resources/` and `docs/` folders named in this skill are the folders there. Skills run as `/egm-review` and so on, without the `/egm:` prefix
 
 ## Overview
 
@@ -29,7 +29,7 @@ A Goldfish runs in a fresh context with no conversation history
 - Each persona lives in `agents/<file>.md`. Its frontmatter `name` (for example `egm-zoom-out`) is the subagent type to request, if your harness registers named subagents
 - Otherwise spawn a general-purpose subagent and tell it to read the persona file first
 - Pass the prompt verbatim and wait for the report
-- If your harness cannot nest subagents, dispatch directly instead of using the synthesizer. See [`docs/harnesses.md`](../../egm/docs/harnesses.md)
+- If your harness cannot nest subagents, dispatch directly instead of using the synthesizer. See [`docs/harnesses.md`](../../docs/harnesses.md)
 - If your harness has no subagent tool, run the scout steps inline
 
 ## Inputs

@@ -13,14 +13,14 @@ This skill only points to the others. Read the chosen skill's `SKILL.md` and fol
 
 | Need                                     | Skill                                           | Output                     |
 | ---------------------------------------- | ----------------------------------------------- | -------------------------- |
-| Test an idea before designing            | [`egm-brainstorm`](../egm-brainstorm/SKILL.md)       | `concepts_brief.md`        |
-| Turn a brief or notes into a design doc  | [`egm-draft`](../egm-draft/SKILL.md)                 | `design_draft.md`          |
-| Review a design doc with fresh reviewers | [`egm-review`](../egm-review/SKILL.md)               | Review report              |
-| Work through review findings             | [`egm-resolve`](../egm-resolve/SKILL.md)             | Agreed changes             |
-| Small fix, refactor or spec tweak        | [`egm-lite`](../egm-lite/SKILL.md)                   | Short checklist and review |
-| A chosen group of reviewers for one task | [`egm-review-loop`](../egm-review-loop/SKILL.md)     | Review report              |
-| Docs for an existing codebase            | [`egm-bootstrap`](../egm-bootstrap/SKILL.md)         | Docs under `docs/designs/` |
-| Docs have drifted from the code          | [`egm-drift-report`](../egm-drift-report/SKILL.md)   | Drift report               |
+| Test an idea before designing            | [`egm-brainstorm`](../../egm/skills/egm-brainstorm/SKILL.md)       | `concepts_brief.md`        |
+| Turn a brief or notes into a design doc  | [`egm-draft`](../../egm/skills/egm-draft/SKILL.md)                 | `design_draft.md`          |
+| Review a design doc with fresh reviewers | [`egm-review`](../../egm/skills/egm-review/SKILL.md)               | Review report              |
+| Work through review findings             | [`egm-resolve`](../../egm/skills/egm-resolve/SKILL.md)             | Agreed changes             |
+| Small fix, refactor or spec tweak        | [`egm-lite`](../../egm/skills/egm-lite/SKILL.md)                   | Short checklist and review |
+| A chosen group of reviewers for one task | [`egm-review-loop`](../../egm/skills/egm-review-loop/SKILL.md)     | Review report              |
+| Docs for an existing codebase            | [`egm-bootstrap`](../../egm/skills/egm-bootstrap/SKILL.md)         | Docs under `docs/designs/` |
+| Docs have drifted from the code          | [`egm-drift-report`](../../egm/skills/egm-drift-report/SKILL.md)   | Drift report               |
 
 Core loop: `egm-brainstorm` → `egm-draft` → `egm-review` → `egm-resolve` → human review on a PR → build
 

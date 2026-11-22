@@ -1,7 +1,8 @@
 # EGM shared files
 
-Shared files for the vendored [Elephant-Goldfish Model](https://github.com/google/elephant-goldfish-model) skills (`.claude/skills/egm-*`). Skill text refers to this folder as the EGM root
+Shared files for the vendored [Elephant-Goldfish Model](https://github.com/google/elephant-goldfish-model) skills (`skills/egm-*` in this folder). Skill text refers to this folder as the EGM root
 
+- `skills/`: the 8 `egm-*` skills (the `egm` index stays in `.claude/skills/egm/`)
 - `agents/`: Goldfish reviewer personas
 - `resources/`: execution instructions and document standards
 - `docs/`: Claude Code, Codex and harness notes
