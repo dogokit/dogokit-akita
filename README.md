@@ -106,7 +106,7 @@ Things that are the primary default.
 
 1. Language: [TypeScript](stacks/typescript.md) + [JavaScript](stacks/javascript.md) + [HTML](stacks/html.md) + [CSS](stacks/css.md)
 2. Runtime & Package Manager: [Bun](stacks/bun.md)
-3. Format and Lint: [Biome](stacks/biome.md)
+3. Format and Lint: [Oxfmt](stacks/oxfmt.md) + [Oxlint](stacks/oxc.md)
 4. Bundler: [Vite](stacks/vite.md)
 5. Frontend Library: [React](stacks/react.md)
 6. Styling: [Tailwind CSS](stacks/tailwind.md) + [shadcn/ui](stacks/shadcn-ui.md) + [UI SDK](stacks/ui-sdk.md) + [unplugin-icons](stacks/unplugin-icons.md) + [Tiptap](stacks/tiptap.md)
