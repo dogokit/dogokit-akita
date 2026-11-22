@@ -2,7 +2,7 @@
 
 TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
-Latest version: v5
+Latest version: v7
 
 Links:
 
