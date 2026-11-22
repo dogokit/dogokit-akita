@@ -12,7 +12,7 @@
 </div>
 
 > [!NOTE]
-> This project is currently documentation only. It is a curated reference of tools, stack choices and guides. It contains no actual implementation of the features listed below (auth, payments, storage, etc.). Treat the content as notes and recommendations to build from.
+> This project is currently documentation only. It is a curated reference of tools, stack choices and guides. It contains no implementation of the features listed below (auth, payments, storage, etc.). The only code is a minimal example in `index.ts` that shows the project runs. Treat the content as notes and recommendations to build from.
 >
 > Example implementation releases will be named/tagged as `akita-1`, `akita-2`, and so on, separated from this repo.
 
