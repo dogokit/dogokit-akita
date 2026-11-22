@@ -84,12 +84,12 @@ Keep these separate from the copy
 
 ## 8. Commit, push, PR
 
-Follow [`commit-good`](../commit-good/SKILL.md) and push. Use at least two commits:
+Follow [`good-commit`](../good-commit/SKILL.md) and push. Use at least two commits:
 
 1. `docs(skills): extract <stack> skills from <upstream>`: the copy and the link fix. Put source, commit, license and count in the body
 2. `docs: add <stack> index and stack note`: our own files and README links
 
-Then follow [`release-the-kraken`](../release-the-kraken/SKILL.md) for the PR against `main`. In the PR body, name the upstream, the pinned commit, the license, and what was skipped. Remove the worktree only after the PR merges, with [`merge-good`](../merge-good/SKILL.md)
+Then follow [`release-the-kraken`](../release-the-kraken/SKILL.md) for the PR against `main`. In the PR body, name the upstream, the pinned commit, the license, and what was skipped. Remove the worktree only after the PR merges, with [`good-merge`](../good-merge/SKILL.md)
 
 ## Reply
 

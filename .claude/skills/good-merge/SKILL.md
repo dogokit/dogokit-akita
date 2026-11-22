@@ -1,5 +1,5 @@
 ---
-name: merge-good
+name: good-merge
 description: Merge a GitHub pull request with a merge commit, then clean up. Checks that CI passes and the PR is mergeable, merges, deletes the merged branch locally and on origin, switches to main and pulls. Use when the user asks to merge a PR, land it, or clean up after a merge.
 ---
 

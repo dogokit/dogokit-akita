@@ -1,5 +1,5 @@
 ---
-name: commit-good
+name: good-commit
 description: Make good git commits. Each commit is atomic (one logical change that passes checks) and has a Conventional Commits message. Use when the user asks to commit, save work to git, split changes into commits, or clean up a mixed working tree. Pushes when asked, and keeps pushing on later commits in the same session.
 ---
 

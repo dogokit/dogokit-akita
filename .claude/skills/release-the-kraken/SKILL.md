@@ -36,7 +36,7 @@ Optional: when the change moves a status or queue flow that a reviewer must foll
 
 ## 3. Commit
 
-Follow [`commit-good`](../commit-good/SKILL.md): keep each commit atomic, use Conventional Commits, run focused checks, then `git diff --check`.
+Follow [`good-commit`](../good-commit/SKILL.md): keep each commit atomic, use Conventional Commits, run focused checks, then `git diff --check`.
 
 ## 4. Push
 
