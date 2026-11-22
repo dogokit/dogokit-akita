@@ -18,24 +18,23 @@ Follow these steps:
 ### Prerequisites
 
 ```shell
-bun: ">=1.1.26"
+bun: "latest"
 ```
 
 ### Setting up your local repo
 
-Dogokit uses bun workspaces, so you should **always run `bun install` from the top-level project directory**. Running `bun install` in the top-level project root will install dependencies for `Dogokit`, and every package in the repo.
+Run `bun install` from the top-level project directory to install all dependencies for `Dogokit`.
 
 ```shell
 git clone && cd ...
 bun install
-bun turbo build
 ```
 
 ### Setting up environment variables
 
-Checkout the `.env.example` file inside the `apps/web` directory for the environment variables you need to get the project running. You should create an UploadThing and Neon DB accounts and copy the environment variables from their dashboard to a `.env.local` file in `apps/web`.
+Create a `.env.local` file in `apps/web` with the variables your local setup needs.
 
-You will also need to create a GitHub Oauth token as well as for Google authentication as well.
+You will also need a GitHub OAuth token and a Google OAuth client for authentication.
 
 ### Using GitHub Codespaces for development
 
@@ -44,30 +43,6 @@ To get started, create a codespace for this repository by clicking this 👇
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/dogokit/dogokit-akita)
 
 Your new codespace will open in a web-based version of Visual Studio Code. All development dependencies will be preinstalled, and the tests will run automatically ensuring you've got a green base from which to start working.
-
-### Development
-
-```shell
-# Dev
-bun turbo dev
-
-# Build
-bun turbo build
-
-# Typecheck
-bun turbo typecheck
-
-# Lint
-bun turbo lint
-
-# Storybook
-bun turbo storybook
-
-# Start apps in production mode
-bun turbo start
-```
-
-If you're familiar with turborepo / bun workspaces, running stuff around this repo will be easy to figure out.
 
 ### Other useful commands
 
