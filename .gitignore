@@ -2,8 +2,6 @@ __*
 .DS_Store
 .env
 .env.production
-.moon/cache
-.moon/docker
 .react-email
 .sentryclirc
 .stylelintcache

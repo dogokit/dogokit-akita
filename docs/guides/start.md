@@ -32,25 +32,6 @@ The possiblity of the project structure is endless.
 
 ## Prerequisites
 
-### moon & proto
-
-Install [proto](https://moonrepo.dev/proto) for toolchain versioning:
-
-```sh
-curl -fsSL https://moonrepo.dev/install/proto.sh | bash
-```
-
-Install [moonrepo](https://moonrepo.dev) for monorepo project management:
-
-```sh
-curl -fsSL https://moonrepo.dev/install/moon.sh | bash
-# or
-proto plugin add moon "https://raw.githubusercontent.com/moonrepo/moon/master/proto-plugin.toml"
-proto install moon
-```
-
-> Note: moon & proto are not required for the project to run, but they are recommended for efficient project management and toolchain versioning.
-
 ### Bun
 
 Use [Bun](https://bun.sh), a fast JavaScript all-in-one toolkit that replace Node.js and npm/yarn/pnpm.
@@ -61,7 +42,6 @@ Use [Bun](https://bun.sh), a fast JavaScript all-in-one toolkit that replace Nod
 curl -fsSL https://bun.sh/install | bash
 npm i -g bun
 brew install oven-sh/bun/bun
-proto install bun
 ```
 
 ### Docker
@@ -111,27 +91,9 @@ bun fix
 
 ## Setup Environment Variables
 
-Create the `.env.local` file from `.env.example`. This is the one for local development, not production
+Create a `.env.local` file for local development, not production. Configure the required environment variables if on local, otherwise in the project settings on other environments.
 
-```sh
-cp -i .env.example .env.local
-```
-
-Configure the required environment variables if on local, otherwise in the project settings on other environments.
-
-If necessary, create the `.env.production` for production access. Adjust accordingly if need for `staging`, `test`, etc. Be careful to change the `APP_MAIN_URL` on different domains and subdomains.
-
-```sh
-cp -i .env.example .env.production
-```
-
-Or run the script:
-
-```sh
-make setup-env
-# cp -i .env.example .env.local
-# cp -i .env.example .env.production
-```
+If necessary, create a `.env.production` for production access. Adjust accordingly if need for `staging`, `test`, etc. Be careful to change the `APP_MAIN_URL` on different domains and subdomains.
 
 Client/Frontend/Application:
 
@@ -173,7 +135,6 @@ To start quickly, create a PostgresQL database with either of these:
 
 - Vercel Postgres
 - Supabase
-- Neon.tech
 - Xata.io
 
 ### Database Operations

@@ -12,7 +12,7 @@
 </div>
 
 > [!NOTE]
-> This project is currently documentation only. It is a curated reference of tools, stack choices and guides. It contains no actual implementation of the features listed below (auth, payments, storage, etc.). Treat the content as notes and recommendations to build from.
+> This project is currently documentation only. It is a curated reference of tools, stack choices and guides. It contains no implementation of the features listed below (auth, payments, storage, etc.). The only code is a minimal example in `index.ts` that shows the project runs. Treat the content as notes and recommendations to build from.
 >
 > Example implementation releases will be named/tagged as `akita-1`, `akita-2`, and so on, separated from this repo.
 
@@ -106,7 +106,7 @@ Things that are the primary default.
 
 1. Language: [TypeScript](stacks/typescript.md) + [JavaScript](stacks/javascript.md) + [HTML](stacks/html.md) + [CSS](stacks/css.md)
 2. Runtime & Package Manager: [Bun](stacks/bun.md)
-3. Format and Lint: [Biome](stacks/biome.md)
+3. Format and Lint: [Oxfmt](stacks/oxfmt.md) + [Oxlint](stacks/oxc.md)
 4. Bundler: [Vite](stacks/vite.md)
 5. Frontend Library: [React](stacks/react.md)
 6. Styling: [Tailwind CSS](stacks/tailwind.md) + [shadcn/ui](stacks/shadcn-ui.md) + [UI SDK](stacks/ui-sdk.md) + [unplugin-icons](stacks/unplugin-icons.md) + [Tiptap](stacks/tiptap.md)
