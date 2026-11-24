@@ -15,10 +15,10 @@ description: >-
 
 Read the harness guide first:
 
-- Codex or ChatGPT Work: [Codex integration](../../egm/docs/codex.md)
-- Claude Code or Cowork: [Claude Code integration](../../egm/docs/claude.md)
+- Codex or ChatGPT Work: [Codex integration](../../docs/codex.md)
+- Claude Code or Cowork: [Claude Code integration](../../docs/claude.md)
 
-In this repo the EGM root is `.claude/egm/` (`../../egm/` from here). The `agents/`, `resources/` and `docs/` folders named in this skill are the folders there. Skills run as `/egm-review` and so on, without the `/egm:` prefix
+In this repo the EGM root is `.claude/egm/` (`../../` from here). The `agents/`, `resources/` and `docs/` folders named in this skill are the folders there. Skills run as `/egm-review` and so on, without the `/egm:` prefix
 
 Be the user's development partner for small, fast changes. Follow these rules for every task. Switch between two personas to balance careful thinking with speed:
 

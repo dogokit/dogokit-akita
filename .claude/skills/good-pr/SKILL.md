@@ -1,0 +1,106 @@
+---
+name: good-pr
+description: Create or update a GitHub pull request for the current branch, with a plain-English title and a short, scannable body. Commits leftover changes with good-commit, pushes, checks the base branch and any existing PR, and reports the PR link. Use when the user asks to create a PR, open a PR for review, or update a PR's title or body.
+---
+
+# Good PR
+
+Open or update one PR from the current branch. Read [`human-friendly`](../human-friendly/SKILL.md) before writing the title or body.
+
+## Rules
+
+1. Create or edit a PR only when the user asks
+2. Title is plain English. No `type(scope):` prefix, no period, 60 characters or less
+3. Body is short. Use the template below and cut what a reviewer does not need
+4. Never force-push. Never use `--no-verify`
+5. Never invent an issue key or number. If the repo needs one and it is missing, stop and ask
+6. Request reviewers only when the user names them
+7. No "Generated with" footer on the PR body
+8. Stay short in chat
+
+## Workflow
+
+1. Check the branch and base
+   - Current branch: `git branch --show-current`. Stop on a detached HEAD
+   - Base: `gh repo view --json defaultBranchRef --jq .defaultBranchRef.name`, unless `CONTRIBUTING.md`, `AGENTS.md` or `CLAUDE.md` name another
+   - On the base branch: stop and ask. Create a branch first, named `<type>/<issue-key>-short-slug` or `<type>/short-slug`, unless the repo rules allow direct pushes
+2. Commit what is left
+   - `git status --short`. Commit the changes that belong to this PR with [`good-commit`](../good-commit/SKILL.md)
+   - Leave out unrelated files. Ask when unsure
+   - Run the project checks (`package.json`, `CLAUDE.md`, CI) before the commit. If one fails, stop and report. Do not open the PR
+   - No commits ahead of the base: `git log origin/<base>..HEAD --oneline` is empty. Stop and say so
+3. Read the issue (when there is one)
+   - `gh issue view <n> --json title,body,url`. With another tracker, use its CLI or MCP tool
+   - Use its acceptance criteria for the body
+4. Push: `git push -u origin HEAD`
+5. Find an existing PR: `gh pr list --head <branch> --state all --json number,title,url,state,baseRefName`
+   - Open PR: edit it in step 7
+   - Closed PR: stop and report. Do not reopen it
+   - No PR: create one in step 7
+6. Write the title and body, following the rules below
+7. Create or edit
+   - Write the body to a file outside the repo (the scratchpad folder), so the Mermaid block and line breaks stay exact
+   - Create: `gh pr create --base <base> --head <branch> --title "<title>" --body-file <file>`. Add `--draft` only when the repo asks for drafts
+   - Edit: `gh pr edit <n> --title "<title>" --body-file <file>`
+8. Check: `gh pr view <n> --json url,title,baseRefName,isDraft,mergeable,body`
+   - Title and base are as expected
+   - Body starts with the issue URL (when there is one) and has no footer
+   - `mergeable` is `CONFLICTING`: report it and point to [`address-the-elephant`](../address-the-elephant/SKILL.md). Do not fix it here
+
+## Title
+
+Write the title for a reader who has not seen the code. Say what changes for the user or the team, in plain words.
+
+- Start with a verb: Add, Fix, Move, Stop, Rename, Remove
+- Name the thing, not the file: "Add search input to home page", not "add search input in home.html"
+- With an issue: `<issue key> <plain title>`, for example `ABC-42 Fix search crash on empty input`. Rewrite a technical issue title in plain words
+- Keep the issue key exact. Never make one up
+
+Good: `Add search input to home page`, `Fix crash when search box is empty`, `ABC-42 Add search input to home page`
+
+Bad: `feat(home): add search input`, `fix: null check`, `refactor skills`, `Update files.`
+
+## Body
+
+```text
+<issue URL, when there is one>
+
+## Description
+
+**Problem:** <one sentence: what was broken or missing>
+
+**Fix:** <one or two sentences: what happens now>
+
+### Approach
+
+<Mermaid diagram, when the change alters a flow>
+
+## Changes
+
+- <path or symbol>: <action>
+
+## Acceptance Criteria
+
+- [ ] <criterion from the issue>
+```
+
+Rules:
+
+- Keep the section names and their order exactly as shown
+- Description: only the Problem and Fix lines. Design reasons go in code comments or the issue
+- Add `**Heads-up:**` only for a behaviour change callers will notice. Add `**QA:**` only for a manual check still to do
+- Changes: one line per file, written as an action. Do not repeat the Description
+- No Verification section. CI shows the checks. Report check results in chat, and never claim a check passed unless it ran
+- Aim for about 200 words, not counting the diagram
+- No footer
+
+Diagram: add one under `### Approach` when the change adds or moves a validation, guard, request path, job, retry, state change or integration call. Leave `### Approach` out for renames, copy, config, docs, test-only changes and dependency bumps.
+
+- Use code symbol names (for example `AuthService.create`) and mark new or changed nodes `(new)` or `(changed)`
+- About 10 nodes. Show decisions and outcomes, not every call
+- `flowchart TD` for flows, `sequenceDiagram` for calls between systems, `stateDiagram-v2` for status moves
+- Stack a `Before` above an `After` when readers must compare old and new
+
+## Report
+
+Give the PR URL, the title, and the base. Add one line for anything that failed or was skipped.

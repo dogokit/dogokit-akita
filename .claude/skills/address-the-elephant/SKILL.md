@@ -97,7 +97,7 @@ One thread or tight cluster at a time.
    - Resolve each file by reading both sides. When both sides add constants, blocks or imports, keep both. Never take `--ours` or `--theirs` wholesale
    - Check no markers are left (`rg -n '^(<<<<<<<|=======|>>>>>>>)'`), then run focused tests and the type check
    - Commit the merge on its own, not mixed with review fixes
-6. Commit and push. Follow [`commit-good`](../commit-good/SKILL.md). Check `git status` and `git diff`. Stage paths explicitly. No `--no-verify`. No force-push. No secrets
+6. Commit and push. Follow [`good-commit`](../good-commit/SKILL.md). Check `git status` and `git diff`. Stage paths explicitly. No `--no-verify`. No force-push. No secrets
 7. Reply on every fixed or answered thread, using Voice. Inline reply via GraphQL `addPullRequestReviewThreadReply`. Top-level only via `gh pr comment`
 8. Resolve with `resolveReviewThread` when done. Not when you asked a question or need confirmation
 9. Re-request every earlier human reviewer on the list: `gh pr edit PR_NUMBER --add-reviewer a,b`. Leave names already pending. If the list is empty, say why. Never re-request the PR author or bots

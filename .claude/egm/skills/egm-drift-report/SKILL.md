@@ -13,10 +13,10 @@ description: >-
 
 Read the harness guide first:
 
-- Codex or ChatGPT Work: [Codex integration](../../egm/docs/codex.md)
-- Claude Code or Cowork: [Claude Code integration](../../egm/docs/claude.md)
+- Codex or ChatGPT Work: [Codex integration](../../docs/codex.md)
+- Claude Code or Cowork: [Claude Code integration](../../docs/claude.md)
 
-In this repo the EGM root is `.claude/egm/` (`../../egm/` from here). The `agents/`, `resources/` and `docs/` folders named in this skill are the folders there. Skills run as `/egm-review` and so on, without the `/egm:` prefix
+In this repo the EGM root is `.claude/egm/` (`../../` from here). The `agents/`, `resources/` and `docs/` folders named in this skill are the folders there. Skills run as `/egm-review` and so on, without the `/egm:` prefix
 
 When the user asks to detect drift across all designs or a set of READMEs, find every place where the codebase has moved away from, or failed to build, what those designs or READMEs describe
 

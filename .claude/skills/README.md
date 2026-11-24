@@ -12,7 +12,9 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 
 ## Review and release
 
-- [commit-good](commit-good/SKILL.md): make atomic commits with Conventional Commits messages
+- [good-commit](good-commit/SKILL.md): make atomic commits with Conventional Commits messages
+- [good-pr](good-pr/SKILL.md): open or update a PR with a plain-English title and a short body
+- [good-merge](good-merge/SKILL.md): merge a PR with a merge commit, then clean up the branch
 - [release-the-kraken](release-the-kraken/SKILL.md): commit, push, and open a short, scannable PR
 - [review-the-kangaroo](review-the-kangaroo/SKILL.md): deep-review a PR or a local diff, with checked findings
 - [address-the-elephant](address-the-elephant/SKILL.md): fix PR review comments, red checks, and merge conflicts
@@ -33,7 +35,7 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 
 ## pstack
 
-- [pstack](pstack/SKILL.md): index of the vendored pstack skills by Lauren Tan, kept apart in [`.claude/pstack/skills`](../pstack/skills) with [poteto-mode](../pstack/skills/poteto-mode/SKILL.md) as the main entry. Not slash commands
+- [pstack index](../pstack/README.md): the vendored pstack skills by Lauren Tan, kept apart in [`.claude/pstack/skills`](../pstack/skills) with [poteto-mode](../pstack/skills/poteto-mode/SKILL.md) as the main entry. Not slash commands
 
 ## Maintain
 
