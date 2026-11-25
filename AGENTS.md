@@ -40,3 +40,4 @@ Rules:
 - Write short, plain sentences. Use the `human-friendly` skill for user-facing text
 - Commits follow Conventional Commits (`good-commit` skill)
 - For branches and PRs, follow [CONTRIBUTING](.github/CONTRIBUTING.md) and the `good-pr` skill
+- Agent sessions never switch branches in the main checkout. To start a branch or check out a PR, make a new worktree in `.claude/worktrees/` and move the session into it. See step 1 of the [`good-pr` skill](.claude/skills/good-pr/SKILL.md)

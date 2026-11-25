@@ -37,6 +37,8 @@ Merge a PR so all its commits land in `main`, then tidy up. Read [`human-friendl
 9. Confirm: `gh pr view <n> --json state,mergeCommit`
 10. Move each stacked PR to `main`: `gh pr edit <m> --base main`. Check it with `gh pr view <m> --json baseRefName`
 11. Switch and pull: `git checkout main`, then `git pull --ff-only`. This also fetches origin
+    - In a worktree for the merged branch: do not check out `main` there. Move the session back to the main checkout, pull there, then `git worktree remove <path>` before step 13
+    - Stacked branches in their own worktrees: pull inside each worktree in step 12
 12. Pull each stacked branch that exists locally, if it is clean:
     - Checked out: `git checkout <head>`, then `git pull --ff-only`
     - Not checked out: `git fetch origin <head>:<head>`

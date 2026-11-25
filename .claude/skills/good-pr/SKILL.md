@@ -17,7 +17,7 @@ Open or update one PR from the current branch. Read [`human-friendly`](../human-
 6. Request reviewers only when the user names them
 7. No "Generated with" footer on the PR body
 8. Stay short in chat
-9. In an agent session (Claude Code, Codex, Cursor, Orca, T3 Code, or similar), work in a new worktree, not in the main checkout. The main checkout stays on the base branch, so `git checkout` never leaves it stuck on a PR branch
+9. In an agent session (Claude Code, Codex, Cursor, Orca, T3 Code, or similar), work in a new worktree, not in the main checkout. Move the session into that worktree and run every later command there. The main checkout stays on the base branch, so `git checkout` never leaves it stuck on a PR branch
 
 ## Workflow
 
@@ -31,6 +31,7 @@ Open or update one PR from the current branch. Read [`human-friendly`](../human-
      - Uncommitted changes in the main checkout: copy them over with `git diff HEAD --binary | git -C <worktree> apply` and copy untracked files by hand. Ask before you clean them out of the main checkout
      - Skip the worktree only when the repo rules allow direct pushes to the base
    - Already in a worktree on a feature branch: keep going there
+   - An existing PR branch: check it out in a new worktree with `git fetch origin <branch> && git worktree add .claude/worktrees/<slug> <branch>`, not with `git checkout` or `gh pr checkout` in the main checkout
    - Base is another open PR's branch (a stacked PR): say so in the report. [`good-merge`](../good-merge/SKILL.md) moves this PR to the default branch after that PR merges
 2. Commit what is left
    - `git status --short`. Commit the changes that belong to this PR with [`good-commit`](../good-commit/SKILL.md)

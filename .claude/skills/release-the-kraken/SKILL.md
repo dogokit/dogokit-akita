@@ -24,7 +24,7 @@ Optional: when the change moves a status or queue flow that a reviewer must foll
 
 - Find the base: the repo's default branch (`gh repo view --json defaultBranchRef --jq .defaultBranchRef.name`), unless the user or the repo docs name another
 - Find the repo rules for the default branch: read `CONTRIBUTING.md`, `AGENTS.md` and `CLAUDE.md`, then check branch protection with `gh api repos/{owner}/{repo}/rules/branches/<default>`. A 404 or an empty list means no rule, but it does not mean the team allows direct pushes
-- If the rules say a PR is required, never open a PR from the default branch. If you are on it, create a branch first: `<type>/<issue-key>-short-slug` (for example `feat/123-export-csv` or `fix/PROJ-42-null-email`), or `<type>/short-slug` when there is no issue
+- If the rules say a PR is required, never open a PR from the default branch. If you are on it, create a branch first: `<type>/<issue-key>-short-slug` (for example `feat/123-export-csv` or `fix/PROJ-42-null-email`), or `<type>/short-slug` when there is no issue. In an agent session, create it in a new worktree and move the session there, as in step 1 of [`good-pr`](../good-pr/SKILL.md)
 - If the rules allow direct pushes, or the user says to push to the default branch, commit and push there with no branch or PR, and skip steps 5 and 6
 - If the rules are unclear, ask the user: push to the default branch, or branch and PR
 - If the repo documents its own branch names or release flow (in `CONTRIBUTING.md`, `AGENTS.md` or `CLAUDE.md`), follow that instead

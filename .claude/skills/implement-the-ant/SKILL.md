@@ -67,6 +67,8 @@ When the work spans several deliverables (for example backend, web and mobile, o
 
 Never implement on the default branch or a release branch. Create a branch from the repo's integration base (usually `origin/main`, unless repo docs say otherwise): `<type>/<issue-key>-short-slug`, or `<type>/short-slug` without an issue.
 
+In an agent session, create the branch in a new worktree and move the session into it, as in step 1 of [`good-pr`](../good-pr/SKILL.md). Do not switch branches in the main checkout.
+
 ## 6. Plan first (default)
 
 Write the plan before editing code, and wait for the user's approval. Use plan mode when the tool has one. Skip only when the user says so in this message ("skip the plan", "just do it"). A small fix still gets a short plan.

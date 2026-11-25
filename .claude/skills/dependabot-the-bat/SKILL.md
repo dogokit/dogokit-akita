@@ -27,7 +27,7 @@ Goal: one PR on `main` with the latest versions, and every Dependabot PR shows a
 3. Find the latest version of each dependency:
    - npm: `npm view <pkg> version`, plus `npm view <pkg>@<ver> dependencies` and `engines`
    - GitHub Action: `gh api repos/<owner>/<repo>/releases/latest -q .tag_name`
-4. Start from `main`: `git fetch origin`, then `git checkout -b chore/dependabot-latest origin/main`
+4. Start from `main` in a new worktree: `git fetch origin`, then `git worktree add -b chore/dependabot-latest .claude/worktrees/dependabot-latest origin/main`. Move the session into it and run every later step there
 5. Record each Dependabot head as a merge parent, keeping our tree. Use the `headRefOid` from step 1, because GitHub deletes the Dependabot branches on merge:
    `git merge -s ours --no-ff -m "Merge branch '<headRef>' (superseded by latest bumps)" <headRefOid>`
 6. Set each dependency to its latest version in `package.json` and the workflow files. Then run `bun install` (or the repo's package manager) and the repo's check script from `package.json`
@@ -36,7 +36,7 @@ Goal: one PR on `main` with the latest versions, and every Dependabot PR shows a
 9. Wait for CI: `gh pr checks <n> --watch`. Stop if a check fails
 10. Merge: `gh pr merge <n> --merge`
 11. Verify each Dependabot PR: `gh pr view <n> --json state,mergedAt`. Each must be `MERGED`. If one is still `OPEN`, check it with `git merge-base --is-ancestor <headRefOid> origin/main` after `git fetch origin`, and report the result
-12. Clean up: `git push origin --delete chore/dependabot-latest`, then `git checkout main`, then `git branch -d chore/dependabot-latest`. Update `main` with `git pull --ff-only`
+12. Clean up: `git push origin --delete chore/dependabot-latest`. Move the session back to the main checkout, then `git worktree remove .claude/worktrees/dependabot-latest` and `git branch -d chore/dependabot-latest`. Update `main` with `git pull --ff-only`
 
 ## Edge cases
 
