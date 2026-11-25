@@ -1,0 +1,12 @@
+[submodule ".claude/mattpocock"]
+	path = .claude/mattpocock
+	url = https://github.com/mattpocock/skills
+[submodule ".claude/addyosmani"]
+	path = .claude/addyosmani
+	url = https://github.com/addyosmani/agent-skills
+[submodule ".claude/pstack"]
+	path = .claude/pstack
+	url = https://github.com/cursor/plugins
+[submodule ".claude/egm"]
+	path = .claude/egm
+	url = https://github.com/google/elephant-goldfish-model
