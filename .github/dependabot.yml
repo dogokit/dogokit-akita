@@ -20,7 +20,7 @@ updates:
     open-pull-requests-limit: 1
     schedule:
       interval: "weekly"
-      day: "monday"
+      day: "sunday"
     groups:
       skill-packs:
         patterns:
