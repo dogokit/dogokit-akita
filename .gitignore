@@ -17,3 +17,6 @@ tsconfig.tsbuildinfo
 
 # Graphify output
 /graphify-out
+
+# Claude Code worktrees
+/.claude/worktrees
