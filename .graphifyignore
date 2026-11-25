@@ -1,0 +1,12 @@
+# Vendored skill packs (Git submodules)
+.claude/mattpocock/
+.claude/addyosmani/
+.claude/egm/
+.claude/pstack/
+
+# Nested worktrees
+.claude/worktrees/
+
+# Dependencies and lockfiles
+node_modules/
+bun.lock
