@@ -33,9 +33,16 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 - [human-friendly](human-friendly/SKILL.md): rewrite text in simple, short words for people
 - [technical-english](technical-english/SKILL.md): rewrite text so an agent or parser cannot misread it
 
-## pstack
+## Vendored packs
 
-- [pstack index](../pstack/README.md): the vendored pstack skills by Lauren Tan, kept apart in [`.claude/pstack/skills`](../pstack/skills) with [poteto-mode](../pstack/skills/poteto-mode/SKILL.md) as the main entry. Not slash commands
+Other people's skill packs, each a Git submodule in its own `.claude/<pack>/` folder. They are not slash commands: open the stack note for the pack, pick a skill, and read its `SKILL.md`. Use one when it fits the task, and mix them freely
+
+| Pack | Best for | Start with |
+| --- | --- | --- |
+| [Matt Pocock](../../stacks/mattpocock.md) | Before take-off: agree on what to build, then spec and tickets | [grill-with-docs](../mattpocock/skills/engineering/grill-with-docs/SKILL.md) |
+| [Addy Osmani](../../stacks/addyosmani.md) | The whole lifecycle, from spec to ship, with quality gates for a team | [using-agent-skills](../addyosmani/skills/using-agent-skills/SKILL.md) |
+| [EGM](../../stacks/egm.md) | Design docs reviewed by fresh-context reviewers | [egm-brainstorm](../egm/skills/egm-brainstorm/SKILL.md) |
+| [pstack](../../stacks/pstack.md) | After take-off: hard bugs, big migrations, long runs, proof that it works | [poteto-mode](../pstack/harness/pstack/claude-code/skills/poteto-mode/SKILL.md) |
 
 ## Maintain
 

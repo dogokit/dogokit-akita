@@ -69,10 +69,10 @@ Show the user: source and commit, license, skill count, what you will skip, and 
 Keep these separate from the copy
 
 - `.claude/<stack>/README.md`: what the shared files are, the Source (URL, folder, commit, version, author, license), Changes from upstream, and Update (the exact steps and the link fix command)
-- `.claude/<stack>/skills/README.md`: an index with a table or short list of the skills and when to use each. Link it from `.claude/<stack>/README.md`. Do not add an index skill to `.claude/skills/`
+- A `Skills index` section in `.claude/<stack>/README.md`: a short list of the skills and when to use each, grouped by phase. Do not add an index skill to `.claude/skills/`
 - `stacks/<stack>.md`: a short stack note with the idea, the install line, and links to the upstream and to the vendored copy. Follow the shape of [`stacks/egm.md`](../../../stacks/egm.md)
 - `README.md`: add the stack to the matching list, and keep the numbering right
-- Do not edit [`.claude/skills/README.md`](../README.md). It lists only our own skills. In `.claude/<stack>/README.md`, tell the user how to enable a skill: copy or symlink its folder into `.claude/skills/`
+- [`.claude/skills/README.md`](../README.md): add one row to the `Vendored packs` table (pack, best for, start with). Do not list the pack's skills there. In `.claude/<stack>/README.md`, tell the user how to enable a skill: copy or symlink its folder into `.claude/skills/`
 
 ## 7. Verify
 

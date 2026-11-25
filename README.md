@@ -136,7 +136,7 @@ Things that are the primary default.
 6. AI Code Generator: [v0 by Vercel](stacks/v0.md)
 7. AI Docs: [Context7](stacks/context7.md)
 8. AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md)
-9. AI Engineering Workflow: [pstack](stacks/pstack.md)
+9. AI Engineering Workflow: [Matt Pocock skills](stacks/mattpocock.md) / [Addy Osmani agent-skills](stacks/addyosmani.md) / [pstack](stacks/pstack.md)
 10. Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md)
 11. Bots: [Grok Bot](stacks/grok-bot.md)
 12. Misc: [Delta](stacks/delta.md) / [Herdr](stacks/herdr.md) / [Paradev](stacks/paradev.md)
