@@ -24,6 +24,7 @@ Open or update one PR from the current branch. Read [`human-friendly`](../human-
    - Current branch: `git branch --show-current`. Stop on a detached HEAD
    - Base: `gh repo view --json defaultBranchRef --jq .defaultBranchRef.name`, unless `CONTRIBUTING.md`, `AGENTS.md` or `CLAUDE.md` name another
    - On the base branch: stop and ask. Create a branch first, named `<type>/<issue-key>-short-slug` or `<type>/short-slug`, unless the repo rules allow direct pushes
+   - Base is another open PR's branch (a stacked PR): say so in the report. [`good-merge`](../good-merge/SKILL.md) moves this PR to the default branch after that PR merges
 2. Commit what is left
    - `git status --short`. Commit the changes that belong to this PR with [`good-commit`](../good-commit/SKILL.md)
    - Leave out unrelated files. Ask when unsure
