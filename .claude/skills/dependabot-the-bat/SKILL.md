@@ -36,7 +36,7 @@ Goal: one PR on `main` with the latest versions, and every Dependabot PR shows a
 9. Wait for CI: `gh pr checks <n> --watch`. Stop if a check fails
 10. Merge: `gh pr merge <n> --merge`
 11. Verify each Dependabot PR: `gh pr view <n> --json state,mergedAt`. Each must be `MERGED`. If one is still `OPEN`, check it with `git merge-base --is-ancestor <headRefOid> origin/main` after `git fetch origin`, and report the result
-12. Clean up: `git push origin --delete chore/dependabot-latest`, then `git branch -d chore/dependabot-latest` from a checkout that is not that branch. Update `main` with `git pull --ff-only`
+12. Clean up: `git push origin --delete chore/dependabot-latest`, then `git checkout main`, then `git branch -d chore/dependabot-latest`. Update `main` with `git pull --ff-only`
 
 ## Edge cases
 
