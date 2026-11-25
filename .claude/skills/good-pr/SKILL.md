@@ -17,13 +17,20 @@ Open or update one PR from the current branch. Read [`human-friendly`](../human-
 6. Request reviewers only when the user names them
 7. No "Generated with" footer on the PR body
 8. Stay short in chat
+9. In an agent session (Claude Code, Codex, Cursor, Orca, T3 Code, or similar), work in a new worktree, not in the main checkout. The main checkout stays on the base branch, so `git checkout` never leaves it stuck on a PR branch
 
 ## Workflow
 
 1. Check the branch and base
    - Current branch: `git branch --show-current`. Stop on a detached HEAD
    - Base: `gh repo view --json defaultBranchRef --jq .defaultBranchRef.name`, unless `CONTRIBUTING.md`, `AGENTS.md` or `CLAUDE.md` name another
-   - On the base branch: stop and ask. Create a branch first, named `<type>/<issue-key>-short-slug` or `<type>/short-slug`, unless the repo rules allow direct pushes
+   - On the base branch: do not switch branches here. Create a new worktree and branch, then do every later step inside it
+     - Branch name: `<type>/<issue-key>-short-slug` or `<type>/short-slug`
+     - Use the tool's own worktree feature when it has one (for example Claude Code `EnterWorktree` or an Orca worktree)
+     - Otherwise: `git fetch origin && git worktree add -b <branch> .claude/worktrees/<slug> origin/<base>`
+     - Uncommitted changes in the main checkout: copy them over with `git diff HEAD --binary | git -C <worktree> apply` and copy untracked files by hand. Ask before you clean them out of the main checkout
+     - Skip the worktree only when the repo rules allow direct pushes to the base
+   - Already in a worktree on a feature branch: keep going there
    - Base is another open PR's branch (a stacked PR): say so in the report. [`good-merge`](../good-merge/SKILL.md) moves this PR to the default branch after that PR merges
 2. Commit what is left
    - `git status --short`. Commit the changes that belong to this PR with [`good-commit`](../good-commit/SKILL.md)
