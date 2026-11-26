@@ -72,7 +72,10 @@
 - Auth with OAuth or Social Login
 - User Management, Register, Login, Onboarding, Profile, Invite Users, Logout
 - Organization and Team Management
-- Role and Permission with Role-Based Access Control (RBAC)
+- Role and Permission
+  - Role-Based Access Control (RBAC): access by role, such as admin or member
+  - Attribute-Based Access Control (ABAC): access by attributes of the user, the resource, or the context, such as team, owner, or time
+  - Relationship-Based Access Control (ReBAC): access by how a user relates to a resource, such as owner, editor, or viewer of a document
 - Assets Management with File/Image Upload on Cloudflare R2
 - User and Admin Dashboard/Panel
 - Form Handling on Client and Server
@@ -80,14 +83,23 @@
 - Email Templates, Notification, Marketing, Verification
 - Payment Gateway Integration with Billing, Subscription, Invoice
 - Blog, Release Notes
-- Scheduled/Cron Jobs
-- Background Jobs/Workers
 - Error Monitoring with Sentry
 - Timezone and Date/Time Picker
 - Internationalization (i18n) and Localization (l10n)
 - Accessibility (a11y)
 - Code Generator/Scaffolder
-- Webhooks
+- Engineering
+  - Cron and Automation: run repeatable tasks on a schedule, such as daily reports or cleanup
+  - Queue and Background Jobs: run long tasks outside the request, with workers and retries
+  - Webhooks: send or receive HTTP calls when an event happens, such as a paid invoice
+  - Idempotency: make a repeated request or retry do the work only once
+  - Rate Limiting: cap how many requests a user or IP can send
+  - Caching: keep hot data close to make reads fast
+  - Feature Flags: turn features on or off without a new deploy
+  - Observability: logs, metrics, and traces to see what the app does
+  - Health Checks: tell the host or load balancer that the app is up
+  - Audit Logs: record who did what and when
+  - Database Migrations and Backups: change the schema safely and restore data when needed
 - Community
 
 ## Tech Stack
