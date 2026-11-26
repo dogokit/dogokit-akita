@@ -170,7 +170,7 @@ Things that are the primary default.
 ### Frontend-Included Web Frameworks
 
 1. Frontend Framework: [Next.js](stacks/nextjs.md)
-2. Frontend Library Only: [Svelte](stacks/svelte.md) / [Vue.js](stacks/vuejs.md) / [Angular](stacks/angular.md) / [SolidJS](stacks/solidjs.md) / [Qwik](stacks/qwik.md) / [Effect UI](stacks/effect-ui.md)
+2. Frontend Library Only: [Vue.js](stacks/vuejs.md) / [Angular](stacks/angular.md) / [SolidJS](stacks/solidjs.md) / [Effect UI](stacks/effect-ui.md)
 3. Frontend Meta Framework: [Nuxt](stacks/nuxt.md) / [SolidStart](stacks/solidstart.md) / [SvelteKit](stacks/sveltekit.md)
 4. JS-Based Full Stack: [Remix](stacks/remix.md) / [RedwoodJS](stacks/redwoodjs.md)
 5. Non-JS Full Stack: [Laravel](stacks/laravel.md) / [Rails](stacks/rails.md) / [Django](stacks/django.md)
