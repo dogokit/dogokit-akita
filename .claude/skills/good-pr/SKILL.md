@@ -40,7 +40,7 @@ Open or update one PR from the current branch. Read [`human-friendly`](../human-
    - No commits ahead of the base: `git log origin/<base>..HEAD --oneline` is empty. Stop and say so
 3. Read the issue (when there is one)
    - `gh issue view <n> --json title,body,url`. With another tracker, use its CLI or MCP tool
-   - Use its acceptance criteria for the body
+   - Use it to write Situation and Proposal. Do not copy its acceptance criteria into the body
 4. Push: `git push -u origin HEAD`
 5. Find an existing PR: `gh pr list --head <branch> --state all --json number,title,url,state,baseRefName`
    - Open PR: edit it in step 7
@@ -76,34 +76,30 @@ Bad: `feat(home): add search input`, `fix: null check`, `refactor skills`, `Upda
 
 ## Description
 
-**Problem:** <one sentence: what was broken or missing>
+<one sentence: what this PR does>
 
-**Fix:** <one or two sentences: what happens now>
+## Situation
 
-### Approach
+<one or two sentences: what is true now>
 
-<Mermaid diagram, when the change alters a flow>
+## Proposal
 
-## Changes
+<one or two sentences: what changes>
 
-- <path or symbol>: <action>
-
-## Acceptance Criteria
-
-- [ ] <criterion from the issue>
+<Mermaid diagram, only when the rules below say so>
 ```
 
 Rules:
 
-- Keep the section names and their order exactly as shown
-- Description: only the Problem and Fix lines. Design reasons go in code comments or the issue
-- Add `**Heads-up:**` only for a behaviour change callers will notice. Add `**QA:**` only for a manual check still to do
-- Changes: one line per file, written as an action. Do not repeat the Description
-- No Verification section. CI shows the checks. Report check results in chat, and never claim a check passed unless it ran
-- Aim for about 200 words, not counting the diagram
+- Keep the three section names and their order exactly as shown
+- Description: one sentence. Say the change, not the reason
+- Situation: what the reader sees or can do today. Name the problem, not the file
+- Proposal: what happens after this PR. Put a behaviour change callers will notice here
+- No Changes list, no Acceptance Criteria, no Verification section. Those live in the issue and in CI. Report check results in chat, and never claim a check passed unless it ran
+- Aim for about 60 words, not counting the diagram
 - No footer
 
-Diagram: add one under `### Approach` when the change adds or moves a validation, guard, request path, job, retry, state change or integration call. Leave `### Approach` out for renames, copy, config, docs, test-only changes and dependency bumps.
+Diagram: add one under `## Proposal`, with a `### Approach` heading, when the change adds or moves a validation, guard, request path, job, retry, state change or integration call. Leave it out for renames, copy, config, docs, test-only changes and dependency bumps.
 
 - Use code symbol names (for example `AuthService.create`) and mark new or changed nodes `(new)` or `(changed)`
 - About 10 nodes. Show decisions and outcomes, not every call
