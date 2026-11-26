@@ -16,12 +16,17 @@ This repo is docs only. Read the [README](README.md) first.
 
 No single workflow rules this repo. Our own skills in `.claude/skills/` come first. The vendored packs are a toolbox: take one skill from a pack when it fits, and mix packs freely
 
-Match the effort to the stakes:
+Match the effort to the stakes. Find the row that fits the size, goal, and risk. If they point to different rows, pick the riskier one
 
-- Small tweak: just do it, then check it
-- Small feature: a short interview to agree on the goal, then test-first
-- Big or fuzzy feature: a spec, a plan in phases, and a check after each phase
-- Production, security, or anything you cannot undo: a full review and a fresh-eyes doubt check
+| Workflow                             | Size                      | Goal                     | Risk                | Our skills                                                 | Pack skills                                                                                                                                                         | Check                                      |
+| ------------------------------------ | ------------------------- | ------------------------ | ------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| Small tweak                          | One file, a few lines     | Clear                    | Low, easy to undo   | `good-commit`, `human-friendly`                            | None                                                                                                                                                                | `bun run check`                            |
+| Small feature                        | A few files, one PR       | Mostly clear             | Low to medium       | `implement-the-ant`, `good-pr`                             | Osmani `interview-me`, Pocock `tdd`                                                                                                                                 | Tests fail first, then pass                |
+| Bug                                  | Unknown until found       | Symptom known, cause not | Depends on the area | `investigate-the-cat`                                      | Pocock `diagnosing-bugs`, Osmani `debugging-and-error-recovery`                                                                                                     | A test shows the bug, then passes          |
+| Big or fuzzy feature                 | Many files or several PRs | Fuzzy                    | Medium              | `plan-the-lion`, `tdd-the-barramundi`, `implement-the-ant` | Pocock `grill-with-docs`, `to-spec`, `to-tickets`, Osmani `planning-and-task-breakdown`, `incremental-implementation`, EGM `egm-brainstorm`, pstack `figure-it-out` | A check after each phase                   |
+| Production, security, or cannot undo | Any                       | Clear                    | High, hard to undo  | `review-the-kangaroo`, `db-the-bee`                        | Osmani `security-and-hardening`, `shipping-and-launch`, `doubt-driven-development`, pstack `blast-radius`, `principle-prove-it-works`                               | A full review and a fresh-eyes doubt check |
+
+Each pack's skill paths are in its stack note in `stacks/` and in the [skills README](.claude/skills/README.md)
 
 Rules:
 
