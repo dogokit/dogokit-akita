@@ -97,7 +97,7 @@ Then:
 Use [`good-pr`](../good-pr/SKILL.md). It is already in the right worktree, so it skips the worktree step
 
 - Title in plain words: `Add Knip stack note`, or `Add Knip stack note and list it in README`
-- Body: keep the template. Put the gate verdict in **Fix** (for example "Not in README: one of many options")
+- Body: use the three sections from `good-pr` (Description, Situation, Proposal). Put the gate verdict under Proposal (for example "Not in README: one of many options")
 - No Approach diagram, since this is a docs change
 
 ## Report
