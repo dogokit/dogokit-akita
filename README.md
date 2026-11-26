@@ -56,51 +56,48 @@
   - Call to Action (CTA)
 - Responsive UI Design and Components
   - Lightweight Animation
-  - WYSIWYG Editor
+  - WYSIWYG Editor (what you see is what you get)
   - Theme and Dark Mode
-  - Optimistic UI/UX
+  - Optimistic UI: show a change before the server confirms it
   - Command Palette/Bar
   - Keyboard Shortcuts
+- Accessibility (a11y)
+- Internationalization (i18n) and Localization (l10n)
 
-#### Business
+#### App Features
 
 - Web Analytics
 - SEO (Search Engine Optimization) and Meta Tags
 - SSR (Server-Side Rendering)
-- Authentication (AuthN) and Authorization (AuthZ)
-- Auth with OAuth or Social Login
-- User Management, Register, Login, Onboarding, Profile, Invite Users, Logout
-- Assets Management with File/Image Upload on Cloudflare R2
-- User and Admin Dashboard/Panel
 - Form Handling on Client and Server
 - Pagination on Client and Server
-- Email Templates, Notification, Marketing, Verification
-- Payment Gateway Integration with Billing, Subscription, Invoice
-- Blog, Release Notes
+- User and Admin Dashboard/Panel
+- Assets Management with File/Image Upload on Cloudflare R2
+- Email Templates, Notifications, Marketing, and Verification
+- Payment Gateway with Billing, Subscriptions, and Invoices
+- Blog and Release Notes
 - Error Monitoring with Sentry
 - Timezone and Date/Time Picker
 - Code Generator/Scaffolder
-- Accessibility (a11y)
-- Internationalization (i18n) and Localization (l10n)
 
-#### AI
+#### Accounts and Access
 
-- AI Workflow Rules
-- AI Management & Agent Configuration
-
-#### Role, Access, Permission
-
-- Organization, Team, Users Management
+- User Management: register, log in, onboard, edit profile, invite users, log out
+- Authentication (AuthN): confirm who the user is
+- Authorization (AuthZ): confirm what the user may do
+- Social Login with OAuth
+- Organization and Team Management
 - Role-Based Access Control (RBAC): access by role, such as admin or member
-- Attribute-Based Access Control (ABAC): access by attributes of the user, the resource, or the context, such as team, owner, or time
-- Relationship-Based Access Control (ReBAC): access by how a user relates to a resource, such as owner, editor, or viewer of a document
+- Attribute-Based Access Control (ABAC): access by user, resource, or context, such as team or time
+- Relationship-Based Access Control (ReBAC): access by a link to a resource, such as owner, editor, or viewer of a document
 
 #### Engineering
 
 - Type-Safe CRUD (Create, Read, Update, Delete)
-- Environment Variables for Local, Staging, Production
+- Environment Variables for Local, Staging, and Production
 - Deployment with Docker and Docker Compose
-- Database, ORM, Migration, Backup: change the schema safely and restore data when needed
+- Database and ORM: read and write data through typed code
+- Migrations and Backups: change the schema safely and restore data when needed
 - Cron and Automation: run repeatable tasks on a schedule, such as daily reports or cleanup
 - Queue and Background Jobs: run long tasks outside the request, with workers and retries
 - Webhooks: send or receive HTTP calls when an event happens, such as a paid invoice
@@ -111,6 +108,14 @@
 - Observability: logs, metrics, and traces to see what the app does
 - Health Checks: tell the host or load balancer that the app is up
 - Audit Logs: record who did what and when
+
+#### AI
+
+- AI Workflow Rules
+- AI Management and Agent Configuration
+- AI Harness
+- AI Skills
+- AI Orchestration
 
 ## Tech Stack
 
