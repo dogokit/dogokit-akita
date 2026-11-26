@@ -14,7 +14,7 @@ Open or update one PR from the current branch. Read [`human-friendly`](../human-
 3. Body is short. Use the template below and cut what a reviewer does not need
 4. Never force-push. Never use `--no-verify`
 5. Never invent an issue key or number. If the repo needs one and it is missing, stop and ask
-6. Request reviewers only when the user names them
+6. Assign each new PR to the user who creates it. Request reviewers only when the user names them
 7. No "Generated with" footer on the PR body
 8. Stay short in chat
 9. In an agent session (Claude Code, Codex, Cursor, Orca, T3 Code, or similar), work in a new worktree, not in the main checkout. Move the session into that worktree and run every later command there. The main checkout stays on the base branch, so `git checkout` never leaves it stuck on a PR branch
@@ -49,10 +49,13 @@ Open or update one PR from the current branch. Read [`human-friendly`](../human-
 6. Write the title and body, following the rules below
 7. Create or edit
    - Write the body to a file outside the repo (the scratchpad folder), so the Mermaid block and line breaks stay exact
-   - Create: `gh pr create --base <base> --head <branch> --title "<title>" --body-file <file>`. Add `--draft` only when the repo asks for drafts
-   - Edit: `gh pr edit <n> --title "<title>" --body-file <file>`
-8. Check: `gh pr view <n> --json url,title,baseRefName,isDraft,mergeable,body`
+   - Create, GitHub: `gh pr create --base <base> --head <branch> --title "<title>" --body-file <file> --assignee @me`. Add `--draft` only when the repo asks for drafts
+   - Create, GitLab: get the user with `glab api user --jq .username`, then `glab mr create --source-branch <branch> --target-branch <base> --title "<title>" --description "$(cat <file>)" --assignee <username>`
+   - Create, Bitbucket Cloud: it has no assignee field. Open the PR as usual and say so in the report. Do not add the creator as a reviewer
+   - Edit: `gh pr edit <n> --title "<title>" --body-file <file>`. Leave assignees as they are
+8. Check: `gh pr view <n> --json url,title,baseRefName,isDraft,mergeable,body,assignees`
    - Title and base are as expected
+   - A new PR has the creator as its only assignee. Fix it with `gh pr edit <n> --add-assignee @me` if not
    - Body starts with the issue URL (when there is one) and has no footer
    - `mergeable` is `CONFLICTING`: report it and point to [`address-the-elephant`](../address-the-elephant/SKILL.md). Do not fix it here
 
@@ -108,4 +111,4 @@ Diagram: add one under `## Proposal`, with a `### Approach` heading, when the ch
 
 ## Report
 
-Give the PR URL, the title, and the base. Add one line for anything that failed or was skipped.
+Give the PR URL, the title, the base, and the assignee. Add one line for anything that failed or was skipped.
