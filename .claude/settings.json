@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && out=$(bun run check 2>&1) || { echo \"bun run check failed after this edit. Fix it before you go on:\" >&2; echo \"$out\" | tail -40 >&2; exit 2; }"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "input=$(cat); if echo \"$input\" | grep -q '\"stop_hook_active\": *true'; then exit 0; fi; cd \"$CLAUDE_PROJECT_DIR\" && out=$(bun run check 2>&1) || { echo \"bun run check fails. Fix it before you finish:\" >&2; echo \"$out\" | tail -40 >&2; exit 2; }"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,9 +1,9 @@
 ---
-name: dependabot-the-bat
+name: dependency-the-bat
 description: Clear the open Dependabot PRs of a repo in one pass. Lists them, groups the ones that conflict, sets each dependency to its latest published version, merges the Dependabot branches with merge commits so GitHub marks each PR merged, then checks CI and cleans up. Use when the user asks to merge, clear, or handle Dependabot PRs, or says they conflict or are outdated.
 ---
 
-# Dependabot the Bat
+# Dependency the Bat
 
 Read [`human-friendly`](../human-friendly/SKILL.md) before writing any text a person will read. Keep package names, versions, PR numbers and SHAs exact.
 

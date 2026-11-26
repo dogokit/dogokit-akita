@@ -1,6 +1,6 @@
 ---
-name: clean-the-garden-opus
-description: Garden a codebase. Do a whole-repo weeding round (unused code, stale or contradicting comments, copied broken patterns, hand-rolled duplicates of shared code, dead links), fix what you find, then make the fix stick with the strongest guard you can: a design change first, then a check (lint, test, type error), then a written rule beside the code. Use when the user asks to garden, weed, clean up rot, do a cleanup or hygiene round, review a whole repo for drift, or run the periodic (about weekly) agent review of a codebase.
+name: clean-the-garden
+description: Garden a codebase. Do a whole-repo weeding round (unused code, stale or contradicting comments, copied broken patterns, hand-rolled duplicates of shared code, dead links), fix what you find, then make the fix stick with the strongest guard you can: a design change first, then a check (lint, test, type error), then a written rule beside the code. Use when the user asks to garden, weed, clean up rot, do a cleanup or hygiene round, review a whole repo for drift, or run the periodic (about weekly) agent review of a codebase. Not for new features, bug hunting in a diff (use code review), or refactors with no rot.
 ---
 
 # Clean the garden
@@ -18,6 +18,10 @@ So a round has two jobs: pull the weeds, then put rules into the code that keep 
 - Cadence: about once a week, or when the user asks.
 - Scope: the whole codebase, not only the latest diff. Earlier rounds often remove one weed and miss others close by, and old weeds sit outside recent diffs.
 - A human approves each change. Do not commit unless the user asks.
+- Do not change behavior. No features, broad refactors, public API, schema or user-visible text changes. Report those as separate work.
+- If a weed might still be live (dynamic use, string names, routes, config, outside users), leave it and list it as uncertain.
+- Run the project checks after each group of fixes. A fix that breaks the build is not a fix.
+- A weed that comes back after a guard was added means the guard is too weak or misses that code. Make it stronger.
 
 ## Step 1. Read the house rules
 
