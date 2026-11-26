@@ -49,7 +49,7 @@ While it is on, every later commit request ends with a push to the current branc
 
 Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`. Pick by purpose, not by file.
 
-- Subject: imperative, lowercase, no period, 72 characters or less
+- Subject: imperative, lowercase, no period, 72 characters or less. [`good-merge`](../good-merge/SKILL.md) copies every commit subject of a PR into its merge commit, so write each one to be read alone
 - Body: only when the reason is not obvious, one to three lines on why, wrapped at 72
 - Footers: `Refs: #123` or `Closes: #123`, then the attribution line from the session context, if any
 - Breaking change: `!` after the type, or a `BREAKING CHANGE:` footer
