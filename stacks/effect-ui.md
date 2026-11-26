@@ -9,3 +9,4 @@ Links:
 - [Effect UI](https://ui.effect.website): the Effect UI site
 - [Effect UI repo](https://github.com/Effect-TS/ui): the source code
 - [Effect](https://effect.website): the Effect site, the library Effect UI is built on
+- [Effect](effect.md): the Effect stack note

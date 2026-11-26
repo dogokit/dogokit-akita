@@ -11,6 +11,7 @@ Links:
 
 - [Effect](https://effect.dev)
 - [Effect](https://effect.website/)
+- [Effect UI](effect-ui.md): frontend library built on Effect
 
 ## Features
 
