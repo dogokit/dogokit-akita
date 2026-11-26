@@ -27,7 +27,7 @@ git remote get-url origin
 git branch --show-current   # must equal headRefName
 ```
 
-If the checkout is the wrong repo or branch, switch to the right clone or branch first. Never push review fixes from the wrong tree.
+If the checkout is the wrong repo or branch, move to the right clone first. In an agent session, check out the PR head in a new worktree and move the session into it, as in step 1 of [`good-pr`](../good-pr/SKILL.md). Do not run `gh pr checkout` in the main checkout. Never push review fixes from the wrong tree.
 
 Fix and test commands follow the target repo (`AGENTS.md`, `CLAUDE.md`, `package.json` scripts).
 

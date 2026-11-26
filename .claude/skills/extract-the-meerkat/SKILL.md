@@ -31,11 +31,11 @@ Get from the user: the upstream URL, and the sub-folder if the repo holds many s
 
 ```sh
 git fetch origin main
-git worktree add -b docs/add-<stack>-skills ../<repo>-extract-<stack> origin/main
+git worktree add -b docs/add-<stack>-skills .claude/worktrees/add-<stack>-skills origin/main
 ```
 
 - Branch name: `docs/add-<stack>-skills`. Use `feat/` only when the user asks for it
-- Do all later steps inside the new worktree
+- Move the session into the new worktree and do all later steps there
 
 ## 3. Fetch and review
 
