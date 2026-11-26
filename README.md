@@ -194,7 +194,7 @@ Things that are the primary default.
 15. Internationalization (i18n): [Lingui](stacks/lingui.md)
 16. Accessibility (a11y): [Lighthouse](stacks/lighthouse.md)
 17. Realtime: [SSE](stacks/sse.md) / [Socket.IO](stacks/socket-io.md) / [Liveblocks](stacks/liveblocks.md) / [InstantDB](stacks/instantdb.md) / [Electric](stacks/electric.md)
-18. Cache and Message Queues: [Redis](stacks/redis.md) / [KiviDB](stacks/kividb.md) / [BullMQ](stacks/bullmq.md) / In-Memory
+18. Cache and Message Queues: [Redis](stacks/redis.md) / [KiviDB](stacks/kividb.md) / [BullMQ](stacks/bullmq.md)
 19. Mobile: [React Native](stacks/react-native.md) with [Expo](stacks/expo.md)
 20. Storage: Unix File System
 21. Mailers: SMTP
