@@ -1,18 +1,18 @@
 ---
 name: good-merge
-description: Squash-merge a GitHub pull request into one commit, then clean up. Checks that CI passes and the PR is mergeable, merges, moves any PRs stacked on it to main, deletes the merged branch locally and on origin, then pulls main and the affected branches. Use when the user asks to merge a PR, land it, or clean up after a merge.
+description: Merge a GitHub pull request, squash by default, then clean up. Checks that CI passes and the PR is mergeable, merges, moves any PRs stacked on it to main, deletes the merged branch locally and on origin, then pulls main and the affected branches. Use when the user asks to merge a PR, land it, or clean up after a merge.
 ---
 
 # Merge good
 
-Squash-merge a PR so all its commits land in `main` as one commit, then tidy up. Read [`human-friendly`](../human-friendly/SKILL.md) before writing the report
+Merge a PR into `main` with a squash by default, then tidy up. Read [`human-friendly`](../human-friendly/SKILL.md) before writing the report
 
 ## Rules
 
 1. Merge only when the user asks
 2. Create a PR when the branch has none. Never merge a branch that has no PR
-3. Use a squash merge (`--squash`) so the PR lands as one commit, even when it has many commits. Use another method only when the user names it
-4. The squash commit keeps the PR title and number, then the branch and every commit of the PR. Never leave GitHub's default `Merge pull request #n from ...` text
+3. Squash by default (`--squash`), so the PR lands as one commit even when it has many commits. Use `--merge` or `--rebase` when the user asks for it, or when the repo or the PR calls for it. Say which method was used
+4. The commit keeps the PR title and number, then the branch and every commit of the PR. For a merge commit, never leave GitHub's default `Merge pull request #n from ...` text
 5. Never bypass checks. No `--admin`, no `--auto`, no force
 6. Delete only a branch that is merged. Use `git branch -d`, never `-D`
 7. Never delete `main` or the default branch
@@ -33,7 +33,7 @@ Squash-merge a PR so all its commits land in `main` as one commit, then tidy up.
 5. Stop and report if the PR is draft, conflicting, or has a failing check. Do not merge
 6. Check the repo allows the method: `gh repo view --json mergeCommitAllowed`
 7. Find stacked PRs: `gh pr list --base <branch> --state open --json number,title,headRefName`. Keep the list for steps 11 and 13
-8. Write the squash commit text:
+8. Write the commit text:
    - Read the PR: `gh pr view <n> --json title,body,headRefName,commits`
    - Subject: `<title> (#<n>)`, using the PR title as it is on GitHub
    - Body, written to a file in the scratchpad folder:
@@ -48,7 +48,7 @@ Squash-merge a PR so all its commits land in `main` as one commit, then tidy up.
      ```
 
    - The commit list has every commit in the PR, not only the newest one. Use the commit subjects as they are
-9. Merge: `gh pr merge <n> --squash --subject "<subject>" --body-file <file>`
+9. Merge: `gh pr merge <n> --squash --subject "<subject>" --body-file <file>`. Swap `--squash` for `--merge` or `--rebase` only when rule 3 says so
 10. Confirm: `gh pr view <n> --json state,mergeCommit`. The commit subject must read `<title> (#<n>)`
 11. Move each stacked PR to `main`: `gh pr edit <m> --base main`. Check it with `gh pr view <m> --json baseRefName`
 12. Switch and pull: `git checkout main`, then `git pull --ff-only`. This also fetches origin
@@ -66,7 +66,7 @@ Squash-merge a PR so all its commits land in `main` as one commit, then tidy up.
 
 Say in a few short lines:
 
-- The PR number, the squash commit subject, and whether this run created the PR
+- The PR number, the commit subject, the method used, and whether this run created the PR
 - The branch deleted, local and remote
 - Each stacked PR moved to `main`, with its number
 - Each stacked branch pulled, or skipped and why
@@ -81,4 +81,4 @@ Say in a few short lines:
 - Stacked PR already closed: report it, do not reopen it
 - Stacked PR has conflicts with `main` after the move: report it, and point to [`address-the-elephant`](../address-the-elephant/SKILL.md). Do not fix it here
 - PR body has no Description section: use the PR title as the one-line description
-- Merge commit or rebase asked: use `--merge` or `--rebase` and say so. A merge commit keeps every PR commit in history, and a rebase may fail the fast-forward pull of stacked branches. Report that Stacked branches then need a fast-forward pull, which may fail. Report that
+- Merge commit or rebase asked: use `--merge` or `--rebase` and say so. A merge commit keeps every PR commit in history. A rebase may fail the fast-forward pull of stacked branches, so report that Stacked branches then need a fast-forward pull, which may fail. Report that
