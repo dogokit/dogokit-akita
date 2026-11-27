@@ -160,7 +160,7 @@ Things that are the primary default.
 - Terminal: [Ghostty](stacks/ghostty.md) / [Rex](stacks/rex.md)
 - Secrets and Environment Variables: [Infisical](stacks/infisical.md) / [Doppler](stacks/doppler.md)
 - Code Editor / Integrated Development Environment (IDE): [Cursor](stacks/cursor.md) / [Zed](stacks/zed.md) / [NeoVim](stacks/neovim.md)
-- Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md) / [Herdr](stacks/herdr.md)
+- Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md) / [Herdr](stacks/herdr.md) / [Delta](stacks/delta.md)
 
 ### AI Workflows
 
@@ -169,10 +169,11 @@ Things that are the primary default.
 - AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md)
 - AI Code Review: [Gitar](stacks/gitar.md)
 - AI Code Generator: [v0 by Vercel](stacks/v0.md)
-- AI Docs: [Context7](stacks/context7.md)
+- AI Context: [Context7](stacks/context7.md) / [Graphify](stacks/graphify.md)
 - AI Database Access: [DBHub](stacks/dbhub.md)
 - AI Bots: [Grok Bot](stacks/grok-bot.md)
-- AI Misc Tools: [Graphify](stacks/graphify.md) / [Delta](stacks/delta.md) / [Paradev](stacks/paradev.md)
+- AI Misc Tools: [Paradev](stacks/paradev.md)
+- AI Computer Use: [agent-desktop](stacks/agent-desktop.md)
 
 ### Deployment: PaaS and Services
 
