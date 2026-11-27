@@ -46,11 +46,11 @@ Compose uses the project name as a prefix for containers, networks and volumes. 
 `docker-compose.ephemeral.yml` sets the name like this:
 
 ```yaml
-name: ${COMPOSE_PROJECT_NAME:-dogokit-akita-test}
+name: ${COMPOSE_PROJECT_NAME:-example-project}
 ```
 
 - With `COMPOSE_PROJECT_NAME` set, Compose uses that value
-- Without it, Compose uses `dogokit-akita-test`
+- Without it, Compose uses `example-project`
 - `:-` also falls back when the value is empty. `${VAR-default}` only falls back when the variable is unset
 
 In CI, set a unique value for each run, such as `COMPOSE_PROJECT_NAME=<project>-<run-id>`, where the run ID comes from your CI system, such as a run or build number. See the [Environments](../docs/guides/environments.md) guide.

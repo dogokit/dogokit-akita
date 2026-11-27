@@ -3,9 +3,9 @@
 # Port: bun run test:infra:port
 # Down: bun run test:infra:down
 # Set COMPOSE_PROJECT_NAME to a unique value to run several stacks at once, such as in CI
-# Project name: uses COMPOSE_PROJECT_NAME if set and not empty, else dogokit-akita-test
+# Project name: uses COMPOSE_PROJECT_NAME if set and not empty, else example-project
 # The :- means an empty value also falls back to the default
-name: ${COMPOSE_PROJECT_NAME:-dogokit-akita-test}
+name: ${COMPOSE_PROJECT_NAME:-example-project}
 
 services:
   postgres:
