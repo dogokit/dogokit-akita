@@ -110,6 +110,13 @@ Diagram rules: pick the type that fits (`flowchart TD`, `sequenceDiagram`, `stat
 - Derive unions from `as const` objects, and keep them next to related types
 - Validate at boundaries (request input, env, external API responses) with the repo's schema library
 
+### Imports
+
+- Prefer absolute imports with the `@/` alias (`import { formatInvoiceDueDate } from "@/lib/invoice"`) over relative paths like `../../lib/invoice`
+- Keep a relative import only for a file in the same folder (`./types`)
+- Before the first alias import, check that `tsconfig.json` has `"paths": { "@/*": [...] }` that points at the real source folder, and that the bundler or test runner reads it. Bun and Vite-style tools read `paths` from `tsconfig.json`. Fix the config in the same change when it is missing or wrong
+- Match the alias the repo already uses (`@/`, `~/`). Do not add a second one
+
 ### Constants and order
 
 - Group related constants in one `as const` object, not loose exports
@@ -148,6 +155,7 @@ Diagram rules: pick the type that fits (`flowchart TD`, `sequenceDiagram`, `stat
 
 - [ ] No unapproved shortcut or ticketless `TODO`
 - [ ] Types reused, not copied. Boundaries validated
+- [ ] Imports use the `@/` alias. Alias config works
 - [ ] Constants grouped. New members appended
 - [ ] No copied helper. Shared helpers have tests
 - [ ] Async calls checked for overlap, retry and fan-out
