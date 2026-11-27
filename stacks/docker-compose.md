@@ -2,13 +2,7 @@
 
 Docker Compose runs several containers from one YAML file
 
-This repo has three Compose files:
-
-- `docker-compose.yml`: local development
-- `docker-compose.ephemeral.yml`: ephemeral integration tests, added on top of `docker-compose.yml`
-- `docker-compose.server.yml`: shared dev, staging and production
-
-Each file is named after how it runs, not after an environment. See the [Environments](../docs/guides/environments.md) guide for which one to use
+This repo has three Compose files, listed in [File names](#file-names). See the [Environments](../docs/guides/environments.md) guide for which one to use
 
 Links:
 
@@ -28,6 +22,7 @@ Name a Compose file after how the stack runs, not after the environment that use
 | `docker-compose.ephemeral.yml` | Fresh each run, data in memory       | Integration tests, PR previews  |
 | `docker-compose.server.yml`    | On a server, data kept, auto restart | Shared dev, staging, production |
 
+- `docker-compose.ephemeral.yml` is not used alone. It adds to `docker-compose.yml`
 - Staging and production run the same way, so they share `docker-compose.server.yml`. The env file tells them apart, such as `--env-file .env.staging`
 - Do not add `docker-compose.prod.yml` or `docker-compose.staging.yml`. Two files for the same way of running drift apart, and a fix in one is missed in the other
 - Add a new file only when the way of running changes
