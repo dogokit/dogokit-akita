@@ -14,7 +14,7 @@ Links:
 
 ## File names
 
-Name a Compose file after how the stack runs, not after the environment that uses it
+Name a Compose file after the one trait that sets it apart from `docker-compose.yml`, not after the environment that uses it
 
 | File                           | How it runs                          | Used by                              |
 | ------------------------------ | ------------------------------------ | ------------------------------------ |

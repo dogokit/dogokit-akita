@@ -8,7 +8,7 @@ Use one Compose file per way of running, not one file per environment name
 
 - Many environments run the same way. Dev, staging, UAT and production all run long-lived servers, so they share one file and differ only by their `.env` file
 - Make a new file only when the way of running changes, such as "throw away the data after each run"
-- Name each file after how it runs, such as `server` or `ephemeral`, never after an environment, such as `prod` or `staging`
+- Name each file after the one trait that sets it apart from `docker-compose.yml`, such as `ephemeral` (data is thrown away after each run) or `server` (runs on a server and restarts on its own). Never name a file after an environment, such as `prod` or `staging`
 
 | Environment                     | How it runs                          | Files                                                 | Command                                         |
 | ------------------------------- | ------------------------------------ | ----------------------------------------------------- | ----------------------------------------------- |
