@@ -1,7 +1,7 @@
 # Local development. Run: docker compose up -d
 services:
   postgres:
-    image: postgres:18-alpine
+    image: postgres:19-alpine
     restart: no
     volumes:
       - postgres_data:/var/lib/postgresql
