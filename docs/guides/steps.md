@@ -261,7 +261,7 @@ For production copy if needed:
 This repo does not define these `bun db:*` scripts yet. Add them to your app's `package.json` when you set up Prisma.
 
 ```sh
-bun db:push
+bun db:migrate
 bun db:reset
 bun db:generate
 bun db:seed

@@ -68,4 +68,4 @@ This script checks the file only. It does not start anything. Use real values on
 Some guides mention these scripts. This repo does not define them yet. Add them to your app's `package.json` when you need them:
 
 - `dev`, `build` and `start`, for the app itself
-- `db:push`, `db:seed`, `db:generate` and other `db:*` scripts, for Drizzle or Prisma
+- `db:migrate`, `db:seed`, `db:generate` and other `db:*` scripts, for Prisma

@@ -121,17 +121,17 @@ OAuth:
 
 ## Database Setup
 
-Drizzle ORM is used to communicate with the database easily. Can replace with query builder such as Kysely if needed or even raw database query.
+Prisma ORM is used to communicate with the database. Use raw SQL for queries that Prisma cannot do easily.
 
-For the database system itself, either choose to use PostgreSQL or MySQL from local system, Docker container, or hosted services.
+The database is PostgreSQL. Run it from a local system, a Docker container, or a hosted service.
 
 If prefer using Docker and Docker Compose for local development, [check the database guide](database.md).
 
-The app is configured primarily to be deployed using PlanetScale. Because of that, the migration files are not needed. Therefore, push the schema directly there. The migration process will be handled through its [deploy requests](https://planetscale.com/docs/concepts/deploy-requests).
+Schema changes use Prisma Migrate. It is not set up in this repo yet, so follow the steps in [Database Operations](#database-operations) when you add it.
 
-### PostgresQL Database
+### PostgreSQL Database
 
-To start quickly, create a PostgresQL database with either of these:
+To start quickly, create a PostgreSQL database with either of these:
 
 - Vercel Postgres
 - Supabase
@@ -139,14 +139,14 @@ To start quickly, create a PostgresQL database with either of these:
 
 ### Database Operations
 
-Sync between Drizzle schema and the database directly. This repo does not define `db:push` yet, so add it to your app's `package.json` when you set up Drizzle:
+Use Prisma Migrate to change the schema. This repo does not define `db:migrate` yet, so add it to your app's `package.json` when you set up Prisma:
 
 ```sh
-bun db:push
-# drizzle-kit push
+bun db:migrate
+# prisma migrate dev
 ```
 
-> Note: Only need to push the schema in development. No need for migration files.
+> Note: Migrate writes migration files into the repo. Commit them with the schema change, so every environment runs the same steps
 
 Create `users.ts` in the `credentials` folder with the format below. Can focus on certain users who want to be able to access in development, so it doesn't have to be everyone.
 
@@ -163,7 +163,7 @@ export const dataUsers = [
 ]
 ```
 
-Then seed the initial data when needed. Like `db:push`, this script is not in this repo yet:
+Then seed the initial data when needed. Like `db:migrate`, this script is not in this repo yet:
 
 ```sh
 bun db:seed
@@ -229,6 +229,5 @@ bunx shadcn-custom-theme primary=indigo secondary=blue accent=violet gray=neutra
 ## Subscribe for the status of the services
 
 - [Vercel Status](https://vercel-status.com)
-- [PlanetScale Status](https://planetscalestatus.com)
 - [Uploadcare Status](https://status.uploadcare.com)
 - [Resend Status](https://resend-status.com)
