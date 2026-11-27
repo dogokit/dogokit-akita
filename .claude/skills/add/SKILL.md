@@ -53,15 +53,22 @@ Read two notes in `stacks/` first. Then write:
 ```md
 # <Name>
 
-<One or two sentences: what it is and why it is in this stack>
+<One or two sentences: what the tool is, the job it does in this stack, and why it is here>
 
-Links:
+Official links:
 
-- [<Label>](<url>): <what it is>
+- [<Name>](<official site>): official site
+- [<Name> Docs](<docs url>): official docs
+- [<Name> GitHub](<repo url>): source code, <license>
+
+Third-party integrations:
+
+- [<Label>](<url>): <integration> made by <who>, not an official <Name> page
 ```
 
-- Add `- Package: ...`, `- Latest version: ...` or a short "use X instead of Y" line only when it helps and you verified it
-- Links come first from the official site or repo. Add a docs link when it is useful
+- Description: one or two sentences in plain words. Take the facts from the official site or README. Say what the tool does, not just its name or a slogan
+- Official links: only pages the project itself publishes (its own site, docs, or repo). Label each one with what it is. Add `- Package: ...`, `- Latest version: ...` or a short "use X instead of Y" line only when it helps and you verified it
+- Third-party integrations: keep this section when the stack works with another tool through an integration, guide or plugin that is not official, and a reader needs it. Name who made it and say it is not official. Never put a third-party link under "Official links", even if it looks official. Leave the section out when there is none
 - The file name is the link target in the README, so keep `<tool-slug>.md` exactly the same in both places
 
 ### Guide or reference
