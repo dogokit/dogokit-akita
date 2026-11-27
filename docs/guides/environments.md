@@ -6,7 +6,7 @@ This guide says which Docker Compose setup to use for each environment
 
 Use one Compose file per way of running, not one file per environment name
 
-- Many environments run the same way. Dev, staging and production all run long-lived servers, so they share one file and differ only by their `.env` file
+- Many environments run the same way. Dev, staging, UAT and production all run long-lived servers, so they share one file and differ only by their `.env` file
 - Make a new file only when the way of running changes, such as "throw away the data after each run"
 - Name each file after how it runs, such as `server` or `ephemeral`, never after an environment, such as `prod` or `staging`
 
@@ -45,7 +45,7 @@ Change the `change_*` values in `.env` if you want your own. Git ignores `.env`.
 
 ```sh
 bun run test:infra:up
-docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml port postgres 5432
+bun run test:infra:port
 # The test values are fixed in docker-compose.ephemeral.yml
 DATABASE_URL="postgresql://test:test@127.0.0.1:<port>/test"
 # Run the tests
