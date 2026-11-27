@@ -1,6 +1,6 @@
-# Rituals of Great Boards
+# Company organization
 
-Eight strategic tools used by top company boards, written by Reid Hoffman. Use the ideas to run better team and board meetings
+Ways a company sets up its work and meetings. Eight strategic tools used by top company boards, written by Reid Hoffman. Use the ideas to run better team and board meetings
 
 Links:
 

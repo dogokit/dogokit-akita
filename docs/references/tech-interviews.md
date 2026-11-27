@@ -1,4 +1,4 @@
-# Ladder
+# Tech interviews
 
 Made for tech interview prep. The ideas can also help in this kind of workflow, such as practice and structured feedback
 
