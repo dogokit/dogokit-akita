@@ -8,13 +8,14 @@ Use one Compose file per way of running, not one file per environment name
 
 - Many environments run the same way. Dev, staging and production all run long-lived servers, so they share one file and differ only by their `.env` file
 - Make a new file only when the way of running changes, such as "throw away the data after each run"
+- Name each file after how it runs, such as `server` or `ephemeral`, never after an environment, such as `prod` or `staging`
 
-| Environment                     | How it runs                          | Files                                            | Command                                         |
-| ------------------------------- | ------------------------------------ | ------------------------------------------------ | ----------------------------------------------- |
-| Local development               | On your machine, data kept           | `docker-compose.yml`                             | `bun run infra:up`                              |
-| Ephemeral integration test      | Fresh each run, data in memory       | `docker-compose.yml` + `docker-compose.test.yml` | `bun run test:infra:up`                         |
-| Shared dev, staging, production | On a server, data kept, auto restart | `docker-compose.prod.yml`                        | See [below](#shared-dev-staging-and-production) |
-| Preview per pull request        | Fresh per pull request               | Same as the ephemeral test                       | Set `COMPOSE_PROJECT_NAME`                      |
+| Environment                     | How it runs                          | Files                                                 | Command                                         |
+| ------------------------------- | ------------------------------------ | ----------------------------------------------------- | ----------------------------------------------- |
+| Local development               | On your machine, data kept           | `docker-compose.yml`                                  | `bun run infra:up`                              |
+| Ephemeral integration test      | Fresh each run, data in memory       | `docker-compose.yml` + `docker-compose.ephemeral.yml` | `bun run test:infra:up`                         |
+| Shared dev, staging, production | On a server, data kept, auto restart | `docker-compose.server.yml`                           | See [below](#shared-dev-staging-and-production) |
+| Preview per pull request        | Fresh per pull request               | Same as the ephemeral test                            | Set `COMPOSE_PROJECT_NAME`                      |
 
 Other options, and why they are not the default:
 
@@ -35,7 +36,7 @@ Change the `change_*` values in `.env` if you want your own. Git ignores `.env`.
 
 ## Ephemeral integration tests
 
-`docker-compose.test.yml` adds to `docker-compose.yml`. It needs Docker Compose 2.24.4 or later, for the `!reset` and `!override` tags. Check with `docker compose version`. It changes the database so that:
+`docker-compose.ephemeral.yml` adds to `docker-compose.yml`. It needs Docker Compose 2.24.4 or later, for the `!reset` and `!override` tags. Check with `docker compose version`. It changes the database so that:
 
 - Data lives in memory (`tmpfs`) and is gone after `down`
 - The host port is random, so it never clashes with your dev database
@@ -44,8 +45,8 @@ Change the `change_*` values in `.env` if you want your own. Git ignores `.env`.
 
 ```sh
 bun run test:infra:up
-docker compose -f docker-compose.yml -f docker-compose.test.yml port postgres 5432
-# The test values are fixed in docker-compose.test.yml
+docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml port postgres 5432
+# The test values are fixed in docker-compose.ephemeral.yml
 DATABASE_URL="postgresql://test:test@127.0.0.1:<port>/test"
 # Run the tests
 bun run test:infra:down
@@ -61,7 +62,7 @@ Always run `test:infra:down` at the end, even when the tests fail. In GitHub Act
 
 ## Shared dev, staging and production
 
-Use `docker-compose.prod.yml` on each server. It has no default values. Compose stops with an error when a value is missing
+Use `docker-compose.server.yml` on each server. It has no default values. Compose stops with an error when a value is missing
 
 Compose looks for each value in this order:
 
@@ -70,13 +71,13 @@ Compose looks for each value in this order:
 
 ```sh
 # From a file
-docker compose -f docker-compose.prod.yml --env-file .env.staging up -d
+docker compose -f docker-compose.server.yml --env-file .env.staging up -d
 # From the shell
 export POSTGRES_PASSWORD="..."
-docker compose -f docker-compose.prod.yml --env-file .env.production up -d
+docker compose -f docker-compose.server.yml --env-file .env.production up -d
 ```
 
-To give a container a new variable, add it under `environment` in `docker-compose.prod.yml`
+To give a container a new variable, add it under `environment` in `docker-compose.server.yml`
 
 Keep real secrets out of Git. See the secrets tools in the [README](../../README.md#default-stack)
 

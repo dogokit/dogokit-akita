@@ -5,10 +5,10 @@ Docker Compose runs several containers from one YAML file
 This repo has three Compose files:
 
 - `docker-compose.yml`: local development
-- `docker-compose.test.yml`: ephemeral integration tests, added on top of `docker-compose.yml`
-- `docker-compose.prod.yml`: shared dev, staging and production
+- `docker-compose.ephemeral.yml`: ephemeral integration tests, added on top of `docker-compose.yml`
+- `docker-compose.server.yml`: shared dev, staging and production
 
-See the [Environments](../docs/guides/environments.md) guide for which one to use
+Each file is named after how it runs, not after an environment. See the [Environments](../docs/guides/environments.md) guide for which one to use
 
 Links:
 
@@ -22,7 +22,7 @@ Links:
 
 Compose uses the project name as a prefix for containers, networks and volumes. Two stacks with the same project name share those resources, so one run can stop another run's containers.
 
-`docker-compose.test.yml` sets the name like this:
+`docker-compose.ephemeral.yml` sets the name like this:
 
 ```yaml
 name: ${COMPOSE_PROJECT_NAME:-dogokit-akita-test}
