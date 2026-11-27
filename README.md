@@ -166,7 +166,7 @@ Things that are the primary default.
 6. AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md)
 7. AI Code Review: [Gitar](stacks/gitar.md)
 8. AI Code Generator: [v0 by Vercel](stacks/v0.md)
-9. AI Context: [Context7](stacks/context7.md) / [Graphify](stacks/graphify.md)
+9. AI Context: [Context7](stacks/context7.md) / [Graphify](stacks/graphify.md) / [Trail-code](stacks/trail.md)
 10. AI Database Access: [DBHub](stacks/dbhub.md)
 11. AI Bots: [Grok Bot](stacks/grok-bot.md)
 12. AI Misc Tools: [Paradev](stacks/paradev.md)
