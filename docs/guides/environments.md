@@ -18,7 +18,7 @@ Use one Compose file per way of running, not one file per environment name
 
 Other options, and why they are not the default:
 
-- One file per environment (`docker-compose.dev.yml`, `docker-compose.staging.yml`, and so on): the files drift apart, and a fix in one is missed in the others
+- One file per environment (`docker-compose.yml` for local, `docker-compose.prod.yml` for shared servers): the files drift apart, and a fix in one is missed in the others
 - [Profiles](https://docs.docker.com/compose/how-tos/profiles/) only: good to turn on extra tools, such as a database UI, but they cannot change a service's ports or volumes
 - [Testcontainers](https://testcontainers.com): starts containers from test code. Good when each test file needs its own database. It adds a library, and the test setup no longer matches the Compose file
 
