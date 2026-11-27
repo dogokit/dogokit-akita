@@ -24,7 +24,7 @@ Other options, and why they are not the default:
 
 ## Ephemeral integration tests
 
-`docker-compose.test.yml` adds to `docker-compose.yml`. It changes the database so that:
+`docker-compose.test.yml` adds to `docker-compose.yml`. It needs Docker Compose 2.24.4 or later, for the `!reset` and `!override` tags. Check with `docker compose version`. It changes the database so that:
 
 - Data lives in memory (`tmpfs`) and is gone after `down`
 - The host port is random, so it never clashes with your dev database
@@ -34,7 +34,9 @@ Other options, and why they are not the default:
 ```sh
 bun run test:infra:up
 docker compose -f docker-compose.yml -f docker-compose.test.yml port postgres 5432
-# Point DATABASE_URL at that port, run the tests
+# Set DATABASE_URL with the user, password and database from docker-compose.test.yml
+DATABASE_URL="postgresql://user:password@127.0.0.1:<port>/db"
+# Run the tests
 bun run test:infra:down
 ```
 
