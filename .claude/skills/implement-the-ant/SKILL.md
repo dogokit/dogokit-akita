@@ -101,7 +101,7 @@ Diagram rules: pick the type that fits (`flowchart TD`, `sequenceDiagram`, `stat
 
 - No quick fix or workaround without saying so and getting the user's yes
 - No `TODO` without an issue link
-- Specific names for new functions, constants and files, not generic ones (`formatInvoiceDueDate`, not `formatDate2`)
+- Specific names for new functions, constants and files, not generic ones (`formatDateTime`, not `formatDate2`)
 - Comments say why, in one or two lines. Never restate the code
 
 ### Types
@@ -112,7 +112,7 @@ Diagram rules: pick the type that fits (`flowchart TD`, `sequenceDiagram`, `stat
 
 ### Imports
 
-- Prefer absolute imports with the `@/` alias (`import { formatInvoiceDueDate } from "@/lib/invoice"`) over relative paths like `../../lib/invoice`
+- Prefer absolute imports with the `@/` alias (`import { formatDateTime } from "@/lib/date-time"`) over relative paths like `../../lib/date-time`
 - Keep a relative import only for a file in the same folder (`./types`)
 - Before the first alias import, check that `tsconfig.json` has `"paths": { "@/*": [...] }` that points at the real source folder, and that the bundler or test runner reads it. Bun and Vite-style tools read `paths` from `tsconfig.json`. Fix the config in the same change when it is missing or wrong
 - Match the alias the repo already uses (`@/`, `~/`). Do not add a second one
