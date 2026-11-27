@@ -25,6 +25,7 @@
     "linkinator": "^8.1.0",
     "markdownlint": "^0.42.2",
     "markdownlint-cli": "^0.50.0",
+    "modern-web-guidance": "^1.0.2",
     "oxfmt": "^0.79.0",
     "oxlint": "^1.94.0"
   },
