@@ -61,7 +61,7 @@ Read the description, acceptance criteria, and every comment before planning. La
 
 ## 4. Scope check
 
-When the work spans several deliverables (for example backend, web and mobile, or two repos), and the issue does not say how to cut it, ask once: split into linked issues, or keep one issue. Do not ask again in the same session. A backend-only change that adds a new type, enum value or field must also check the clients that validate it (for example a Zod schema in the web app), so they are not forgotten.
+When the work spans several deliverables (for example backend, web and mobile, or two repos), and the issue does not say how to cut it, ask once: split into linked issues, or keep one issue. Do not ask again in the same session. A backend-only change that adds a new type, enum value or field must also check the clients that validate it (for example a validation schema in a client app), so they are not forgotten.
 
 ## 5. Branch
 
