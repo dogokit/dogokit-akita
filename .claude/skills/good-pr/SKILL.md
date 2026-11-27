@@ -15,7 +15,7 @@ Open or update one PR from the current branch. Read [`human-friendly`](../human-
 4. Never force-push. Never use `--no-verify`
 5. Never invent an issue key or number. If the repo needs one and it is missing, stop and ask
 6. Assign each new PR to the user who creates it. Request reviewers only when the user names them
-7. No "Generated with" footer on the PR body
+7. Never add AI or tool credit text to the PR title or body, in any section. That includes "Generated with" footers, "Claude Code" links and "Co-Authored-By" lines. Commits keep only their Co-Authored-By line
 8. Stay short in chat
 9. In an agent session (Claude Code, Codex, Cursor, Orca, T3 Code, or similar), work in a new worktree, not in the main checkout. Move the session into that worktree and run every later command there. The main checkout stays on the base branch, so `git checkout` never leaves it stuck on a PR branch
 

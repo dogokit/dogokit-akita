@@ -18,12 +18,14 @@
 
 ## Goal
 
-🐶Dogokit Akita is a comprehensive and opinionated full stack application development kit. Encompassing JavaScript/TypeScript, Node.js/Deno/Bun, and more. It serves as a versatile reference for constructing robust web applications, that can scale from zero to millions of users.
+🐶Dogokit Akita is a comprehensive and opinionated full stack application development kit. Mainly with JavaScript/TypeScript, Node.js/Bun, SQL database, and more. It serves as a versatile guide for constructing robust web-based applications, that have high scalability.
 
 - Default frontend web with React and Tailwind CSS
-- Optional full-stack web framework
+- Optional frontend web alternatives
+- Optional full-stack web frameworks
 - Optional backend API
 - Optional database ORM
+- Optional mobile
 
 ## Benefits
 
@@ -50,45 +52,72 @@
 
 ### Details
 
+#### UI/UX
+
 - Landing Page That Converts
   - Call to Action (CTA)
 - Responsive UI Design and Components
-  - WYSIWYG Editor
-  - Theme and Dark Mode
-  - Optimistic UI/UX
   - Lightweight Animation
+  - WYSIWYG Editor (what you see is what you get)
+  - Theme and Dark Mode
+  - Optimistic UI: show a change before the server confirms it
   - Command Palette/Bar
   - Keyboard Shortcuts
+- Accessibility (a11y)
+- Internationalization (i18n) and Localization (l10n)
+
+#### App Features
+
 - Web Analytics
-- AI Workflow Rules
-- AI Management & Agent Configuration
 - SEO (Search Engine Optimization) and Meta Tags
 - SSR (Server-Side Rendering)
-- Type-Safe CRUD (Create, Read, Update, Delete)
-- Database and ORM
-- Environment Variables for Local, Staging, Production
-- Deployment with Docker and Docker Compose
-- Authentication (AuthN) and Authorization (AuthZ)
-- Auth with OAuth or Social Login
-- User Management, Register, Login, Onboarding, Profile, Invite Users, Logout
-- Organization and Team Management
-- Role and Permission with Role-Based Access Control (RBAC)
-- Assets Management with File/Image Upload on Cloudflare R2
-- User and Admin Dashboard/Panel
 - Form Handling on Client and Server
 - Pagination on Client and Server
-- Email Templates, Notification, Marketing, Verification
-- Payment Gateway Integration with Billing, Subscription, Invoice
-- Blog, Release Notes
-- Scheduled/Cron Jobs
-- Background Jobs/Workers
+- User and Admin Dashboard/Panel
+- Assets Management with File/Image Upload on Cloudflare R2
+- Email Templates, Notifications, Marketing, and Verification
+- Payment Gateway with Billing, Subscriptions, and Invoices
+- Blog and Release Notes
 - Error Monitoring with Sentry
 - Timezone and Date/Time Picker
-- Internationalization (i18n) and Localization (l10n)
-- Accessibility (a11y)
 - Code Generator/Scaffolder
-- Webhooks
-- Community
+
+#### Accounts and Access
+
+- User Management: register, log in, onboard, edit profile, invite users, log out
+- Authentication (AuthN): confirm who the user is
+- Authorization (AuthZ): confirm what the user may do
+- Social Login with OAuth
+- Organization and Team Management
+- Role-Based Access Control (RBAC): access by role, such as admin or member
+- Attribute-Based Access Control (ABAC): access by user, resource, or context, such as team or time
+- Relationship-Based Access Control (ReBAC): access by a link to a resource, such as owner, editor, or viewer of a document
+
+#### Engineering
+
+- Type-Safe CRUD (Create, Read, Update, Delete)
+- Environment Variables for Local, Staging, and Production
+- Deployment with Docker and Docker Compose
+- Database and ORM: read and write data through typed code
+- Migrations and Backups: change the schema safely and restore data when needed
+- Cron and Automation: run repeatable tasks on a schedule, such as daily reports or cleanup
+- Queue and Background Jobs: run long tasks outside the request, with workers and retries
+- Webhooks: send or receive HTTP calls when an event happens, such as a paid invoice
+- Idempotency: make a repeated request or retry do the work only once
+- Rate Limiting: cap how many requests a user or IP can send
+- Caching: keep hot data close to make reads fast
+- Feature Flags: turn features on or off without a new deploy
+- Observability: logs, metrics, and traces to see what the app does
+- Health Checks: tell the host or load balancer that the app is up
+- Audit Logs: record who did what and when
+
+#### AI
+
+- AI Workflow Rules
+- AI Management and Agent Configuration
+- AI Harness
+- AI Skills
+- AI Orchestration
 
 ## Tech Stack
 
@@ -130,18 +159,17 @@ Things that are the primary default.
 ### Development Tools
 
 1. Terminal: [Ghostty](stacks/ghostty.md) / [Rex](stacks/rex.md)
-2. Code Editor: [Zed](stacks/zed.md) / [NeoVim](stacks/neovim.md)
-3. Code Review: [Gitar](stacks/gitar.md)
-4. AI Code Editor: [Cursor](stacks/cursor.md)
-5. AI Model: [Claude by Anthropic](stacks/claude.md) / [GPT by OpenAI](stacks/gpt.md) / [Gemini by Google](stacks/gemini.md)
-6. AI Code Generator: [v0 by Vercel](stacks/v0.md)
-7. AI Docs: [Context7](stacks/context7.md)
-8. AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md)
-9. AI Engineering Workflow: [Matt Pocock skills](stacks/mattpocock.md) / [Addy Osmani agent-skills](stacks/addyosmani.md) / [pstack](stacks/pstack.md)
-10. Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md)
-11. Bots: [Grok Bot](stacks/grok-bot.md)
-12. Misc: [Graphify](stacks/graphify.md) / [Delta](stacks/delta.md) / [Herdr](stacks/herdr.md) / [Paradev](stacks/paradev.md)
-13. AI Database Access: [DBHub](stacks/dbhub.md)
+2. AI Code Editor: [Cursor](stacks/cursor.md) / [Zed](stacks/zed.md) / [NeoVim](stacks/neovim.md)
+3. Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md) / [Herdr](stacks/herdr.md)
+4. AI Model: [Claude by Anthropic](stacks/claude.md) / [GPT by OpenAI](stacks/gpt.md) / [Gemini by Google](stacks/gemini.md)
+5. AI Engineering Workflow: [Matt Pocock skills](stacks/mattpocock.md) / [Addy Osmani agent-skills](stacks/addyosmani.md) / [pstack](stacks/pstack.md)
+6. AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md)
+7. AI Code Review: [Gitar](stacks/gitar.md)
+8. AI Code Generator: [v0 by Vercel](stacks/v0.md)
+9. AI Docs: [Context7](stacks/context7.md)
+10. AI Database Access: [DBHub](stacks/dbhub.md)
+11. AI Bots: [Grok Bot](stacks/grok-bot.md)
+12. AI Misc Tools: [Graphify](stacks/graphify.md) / [Delta](stacks/delta.md) / [Paradev](stacks/paradev.md)
 
 ### Deployment: PaaS and Services
 
@@ -165,7 +193,7 @@ Things that are the primary default.
 
 1. BaaS: [Keel](stacks/keel.md) / [Directus](stacks/directus.md) / [Strapi](stacks/strapi.md) / [Payload](stacks/payload.md) / [PocketBase](stacks/pocketbase.md) / [Supabase](stacks/supabase.md) / [Firebase](stacks/firebase.md)
 2. [REST API](stacks/rest-api.md): [Hono](stacks/hono.md) with [OpenAPI Swagger](stacks/openapi-swagger.md) generated by [Scalar](stacks/scalar.md)
-3. [GraphQL](stacks/graphql.md): [Apollo](stacks/apollo.md), [Pothos](stacks/pothos.md), [Sofa](stacks/sofa.md)
+3. [GraphQL](stacks/graphql.md): [Apollo](stacks/apollo.md) / [Pothos](stacks/pothos.md) / [Sofa](stacks/sofa.md)
 4. JS-Based Fully Featured: [NestJS](stacks/nestjs.md) / [Effect](stacks/effect.md) / [AdonisJS](stacks/adonisjs.md)
 5. Non-JS: [Fastify](stacks/fastify.md) / [Fiber](stacks/fiber.md) / [Echo](stacks/echo.md)
 
