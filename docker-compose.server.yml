@@ -21,12 +21,14 @@ services:
       interval: 2s
       timeout: 5s
       retries: 15
+  # Example only. There is no Dockerfile yet, so `build` fails until one is added
   api:
     image: example-api:latest
     build:
       context: .
+    restart: always
     ports:
-      - "3000:3000"
+      - "${API_HOST_PORT:-3000}:3000"
     depends_on:
       postgres:
         condition: service_healthy

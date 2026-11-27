@@ -76,6 +76,7 @@ Only make a value a variable when someone may really need to change it. A variab
 
 - `POSTGRES_HOST_PORT` is a variable. It is the port on your machine, and you may need another one when 5432 is already taken
 - The container port is not a variable. Postgres always listens on 5432 inside its container, so the files write `5432` directly. A `POSTGRES_CONTAINER_PORT` set to any other value would point Compose at a port where nothing listens
+- `API_HOST_PORT` is a variable with `3000` as the default. It is the port on the server that the api is published on, so you can change it when 3000 is taken
 - `docker-compose.server.yml` publishes no Postgres port at all. The api reaches Postgres over the Compose network at `postgres:5432`, so a host port would only open the database to the network
 - `docker-compose.yml` binds the port to `127.0.0.1`, so only your own machine can reach the dev database. Without it, Docker listens on every network interface, and other devices on the same Wi-Fi could try to log in
 - `DATABASE_URL` uses a different host in each place. On your machine it is `127.0.0.1`. On a server the api runs in a container, where `127.0.0.1` is the container itself, so it uses the service name `postgres`
