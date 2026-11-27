@@ -18,6 +18,20 @@ Links:
 - [Merge multiple Compose files](https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/)
 - [docker compose exec](https://docs.docker.com/reference/cli/docker/compose/exec/)
 
+## File names
+
+Name a Compose file after how the stack runs, not after the environment that uses it
+
+| File                           | How it runs                          | Used by                         |
+| ------------------------------ | ------------------------------------ | ------------------------------- |
+| `docker-compose.yml`           | On your machine, data kept           | Local development               |
+| `docker-compose.ephemeral.yml` | Fresh each run, data in memory       | Integration tests, PR previews  |
+| `docker-compose.server.yml`    | On a server, data kept, auto restart | Shared dev, staging, production |
+
+- Staging and production run the same way, so they share `docker-compose.server.yml`. The env file tells them apart, such as `--env-file .env.staging`
+- Do not add `docker-compose.prod.yml` or `docker-compose.staging.yml`. Two files for the same way of running drift apart, and a fix in one is missed in the other
+- Add a new file only when the way of running changes
+
 ## Project name
 
 Compose uses the project name as a prefix for containers, networks and volumes. Two stacks with the same project name share those resources, so one run can stop another run's containers.
