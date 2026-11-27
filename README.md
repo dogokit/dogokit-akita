@@ -140,6 +140,7 @@ Things that are the primary default.
 10. Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md)
 11. Bots: [Grok Bot](stacks/grok-bot.md)
 12. Misc: [Graphify](stacks/graphify.md) / [Delta](stacks/delta.md) / [Herdr](stacks/herdr.md) / [Paradev](stacks/paradev.md)
+13. AI Database Access: [DBHub](stacks/dbhub.md)
 
 ### Deployment: PaaS and Services
 
