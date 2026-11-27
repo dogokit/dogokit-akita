@@ -258,6 +258,8 @@ For production copy if needed:
 
 ## Prisma ORM
 
+This repo does not define these `bun db:*` scripts yet. Add them to your app's `package.json` when you set up Prisma.
+
 ```sh
 bun db:push
 bun db:reset

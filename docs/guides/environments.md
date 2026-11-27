@@ -13,7 +13,7 @@ Use one Compose file per way of running, not one file per environment name
 | Environment                     | How it runs                          | Files                                                 | Command                                         |
 | ------------------------------- | ------------------------------------ | ----------------------------------------------------- | ----------------------------------------------- |
 | Local development               | On your machine, data kept           | `docker-compose.yml`                                  | `bun run infra:up`                              |
-| Ephemeral integration test      | Fresh each run, data in memory       | `docker-compose.yml` + `docker-compose.ephemeral.yml` | `bun run test:infra:up`                         |
+| Ephemeral integration test      | Fresh each run, data in memory       | `docker-compose.yml` + `docker-compose.ephemeral.yml` | `bun run infra:test:up`                         |
 | Shared dev, staging, production | On a server, data kept, auto restart | `docker-compose.server.yml`                           | See [below](#shared-dev-staging-and-production) |
 
 Other options, and why they are not the default:
@@ -43,26 +43,26 @@ Change the `change_*` values in `.env` if you want your own. Git ignores `.env`.
 - `--wait` waits until the health check passes, so tests do not start too early
 
 ```sh
-bun run test:infra:up
-bun run test:infra:port
+bun run infra:test:up
+bun run infra:test:port
 # The test values are fixed in docker-compose.ephemeral.yml
 DATABASE_URL="postgresql://test:test@127.0.0.1:<port>/test"
 # Run the tests
-bun run test:infra:down
+bun run infra:test:down
 ```
 
-In CI, give each run its own project name, so parallel runs do not share containers. Set it once for the whole job, not on one command. `test:infra:port` and `test:infra:down` need the same name, or they look for the default stack and leave yours running:
+In CI, give each run its own project name, so parallel runs do not share containers. Set it once for the whole job, not on one command. `infra:test:port` and `infra:test:down` need the same name, or they look for the default stack and leave yours running:
 
 ```sh
 export COMPOSE_PROJECT_NAME=<project>-<run-id>
-bun run test:infra:up
+bun run infra:test:up
 # Run the tests
-bun run test:infra:down
+bun run infra:test:down
 ```
 
 In GitHub Actions, set `COMPOSE_PROJECT_NAME` under `env:` at the job level
 
-Always run `test:infra:down` at the end, even when the tests fail. In GitHub Actions, use `if: always()` on that step
+Always run `infra:test:down` at the end, even when the tests fail. In GitHub Actions, use `if: always()` on that step
 
 ## Shared dev, staging and production
 
@@ -90,7 +90,7 @@ The api reads only the file named by `API_ENV_FILE`. Shell-only values reach Pos
 
 To give the api a value that comes from the Compose setup, not the file, add it under `environment` in `docker-compose.server.yml`
 
-Keep real secrets out of Git. See the secrets tools in the [README](../../README.md#default-stack)
+Keep real secrets out of Git. See the secrets tools in the [README](../../README.md#development-tools)
 
 ## Links
 

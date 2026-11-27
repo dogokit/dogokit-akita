@@ -40,6 +40,8 @@ bun run infra:up
 
 To stop it, run `bun run infra:down`. To delete the data too, run `bun run infra:reset`.
 
+The image is Postgres 19. A data folder made by an older major version will not start on it. To keep that data, dump it with `pg_dump` before you upgrade. To start empty, run `bun run infra:reset`.
+
 ## Database Backup and Restore
 
 🚧

@@ -32,7 +32,7 @@ Name a Compose file after the one trait that sets it apart from `docker-compose.
 UAT (user acceptance testing) does not need its own file, such as `docker-compose.integration.yml` or `docker-compose.uat.yml`. It runs the same way as staging: on a server, with data kept, so testers can come back to their work. Use `docker-compose.server.yml` with its own env file:
 
 ```sh
-docker compose -f docker-compose.server.yml --env-file .env.uat up -d
+API_ENV_FILE=.env.uat docker compose -f docker-compose.server.yml --env-file .env.uat up -d
 ```
 
 - Integration tests are different from UAT. They throw the data away after each run, so they use `docker-compose.ephemeral.yml`

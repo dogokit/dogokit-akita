@@ -139,7 +139,7 @@ To start quickly, create a PostgresQL database with either of these:
 
 ### Database Operations
 
-Sync between Drizzle schema and the database directly:
+Sync between Drizzle schema and the database directly. This repo does not define `db:push` yet, so add it to your app's `package.json` when you set up Drizzle:
 
 ```sh
 bun db:push
@@ -163,7 +163,7 @@ export const dataUsers = [
 ]
 ```
 
-Then seed the initial data when needed:
+Then seed the initial data when needed. Like `db:push`, this script is not in this repo yet:
 
 ```sh
 bun db:seed
