@@ -30,6 +30,11 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+    # Every app variable comes from the file named by API_ENV_FILE. Set it to the same file as --env-file
+    env_file:
+      - path: ${API_ENV_FILE:?}
+        required: true
+    # Set here, not in the file, so the api always gets the DATABASE_URL from --env-file, with the postgres host
     environment:
       DATABASE_URL: ${DATABASE_URL:?}
 

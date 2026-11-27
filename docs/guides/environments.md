@@ -76,15 +76,19 @@ Compose looks for each value in this order:
 
 Always pass `--env-file` on a server. Otherwise a dev `.env` left there is used without a warning
 
+Pass the same file twice: to `--env-file` for Postgres and the `DATABASE_URL` value, and to `API_ENV_FILE` so the api container reads every app variable from it
+
 ```sh
 # From a file
-docker compose -f docker-compose.server.yml --env-file .env.staging up -d
+API_ENV_FILE=.env.staging docker compose -f docker-compose.server.yml --env-file .env.staging up -d
 # From the shell
 export POSTGRES_PASSWORD="..."
-docker compose -f docker-compose.server.yml --env-file .env.production up -d
+API_ENV_FILE=.env.production docker compose -f docker-compose.server.yml --env-file .env.production up -d
 ```
 
-To give a container a new variable, add it under `environment` in `docker-compose.server.yml`
+The api reads only the file named by `API_ENV_FILE`. Shell-only values reach Postgres but not the api, so put app variables in that file
+
+To give the api a value that comes from the Compose setup, not the file, add it under `environment` in `docker-compose.server.yml`
 
 Keep real secrets out of Git. See the secrets tools in the [README](../../README.md#default-stack)
 

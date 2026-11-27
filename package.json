@@ -14,7 +14,7 @@
     "infra:up": "docker compose up -d --wait",
     "lint": "oxlint --deny-warnings .",
     "lint:md": "markdownlint \"**/*.md\" --dot",
-    "server:config": "docker compose --env-file .env.example -f docker-compose.server.yml config --quiet",
+    "server:config": "API_ENV_FILE=.env.example docker compose --env-file .env.example -f docker-compose.server.yml config --quiet",
     "test:infra:down": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml down -v",
     "test:infra:logs": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml logs postgres",
     "test:infra:port": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml port postgres 5432",
