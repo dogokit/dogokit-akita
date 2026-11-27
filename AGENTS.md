@@ -36,9 +36,9 @@ Rules:
 
 ## Before you finish
 
-- Run `bun run check` (format, lint, Markdown lint)
+- Run `bun run check` (format, lint, types, Markdown lint). Fix with `bun run fix`
 - Keep changes small and in the right folder
-- Do not add app code. The only code is `index.ts`
+- Do not add app code. The only code is `index.ts`, plus tool config in `vite.config.ts`
 
 ## Working rules
 

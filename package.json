@@ -3,10 +3,9 @@
   "type": "module",
   "module": "index.ts",
   "scripts": {
-    "check": "bun run format:check && bun run lint && bun run lint:md",
+    "check": "vp check --deny-warnings && vp run lint:md",
     "check:links": "linkinator *.md --markdown --retry-errors",
-    "format": "oxfmt",
-    "format:check": "oxfmt --check",
+    "format": "vp fmt",
     "generate:secret": "openssl rand -base64 32",
     "infra:down": "docker compose down",
     "infra:logs": "docker compose logs -f postgres",
@@ -16,9 +15,10 @@
     "infra:test:port": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml port postgres 5432 | cut -d: -f2",
     "infra:test:up": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml up -d --wait",
     "infra:up": "docker compose up -d --wait",
-    "lint": "oxlint --deny-warnings .",
+    "lint": "vp lint --deny-warnings",
     "lint:md": "markdownlint \"**/*.md\" --dot",
-    "server:config": "API_ENV_FILE=.env.example docker compose --env-file .env.example -f docker-compose.server.yml config --quiet"
+    "server:config": "API_ENV_FILE=.env.example docker compose --env-file .env.example -f docker-compose.server.yml config --quiet",
+    "fix": "vp check --fix"
   },
   "devDependencies": {
     "@types/bun": "1.4.5",
@@ -26,10 +26,14 @@
     "markdownlint": "^0.42.2",
     "markdownlint-cli": "^0.50.0",
     "modern-web-guidance": "^1.0.2",
-    "oxfmt": "^0.79.0",
-    "oxlint": "^1.94.0"
+    "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8001",
+    "vite-plus": "1.8.0"
   },
   "peerDependencies": {
     "typescript": "^7.0.2"
-  }
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8001"
+  },
+  "packageManager": "bun@1.4.5"
 }

@@ -10,6 +10,7 @@
     "moalamri.inline-fold",
     "prisma.prisma",
     "usernamehw.errorlens",
-    "yoavbls.pretty-ts-errors"
+    "yoavbls.pretty-ts-errors",
+    "VoidZero.vite-plus-extension-pack"
   ]
 }
