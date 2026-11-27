@@ -17,6 +17,7 @@ Add an entry to this repo. Most entries are a new stack note. Read [`human-frien
 - Never touch app code. The only code in this repo is `index.ts`
 - Do not add a note to the README without passing the gate below
 - Vendored skill packs and stacks from other repos go through [`extract-the-meerkat`](../extract-the-meerkat/SKILL.md), not this skill
+- Never put AI or tool credit text ("Generated with", "Claude Code" links) in the PR title or body. The [`good-pr`](../good-pr/SKILL.md) rules apply, and this skill does not override them
 
 ## 1. Pick the kind of entry
 
