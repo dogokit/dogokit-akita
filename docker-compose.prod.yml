@@ -1,10 +1,9 @@
 services:
   postgres:
-    container_name: example-postgres
-    image: postgres:alpine
+    image: postgres:18-alpine
     restart: always
     volumes:
-      - postgres_data:/var/lib/postgres
+      - postgres_data:/var/lib/postgresql
     ports:
       - ${POSTGRES_HOST_PORT}:${POSTGRES_CONTAINER_PORT}
     env_file:
@@ -17,7 +16,7 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - database
+      - postgres
     env_file:
       - path: .env
         required: true

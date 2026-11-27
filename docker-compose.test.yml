@@ -1,0 +1,22 @@
+# Ephemeral integration tests. Adds to docker-compose.yml.
+# Up:   bun run test:infra:up
+# Port: docker compose -f docker-compose.yml -f docker-compose.test.yml port postgres 5432
+# Down: bun run test:infra:down
+# Set COMPOSE_PROJECT_NAME to a unique value to run several stacks at once, such as in CI
+name: akita-test
+
+services:
+  postgres:
+    # Data lives in memory and is gone after `down`
+    volumes: !reset []
+    tmpfs:
+      - /var/lib/postgresql
+    # Random free host port, so it never clashes with the dev database
+    ports: !override
+      - "127.0.0.1::5432"
+    # Fixed test values, so tests do not need a .env file
+    env_file: !reset []
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: test

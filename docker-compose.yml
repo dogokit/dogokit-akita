@@ -1,15 +1,20 @@
+# Local development. Run: docker compose up -d
 services:
   postgres:
-    container_name: example-postgres
-    image: postgres:alpine # latest = postgres:14.15-alpine3.20
+    image: postgres:18-alpine
     restart: no
     volumes:
-      - postgres_data:/var/lib/postgres
+      - postgres_data:/var/lib/postgresql
     ports:
       - "5432:5432"
     env_file:
       - path: .env
         required: true
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 2s
+      timeout: 5s
+      retries: 15
 
 volumes:
   postgres_data:
