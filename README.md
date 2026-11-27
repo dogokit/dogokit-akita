@@ -131,7 +131,7 @@ Things that are the primary default.
 - Database: SQL, ORM
 - Mobile: React Native with Expo, Uniwind
 
-### Default Stack
+### Default Application Stack
 
 - Language: [TypeScript](stacks/typescript.md) + [JavaScript](stacks/javascript.md) + [HTML](stacks/html.md) + [CSS](stacks/css.md)
 - Runtime & Package Manager: [Bun](stacks/bun.md)
@@ -142,7 +142,6 @@ Things that are the primary default.
 - Data Validation: [Zod](stacks/zod.md)
 - Form Handling: [Conform](stacks/conform.md)
 - Backend API Framework: [Hono](stacks/hono.md) + [tRPC](stacks/trpc.md) or [oRPC](stacks/orpc.md)
-- Secrets and Environment Variables: [Infisical](stacks/infisical.md) / [Doppler](stacks/doppler.md)
 - Database (DBMS): [PostgreSQL](stacks/postgresql.md)
 - Database Clients: [psql](stacks/postgresql.md) / [TablePlus](stacks/tableplus.md)
 - Database ORM: [Prisma](stacks/prisma.md)
@@ -159,8 +158,12 @@ Things that are the primary default.
 ### Development Tools
 
 - Terminal: [Ghostty](stacks/ghostty.md) / [Rex](stacks/rex.md)
-- AI Code Editor: [Cursor](stacks/cursor.md) / [Zed](stacks/zed.md) / [NeoVim](stacks/neovim.md)
+- Secrets and Environment Variables: [Infisical](stacks/infisical.md) / [Doppler](stacks/doppler.md)
+- Code Editor / Integrated Development Environment (IDE): [Cursor](stacks/cursor.md) / [Zed](stacks/zed.md) / [NeoVim](stacks/neovim.md)
 - Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md) / [Herdr](stacks/herdr.md)
+
+### AI Workflows
+
 - AI Model: [Claude by Anthropic](stacks/claude.md) / [GPT by OpenAI](stacks/gpt.md) / [Gemini by Google](stacks/gemini.md)
 - AI Engineering Workflow: [Matt Pocock skills](stacks/mattpocock.md) / [Addy Osmani agent-skills](stacks/addyosmani.md) / [pstack](stacks/pstack.md)
 - AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md)
