@@ -286,6 +286,7 @@ Things that are the primary default.
 ## Guides
 
 - [Workflow](docs/guides/workflow.md)
+- [Environments](docs/guides/environments.md)
 - [Tech Stack](stacks/tech-stack.md)
 - [System Design](docs/guides/system-design.md)
 - [Domain-Driven Design](docs/guides/domain-driven-design.md)
