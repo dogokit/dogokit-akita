@@ -43,4 +43,3 @@ Standards and updates:
 Sites:
 
 - [Allo?](https://allo.joshpuckett.me/)
-- [System Design](https://designed-to-scale.vercel.app): interactive course on system design by [@DilumSanjaya](https://x.com/DilumSanjaya)
