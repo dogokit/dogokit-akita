@@ -72,6 +72,6 @@ Keep real secrets out of Git. See the secrets tools in the [README](../../README
 
 ## Links
 
-- [Merge Compose files](https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/)
+- [Docker - Merge Compose files](https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/)
 - [Docker Compose](../../stacks/docker-compose.md)
 - [Database](database.md)
