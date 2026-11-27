@@ -331,3 +331,4 @@ Run `bun run check` first.
 
 - [Inspirations](docs/references/inspirations.md)
 - [Credits](docs/references/credits.md)
+- [System design](docs/references/system-design.md)
