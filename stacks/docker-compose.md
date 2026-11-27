@@ -18,6 +18,22 @@ Links:
 - [Merge multiple Compose files](https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/)
 - [docker compose exec](https://docs.docker.com/reference/cli/docker/compose/exec/)
 
+## Project name
+
+Compose uses the project name as a prefix for containers, networks and volumes. Two stacks with the same project name share those resources, so one run can stop another run's containers.
+
+`docker-compose.test.yml` sets the name like this:
+
+```yaml
+name: ${COMPOSE_PROJECT_NAME:-dogokit-akita-test}
+```
+
+- With `COMPOSE_PROJECT_NAME` set, Compose uses that value
+- Without it, Compose uses `dogokit-akita-test`
+- `:-` also falls back when the value is empty. `${VAR-default}` only falls back when the variable is unset
+
+In CI, set a unique value for each run, such as `COMPOSE_PROJECT_NAME=<project>-<run-id>`, where the run ID comes from your CI system, such as a run or build number. See the [Environments](../docs/guides/environments.md) guide.
+
 ## Container names
 
 This repo does not set [`container_name`](https://docs.docker.com/reference/compose-file/services/#container_name). Compose names each container after the project, such as `<project>-postgres-1`.

@@ -54,7 +54,7 @@ bun run test:infra:down
 In CI, give each run its own project name, so parallel runs do not share containers:
 
 ```sh
-COMPOSE_PROJECT_NAME=akita-test-$GITHUB_RUN_ID bun run test:infra:up
+COMPOSE_PROJECT_NAME=<project>-<run-id> bun run test:infra:up
 ```
 
 Always run `test:infra:down` at the end, even when the tests fail. In GitHub Actions, use `if: always()` on that step
