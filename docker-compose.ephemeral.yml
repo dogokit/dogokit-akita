@@ -1,7 +1,7 @@
 # Ephemeral integration tests. Adds to docker-compose.yml.
-# Up:   bun run test:infra:up
-# Port: bun run test:infra:port
-# Down: bun run test:infra:down
+# Up:   bun run infra:test:up
+# Port: bun run infra:test:port
+# Down: bun run infra:test:down
 # Set COMPOSE_PROJECT_NAME to a unique value to run several stacks at once, such as in CI
 # Project name: uses COMPOSE_PROJECT_NAME if set and not empty, else example-project
 # The :- means an empty value also falls back to the default

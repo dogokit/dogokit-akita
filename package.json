@@ -11,14 +11,14 @@
     "infra:down": "docker compose down",
     "infra:logs": "docker compose logs -f postgres",
     "infra:reset": "docker compose down -v",
+    "infra:test:down": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml down -v",
+    "infra:test:logs": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml logs postgres",
+    "infra:test:port": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml port postgres 5432",
+    "infra:test:up": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml up -d --wait",
     "infra:up": "docker compose up -d --wait",
     "lint": "oxlint --deny-warnings .",
     "lint:md": "markdownlint \"**/*.md\" --dot",
-    "server:config": "API_ENV_FILE=.env.example docker compose --env-file .env.example -f docker-compose.server.yml config --quiet",
-    "test:infra:down": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml down -v",
-    "test:infra:logs": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml logs postgres",
-    "test:infra:port": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml port postgres 5432",
-    "test:infra:up": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml up -d --wait"
+    "server:config": "API_ENV_FILE=.env.example docker compose --env-file .env.example -f docker-compose.server.yml config --quiet"
   },
   "devDependencies": {
     "@types/bun": "1.4.5",
