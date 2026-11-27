@@ -68,7 +68,7 @@ docker compose -f docker-compose.prod.yml --env-file .env.staging up -d
 docker compose -f docker-compose.prod.yml --env-file .env.production up -d
 ```
 
-Keep real secrets out of Git. See [Doppler](../../stacks/doppler.md), [Infisical](../../stacks/infisical.md) or [dotenvx](../../stacks/dotenvx.md)
+Keep real secrets out of Git. See the secrets tools in the [README](../../README.md#default-stack)
 
 ## Links
 
