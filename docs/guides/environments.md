@@ -45,8 +45,8 @@ Change the `change_*` values in `.env` if you want your own. Git ignores `.env`.
 ```sh
 bun run test:infra:up
 docker compose -f docker-compose.yml -f docker-compose.test.yml port postgres 5432
-# Set DATABASE_URL with the user, password and database from docker-compose.test.yml
-DATABASE_URL="postgresql://user:password@127.0.0.1:<port>/db"
+# The test values are fixed in docker-compose.test.yml
+DATABASE_URL="postgresql://test:test@127.0.0.1:<port>/test"
 # Run the tests
 bun run test:infra:down
 ```
