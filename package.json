@@ -13,7 +13,7 @@
     "infra:reset": "docker compose down -v",
     "infra:test:down": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml down -v",
     "infra:test:logs": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml logs postgres",
-    "infra:test:port": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml port postgres 5432",
+    "infra:test:port": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml port postgres 5432 | cut -d: -f2",
     "infra:test:up": "docker compose -f docker-compose.yml -f docker-compose.ephemeral.yml up -d --wait",
     "infra:up": "docker compose up -d --wait",
     "lint": "oxlint --deny-warnings .",
