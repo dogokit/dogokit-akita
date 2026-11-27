@@ -44,5 +44,5 @@
       }
     }
   ],
-  "ignorePatterns": [".claude/**", ".trail/**"]
+  "ignorePatterns": [".claude/**"]
 }

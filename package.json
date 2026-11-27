@@ -13,7 +13,6 @@
     "lint:md": "markdownlint \"**/*.md\" --dot"
   },
   "devDependencies": {
-    "@trailhq/trail-code": "^0.30.5",
     "@types/bun": "1.4.5",
     "markdownlint": "^0.42.2",
     "markdownlint-cli": "^0.50.0",
