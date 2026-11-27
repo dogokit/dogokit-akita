@@ -18,12 +18,14 @@
 
 ## Goal
 
-🐶Dogokit Akita is a comprehensive and opinionated full stack application development kit. Encompassing JavaScript/TypeScript, Node.js/Deno/Bun, and more. It serves as a versatile reference for constructing robust web applications, that can scale from zero to millions of users.
+🐶Dogokit Akita is a comprehensive and opinionated full stack application development kit. Mainly with JavaScript/TypeScript, Node.js/Bun, SQL database, and more. It serves as a versatile guide for constructing robust web-based applications, that have high scalability.
 
 - Default frontend web with React and Tailwind CSS
-- Optional full-stack web framework
+- Optional frontend web alternatives
+- Optional full-stack web frameworks
 - Optional backend API
 - Optional database ORM
+- Optional mobile
 
 ## Benefits
 
