@@ -1,6 +1,6 @@
 # MarathonLabs
 
-Company behind Marathon, an open-source test runner for Android and iOS UI tests, and Marathon Cloud, a paid hosted service that runs those tests on managed emulators and simulators.
+An open-source test runner for Android and iOS UI tests, and Marathon Cloud, a paid hosted service that runs those tests on managed emulators and simulators.
 
 Links:
 
