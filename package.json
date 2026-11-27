@@ -12,7 +12,7 @@
     "test:infra:down": "docker compose -f docker-compose.yml -f docker-compose.test.yml down -v",
     "test:infra:logs": "docker compose -f docker-compose.yml -f docker-compose.test.yml logs postgres",
     "test:infra:port": "docker compose -f docker-compose.yml -f docker-compose.test.yml port postgres 5432",
-    "prod:config": "docker compose -f docker-compose.prod.yml config --quiet",
+    "prod:config": "docker compose --env-file .env.example -f docker-compose.prod.yml config --quiet",
     "generate:secret": "openssl rand -base64 32",
     "check:links": "linkinator *.md --markdown --retry-errors",
     "format": "oxfmt",

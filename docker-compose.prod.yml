@@ -8,7 +8,7 @@ services:
       - ${POSTGRES_HOST_PORT}:${POSTGRES_CONTAINER_PORT}
     env_file:
       - path: .env
-        required: true
+        required: false
   api:
     image: example-api:latest
     build:
@@ -19,7 +19,7 @@ services:
       - postgres
     env_file:
       - path: .env
-        required: true
+        required: false
 
 volumes:
   postgres_data:
