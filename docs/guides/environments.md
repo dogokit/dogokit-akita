@@ -11,7 +11,7 @@ Use one Compose file per way of running, not one file per environment name
 
 | Environment                     | How it runs                          | Files                                            | Command                                         |
 | ------------------------------- | ------------------------------------ | ------------------------------------------------ | ----------------------------------------------- |
-| Local development               | On your machine, data kept           | `docker-compose.yml`                             | `bun run setup-db`                              |
+| Local development               | On your machine, data kept           | `docker-compose.yml`                             | `bun run infra:up`                              |
 | Ephemeral integration test      | Fresh each run, data in memory       | `docker-compose.yml` + `docker-compose.test.yml` | `bun run test:infra:up`                         |
 | Shared dev, staging, production | On a server, data kept, auto restart | `docker-compose.prod.yml`                        | See [below](#shared-dev-staging-and-production) |
 | Preview per pull request        | Fresh per pull request               | Same as the ephemeral test                       | Set `COMPOSE_PROJECT_NAME`                      |
