@@ -20,6 +20,7 @@ Write for a common human or newbie who is in a hurry. Use simple words. Keep it 
 9. Drop the final period of each paragraph and list item
 10. Use `##` for structure. Use bold only for a must-not-miss warning. Do not bold list labels, step names, or key terms: write "Inspect: ...", not "**Inspect**: ...". Too much bold hides the real warnings
 11. Use the plain verb form, without the `s` ending. Write "use", "send", and "log", not "uses", "sends", and "logs". Plural nouns keep their `s`, such as "logs" or "retries"
+12. Write a bare domain without a trailing slash: `example.com`, not `example.com/`. Keep the slash only when a path follows, such as `example.com/docs`
 
 ## Never drop
 
