@@ -7,12 +7,20 @@ services:
     restart: always
     volumes:
       - postgres_data:/var/lib/postgresql
-    ports:
-      - ${POSTGRES_HOST_PORT:?}:${POSTGRES_CONTAINER_PORT:?}
+    # No host port. The api reaches Postgres over the Compose network
     environment:
       POSTGRES_USER: ${POSTGRES_USER:?}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
       POSTGRES_DB: ${POSTGRES_DB:?}
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -h 127.0.0.1 -U $${POSTGRES_USER} -d $${POSTGRES_DB}",
+        ]
+      interval: 2s
+      timeout: 5s
+      retries: 15
   api:
     image: example-api:latest
     build:
@@ -20,7 +28,8 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     environment:
       DATABASE_URL: ${DATABASE_URL:?}
 
