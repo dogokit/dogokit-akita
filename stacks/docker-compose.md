@@ -19,7 +19,7 @@ Name a Compose file after how the stack runs, not after the environment that use
 | File                           | How it runs                          | Used by                              |
 | ------------------------------ | ------------------------------------ | ------------------------------------ |
 | `docker-compose.yml`           | On your machine, data kept           | Local development                    |
-| `docker-compose.ephemeral.yml` | Fresh each run, data in memory       | Integration tests, PR previews       |
+| `docker-compose.ephemeral.yml` | Fresh each run, data in memory       | Integration tests                    |
 | `docker-compose.server.yml`    | On a server, data kept, auto restart | Shared dev, staging, UAT, production |
 
 - `docker-compose.ephemeral.yml` is not used alone. It adds to `docker-compose.yml`

@@ -15,7 +15,6 @@ Use one Compose file per way of running, not one file per environment name
 | Local development               | On your machine, data kept           | `docker-compose.yml`                                  | `bun run infra:up`                              |
 | Ephemeral integration test      | Fresh each run, data in memory       | `docker-compose.yml` + `docker-compose.ephemeral.yml` | `bun run test:infra:up`                         |
 | Shared dev, staging, production | On a server, data kept, auto restart | `docker-compose.server.yml`                           | See [below](#shared-dev-staging-and-production) |
-| Preview per pull request        | Fresh per pull request               | Same as the ephemeral test                            | Set `COMPOSE_PROJECT_NAME`                      |
 
 Other options, and why they are not the default:
 
@@ -52,11 +51,16 @@ DATABASE_URL="postgresql://test:test@127.0.0.1:<port>/test"
 bun run test:infra:down
 ```
 
-In CI, give each run its own project name, so parallel runs do not share containers:
+In CI, give each run its own project name, so parallel runs do not share containers. Set it once for the whole job, not on one command. `test:infra:port` and `test:infra:down` need the same name, or they look for the default stack and leave yours running:
 
 ```sh
-COMPOSE_PROJECT_NAME=<project>-<run-id> bun run test:infra:up
+export COMPOSE_PROJECT_NAME=<project>-<run-id>
+bun run test:infra:up
+# Run the tests
+bun run test:infra:down
 ```
+
+In GitHub Actions, set `COMPOSE_PROJECT_NAME` under `env:` at the job level
 
 Always run `test:infra:down` at the end, even when the tests fail. In GitHub Actions, use `if: always()` on that step
 
@@ -68,6 +72,9 @@ Compose looks for each value in this order:
 
 1. The shell, such as variables set by your secrets tool or CI
 2. The file you pass with `--env-file`
+3. Without `--env-file`, the `.env` file in the project folder
+
+Always pass `--env-file` on a server. Otherwise a dev `.env` left there is used without a warning
 
 ```sh
 # From a file
