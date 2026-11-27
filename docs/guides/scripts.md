@@ -21,7 +21,7 @@ The script names use a prefix to group them:
 | `lint:md`      | Lints every Markdown file with markdownlint              | Inside `check`                      |
 | `check:links`  | Checks links in the Markdown files in the root folder    | By hand, since it needs the network |
 
-`check` stops at the first failure. Run `bun run check` to see the full list of problems in one go after the first fix.
+`check` stops at the first failing step. To see every problem from one tool, run that tool alone, such as `bun run lint`.
 
 ## Local database
 
