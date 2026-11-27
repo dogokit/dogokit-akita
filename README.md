@@ -145,15 +145,16 @@ Things that are the primary default.
 10. Database (DBMS): [PostgreSQL](stacks/postgresql.md)
 11. Database Clients: [psql](stacks/postgresql.md) [TablePlus](stacks/tableplus.md)
 12. Database ORM: [Prisma](stacks/prisma.md)
-13. Auth and RBAC: [Better Auth](stacks/better-auth.md) / [Permit.io](stacks/permit-io.md) / [ZenStack](stacks/zenstack.md)
-14. Container: [Docker](stacks/docker.md) + [Docker Compose](stacks/docker-compose.md) with [OrbStack](stacks/orbstack.md) / [Colima](stacks/colima.md) / [Kiri](stacks/kiri.md) / [Docker Desktop](stacks/docker-desktop.md)
-15. Email: [Resend](stacks/resend.md) + [React Email](stacks/react-email.md)
-16. File Upload: [Uploadcare](stacks/uploadcare.md) or [Cloudflare R2](stacks/cloudflare-r2.md)
-17. Testing: [Vitest](stacks/vitest.md) + [Testing Library](stacks/testing-library.md) + [Playwright](stacks/playwright.md) + [Storybook](stacks/storybook.md) + [MSW](stacks/msw.md)
-18. Payment: [Polar](stacks/polar.md)
-19. Security: [Arcjet](stacks/arcjet.md)
-20. Image Optimization: [Unpic](stacks/unpic.md)
-21. Documentation: [Fumadocs](stacks/fumadocs.md)
+13. Database Governance: [Bytebase](stacks/bytebase.md)
+14. Auth and RBAC: [Better Auth](stacks/better-auth.md) / [Permit.io](stacks/permit-io.md) / [ZenStack](stacks/zenstack.md)
+15. Container: [Docker](stacks/docker.md) + [Docker Compose](stacks/docker-compose.md) with [OrbStack](stacks/orbstack.md) / [Colima](stacks/colima.md) / [Kiri](stacks/kiri.md) / [Docker Desktop](stacks/docker-desktop.md)
+16. Email: [Resend](stacks/resend.md) + [React Email](stacks/react-email.md)
+17. File Upload: [Uploadcare](stacks/uploadcare.md) or [Cloudflare R2](stacks/cloudflare-r2.md)
+18. Testing: [Vitest](stacks/vitest.md) + [Testing Library](stacks/testing-library.md) + [Playwright](stacks/playwright.md) + [Storybook](stacks/storybook.md) + [MSW](stacks/msw.md)
+19. Payment: [Polar](stacks/polar.md)
+20. Security: [Arcjet](stacks/arcjet.md)
+21. Image Optimization: [Unpic](stacks/unpic.md)
+22. Documentation: [Fumadocs](stacks/fumadocs.md)
 
 ### Development Tools
 
@@ -169,6 +170,7 @@ Things that are the primary default.
 10. Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md)
 11. Bots: [Grok Bot](stacks/grok-bot.md)
 12. Misc: [Graphify](stacks/graphify.md) / [Delta](stacks/delta.md) / [Herdr](stacks/herdr.md) / [Paradev](stacks/paradev.md)
+13. AI Database Access: [DBHub](stacks/dbhub.md)
 
 ### Deployment: PaaS and Services
 
