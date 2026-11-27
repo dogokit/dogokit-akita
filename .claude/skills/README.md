@@ -13,6 +13,7 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 - [extract-the-meerkat](extract-the-meerkat/SKILL.md): extract someone else's stack or skills into this repo on a new branch and PR
 - [plan-the-lion](plan-the-lion/SKILL.md): plan issues at the right depth, from one issue to a full backlog, and refine old ones
 - [implement-the-ant](implement-the-ant/SKILL.md): plan first, then land a small, review-ready change
+- [clean-code](clean-code/SKILL.md): write code in small functions, with clear names and few comments
 - [investigate-the-cat](investigate-the-cat/SKILL.md): triage a bug report or question into a verdict, a cause, and next steps
 - [db-the-bee](db-the-bee/SKILL.md): print safe, copy-paste SQL for a person to run
 
