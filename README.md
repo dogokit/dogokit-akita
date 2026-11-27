@@ -12,13 +12,18 @@
 </div>
 
 > [!NOTE]
-> This project is currently documentation only. It is a curated reference of tools, stack choices and guides. It contains no implementation of the features listed below (auth, payments, storage, etc.). The only code is a minimal example in `index.ts` that shows the project runs. Treat the content as notes and recommendations to build from.
+> This repo is docs only. It is a curated list of tools, stack choices, and guides.
+> It has no code for the features below, such as auth or payments.
+> The only code is `index.ts`, a small example that shows the project runs.
+> Use the content as notes to build from.
 >
-> Example implementation releases will be named/tagged as `akita-1`, `akita-2`, and so on, separated from this repo.
+> Example implementations will be tagged `akita-1`, `akita-2`, and so on, kept apart from this repo.
 
 ## Goal
 
-🐶Dogokit Akita is a comprehensive and opinionated full stack application development kit. Mainly with JavaScript/TypeScript, Node.js/Bun, SQL database, and more. It serves as a versatile guide for constructing robust web-based applications, that have high scalability.
+🐶Dogokit Akita is an opinionated full stack app kit.
+It mostly uses JavaScript and TypeScript, with Bun, a SQL database, and more.
+Use it as a guide to build web apps that scale well.
 
 - Default frontend web with React and Tailwind CSS
 - Optional frontend web alternatives
@@ -29,12 +34,12 @@
 
 ## Benefits
 
-- Build website or web app quickly, with pre-built modules.
-- Use rich UI components and templates.
-- Customize tech stack, defaults without 3rd party services.
-- Deploy anywhere, no vendor lock-in.
-- Develop with better AI workflow.
-- Demonstrate the JavaScript developer experience (DX) ecosystem capability. As an alternative to existing one such as PHP with Laravel, Ruby with Rails, Python with Django, etc.
+- Build a website or web app fast, with pre-built modules
+- Use rich UI components and templates
+- Customize the tech stack and defaults, without 3rd party services
+- Deploy anywhere, with no vendor lock-in
+- Develop with a better AI workflow
+- Show what the JavaScript developer experience (DX) can do, as an alternative to PHP with Laravel, Ruby with Rails, or Python with Django
 
 ## Features
 
@@ -123,7 +128,7 @@
 
 ### Core Stack
 
-Things that are the primary default.
+The main defaults.
 
 - General: TypeScript, Bun, Docker
 - Frontend: React, Tailwind CSS
@@ -289,15 +294,30 @@ Things that are the primary default.
 
 ## Guides
 
+- [Getting Started](docs/guides/start.md)
 - [Workflow](docs/guides/workflow.md)
 - [Environments](docs/guides/environments.md)
 - [Scripts](docs/guides/scripts.md)
+- [Steps](docs/guides/steps.md)
 - [Tech Stack](stacks/tech-stack.md)
 - [System Design](docs/guides/system-design.md)
 - [Domain-Driven Design](docs/guides/domain-driven-design.md)
+- [Database](docs/guides/database.md)
+- [Auth](docs/guides/auth.md)
+- [OAuth](docs/guides/oauth.md)
+- [Assets](docs/guides/assets.md)
+- [Social](docs/guides/social.md)
+- [Internationalization](docs/guides/internationalization.md)
+- [Brand](docs/guides/brand.md)
 - [UI Design System](docs/guides/ui-design-system.md)
+- [UI Components](docs/guides/ui-components.md)
 - [UI Component Library](docs/guides/ui-component-library.md)
 - [AI Agent Skills](.claude/skills/README.md)
+
+## Contribute
+
+Read the [contributing guide](.github/CONTRIBUTING.md) before you open a pull request.
+Run `bun run check` first.
 
 ## Implementations (TBA)
 
