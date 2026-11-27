@@ -61,12 +61,22 @@ Always run `test:infra:down` at the end, even when the tests fail. In GitHub Act
 
 ## Shared dev, staging and production
 
-Use `docker-compose.prod.yml` with a different env file for each server:
+Use `docker-compose.prod.yml` on each server. It has no default values. Compose stops with an error when a value is missing
+
+Compose looks for each value in this order:
+
+1. The shell, such as variables set by your secrets tool or CI
+2. The file you pass with `--env-file`
 
 ```sh
+# From a file
 docker compose -f docker-compose.prod.yml --env-file .env.staging up -d
+# From the shell
+export POSTGRES_PASSWORD="..."
 docker compose -f docker-compose.prod.yml --env-file .env.production up -d
 ```
+
+To give a container a new variable, add it under `environment` in `docker-compose.prod.yml`
 
 Keep real secrets out of Git. See the secrets tools in the [README](../../README.md#default-stack)
 

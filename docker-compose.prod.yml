@@ -1,3 +1,6 @@
+# Shared dev, staging and production
+# Values come from the shell first, then from --env-file. See docs/guides/environments.md
+# ${VAR:?} stops Compose with an error when VAR is unset or empty
 services:
   postgres:
     image: postgres:19-alpine
@@ -5,10 +8,11 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql
     ports:
-      - ${POSTGRES_HOST_PORT}:${POSTGRES_CONTAINER_PORT}
-    env_file:
-      - path: .env
-        required: false
+      - ${POSTGRES_HOST_PORT:?}:${POSTGRES_CONTAINER_PORT:?}
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
+      POSTGRES_DB: ${POSTGRES_DB:?}
   api:
     image: example-api:latest
     build:
@@ -17,9 +21,8 @@ services:
       - "3000:3000"
     depends_on:
       - postgres
-    env_file:
-      - path: .env
-        required: false
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?}
 
 volumes:
   postgres_data:
