@@ -137,7 +137,8 @@ The main defaults.
 
 - Language: [TypeScript](stacks/typescript.md) + [JavaScript](stacks/javascript.md) + [HTML](stacks/html.md) + [CSS](stacks/css.md)
 - Runtime & Package Manager: [Bun](stacks/bun.md)
-- Format and Lint: [Oxfmt](stacks/oxfmt.md) + [Oxlint](stacks/oxc.md)
+- Toolchain: [Vite+](stacks/vite-plus.md), one `vp` CLI and one `vite.config.ts`
+- Format and Lint: [Oxfmt](stacks/oxfmt.md) + [Oxlint](stacks/oxc.md), through Vite+
 - Bundler: [Vite](stacks/vite.md)
 - Frontend Library: [React](stacks/react.md)
 - Styling: [Tailwind CSS](stacks/tailwind.md) + [shadcn/ui](stacks/shadcn-ui.md) + [UI SDK](stacks/ui-sdk.md) + [unplugin-icons](stacks/unplugin-icons.md) + [Tiptap](stacks/tiptap.md)
@@ -235,7 +236,6 @@ The main defaults.
 - Storage: Unix File System
 - Mailers: SMTP
 - Documentation: [Nextra](stacks/nextra.md)
-- Toolchain: [Vite+](stacks/vite-plus.md)
 - Package Browser: [npmx](stacks/npmx.md)
 - State Machine: [XState](stacks/xstate.md)
 - Policy: [Open Policy Agent](stacks/opa.md)
