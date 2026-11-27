@@ -13,11 +13,8 @@
 
 > [!NOTE]
 > This repo is docs only. It is a curated list of tools, stack choices, and guides.
-> It has no code for the features below, such as auth or payments.
-> The only code is `index.ts`, a small example that shows the project runs.
-> Use the content as notes to build from.
 >
-> Example implementations will be tagged `akita-1`, `akita-2`, and so on, kept apart from this repo.
+> Example implementations will be tagged `akita-1` and so on, kept apart from this repo.
 
 ## Goal
 
