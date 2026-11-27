@@ -16,6 +16,7 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 - [clean-code](clean-code/SKILL.md): write code in small functions, with clear names and few comments
 - [investigate-the-cat](investigate-the-cat/SKILL.md): triage a bug report or question into a verdict, a cause, and next steps
 - [db-the-bee](db-the-bee/SKILL.md): print safe, copy-paste SQL for a person to run
+- [create-private-skill](create-private-skill/SKILL.md): write a skill that git ignores, in the main checkout only
 
 ## Review and release
 
@@ -27,6 +28,7 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 - [clean-the-garden](clean-the-garden/SKILL.md): weed small rot across the whole repo, then add guards so it stays out
 - [address-the-elephant](address-the-elephant/SKILL.md): fix PR review comments, red checks, and merge conflicts
 - [dependency-the-bat](dependency-the-bat/SKILL.md): clear open dependency PRs (such as Dependabot) onto the latest versions and merge them
+- [orchestrate-merge-prs](orchestrate-merge-prs/SKILL.md): plan, then merge a batch of finished PRs and clean up their worktrees and branches
 
 ## Design and explain
 
