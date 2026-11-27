@@ -227,7 +227,7 @@ docker-compose.yml
 ```
 
 ```sh
-docker compose up -d
+bun run infra:up
 ```
 
 ## PostgresQL on a Docker container
