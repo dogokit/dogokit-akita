@@ -1,6 +1,6 @@
 ---
 name: review-the-kangaroo
-description: Deep-reviews a GitHub PR or a pre-PR local diff end to end (resolve scope, read the diff, orient in the code, analyse, verify every finding, draft). Review text uses plain words and one fixed layout. With an open PR, drafts with REQUEST_CHANGES by default and waits for confirmation before posting with gh. With no PR, or when the user opts out of GitHub, reviews the working tree or branch diff in chat only. Use when the user invokes /review-the-kangaroo or asks for a deep review of a PR, branch or working tree.
+description: Deep-reviews a GitHub PR or a pre-PR local diff end to end (resolve scope, read the diff, orient in the code, analyse, verify every finding, draft). Review text uses plain words and one fixed layout. With an open PR, drafts with REQUEST_CHANGES by default and waits for confirmation before posting with gh. With no PR, or when the user asks to keep the review local (chat only, nothing posted), reviews the working tree, branch, or PR diff in chat only. Use when the user invokes /review-the-kangaroo or asks for a deep review of a PR, branch or working tree.
 disable-model-invocation: true
 ---
 
@@ -14,6 +14,16 @@ Run the whole review in one session. Do not stop after a plan with empty checkbo
 
 Complement: [`address-the-elephant`](../address-the-elephant/SKILL.md) handles the response side (fix → reply → resolve). This skill writes the review.
 
+## Start
+
+Start the review as soon as the skill is invoked. Do not ask questions first.
+
+- No target given: review the current branch against `origin/main`. Find its PR with `gh pr list --head <branch>`. If a PR exists, use PR mode. If not, use Local mode.
+- A PR number or URL given: use PR mode, or Local mode if the user asks for a local review.
+- Run workflow steps 1 to 6 without pausing. Produce the draft in the same turn.
+- Stop only at the PR mode posting gate (step 5). Local mode ends after the draft.
+- Hold off only when the user clearly asks you to wait before the review starts. Then do nothing until they ask again.
+
 ## Review mode
 
 | Mode      | Scope                                         | Diff source                                              | Deliverable                          | Posts to GitHub    |
@@ -22,6 +32,8 @@ Complement: [`address-the-elephant`](../address-the-elephant/SKILL.md) handles t
 | Local | Branch name, or the working tree              | `git diff`, `git diff --cached`, or `git diff <base>...HEAD` | Verdict, summary, findings (`path:line`) | No, chat only   |
 
 Choose local when `gh pr list --head <branch>` finds no PR, or the user says pre-PR, fix first, no GitHub post, or chat only. No PR is never a reason to stop.
+
+A PR can also be reviewed locally. When the user asks for a local review of a PR number or URL, use the PR diff from `gh pr diff` and the local steps below, and never post. Local mode posts nothing, even when a PR exists.
 
 ## Format and wording
 
@@ -173,12 +185,11 @@ Present in chat:
 2. Top comment, from the template
 3. Findings table and every inline comment
 
-PR mode posting gate. Ask both in one message:
+PR mode posting gate. Ask in one message:
 
-1. The planned action is `REQUEST_CHANGES`. Do you want comment only or approve instead?
-2. Should I post this review on GitHub?
+1. Should I post this review on GitHub, keep it local (chat only), or post it as `COMMENT` or `APPROVE` instead of the planned `REQUEST_CHANGES`?
 
-If they say post without naming an action, use `REQUEST_CHANGES`. If they decline, stop after the draft.
+If they say post without naming an action, use `REQUEST_CHANGES`. If they choose local, or decline, stop after the draft and post nothing.
 
 Local mode: state the would-be verdict and end with next steps: apply the fixes, run focused tests, then open the PR.
 

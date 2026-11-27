@@ -1,7 +1,8 @@
 __*
 .DS_Store
 .env
-.env.production
+.env.*
+!.env.example
 .react-email
 .sentryclirc
 .stylelintcache

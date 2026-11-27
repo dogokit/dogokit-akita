@@ -1,0 +1,44 @@
+# Shared dev, staging and production
+# Values come from the shell first, then from --env-file. See docs/guides/environments.md
+# ${VAR:?} stops Compose with an error when VAR is unset or empty
+services:
+  postgres:
+    image: postgres:19-alpine
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    # No host port. The api reaches Postgres over the Compose network
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
+      POSTGRES_DB: ${POSTGRES_DB:?}
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -h 127.0.0.1 -U $${POSTGRES_USER} -d $${POSTGRES_DB}",
+        ]
+      interval: 2s
+      timeout: 5s
+      retries: 15
+  # Example only. There is no Dockerfile yet, so `build` fails until one is added
+  api:
+    image: example-api:latest
+    build:
+      context: .
+    restart: always
+    ports:
+      - "${API_HOST_PORT:-3000}:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    # Every app variable comes from the file named by API_ENV_FILE. Set it to the same file as --env-file
+    env_file:
+      - path: ${API_ENV_FILE:?}
+        required: true
+    # Set here, not in the file, so the api always gets the DATABASE_URL from --env-file, with the postgres host
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?}
+
+volumes:
+  postgres_data:

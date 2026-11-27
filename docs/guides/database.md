@@ -13,42 +13,36 @@ Install and setup Docker on your system.
 
 ## Docker Compose
 
-Setup `.env` to contain these and change them as needed:
+Copy the example file once, then change the values in `.env` if you want your own:
 
 ```sh
-POSTGRES_ROOT_PASSWORD=the_root_password
-POSTGRES_USER=the_user
-POSTGRES_PASSWORD=the_password
-POSTGRES_DATABASE=bandungdev
+cp .env.example .env
+```
+
+These values matter for the database:
+
+```sh
+POSTGRES_USER=change_user
+POSTGRES_PASSWORD=change_password
+POSTGRES_DB=change_db
 POSTGRES_HOST_PORT=5432
-POSTGRES_CONTAINER_PORT=5432
+DATABASE_URL="postgresql://change_user:change_password@127.0.0.1:5432/change_db"
 ```
 
-Start Docker service.
+- `POSTGRES_HOST_PORT` is the port on your machine. If you change it, change the port in `DATABASE_URL` too
+- Keep the user, password and database in `DATABASE_URL` the same as the `POSTGRES_*` values
 
-Run Docker Compose up.
+Start Docker, then start Postgres in the background. The command waits until the database is ready:
 
 ```sh
-docker-compose up
+bun run infra:up
 ```
 
-If everything is fine, exit and run it again in detached mode.
+To stop it, run `bun run infra:down`. To delete the data too, run `bun run infra:reset`.
 
-```sh
-docker-compose up -d
-```
+The image is Postgres 19. A data folder made by an older major version will not start on it. To keep that data, dump it with `pg_dump` before you upgrade. To start empty, run `bun run infra:reset`.
 
-Push the schema to it.
-
-```sh
-bun db:push
-```
-
-Seed initial data
-
-```sh
-bun db:seed
-```
+Older versions of this file mounted the data folder at the wrong path (`/var/lib/postgres`), so their data was never saved to the volume. If you ran that version, dump the database before you switch, since `infra:down` will not keep that data.
 
 ## Database Backup and Restore
 

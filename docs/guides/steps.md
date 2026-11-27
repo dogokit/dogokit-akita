@@ -227,7 +227,7 @@ docker-compose.yml
 ```
 
 ```sh
-docker compose up -d
+bun run infra:up
 ```
 
 ## PostgresQL on a Docker container
@@ -258,8 +258,10 @@ For production copy if needed:
 
 ## Prisma ORM
 
+This repo does not define these `bun db:*` scripts yet. Add them to your app's `package.json` when you set up Prisma.
+
 ```sh
-bun db:push
+bun db:migrate
 bun db:reset
 bun db:generate
 bun db:seed
