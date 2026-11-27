@@ -14,6 +14,9 @@
     "verbatimModuleSyntax": true,
     "noEmit": true,
 
+    // Absolute imports: "@/foo" maps to "./foo" at the repo root
+    "paths": { "@/*": ["./*"] },
+
     // Best practices
     "strict": true,
     "skipLibCheck": true,
