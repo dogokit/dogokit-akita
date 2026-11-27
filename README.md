@@ -160,16 +160,17 @@ Things that are the primary default.
 
 1. Terminal: [Ghostty](stacks/ghostty.md) / [Rex](stacks/rex.md)
 2. AI Code Editor: [Cursor](stacks/cursor.md) / [Zed](stacks/zed.md) / [NeoVim](stacks/neovim.md)
-3. Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md) / [Herdr](stacks/herdr.md)
+3. Agentic Development Environments (ADE): [Orca](stacks/orca.md) / [T3 Code](stacks/t3-code.md) / [Paseo](https://paseo.sh) / [Amp Code](stacks/ampcode.md) / [Herdr](stacks/herdr.md) / [Delta](stacks/delta.md)
 4. AI Model: [Claude by Anthropic](stacks/claude.md) / [GPT by OpenAI](stacks/gpt.md) / [Gemini by Google](stacks/gemini.md)
 5. AI Engineering Workflow: [Matt Pocock skills](stacks/mattpocock.md) / [Addy Osmani agent-skills](stacks/addyosmani.md) / [pstack](stacks/pstack.md)
 6. AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md)
 7. AI Code Review: [Gitar](stacks/gitar.md)
 8. AI Code Generator: [v0 by Vercel](stacks/v0.md)
-9. AI Docs: [Context7](stacks/context7.md)
+9. AI Context: [Context7](stacks/context7.md) / [Graphify](stacks/graphify.md)
 10. AI Database Access: [DBHub](stacks/dbhub.md)
 11. AI Bots: [Grok Bot](stacks/grok-bot.md)
-12. AI Misc Tools: [Graphify](stacks/graphify.md) / [Delta](stacks/delta.md) / [Paradev](stacks/paradev.md)
+12. AI Misc Tools: [Paradev](stacks/paradev.md)
+13. AI Computer Use: [agent-desktop](stacks/agent-desktop.md)
 
 ### Deployment: PaaS and Services
 
