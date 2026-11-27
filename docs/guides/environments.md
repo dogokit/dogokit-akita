@@ -22,6 +22,17 @@ Other options, and why they are not the default:
 - [Profiles](https://docs.docker.com/compose/how-tos/profiles/) only: good to turn on extra tools, such as a database UI, but they cannot change a service's ports or volumes
 - [Testcontainers](https://testcontainers.com): starts containers from test code. Good when each test file needs its own database. It adds a library, and the test setup no longer matches the Compose file
 
+## Local development
+
+`docker-compose.yml` reads `.env`, so copy the example file once before you start. Without it, Compose stops with "env file .env not found":
+
+```sh
+cp .env.example .env
+bun run infra:up
+```
+
+Change the `change_*` values in `.env` if you want your own. Git ignores `.env`.
+
 ## Ephemeral integration tests
 
 `docker-compose.test.yml` adds to `docker-compose.yml`. It needs Docker Compose 2.24.4 or later, for the `!reset` and `!override` tags. Check with `docker compose version`. It changes the database so that:
