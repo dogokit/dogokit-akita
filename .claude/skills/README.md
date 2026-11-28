@@ -18,6 +18,7 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 - [db-the-bee](db-the-bee/SKILL.md): print safe, copy-paste SQL for a person to run
 - [create-private-skill](create-private-skill/SKILL.md): write a skill that git ignores, in the main checkout only
 - [migrate-to-oxc](migrate-to-oxc/SKILL.md): move another repo from Biome, Prettier or ESLint to Oxc (not for repos on Vite+)
+- [migrate-to-vite-plus](migrate-to-vite-plus/SKILL.md): move a repo to Vite+ and `vp`, and swap its Bun, Node, npm or pnpm commands for `vp` (run migrate-to-oxc first when the repo still has Biome, Prettier or ESLint)
 
 ## Review and release
 
