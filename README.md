@@ -181,7 +181,7 @@ The main defaults.
 
 ### Deployment: PaaS and Services
 
-- General: [Railway](stacks/railway.md) / [Render](stacks/render.md) / [Fly.io](stacks/flyio.md) / [Cloudflare Workers](stacks/cloudflare-workers.md) / [Cloudflare Containers](stacks/cloudflare-containers.md)
+- General: [Railway](stacks/railway.md) / [Zeabur](stacks/zeabur.md) / [Render](stacks/render.md) / [Fly.io](stacks/flyio.md) / [Cloudflare Workers](stacks/cloudflare-workers.md) / [Cloudflare Containers](stacks/cloudflare-containers.md)
 - Frontend: [Vercel](stacks/vercel.md) / [Netlify](stacks/netlify.md) / [Cloudflare Pages](stacks/cloudflare-pages.md)
 - Database: [Prisma Postgres](stacks/prisma-postgres.md) / [Supabase](stacks/supabase.md) / [Neon](stacks/neon.md)
 - Storage: [Cloudflare R2](stacks/cloudflare-r2.md) / [Amazon S3](stacks/amazon-s3.md)
