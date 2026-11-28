@@ -2,6 +2,10 @@
 
 Small follow-up tasks. We do not use an issue tracker yet, so this file is the list.
 
+## Open
+
+None.
+
 ## Decided
 
 - Keep Bun as the default package manager. `packageManager: bun@1.4.5` in `package.json` and `bun.lock` stay as they are
