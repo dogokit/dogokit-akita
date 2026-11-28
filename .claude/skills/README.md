@@ -25,7 +25,7 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 - [good-commit](good-commit/SKILL.md): make atomic commits with Conventional Commits messages
 - [good-pr](good-pr/SKILL.md): open or update a PR with a plain-English title and a short body
 - [good-merge](good-merge/SKILL.md): squash-merge a PR by default, move stacked PRs to main, then pull and clean up
-- [release-the-kraken](release-the-kraken/SKILL.md): commit, push, and open a short, scannable PR
+- [release-the-kraken](release-the-kraken/SKILL.md): the complex route to a reviewable PR, with route choices and tracker sync (use good-pr for a simple PR)
 - [review-the-kangaroo](review-the-kangaroo/SKILL.md): deep-review a PR or a local diff, with checked findings
 - [clean-the-garden](clean-the-garden/SKILL.md): weed small rot across the whole repo, then add guards so it stays out
 - [address-the-elephant](address-the-elephant/SKILL.md): fix PR review comments, red checks, and merge conflicts

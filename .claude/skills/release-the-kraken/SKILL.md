@@ -1,58 +1,112 @@
 ---
 name: release-the-kraken
-description: Commit, push, open, and hand off the current change for review. Checks the branch and PR base, commits with good-commit, opens or updates the PR with good-pr, moves the linked issue to its review status when a tracker is used. Use when the user asks to release work, create a PR, open a PR for review, or run the commit-to-review workflow.
+description: The complex way to send a change for review. Use it instead of good-pr when the handoff needs choices, such as a tracker issue to sync, a stacked or split PR, an open PR to update, a parent issue whose PR is still open, a draft, or repo rules that are unclear. Checks the repo rules, picks the route, commits with good-commit, opens or updates the PR with good-pr, syncs the tracker when there is one, and reports every choice it made. Use when the user asks to release work, run the commit-to-review workflow, or open a PR that needs one of these choices. For one simple PR with no tracker, use good-pr.
 ---
 
 # Release the Kraken
 
-Run the commit-to-review handoff. The PR title and body come from [`good-pr`](../good-pr/SKILL.md). This skill does not have its own PR format.
+The complex route from a finished change to a reviewable PR. For a simple PR (one branch, one PR, no tracker, no special routing), use [`good-pr`](../good-pr/SKILL.md) alone.
+
+This skill adds the choices around good-pr. The title, body, worktree, assignee and check rules all come from good-pr. Do not copy them here.
 
 ## Rules
 
 - Never force-push
-- Never push to the default branch unless the repo rules allow it and the user asks for it in this request. Check the repo rules first (step 1). If they are unclear, ask the user
+- Never merge, and never enable auto-merge. Merging is [`good-merge`](../good-merge/SKILL.md)'s job
+- Push to the default branch only when the repo rules allow it and the user asks in this request
 - Do not request reviewers unless the user names them in this request
 - Never invent an issue key or number. If the repo requires one and it is missing, stop and ask
+- Never reopen a closed PR
+- Agent sessions never switch branches in the main checkout. Use the worktree steps in good-pr step 1
 - Do not run formatters or `lint --fix` over existing files before committing. Formatting new files is fine
+- Keep the chat short. The PR body is good-pr's job
 
-Optional: when the change moves a status or queue flow that a reviewer must follow, suggest [`statechart-the-hart`](../statechart-the-hart/SKILL.md) in one line. Never block the handoff on it.
+## 1. Preflight
 
-## 1. Check the branch and base
+Run these and keep the output for the report:
 
-- Find the base: the repo's default branch (`gh repo view --json defaultBranchRef --jq .defaultBranchRef.name`), unless the user or the repo docs name another
-- Find the repo rules for the default branch: read `CONTRIBUTING.md`, `AGENTS.md` and `CLAUDE.md`, then check branch protection with `gh api repos/{owner}/{repo}/rules/branches/<default>`. A 404 or an empty list means no rule, but it does not mean the team allows direct pushes
-- If the rules say a PR is required, never open a PR from the default branch. If you are on it, create a branch first, as in step 1 of [`good-pr`](../good-pr/SKILL.md). In an agent session, use a new worktree
-- If the rules allow direct pushes, or the user says to push to the default branch, commit and push there with no branch or PR, and skip steps 4 and 5
-- If the rules are unclear, ask the user: push to the default branch, or branch and PR
-- If the repo documents its own branch names or release flow (in `CONTRIBUTING.md`, `AGENTS.md` or `CLAUDE.md`), follow that instead
+- `git branch --show-current`. Stop on a detached HEAD
+- `git status -sb` and `git status --short`
+- Base: `gh repo view --json defaultBranchRef --jq .defaultBranchRef.name`, unless `CONTRIBUTING.md`, `AGENTS.md` or `CLAUDE.md` name another
+- Repo rules: read `CONTRIBUTING.md`, `AGENTS.md` and `CLAUDE.md` for branch, PR, draft, review, tracker and check rules. Then `gh api repos/{owner}/{repo}/rules/branches/<base>`. A 404 or an empty list means no rule, not permission to push directly
+- Existing PR: `gh pr list --head <branch> --state all --json number,title,url,state,baseRefName`
+- Tracker: find its key in the branch name, the commit, or the user's message. No key and no tracker means skip steps 3 and 6
 
-## 2. Read the issue (when there is one)
+Stop and report when:
 
-- Read the title and acceptance criteria. With GitHub: `gh issue view <n> --json title,body,labels,url`. With another tracker, use its CLI or MCP tool
-- Note sub-tasks or bugs that belong to a parent issue whose PR is still open. Those land on the parent's PR as an extra commit, not as a second PR, unless the user says otherwise
+- The HEAD is detached
+- The branch has a closed PR
+- Uncommitted changes are there and you cannot tell whether they belong to this change
 
-## 3. Commit
+If the current branch is the base, do not switch branches in the main checkout. Create a worktree and branch as good-pr step 1 says, then run every later step there.
 
-Follow [`good-commit`](../good-commit/SKILL.md): keep each commit atomic, use Conventional Commits, run the project checks, then `git diff --check`. Do not open the PR when a check fails.
+## 2. Pick the route
 
-## 4. Push and open or update the PR
+Pick one row. If two rows fit, take the riskier one, as [`AGENTS.md`](../../../AGENTS.md) says. The route sets the base, the draft flag and whether a new PR is made.
+
+| Situation | Route | Default |
+| --- | --- | --- |
+| Repo rules allow direct pushes to the base, and the user asks for it | Commit and push to the base. No branch and no PR. Skip steps 5 and 7 | Only when asked |
+| Normal change | New branch and one PR into the base | Yes |
+| The branch already has an open PR | Update that PR with good-pr step 5 | Yes |
+| The change builds on another open PR | Stacked PR. The base is that PR's branch. Say so in the report | Ask if the parent is unclear |
+| A sub-task of a parent issue whose PR is still open | Extra commit on the parent PR, not a second PR | Unless the user says otherwise |
+| The change is too big to review as one | Split into several PRs or keep one | Ask |
+| The work is not ready for review | Draft PR | Only when the repo asks or the user says so |
+| The repo rules say a PR is required, but the base is unclear | Stop and ask | Ask |
+
+Other choices, with their defaults:
+
+- Base: the default branch, or the parent branch for a stacked PR, or the branch the repo docs name
+- Draft: no, unless the repo asks or the user says so
+- Reviewers: none, unless the user names them
+- Assignee: the user who runs the skill. good-pr sets it
+- Commits: as good-commit splits them. No squash here, because [`good-merge`](../good-merge/SKILL.md) squashes at merge
+- Ready: keep the current draft state. Run `gh pr ready` only when the user asks for review now
+
+Ask only when the answer changes what happens next, such as unclear repo rules, one PR or several, or an unclear stacked base. For every other choice, take the default and list it in the report.
+
+When the change moves a status or queue flow that a reviewer must follow, suggest [`statechart-the-hart`](../statechart-the-hart/SKILL.md) in one line. Never block the handoff on it.
+
+## 3. Read the issue (when there is one)
+
+- `gh issue view <n> --json title,body,labels,url`. With another tracker, use its CLI or MCP tool
+- Use the issue for Situation and Proposal in the PR body. Do not copy its acceptance criteria into the body
+- A sub-task of a parent issue follows the route table in step 2
+
+## 4. Commit
+
+Follow [`good-commit`](../good-commit/SKILL.md): atomic commits, Conventional Commits messages, the project checks, then `git diff --check`.
+
+- Leave out unrelated files. Ask when unsure
+- If a check fails, stop and report. Do not open the PR
+- No commits ahead of the base (`git log origin/<base>..HEAD --oneline` is empty): stop and say so
+
+## 5. Push and open or update the PR
 
 - Push: `git push -u origin HEAD`
-- Write the title and body with [`good-pr`](../good-pr/SKILL.md), including its diagram and body rules. Do not use any other template
-- Create or edit the PR as `good-pr` says. Create it as a draft only when the repo workflow asks for that
+- Title, body, create or edit: follow [`good-pr`](../good-pr/SKILL.md) steps 5 to 8 as written. Do not use another template
+- Create as a draft only when the route says so
+- For a stacked PR, `--base` is the parent branch
 
-## 5. Sync the issue (when there is one)
+## 6. Sync the tracker (when there is one)
 
-- Update the issue only when its text no longer matches the scope of the PR. Change only the parts that differ, and add the PR link
+- Update the issue text only where it no longer matches the PR scope. Add the PR link
 - Move the issue to its review status (for example "In review") when the tracker has one. If the move fails, report it and continue
 
-## 6. Ready and hand off
+## 7. Check the PR
 
-```bash
-gh pr ready <n>          # only when it was a draft and the user wants review now
-gh pr edit <n> --add-assignee @me
-```
+- `gh pr view <n> --json url,title,baseRefName,isDraft,mergeable,assignees`
+- Title, base, draft state and assignee match the route and good-pr
+- `gh pr checks <n>` shows CI. Report its state. If checks are still running, say so and do not poll
+- `mergeable` is `CONFLICTING`: report it and point to [`address-the-elephant`](../address-the-elephant/SKILL.md). Do not fix it here
 
-## 7. Final check
+## 8. Hand off
 
-Run the `good-pr` final check with real command output. The PR base, title, body and assignee must match `good-pr`. The final message is the PR URL, plus one line for anything that failed.
+Final message, in this order:
+
+- PR URL and title
+- Route, and each default the skill took (base, draft, reviewers)
+- CI state from `gh pr checks`
+- One line for anything that failed or was skipped
+- Next step: review, then [`good-merge`](../good-merge/SKILL.md) after approval
