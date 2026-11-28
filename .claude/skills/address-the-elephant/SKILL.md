@@ -33,7 +33,7 @@ Fix and test commands follow the target repo (`AGENTS.md`, `CLAUDE.md`, `package
 
 ## Voice (GitHub replies)
 
-A short note to a teammate. Sentence case. One or two sentences. Contractions are fine.
+A short note to a teammate. Start with a lowercase letter, like a chat message. One or two sentences. Contractions are fine.
 
 - Say what changed, in plain words
 - For a thread the PR author opened on their own PR, say what changed compared with the original comment

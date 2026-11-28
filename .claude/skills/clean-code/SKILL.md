@@ -80,7 +80,7 @@ Edit the file and every dependent file in the same task. Never leave broken impo
 
 | Situation | Action |
 | --- | --- |
-| Clear feature request | Write it directly |
+| Clear feature request | Write it directly, unless the repo's workflow needs a plan first (see [`implement-the-ant`](../implement-the-ant/SKILL.md)). Then plan and wait for approval |
 | Bug report | Fix it, and explain only what the user needs to know |
 | Unclear requirement | Ask, do not assume |
 
