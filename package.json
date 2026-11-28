@@ -12,6 +12,7 @@
     "test": "echo 'test'",
     "test:unit": "echo 'test:unit'",
     "test:e2e": "echo 'test:e2e'",
+    "upgrade": "taze -w && taze major -w",
     "gen:secret": "openssl rand -base64 32",
     "infra:up": "docker compose up -d --wait",
     "infra:down": "docker compose down",
@@ -29,6 +30,7 @@
     "markdownlint": "^0.42.2",
     "markdownlint-cli": "^0.50.0",
     "modern-web-guidance": "^1.0.2",
+    "taze": "^21.3.0",
     "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8001",
     "vite-plus": "1.8.0"
   },
