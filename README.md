@@ -176,7 +176,7 @@ The main defaults.
 - AI Database Access: [DBHub](stacks/dbhub.md)
 - AI Bots: [Grok Bot](stacks/grok-bot.md)
 - AI Misc Tools: [Paradev](stacks/paradev.md)
-- AI Computer Use: [agent-desktop](stacks/agent-desktop.md)
+- AI Computer Use: [agent-desktop](stacks/agent-desktop.md) / [Cua](stacks/cua.md)
 
 ### Deployment: PaaS and Services
 
