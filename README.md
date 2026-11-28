@@ -167,6 +167,7 @@ The main defaults.
 ### AI Workflows
 
 - AI Model: [Claude by Anthropic](stacks/claude.md) / [GPT by OpenAI](stacks/gpt.md) / [Gemini by Google](stacks/gemini.md)
+- AI Agent Framework: [Mastra](stacks/mastra.md)
 - AI Engineering Workflow: [Matt Pocock skills](stacks/mattpocock.md) / [Addy Osmani agent-skills](stacks/addyosmani.md) / [pstack](stacks/pstack.md)
 - AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md)
 - AI Code Review: [Gitar](stacks/gitar.md)
