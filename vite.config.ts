@@ -46,10 +46,10 @@ export default defineConfig({
         },
       },
     ],
-    ignorePatterns: [".claude/**"],
+    ignorePatterns: [".claude/**", ".agents/**"],
   },
   lint: {
-    ignorePatterns: [".claude/**"],
+    ignorePatterns: [".claude/**", ".agents/**"],
     options: {
       typeAware: true,
       typeCheck: true,
