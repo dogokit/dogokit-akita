@@ -106,7 +106,8 @@ Diagram: add one under `## Proposal`, with a `### Approach` heading, when the ch
 
 - Use code symbol names (for example `AuthService.create`) and mark new or changed nodes `(new)` or `(changed)`
 - About 10 nodes. Show decisions and outcomes, not every call
-- `flowchart TD` for flows, `sequenceDiagram` for calls between systems, `stateDiagram-v2` for status moves
+- `flowchart TD` for flows, `sequenceDiagram` for calls between systems, `stateDiagram-v2` for status moves, `erDiagram` for schema changes, `classDiagram` for type shape
+- Trackers that do not render Mermaid (for example Jira): the same diagram as plain ASCII in a code block
 - Stack a `Before` above an `After` when readers must compare old and new
 
 ## Report
