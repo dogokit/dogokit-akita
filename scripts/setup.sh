@@ -1,0 +1,10 @@
+#!/bin/sh
+# Orca setup script. Runs in a new worktree (see orca.yaml).
+
+git fetch --prune origin
+if git rev-parse --abbrev-ref --symbolic-full-name '@{u}' >/dev/null 2>&1; then
+  git pull --ff-only || echo "orca setup: git pull skipped, resolve manually"
+else
+  echo "orca setup: no upstream branch, skipped git pull"
+fi
+vp install
