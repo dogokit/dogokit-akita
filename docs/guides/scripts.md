@@ -7,8 +7,8 @@ This guide explains each script in `package.json`. Run one with `bun run <name>`
 The script names use a prefix to group them:
 
 - No prefix: code quality, such as `check`, `format` and `lint`
-- `infra:`: Docker Compose for the database. `infra:test:` is for the ephemeral test stack
-- `server:`: checks for the server Compose file
+- `infra:`: Docker Compose for the database. `infra:test:` is for the ephemeral test stack. `infra:server:` checks the server Compose file
+- `gen:`: generates values, such as a secret
 
 ## Code quality
 
@@ -53,17 +53,21 @@ Always run `infra:test:down` at the end, even when the tests fail.
 
 ## Server
 
-| Script          | What it does                                                                                     |
-| --------------- | ------------------------------------------------------------------------------------------------ |
-| `server:config` | Checks `docker-compose.server.yml` with `.env.example`. It prints nothing when the file is valid |
+| Script                | What it does                                                                                     |
+| --------------------- | ------------------------------------------------------------------------------------------------ |
+| `infra:server:config` | Checks `docker-compose.server.yml` with `.env.example`. It prints nothing when the file is valid |
 
 This script checks the file only. It does not start anything. Use real values on the server, not `.env.example`.
 
 ## Other
 
-| Script            | What it does                                                 |
-| ----------------- | ------------------------------------------------------------ |
-| `generate:secret` | Prints a random 32-byte string, such as for `SESSION_SECRET` |
+| Script       | What it does                                                 |
+| ------------ | ------------------------------------------------------------ |
+| `gen:secret` | Prints a random 32-byte string, such as for `SESSION_SECRET` |
+
+## Placeholder tests
+
+`test`, `test:unit` and `test:e2e` only print a message for now. They do not run any tests yet.
 
 ## Not defined yet
 
