@@ -68,20 +68,18 @@ Check the package scripts for:
 - `fix:*`: Code fix commands
 - `db:*`: Database-related commands
 
-## Node.js Dependencies with pnpm
+## Dependencies
+
+Install them with Vite+. It uses the package manager set in `package.json`:
 
 ```sh
-npm install -g pnpm
-```
-
-```sh
-bun install
+vp install
 ```
 
 Can also check the version updates with `taze`:
 
 ```sh
-bun taze
+vp dlx taze
 ```
 
 ## Prettier
@@ -143,8 +141,8 @@ Configure in Remix `root.tsx`
 ## Tailwind CSS & PostCSS
 
 ```sh
-bun install -D tailwindcss postcss autoprefixer
-bun install -D @tailwindcss/typography @tailwindcss/forms tailwindcss-animate
+vp add -D tailwindcss postcss autoprefixer
+vp add -D @tailwindcss/typography @tailwindcss/forms tailwindcss-animate
 ```
 
 ```txt
@@ -159,7 +157,7 @@ No config necessary.
 But if install the packages manually:
 
 ```sh
-bun install @radix-ui/react-slot
+vp add @radix-ui/react-slot
 ```
 
 ## shadcn/ui
@@ -170,13 +168,13 @@ Automatically setup Tailwind CSS, PostCSS, Radix UI, Class Variance Authority, c
 and more.
 
 ```sh
-pnpx shadcn-ui@latest init
+vp dlx shadcn-ui@latest init
 ```
 
 But if install the packages manually:
 
 ```sh
-bun install class-variance-authority clsx tw-merge
+vp add class-variance-authority clsx tw-merge
 ```
 
 Then follow the next installation steps. The components are configured in:
@@ -188,7 +186,7 @@ components.json
 Then can install the UI component as needed:
 
 ```sh
-pnpx shadcn-ui@latest add component-name
+vp dlx shadcn-ui@latest add component-name
 ```
 
 ## Progress Bar
@@ -207,9 +205,9 @@ Use [Fontsource](https://fontsource.org) to install the font locally without usi
 [Google Fonts](https://fonts.google.com).
 
 ```sh
-bun install @fontsource-variable/font-name
+vp add @fontsource-variable/font-name
 # or
-bun install @fontsource/font-name
+vp add @fontsource/font-name
 ```
 
 ## Theme Mode
@@ -227,7 +225,7 @@ docker-compose.yml
 ```
 
 ```sh
-bun run infra:up
+vp run infra:up
 ```
 
 ## PostgresQL on a Docker container
@@ -258,15 +256,15 @@ For production copy if needed:
 
 ## Prisma ORM
 
-This repo does not define these `bun db:*` scripts yet. Add them to your app's `package.json` when you set up Prisma.
+This repo does not define these `db:*` scripts yet. Add them to your app's `package.json` when you set up Prisma.
 
 ```sh
-bun db:migrate
-bun db:reset
-bun db:generate
-bun db:seed
-bun db:studio
-bun db:docs
+vp run db:migrate
+vp run db:reset
+vp run db:generate
+vp run db:seed
+vp run db:studio
+vp run db:docs
 ```
 
 ---
