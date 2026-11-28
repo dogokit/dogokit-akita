@@ -12,7 +12,7 @@
 </div>
 
 > [!NOTE]
-> This repo is docs only. It is a curated list of tools, stack choices, and guides.
+> This repo is mostly docs. It is a curated list of tools, stack choices, and guides, plus a minimal Vite+ monorepo example in `apps/` and `packages/`.
 >
 > Example implementations will be tagged `akita-1` and so on, kept apart from this repo.
 

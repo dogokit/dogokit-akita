@@ -23,6 +23,21 @@ Use `vp` in docs, hooks and scripts, not `bun run` or `npm run`. Then the same c
 
 [`vp env`](https://viteplus.dev/guide/env) manages the whole JavaScript setup: one Node.js runtime and one package manager. npm, pnpm, Yarn and Bun are equal choices. This repo picks Bun in `packageManager` in `package.json`, and Vite+ uses it. CI uses `voidzero-dev/setup-vp` to install `vp`, Node and Bun
 
+## Monorepo
+
+The repo is a Vite+ monorepo. The root `package.json` lists the workspaces in `apps/*` and `packages/*`. They are minimal examples, not real apps
+
+- [`packages/utils`](../packages/utils/README.md): a shared package with one `greet` function and a test
+- [`apps/web`](../apps/web/README.md): a web page that imports `@dogokit/utils` with `workspace:*`
+
+Commands:
+
+- `vp run dev`: start the web dev server
+- `vp run -r test`: run `test` in every workspace
+- `vp run -r build`: run `build` in every workspace, in dependency order
+- `vp run @dogokit/web#build`: run one task in one workspace
+- `vp run ready`: check, test and build everything
+
 ## Install
 
 Install the `vp` CLI once per machine:

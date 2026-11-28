@@ -1,11 +1,12 @@
 # Agent Guide
 
-This repo is docs only. Read the [README](README.md) first.
+This repo is mostly docs, with a few minimal code examples. Read the [README](README.md) first.
 
 ## Where things live
 
 - `README.md`: overview and stack choices
 - `stacks/`: one note per tool
+- `apps/` and `packages/`: Vite+ monorepo workspaces with minimal examples, see [Vite+](stacks/vite-plus.md)
 - `docs/guides/`: how-to guides
 - `docs/references/`: credits and inspirations
 - `graphify-out/`: local knowledge graph, git-ignored. Build it once per worktree, see [Graphify](stacks/graphify.md)
@@ -39,7 +40,7 @@ Rules:
 
 - Run `vp run check` (format, lint, types, Markdown lint). Fix with `vp run fix`
 - Keep changes small and in the right folder
-- Do not add app code. The only code is `index.ts`, plus tool config in `vite.config.ts`
+- Do not add real app code. Code in `apps/` and `packages/` stays a minimal example, like `index.ts`. Tool config lives in `vite.config.ts`
 
 ## Working rules
 

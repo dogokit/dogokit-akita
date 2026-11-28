@@ -1,0 +1,14 @@
+{
+  "name": "@dogokit/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vp build",
+    "dev": "vp dev",
+    "preview": "vp preview"
+  },
+  "dependencies": {
+    "@dogokit/utils": "workspace:*"
+  }
+}
