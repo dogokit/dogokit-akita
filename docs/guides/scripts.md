@@ -1,6 +1,6 @@
 # Scripts
 
-This guide explains each script in `package.json`. Run one with `bun run <name>`, such as `bun run check`
+This guide explains each script in `package.json`. Run one with `vp run <name>`, such as `vp run check`
 
 ## Naming
 
@@ -23,7 +23,7 @@ Vite+ runs format, lint and type checks with one command, `vp check`. Its config
 | `lint:md`     | Lints every Markdown file with markdownlint               | Inside `check`                      |
 | `check:links` | Checks links in the Markdown files in the root folder     | By hand, since it needs the network |
 
-`check` stops at the first failing step. To see every problem from one tool, run that tool alone, such as `bun run lint`
+`check` stops at the first failing step. To see every problem from one tool, run that tool alone, such as `vp run lint`
 
 ## Local database
 

@@ -32,17 +32,30 @@ The possiblity of the project structure is endless.
 
 ## Prerequisites
 
-### Bun
+### Vite+
 
-Use [Bun](https://bun.sh), a fast JavaScript all-in-one toolkit that replace Node.js and npm/yarn/pnpm.
+Use [Vite+](https://viteplus.dev) and its `vp` CLI to run every command in this repo. See the [Vite+](../../stacks/vite-plus.md) stack note.
 
-[Install Bun](https://bun.sh/docs/installation) with either methods:
+Install `vp` once per machine:
 
 ```sh
-curl -fsSL https://bun.sh/install | bash
-npm i -g bun
-brew install oven-sh/bun/bun
+curl -fsSL https://vite.plus | bash
 ```
+
+`vp` works with any package manager. npm, pnpm, Yarn and Bun are all equal choices. This repo picks Bun in `packageManager` in `package.json`, and `vp` uses it for you. You do not need to install Bun first.
+
+[`vp env`](https://viteplus.dev/guide/env) manages the whole JavaScript setup: one Node.js runtime and one package manager. To see what it picked, run:
+
+```sh
+vp env current
+```
+
+Common commands:
+
+- `vp install`: install the packages
+- `vp add <package>`: add a package. Use `vp add -D <package>` for a dev dependency
+- `vp run <script>`: run a `package.json` script, such as `vp run check`. `vpr <script>` is the short form
+- `vp dlx <package>`: run a package without installing it
 
 ### Docker
 
@@ -56,7 +69,7 @@ Install Docker with either methods:
 ## Clone repo
 
 ```sh
-bunx degit dogokit/dogokit-akita
+vp dlx degit dogokit/dogokit-akita
 ```
 
 or
@@ -70,7 +83,7 @@ git clone --depth 1 https://github.com/dogokit/dogokit-akita.git <your-project-n
 To run the app locally, make sure the project's local packages/dependencies are installed:
 
 ```sh
-bun install
+vp install
 ```
 
 ## Check and Fix Code Quality
@@ -78,12 +91,12 @@ bun install
 Log, format, lint to check if the setup is fine:
 
 ```sh
-bun check
+vp run check
 # env typecheck prettier eslint stylelint
 ```
 
 ```sh
-bun fix
+vp run fix
 # prettier eslint stylelint
 ```
 
@@ -142,7 +155,7 @@ To start quickly, create a PostgreSQL database with either of these:
 Use Prisma Migrate to change the schema. This repo does not define `db:migrate` yet, so add it to your app's `package.json` when you set up Prisma:
 
 ```sh
-bun db:migrate
+vp run db:migrate
 # prisma migrate dev
 ```
 
@@ -166,7 +179,7 @@ export const dataUsers = [
 Then seed the initial data when needed. Like `db:migrate`, this script is not in this repo yet:
 
 ```sh
-bun db:seed
+vp run db:seed
 ```
 
 ## Build
@@ -174,13 +187,13 @@ bun db:seed
 Check if the build is fine. This als be used to build the app for production.
 
 ```sh
-bun build
+vp run build
 ```
 
 Then try to run the app in production mode:
 
 ```sh
-bun start
+vp run start
 ```
 
 Then pick a host to deploy it to, such as:
@@ -199,7 +212,7 @@ Then pick a host to deploy it to, such as:
 Finally, develop the app while running the development server:
 
 ```sh
-bun dev
+vp run dev
 ```
 
 ## Change the Contents
@@ -214,7 +227,7 @@ Use [`kiliman/shadcn-custom-theme`](https://github.com/kiliman/shadcn-custom-the
 For example:
 
 ```sh
-bunx shadcn-custom-theme primary=indigo secondary=blue accent=violet gray=neutral
+vp dlx shadcn-custom-theme primary=indigo secondary=blue accent=violet gray=neutral
 ```
 
 ## Setup some services

@@ -12,8 +12,8 @@ Use one Compose file per way of running, not one file per environment name
 
 | Environment                     | How it runs                          | Files                                                 | Command                                         |
 | ------------------------------- | ------------------------------------ | ----------------------------------------------------- | ----------------------------------------------- |
-| Local development               | On your machine, data kept           | `docker-compose.yml`                                  | `bun run infra:up`                              |
-| Ephemeral integration test      | Fresh each run, data in memory       | `docker-compose.yml` + `docker-compose.ephemeral.yml` | `bun run infra:test:up`                         |
+| Local development               | On your machine, data kept           | `docker-compose.yml`                                  | `vp run infra:up`                               |
+| Ephemeral integration test      | Fresh each run, data in memory       | `docker-compose.yml` + `docker-compose.ephemeral.yml` | `vp run infra:test:up`                          |
 | Shared dev, staging, production | On a server, data kept, auto restart | `docker-compose.server.yml`                           | See [below](#shared-dev-staging-and-production) |
 
 Other options, and why they are not the default:
@@ -28,7 +28,7 @@ Other options, and why they are not the default:
 
 ```sh
 cp .env.example .env
-bun run infra:up
+vp run infra:up
 ```
 
 Change the `change_*` values in `.env` if you want your own. Git ignores `.env`.
@@ -43,21 +43,21 @@ Change the `change_*` values in `.env` if you want your own. Git ignores `.env`.
 - `--wait` waits until the health check passes, so tests do not start too early
 
 ```sh
-bun run infra:test:up
-bun run infra:test:port
+vp run infra:test:up
+vp run infra:test:port
 # The test values are fixed in docker-compose.ephemeral.yml
 DATABASE_URL="postgresql://test:test@127.0.0.1:<port>/test"
 # Run the tests
-bun run infra:test:down
+vp run infra:test:down
 ```
 
 In CI, give each run its own project name, so parallel runs do not share containers. Set it once for the whole job, not on one command. `infra:test:port` and `infra:test:down` need the same name, or they look for the default stack and leave yours running:
 
 ```sh
 export COMPOSE_PROJECT_NAME=<project>-<run-id>
-bun run infra:test:up
+vp run infra:test:up
 # Run the tests
-bun run infra:test:down
+vp run infra:test:down
 ```
 
 In GitHub Actions, set `COMPOSE_PROJECT_NAME` under `env:` at the job level

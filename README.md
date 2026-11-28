@@ -168,7 +168,7 @@ The main defaults.
 ### AI Workflows
 
 - AI Model: [Claude by Anthropic](stacks/claude.md) / [GPT by OpenAI](stacks/gpt.md) / [Gemini by Google](stacks/gemini.md)
-- AI Agent Framework: [Mastra](stacks/mastra.md)
+- AI Agent Framework: [Mastra](stacks/mastra.md) / [Agent Native](stacks/agent-native.md)
 - AI Engineering Workflow: [Matt Pocock skills](stacks/mattpocock.md) / [Addy Osmani agent-skills](stacks/addyosmani.md) / [pstack](stacks/pstack.md)
 - AI Design Review: [Elephant-Goldfish Model (EGM)](stacks/egm.md)
 - AI Code Review: [Gitar](stacks/gitar.md)
@@ -178,11 +178,12 @@ The main defaults.
 - AI Bots: [Grok Bot](stacks/grok-bot.md)
 - AI Misc Tools: [Paradev](stacks/paradev.md)
 - AI Computer Use: [agent-desktop](stacks/agent-desktop.md) / [Cua](stacks/cua.md)
+- AI Audio: [Fish Audio](stacks/fish-audio.md) / [ElevenLabs](stacks/elevenlabs.md)
 - AI Voice to Text: [Wispr Flow](stacks/wispr-flow.md) / [Superwhisper](stacks/superwhisper.md)
 
 ### Deployment: PaaS and Services
 
-- General: [Railway](stacks/railway.md) / [Render](stacks/render.md) / [Fly.io](stacks/flyio.md) / [Cloudflare Workers](stacks/cloudflare-workers.md) / [Cloudflare Containers](stacks/cloudflare-containers.md)
+- General: [Railway](stacks/railway.md) / [Zeabur](stacks/zeabur.md) / [Render](stacks/render.md) / [Fly.io](stacks/flyio.md) / [Cloudflare Workers](stacks/cloudflare-workers.md) / [Cloudflare Containers](stacks/cloudflare-containers.md)
 - Frontend: [Vercel](stacks/vercel.md) / [Netlify](stacks/netlify.md) / [Cloudflare Pages](stacks/cloudflare-pages.md)
 - Database: [Prisma Postgres](stacks/prisma-postgres.md) / [Supabase](stacks/supabase.md) / [Neon](stacks/neon.md)
 - Storage: [Cloudflare R2](stacks/cloudflare-r2.md) / [Amazon S3](stacks/amazon-s3.md)
@@ -280,6 +281,7 @@ The main defaults.
 - Credentials: [Bitwarden](stacks/bitwarden.md) / [Passbolt](stacks/passbolt.md) / [LastPass](stacks/lastpass.md) / [1Password](stacks/1password.md)
 - Dotfiles: [Chezmoi](stacks/chezmoi.md) / [Dotbot](stacks/dotbot.md)
 - UI/UX Design: [Figma](stacks/figma.md)
+- Slides: [open-slide](stacks/open-slide.md)
 - Communication & Community: [Telegram](stacks/telegram.md) / [Discord](stacks/discord.md) / [X (Twitter)](stacks/x.md)
 - CRM: [Attio](stacks/attio.md)
 - Business Database & MVP Builder: [Airtable](stacks/airtable.md) / [Baserow](stacks/baserow.md) / [NocoDB](stacks/nocodb.md)
@@ -317,7 +319,7 @@ The main defaults.
 ## Contribute
 
 Read the [contributing guide](.github/CONTRIBUTING.md) before you open a pull request.
-Run `bun run check` first.
+Run `vp run check` first.
 
 ## Implementations (TBA)
 

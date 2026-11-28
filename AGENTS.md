@@ -20,7 +20,7 @@ Match the effort to the stakes. Find the row that fits the size, goal, and risk.
 
 | Workflow                             | Size                      | Goal                     | Risk                | Our skills                                                 | Pack skills                                                                                                                                                         | Check                                      |
 | ------------------------------------ | ------------------------- | ------------------------ | ------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Small tweak                          | One file, a few lines     | Clear                    | Low, easy to undo   | `good-commit`, `human-friendly`                            | None                                                                                                                                                                | `bun run check`                            |
+| Small tweak                          | One file, a few lines     | Clear                    | Low, easy to undo   | `good-commit`, `human-friendly`                            | None                                                                                                                                                                | `vp run check`                             |
 | Small feature                        | A few files, one PR       | Mostly clear             | Low to medium       | `implement-the-ant`, `good-pr`                             | Osmani `interview-me`, Pocock `tdd`                                                                                                                                 | Tests fail first, then pass                |
 | Bug                                  | Unknown until found       | Symptom known, cause not | Depends on the area | `investigate-the-cat`                                      | Pocock `diagnosing-bugs`, Osmani `debugging-and-error-recovery`                                                                                                     | A test shows the bug, then passes          |
 | Big or fuzzy feature                 | Many files or several PRs | Fuzzy                    | Medium              | `plan-the-lion`, `tdd-the-barramundi`, `implement-the-ant` | Pocock `grill-with-docs`, `to-spec`, `to-tickets`, Osmani `planning-and-task-breakdown`, `incremental-implementation`, EGM `egm-brainstorm`, pstack `figure-it-out` | A check after each phase                   |
@@ -36,7 +36,7 @@ Rules:
 
 ## Before you finish
 
-- Run `bun run check` (format, lint, types, Markdown lint). Fix with `bun run fix`
+- Run `vp run check` (format, lint, types, Markdown lint). Fix with `vp run fix`
 - Keep changes small and in the right folder
 - Do not add app code. The only code is `index.ts`, plus tool config in `vite.config.ts`
 
