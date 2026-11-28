@@ -178,6 +178,7 @@ The main defaults.
 - AI Bots: [Grok Bot](stacks/grok-bot.md)
 - AI Misc Tools: [Paradev](stacks/paradev.md)
 - AI Computer Use: [agent-desktop](stacks/agent-desktop.md) / [Cua](stacks/cua.md)
+- AI Audio: [Fish Audio](stacks/fish-audio.md)
 
 ### Deployment: PaaS and Services
 
