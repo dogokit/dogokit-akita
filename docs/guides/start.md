@@ -220,16 +220,6 @@ vp run dev
 - Arrange and remove components as needed.
 - Find and replace various texts, especially the word "Dogokit" and "Dogokit Akita".
 
-## Change Theme Colors
-
-Use [`kiliman/shadcn-custom-theme`](https://github.com/kiliman/shadcn-custom-theme) to generate shadcn/ui CSS variables with Tailwind CSS colors.
-
-For example:
-
-```sh
-vp dlx shadcn-custom-theme primary=indigo secondary=blue accent=violet gray=neutral
-```
-
 ## Setup some services
 
 - Image upload with [Uploadcare](https://uploadcare.com)
