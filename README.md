@@ -279,6 +279,7 @@ The main defaults.
 - Credentials: [Bitwarden](stacks/bitwarden.md) / [Passbolt](stacks/passbolt.md) / [LastPass](stacks/lastpass.md) / [1Password](stacks/1password.md)
 - Dotfiles: [Chezmoi](stacks/chezmoi.md) / [Dotbot](stacks/dotbot.md)
 - UI/UX Design: [Figma](stacks/figma.md)
+- Slides: [open-slide](stacks/open-slide.md)
 - Communication & Community: [Telegram](stacks/telegram.md) / [Discord](stacks/discord.md) / [X (Twitter)](stacks/x.md)
 - CRM: [Attio](stacks/attio.md)
 - Business Database & MVP Builder: [Airtable](stacks/airtable.md) / [Baserow](stacks/baserow.md) / [NocoDB](stacks/nocodb.md)
