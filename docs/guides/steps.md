@@ -79,7 +79,7 @@ vp install
 Can also check the version updates with `taze`:
 
 ```sh
-vp dlx taze
+vp run outdated
 ```
 
 ## Prettier
