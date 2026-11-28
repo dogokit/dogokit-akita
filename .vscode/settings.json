@@ -41,5 +41,14 @@
     "titleBar.inactiveBackground": "#1e1b4b99",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#1e1b4b"
+  "peacock.color": "#1e1b4b",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "oxc.disableNestedConfig": true,
+  "oxc.fmt.disableNestedConfig": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit"
+  }
 }

@@ -12,16 +12,18 @@ The script names use a prefix to group them:
 
 ## Code quality
 
-| Script         | What it does                                             | When to use it                      |
-| -------------- | -------------------------------------------------------- | ----------------------------------- |
-| `check`        | Runs `format:check`, `lint` and `lint:md` in that order  | Before you finish, and in CI        |
-| `format`       | Formats the files with Oxfmt and saves them              | To fix formatting                   |
-| `format:check` | Checks formatting with Oxfmt and changes no files        | Inside `check`                      |
-| `lint`         | Lints with Oxlint. Warnings fail too (`--deny-warnings`) | Inside `check`                      |
-| `lint:md`      | Lints every Markdown file with markdownlint              | Inside `check`                      |
-| `check:links`  | Checks links in the Markdown files in the root folder    | By hand, since it needs the network |
+Vite+ runs format, lint and type checks with one command, `vp check`. Its config lives in `vite.config.ts`. See [Vite+](../../stacks/vite-plus.md).
 
-`check` stops at the first failing step. To see every problem from one tool, run that tool alone, such as `bun run lint`.
+| Script        | What it does                                              | When to use it                      |
+| ------------- | --------------------------------------------------------- | ----------------------------------- |
+| `check`       | Runs `vp check` (format, lint, types), then `lint:md`     | Before you finish, and in CI        |
+| `fix`         | Formats the files and applies safe lint fixes             | To fix what `check` found           |
+| `format`      | Formats the files with Oxfmt through Vite+ and saves them | To fix formatting only              |
+| `lint`        | Lints with Oxlint through Vite+. Warnings fail too        | To see lint problems only           |
+| `lint:md`     | Lints every Markdown file with markdownlint               | Inside `check`                      |
+| `check:links` | Checks links in the Markdown files in the root folder     | By hand, since it needs the network |
+
+`check` stops at the first failing step. To see every problem from one tool, run that tool alone, such as `bun run lint`
 
 ## Local database
 
