@@ -1,8 +1,14 @@
 {
   "name": "dogokit-akita",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "type": "module",
   "module": "index.ts",
   "scripts": {
+    "dev": "vp run @dogokit/web#dev",
+    "ready": "vp run check && vp run -r test && vp run -r build",
     "check": "vp check --deny-warnings && vp run lint:md",
     "check:links": "git ls-files -co --exclude-standard -z '*.md' ':!.claude' | xargs -0 linkinator --markdown --timeout 15000",
     "fix": "vp check --fix",

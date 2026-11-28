@@ -11,7 +11,8 @@ __*
 /.cache
 /build
 /coverage-ts
-/node_modules
+dist
+node_modules
 /prisma/docs
 /public/build
 tsconfig.tsbuildinfo
