@@ -5,6 +5,6 @@ Quick notes on upgrading some parts.
 ## Upgrade Dependencies with Taze
 
 ```sh
-bun upgrade
-# taze -w && taze major -w
+vp dlx taze -w
+vp dlx taze major -w
 ```

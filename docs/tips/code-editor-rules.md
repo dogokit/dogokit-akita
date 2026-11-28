@@ -105,7 +105,7 @@ shared/
 ## UI and Styling
 
 - Use Shadcn UI and Radix for components
-- use `npx shadcn@latest add <component-name>` to add new shadcn components
+- use `vp dlx shadcn@latest add <component-name>` to add new shadcn components
 - Implement Tailwind CSS for styling
 - Consider extension-specific constraints (popup dimensions, permissions)
 - Follow Material Design guidelines for Chrome extensions
