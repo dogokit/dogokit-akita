@@ -168,7 +168,7 @@ Automatically setup Tailwind CSS, PostCSS, Radix UI, Class Variance Authority, c
 and more.
 
 ```sh
-vp dlx shadcn-ui@latest init
+vp run ui init
 ```
 
 But if install the packages manually:
@@ -186,7 +186,7 @@ components.json
 Then can install the UI component as needed:
 
 ```sh
-vp dlx shadcn-ui@latest add component-name
+vp run ui add component-name
 ```
 
 ## Progress Bar
