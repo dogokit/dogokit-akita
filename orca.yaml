@@ -6,4 +6,4 @@ scripts:
     else
       echo "orca setup: no upstream branch, skipped git pull"
     fi
-    bun install
+    vp install

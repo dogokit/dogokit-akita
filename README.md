@@ -316,7 +316,7 @@ The main defaults.
 ## Contribute
 
 Read the [contributing guide](.github/CONTRIBUTING.md) before you open a pull request.
-Run `bun run check` first.
+Run `vp run check` first.
 
 ## Implementations (TBA)
 

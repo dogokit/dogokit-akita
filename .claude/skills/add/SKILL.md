@@ -42,7 +42,7 @@ git worktree add -b docs/add-<slug> .claude/worktrees/add-<slug> origin/main
 - If the branch or the worktree folder already exists, stop and ask. Do not reuse it
 - Move the session into the new worktree and run every later command there
 - If the tool has its own worktree feature (Claude Code `EnterWorktree`, Orca), use it. Name the branch the same way
-- Run `bun install` in the new worktree before step 5. A new worktree has no `node_modules`, so `bun run check` fails without it
+- Run `vp install` in the new worktree before step 5. A new worktree has no `node_modules`, so `vp run check` fails without it
 
 ## 3. Write the entry
 
@@ -99,7 +99,7 @@ Then:
 
 ## 5. Check and commit
 
-- `bun run check` (format, lint, Markdown lint). Fix what it reports. If it still fails, stop and report. Otherwise commit with [`good-commit`](../good-commit/SKILL.md): `docs(stacks): add <name> stack`. The README link goes in the same commit as the note, since they are one change
+- `vp run check` (format, lint, Markdown lint). Fix what it reports. If it still fails, stop and report. Otherwise commit with [`good-commit`](../good-commit/SKILL.md): `docs(stacks): add <name> stack`. The README link goes in the same commit as the note, since they are one change
 - Several entries: one commit each, so a reviewer can drop one
 
 ## 6. Open the PR

@@ -14,9 +14,9 @@ This repo is documentation only. It is a curated reference of tools, stack choic
 
 1. Fork the repo and clone it
 2. Create a branch from `main`: `git checkout -b your-branch-name`
-3. Install dependencies: `bun install`
+3. Install dependencies: `vp install`
 4. Make your change
-5. Run the checks: `bun run check`
+5. Run the checks: `vp run check`
 6. Commit with a [Conventional Commits](https://www.conventionalcommits.org) message, such as `docs: fix link in stack note`
 7. Push and open a pull request into `main`
 

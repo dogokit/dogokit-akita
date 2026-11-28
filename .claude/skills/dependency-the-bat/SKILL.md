@@ -30,7 +30,7 @@ Goal: one PR on `main` with the latest versions, and every Dependabot PR shows a
 4. Start from `main` in a new worktree: `git fetch origin`, then `git worktree add -b chore/dependabot-latest .claude/worktrees/dependabot-latest origin/main`. Move the session into it and run every later step there
 5. Record each Dependabot head as a merge parent, keeping our tree. Use the `headRefOid` from step 1, because GitHub deletes the Dependabot branches on merge:
    `git merge -s ours --no-ff -m "Merge branch '<headRef>' (superseded by latest bumps)" <headRefOid>`
-6. Set each dependency to its latest version in `package.json` and the workflow files. Then run `bun install` (or the repo's package manager) and the repo's check script from `package.json`
+6. Set each dependency to its latest version in `package.json` and the workflow files. Then run `vp install` and the repo's check script from `package.json`
 7. Commit with a Conventional Commits message that lists each bump, and end it with the Co-Authored-By line for the model. Push with `git push -u origin chore/dependabot-latest`
 8. Open the PR with `gh pr create --base main`. Put the superseded PR numbers in the body
 9. Wait for CI: `gh pr checks <n> --watch`. Stop if a check fails
