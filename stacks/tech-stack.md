@@ -13,7 +13,7 @@ These are the complete things that can be used and recommended, with more focus 
 - Markup: [HTML](html.md)
 - Styling: [CSS](css.md)
 - Programming: [TypeScript](typescript.md) & [JavaScript](javascript.md) 👍
-- Runtime version manager: [proto](proto.md) 👍, alternative to nvm / asdf
+- Runtime version manager: [Vite+](vite-plus.md) 👍 (`vp`), alternative to nvm / asdf
 - Runtime: [Bun](bun.md) 👍, alternative to [Node.js](nodejs.md) / [Deno](deno.md)
   - Package manager: [Bun](bun.md) 👍, alternative to [npm](npm.md) / [yarn](yarn.md) / [pnpm](pnpm.md)
 
