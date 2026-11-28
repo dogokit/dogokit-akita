@@ -17,12 +17,13 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 - [investigate-the-cat](investigate-the-cat/SKILL.md): triage a bug report or question into a verdict, a cause, and next steps
 - [db-the-bee](db-the-bee/SKILL.md): print safe, copy-paste SQL for a person to run
 - [create-private-skill](create-private-skill/SKILL.md): write a skill that git ignores, in the main checkout only
+- [migrate-to-oxc](migrate-to-oxc/SKILL.md): move another repo from Biome, Prettier or ESLint to Oxc (not for repos on Vite+)
 
 ## Review and release
 
 - [good-commit](good-commit/SKILL.md): make atomic commits with Conventional Commits messages
 - [good-pr](good-pr/SKILL.md): open or update a PR with a plain-English title and a short body
-- [good-merge](good-merge/SKILL.md): merge a PR with a merge commit, move stacked PRs to main, then pull and clean up
+- [good-merge](good-merge/SKILL.md): squash-merge a PR by default, move stacked PRs to main, then pull and clean up
 - [release-the-kraken](release-the-kraken/SKILL.md): commit, push, and open a short, scannable PR
 - [review-the-kangaroo](review-the-kangaroo/SKILL.md): deep-review a PR or a local diff, with checked findings
 - [clean-the-garden](clean-the-garden/SKILL.md): weed small rot across the whole repo, then add guards so it stays out

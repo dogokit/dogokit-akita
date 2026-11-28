@@ -7,6 +7,8 @@ description: Move a JavaScript or TypeScript repo from Biome, Prettier or ESLint
 
 Goal: the repo runs `oxlint` and `oxfmt` through the same gates it had before, with no Biome, Prettier, ESLint packages, configs or editor settings left behind.
 
+Not for a repo that already runs Vite+ (`vp check`), such as this one. Check `package.json` first and stop if it does.
+
 ## 1. Detect what the repo has
 
 Find these before changing anything:
@@ -45,7 +47,7 @@ Write down the gates and the mapping before moving on.
 
 ## 4. Migrate the linter
 
-- The installed `oxlint` (1.94.0) has no migrate command for ESLint configs, so check each custom ESLint rule and find its Oxlint equivalent. Drop rules that have no equivalent and list them for the user.
+- The installed `oxlint` has no migrate command for ESLint configs (check the version you installed with `oxlint --version`), so check each custom ESLint rule and find its Oxlint equivalent. Drop rules that have no equivalent and list them for the user.
 - Biome's linter defaults are close to Oxlint's, but not identical. Run both once on the repo and note the difference only if it matters.
 - Keep the linter config minimal. Add rule categories only when the user asks for them.
 
