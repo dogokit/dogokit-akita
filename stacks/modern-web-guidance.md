@@ -4,6 +4,8 @@ Agent skills from the Chrome team at Google. They help your coding agent write c
 
 Install with `npx modern-web-guidance@latest install`. The CLI route turns on automatic updates. If no Baseline target is set, it uses Baseline Widely available, the web features that work in all major browsers
 
+No package script for now, since it only installs skills
+
 Official links:
 
 - [Modern Web Guidance docs](https://developer.chrome.com/docs/modern-web-guidance): official docs

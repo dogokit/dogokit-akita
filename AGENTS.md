@@ -10,6 +10,7 @@ This repo is docs only. Read the [README](README.md) first.
 - `docs/references/`: credits and inspirations
 - `graphify-out/`: local knowledge graph, git-ignored. Build it once per worktree, see [Graphify](stacks/graphify.md)
 - `.claude/skills/`: agent skills, listed in its [README](.claude/skills/README.md)
+- `.agents/`: symlink to `.claude/` for agent tools that read `.agents/`. Edit files in `.claude/` only
 - `.claude/<pack>/`: skill packs from other people (`mattpocock`, `addyosmani`, `egm`, `pstack`). All four are Git submodules, so run `git clone --recurse-submodules`. Notes for each pack live in `stacks/`
 
 ## Pick a workflow
