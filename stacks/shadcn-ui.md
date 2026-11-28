@@ -17,7 +17,7 @@ Complementaries:
 
 - [OriginUI](https://originui.com)
 - [Kibo UI](https://kibo-ui.com)
-- [UI SDK](https://ui-sdk.dev)
+- [UI SDK](ui-sdk.md): the UI SDK stack note
 - [Launch UI](https://launchuicomponents.com)
 - [Auth CN](https://auth.uprizing.me)
 - [shadcn Registries](https://shadcn-registries.vercel.app)
