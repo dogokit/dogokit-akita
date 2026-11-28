@@ -34,7 +34,7 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 ## Design and explain
 
 - [tdd-the-barramundi](tdd-the-barramundi/SKILL.md): write or simplify a Technical Design Document (TDD) in plain English
-- [design-docs](design-docs/SKILL.md): rules for where design docs live and what they must contain
+- [write-design-docs](write-design-docs/SKILL.md): rules for where design docs live and what they must contain
 - [present-the-chicken](present-the-chicken/SKILL.md): turn documentation into a talk guide and a slide deck
 - [draw-the-owl](draw-the-owl/SKILL.md): explain a topic with diagrams, code sketches, and small HTML pages
 - [statechart-the-hart](statechart-the-hart/SKILL.md): draw states and moves as a Mermaid statechart

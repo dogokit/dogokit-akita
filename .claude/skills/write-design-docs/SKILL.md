@@ -1,5 +1,5 @@
 ---
-name: design-docs
+name: write-design-docs
 description: 'Use when creating or revising a TDD, spike, plan or integration doc in docs/technical-design/, docs/spikes/, docs/plans/ or docs/integrations/, or when an implementation PR changes a feature that has a TDD.'
 ---
 
