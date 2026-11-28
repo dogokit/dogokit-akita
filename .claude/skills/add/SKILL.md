@@ -15,7 +15,7 @@ Add an entry to this repo. Most entries are a new stack note. Read [`human-frien
 - Do not invent facts. Check the official site or repo for the name, links, package name and version. Use WebSearch, or the `web-fetch` agent when no fetch tool is at hand. Say so when you cannot verify one
 - Keep each note short and plain. Match the shape of the notes next to it
 - Never touch app code. The only code in this repo is `index.ts`
-- Do not add a note to the README without passing the gate below
+- Do not add a note to the README unless the user asked for it or the gate below passes
 - Vendored skill packs and stacks from other repos go through [`extract-the-meerkat`](../extract-the-meerkat/SKILL.md), not this skill
 - Never put AI or tool credit text ("Generated with", "Claude Code" links) in the PR title or body. The [`good-pr`](../good-pr/SKILL.md) rules apply, and this skill does not override them
 
@@ -78,19 +78,21 @@ Third-party integrations:
 
 ## 4. Run the gate
 
-The gate decides if the entry is also listed in the main [README](../../../README.md). Most entries fail the gate. They stay in `stacks/` only. That is fine
+The gate decides if the entry is also listed in the main [README](../../../README.md). Most entries stay in `stacks/` only. That is fine
 
-Score the entry. It passes only when **all** of these are true:
+If the user asked for the README up front, add the line and skip the gate. If the user said it does not go in the README, leave it out and skip the gate
 
-1. It is a default or a clear first choice for a job, not one of many options
+Otherwise, score the entry. It passes when **at least two** of these are true:
+
+1. It is a default or a clear first choice for a job, or the first entry of a new category
 2. A new reader of the README would miss it
-3. It fits a section that already exists (`Default Stack`, `Development Tools`, `Optional: ...`, `Guides`, `References`)
+3. It fits a section that already exists (`Default Stack`, `Development Tools`, `Optional: ...`, `Guides`, `References`), or a new line in one of them
 
-Else it fails. A tool you only want to remember, compare or try is not README material. A guide or reference uses the same three checks, with "a new reader would miss it" meaning a how-to or credit a newcomer needs
+Else it fails. A tool you only want to remember, compare or try is not README material. A guide or reference uses the same checks, with "a new reader would miss it" meaning a how-to or credit a newcomer needs
 
 Then:
 
-- Show the user the verdict in two lines: pass or fail, and the one reason. Ask for a yes before you touch the README. When the user said up front that it goes in the README, or that it does not, follow that and skip the question
+- Show the user the verdict in two lines: pass or fail, and the one reason. On a pass, ask for a yes before you touch the README. Skip the question when the user already said where it goes
 - On a pass, add one line to the best README section, in the style of its neighbours (`Label: [Name](stacks/<slug>.md)`). Keep the numbering right. A new default may mean you must renumber the list
 - Guides go under `## Guides`. References go under `## References`
 - Do not edit the `Core Stack` list, the hero, `Goal`, `Benefits` or `Features` through this skill. Ask first
