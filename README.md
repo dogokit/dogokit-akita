@@ -272,9 +272,10 @@ The main defaults.
 - Networking: [Tailscale](stacks/tailscale.md)
 - Infrastructure as Code: [SST](stacks/sst.md) / [Encore](stacks/encore.md)
 
-### Optional: Communication Tools
+### Optional: Work Apps
 
-- Email: [Gmail](stacks/gmail.md) / [Zero Email](stacks/zero-email.md) / [HEY](stacks/hey.md) / [ProtonMail](stacks/protonmail.md)
+- Browser: [Chrome](stacks/chrome.md) / [Yab](stacks/yab.md)
+- Email: [Gmail](stacks/gmail.md) / [HEY](stacks/hey.md) / [ProtonMail](stacks/protonmail.md) / [Zero Email](stacks/zero-email.md)
 - Credentials: [Bitwarden](stacks/bitwarden.md) / [Passbolt](stacks/passbolt.md) / [LastPass](stacks/lastpass.md) / [1Password](stacks/1password.md)
 - Dotfiles: [Chezmoi](stacks/chezmoi.md) / [Dotbot](stacks/dotbot.md)
 - UI/UX Design: [Figma](stacks/figma.md)
