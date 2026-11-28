@@ -179,6 +179,7 @@ The main defaults.
 - AI Misc Tools: [Paradev](stacks/paradev.md)
 - AI Computer Use: [agent-desktop](stacks/agent-desktop.md) / [Cua](stacks/cua.md)
 - AI Audio: [Fish Audio](stacks/fish-audio.md) / [ElevenLabs](stacks/elevenlabs.md)
+- AI Voice to Text: [Wispr Flow](stacks/wispr-flow.md) / [Superwhisper](stacks/superwhisper.md)
 
 ### Deployment: PaaS and Services
 
