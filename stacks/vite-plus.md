@@ -16,9 +16,12 @@ All tool config lives in one file, `vite.config.ts`. It holds the `fmt` block (O
 - `vp check`: format, lint and type checks in one run
 - `vp check --fix`: format and apply safe lint fixes
 - `vp fmt` and `vp lint`: run one tool alone
-- `vp run <script>`: run a `package.json` script
+- `vp run <script>`: run a `package.json` script. `vpr <script>` is the short form
+- `vp install`, `vp add` and `vp dlx`: install, add and run packages
 
-Bun stays the package manager. Vite+ finds it from `packageManager` in `package.json`. CI uses `voidzero-dev/setup-vp` to install `vp`, Node and Bun
+Use `vp` in docs, hooks and scripts, not `bun run` or `npm run`. Then the same command works for every package manager
+
+[`vp env`](https://viteplus.dev/guide/env) manages the whole JavaScript setup: one Node.js runtime and one package manager. npm, pnpm, Yarn and Bun are equal choices. This repo picks Bun in `packageManager` in `package.json`, and Vite+ uses it. CI uses `voidzero-dev/setup-vp` to install `vp`, Node and Bun
 
 ## Install
 
@@ -28,7 +31,7 @@ Install the `vp` CLI once per machine:
 curl -fsSL https://vite.plus | bash
 ```
 
-Then install the project packages with `bun install` or `vp install`
+Then install the project packages with `vp install`
 
 ## Migrate a project
 

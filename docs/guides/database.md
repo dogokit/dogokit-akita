@@ -35,12 +35,12 @@ DATABASE_URL="postgresql://change_user:change_password@127.0.0.1:5432/change_db"
 Start Docker, then start Postgres in the background. The command waits until the database is ready:
 
 ```sh
-bun run infra:up
+vp run infra:up
 ```
 
-To stop it, run `bun run infra:down`. To delete the data too, run `bun run infra:reset`.
+To stop it, run `vp run infra:down`. To delete the data too, run `vp run infra:reset`.
 
-The image is Postgres 19. A data folder made by an older major version will not start on it. To keep that data, dump it with `pg_dump` before you upgrade. To start empty, run `bun run infra:reset`.
+The image is Postgres 19. A data folder made by an older major version will not start on it. To keep that data, dump it with `pg_dump` before you upgrade. To start empty, run `vp run infra:reset`.
 
 Older versions of this file mounted the data folder at the wrong path (`/var/lib/postgres`), so their data was never saved to the volume. If you ran that version, dump the database before you switch, since `infra:down` will not keep that data.
 

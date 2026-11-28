@@ -60,7 +60,7 @@ When a PR changes the schema, an index, status transitions, error codes, job sch
 
 ## Before you push
 
-- Run the project checks (`bun run check`). Fix what they report.
+- Run the project checks (`vp run check`). Fix what they report.
 - Check the relative links in the changed doc resolve:
 
 ```bash

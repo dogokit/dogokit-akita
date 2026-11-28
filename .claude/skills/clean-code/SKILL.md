@@ -104,4 +104,4 @@ Edit the file and every dependent file in the same task. Never leave broken impo
 | Checks | Did lint, format, type checks, and tests pass? |
 | Edge cases | Did you cover empty, error, and boundary inputs? |
 
-Run the checks this project defines. In a repo with `bun run check`, run that. If any check fails, fix it before you report done. If you cannot run a check, say so and why.
+Run the checks this project defines. In a repo with `vp run check`, run that. If any check fails, fix it before you report done. If you cannot run a check, say so and why.
