@@ -1,6 +1,6 @@
 ---
 name: review-the-kangaroo
-description: Deep-reviews a GitHub PR or a pre-PR local diff end to end (resolve scope, read the diff, orient in the code, analyse, verify every finding, draft). Review text uses plain words and one fixed layout. With an open PR, drafts with REQUEST_CHANGES by default and waits for confirmation before posting with gh. With no PR, or when the user asks to keep the review local (chat only, nothing posted), reviews the working tree, branch, or PR diff in chat only. Use when the user invokes /review-the-kangaroo or asks for a deep review of a PR, branch or working tree.
+description: Deep-reviews a GitHub PR or a pre-PR local diff end to end (resolve scope, read the diff, orient in the code, analyse, verify every finding, draft). Review text uses plain words and one fixed layout. With an open PR, drafts with REQUEST_CHANGES by default (COMMENT when the PR is yours) and waits for confirmation before posting with gh. With no PR, or when the user asks to keep the review local (chat only, nothing posted), reviews the working tree, branch, or PR diff in chat only. Use when the user invokes /review-the-kangaroo or asks for a deep review of a PR, branch or working tree.
 disable-model-invocation: true
 ---
 
@@ -20,8 +20,8 @@ Start the review as soon as the skill is invoked. Do not ask questions first.
 
 - No target given: review the current branch against `origin/main`. Find its PR with `gh pr list --head <branch>`. If a PR exists, use PR mode. If not, use Local mode.
 - A PR number or URL given: use PR mode, or Local mode if the user asks for a local review.
-- Run workflow steps 1 to 6 without pausing. Produce the draft in the same turn.
-- Stop only at the PR mode posting gate (step 5). Local mode ends after the draft.
+- Run steps 1 to 5 of the workflow without pausing. Produce the draft in the same turn.
+- In PR mode, stop at the posting gate in step 5. Local mode ends after the draft.
 - Hold off only when the user clearly asks you to wait before the review starts. Then do nothing until they ask again.
 
 ## Review mode
@@ -41,13 +41,13 @@ Write for a reader new to this code. Each comment must make sense on one read, w
 
 ### Wording
 
-- Normal sentences, with a capital letter and a full stop
+- Follow [`human-friendly`](../human-friendly/SKILL.md) for punctuation: no full stop at the end of a paragraph or a list item, and no em dashes or semicolons
 - Short, common words. One idea per sentence. One to three sentences per paragraph
 - Say what is wrong, then why it matters, then what to do
 - Explain a project term the first time, in plain words. Example: "the outbox (the table of messages waiting to be sent)"
 - Put paths, symbols, commands and API names in backticks. Never reword them
 - No report voice ("This PR exhibits…", "It is recommended that…")
-- No em dashes, semicolons, or arrows as grammar
+- Arrows are not allowed as grammar
 - Ask a question only when you need the author's answer
 
 ### Top comment template
@@ -57,35 +57,35 @@ Leave out any section with no items.
 ````markdown
 ## Review summary
 
-One or two sentences: the verdict and the main reason.
+One or two sentences: the verdict and the main reason
 
 ### What I checked
 
-- Scope: `<branch or PR>` against `<base>`, <n> files.
-- References: <n> of <n> code references matched the review head.
-- Tests: <the exact commands you ran, or "not run: docs only">.
+- Scope: `<branch or PR>` against `<base>`, <n> files
+- References: <n> of <n> code references matched the review head
+- Tests: <the exact commands you ran, or "not run: docs only">
 
 ### Must fix before merge
 
-1. `path:line`: what is wrong, in one sentence. Fix: what to do, in one sentence.
+1. `path:line`: what is wrong, in one sentence. Fix: what to do, in one sentence
 
 ### Should fix
 
-1. `path:line`: what is wrong. Fix: what to do.
+1. `path:line`: what is wrong. Fix: what to do
 
 ### What went well
 
-- One short, specific point.
+- One short, specific point
 ````
 
 ### Inline comment template
 
 ````markdown
-**Blocker:** What is wrong, in one or two sentences.
+**Blocker:** What is wrong, in one or two sentences
 
-**Why it matters:** The effect on users, data, or the next change. Blocker and major only.
+**Why it matters:** The effect on users, data, or the next change. Blocker and major only
 
-**Fix:** What to do. If there are two valid options, name both and ask which one to build.
+**Fix:** What to do. If there are two valid options, name both and ask which one to build
 ````
 
 - Severity labels: `**Blocker:**`, `**Major:**`, `**Minor:**`, `**Nit:**`
@@ -117,21 +117,23 @@ When you point at a place in a design doc, cite the section heading (and number,
 
 | `event`           | When                                                            |
 | ----------------- | --------------------------------------------------------------- |
-| `REQUEST_CHANGES` | Default, unless the user chose otherwise                    |
-| `COMMENT`         | The user asked for feedback only, with no verdict               |
-| `APPROVE`         | The user explicitly asked to approve, and findings allow it |
+| `REQUEST_CHANGES` | Default. Not when the PR author is you (GitHub rejects it on your own PR)  |
+| `COMMENT`         | The default when the PR author is you. Also when the user asked for feedback only, with no verdict |
+| `APPROVE`         | The user explicitly asked to approve, the PR author is not you, and findings allow it |
 
-Never approve only because the diff looks clean. "No findings" still defaults to `REQUEST_CHANGES` with a short note, or `COMMENT` if the user asked for comment only.
+To check whether the PR is yours, compare `author.login` from step 1 with `gh api user --jq .login`.
+
+Never approve only because the diff looks clean. "No findings" still uses the default event with a short note, or `COMMENT` if the user asked for comment only.
 
 ## Workflow
 
-1. Resolve target (PR or local scope) and HEAD SHA
-2. Fetch metadata and diff
-3. Orient in the touched code
-4. Analyse (optionally with one review subagent)
-5. Verify every finding against the review head
-6. Draft verdict, top comment and findings table
-7. PR mode only: posting gate, then submit and verify
+1. Resolve target (PR or local scope), HEAD SHA, and whether the PR is yours
+2. Orient in the touched code
+3. Analyse, then verify every finding against the review head
+4. Classify findings
+5. Draft verdict, top comment and findings table (PR mode: posting gate)
+6. Submit (PR mode, after confirmation)
+7. Verify and report
 
 ### 1. Resolve target
 
@@ -181,15 +183,15 @@ Always spot-check subagent findings yourself with Read or Grep. Never post an un
 
 Present in chat:
 
-1. Planned GitHub action (default `REQUEST_CHANGES`) with a one-line reason
+1. Planned GitHub event (the default from the table above) with a one-line reason
 2. Top comment, from the template
 3. Findings table and every inline comment
 
 PR mode posting gate. Ask in one message:
 
-1. Should I post this review on GitHub, keep it local (chat only), or post it as `COMMENT` or `APPROVE` instead of the planned `REQUEST_CHANGES`?
+1. Should I post this review on GitHub, keep it local (chat only), or post it as `COMMENT` or `APPROVE` instead of the planned event?
 
-If they say post without naming an action, use `REQUEST_CHANGES`. If they choose local, or decline, stop after the draft and post nothing.
+If they say post without naming an action, use the planned event. If they choose local, or decline, stop after the draft and post nothing.
 
 Local mode: state the would-be verdict and end with next steps: apply the fixes, run focused tests, then open the PR.
 
@@ -199,14 +201,14 @@ Local mode: state the would-be verdict and end with next steps: apply the fixes,
 gh api repos/{owner}/{repo}/pulls/{number}/reviews --input - <<'EOF'
 {
   "commit_id": "<headRefOid>",
-  "event": "REQUEST_CHANGES",
+  "event": "<event from the table>",
   "body": "<top comment markdown>",
   "comments": [
     {
       "path": "src/api/hooks.ts",
       "line": 42,
       "side": "RIGHT",
-      "body": "**Blocker:** The webhook body has no tenant ID, so we cannot tell which account it belongs to.\n\n**Why it matters:** Any payload could be saved against the wrong account.\n\n**Fix:** Read the tenant from the signed header, or add it to the payload. Which one should we build?"
+      "body": "**Blocker:** The webhook body has no tenant ID, so we cannot tell which account it belongs to\n\n**Why it matters:** Any payload could be saved against the wrong account\n\n**Fix:** Read the tenant from the signed header, or add it to the payload. Which one should we build?"
     }
   ]
 }

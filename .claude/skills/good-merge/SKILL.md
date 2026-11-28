@@ -10,7 +10,7 @@ Merge a PR into `main` with a squash by default, then tidy up. Read [`human-frie
 ## Rules
 
 1. Merge only when the user asks
-2. Create a PR when the branch has none. Never merge a branch that has no PR
+2. Never merge a branch that has no PR. If it has none, ask the user before creating one
 3. Squash by default (`--squash`), so the PR lands as one commit even when it has many commits. Use `--merge` or `--rebase` when the user asks for it, or when the repo or the PR calls for it. Say which method was used
 4. The commit keeps the PR title and number, then the branch and every commit of the PR. For a merge commit, never leave GitHub's default `Merge pull request #n from ...` text
 5. Never bypass checks. No `--admin`, no `--auto`, no force
@@ -29,11 +29,7 @@ Merge a PR into `main` with a squash by default, then tidy up. Read [`human-frie
    - A branch that is not pushed yet is fine. Step 3 pushes it
    - Clean: continue
 2. Find the PR for the current branch: `gh pr view --json number,state,headRefName`
-3. No PR (the command fails, or the branch is not pushed): create one
-   - Push the branch first if it is not on origin: `git push -u origin <branch>`
-   - Create it: `gh pr create --base main --head <branch> --title "<title>" --body-file <file>`
-   - Title and body: follow [`good-pr`](../good-pr/SKILL.md). Write the body to a file in the scratchpad folder
-   - Do not run `release-the-kraken`. Keep this to the one `gh pr create` call
+3. No PR (the command fails): stop and ask whether to open one with [`good-pr`](../good-pr/SKILL.md). Do not create it here. Opening a PR is a separate ask. Once the user says yes, create it with `good-pr`, then continue from step 4
 4. If the PR is closed, stop and report. Do not reopen it
 5. Check the PR: `gh pr view <n> --json state,mergeable,mergeStateStatus,isDraft,reviewDecision` and `gh pr checks <n> --watch` (wait for pending checks to finish)
 6. Stop and report if the PR is draft, conflicting, or has a failing check. Do not merge

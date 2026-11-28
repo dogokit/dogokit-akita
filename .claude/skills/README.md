@@ -17,13 +17,15 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 - [investigate-the-cat](investigate-the-cat/SKILL.md): triage a bug report or question into a verdict, a cause, and next steps
 - [db-the-bee](db-the-bee/SKILL.md): print safe, copy-paste SQL for a person to run
 - [create-private-skill](create-private-skill/SKILL.md): write a skill that git ignores, in the main checkout only
+- [migrate-to-oxc](migrate-to-oxc/SKILL.md): move another repo from Biome, Prettier or ESLint to Oxc (not for repos on Vite+)
+- [migrate-to-vite-plus](migrate-to-vite-plus/SKILL.md): move a repo to Vite+ and `vp`, and swap its Bun, Node, npm or pnpm commands for `vp` (run migrate-to-oxc first when the repo still has Biome, Prettier or ESLint)
 
 ## Review and release
 
 - [good-commit](good-commit/SKILL.md): make atomic commits with Conventional Commits messages
 - [good-pr](good-pr/SKILL.md): open or update a PR with a plain-English title and a short body
-- [good-merge](good-merge/SKILL.md): merge a PR with a merge commit, move stacked PRs to main, then pull and clean up
-- [release-the-kraken](release-the-kraken/SKILL.md): commit, push, and open a short, scannable PR
+- [good-merge](good-merge/SKILL.md): squash-merge a PR by default, move stacked PRs to main, then pull and clean up
+- [release-the-kraken](release-the-kraken/SKILL.md): the complex route to a reviewable PR, with route choices and tracker sync (use good-pr for a simple PR)
 - [review-the-kangaroo](review-the-kangaroo/SKILL.md): deep-review a PR or a local diff, with checked findings
 - [clean-the-garden](clean-the-garden/SKILL.md): weed small rot across the whole repo, then add guards so it stays out
 - [address-the-elephant](address-the-elephant/SKILL.md): fix PR review comments, red checks, and merge conflicts
@@ -33,7 +35,7 @@ AI agent skills live primarily in [`.claude/skills`](.). For others, can just us
 ## Design and explain
 
 - [tdd-the-barramundi](tdd-the-barramundi/SKILL.md): write or simplify a Technical Design Document (TDD) in plain English
-- [design-docs](design-docs/SKILL.md): rules for where design docs live and what they must contain
+- [write-design-docs](write-design-docs/SKILL.md): rules for where design docs live and what they must contain
 - [present-the-chicken](present-the-chicken/SKILL.md): turn documentation into a talk guide and a slide deck
 - [draw-the-owl](draw-the-owl/SKILL.md): explain a topic with diagrams, code sketches, and small HTML pages
 - [statechart-the-hart](statechart-the-hart/SKILL.md): draw states and moves as a Mermaid statechart

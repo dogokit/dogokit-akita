@@ -47,21 +47,21 @@ Expected behaviour (a poll, not a webhook; a filter that excludes an item; a del
 8. One Mermaid diagram of the path, with the stop point marked
 9. Issue draft (unless the user asked for chat only)
 
-### 1. Intake
+### Intake
 
 Restate the question in one line. Note the ask type and where it happens (UI, API, job, webhook, integration). Separate current state (what the app does now, with evidence) from desired state (what they want).
 
-### 2. Live context
+### Live context
 
 Read the full linked thread or issue to the latest reply. Summarise in chat only.
 
-### 3. Evidence
+### Evidence
 
 1. Find the docs for the area (`docs/`, `README.md`, design docs)
 2. Read only the code paths that handle the reported behaviour. Cite `path:line`
 3. Gather data read-only: database SELECTs with a `WHERE` and `LIMIT` and named columns, the app's admin API or UI, or log search. Prefer the API or UI for heavy log tables. Read metadata first (status, error, timestamp, ID). Open one full entry only when it decides the verdict
 
-### 4. Checklist (before calling it a code defect)
+### Checklist (before calling it a code defect)
 
 | Check       | Question |
 | ----------- | -------- |
@@ -75,7 +75,7 @@ Read the full linked thread or issue to the latest reply. Summarise in chat only
 
 Anything you cannot read from code, data or logs becomes "<Owner> to confirm".
 
-### 5. Classify the cause
+### Classify the cause
 
 For an incident or mixed (A), pick one primary cause, and note secondary factors:
 

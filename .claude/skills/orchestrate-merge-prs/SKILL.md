@@ -62,7 +62,7 @@ For each PR, lowest number first:
 
 1. Run the repo check in the PR's worktree (`bun run check` in this repo)
 2. Recheck the PR right before merging: `gh pr view <n> --json state,mergeable,mergeStateStatus,isDraft`, and `gh pr checks <n>`. An earlier merge can make a later PR out of date
-3. Merge with `good-merge` steps 7 to 10: write the commit text file in the scratchpad folder, then `gh pr merge <n> --squash --subject "<title> (#<n>)" --body-file <file>`
+3. Merge with `good-merge`: check the repo allows squash, write the commit text file in the scratchpad folder, then `gh pr merge <n> --squash --subject "<title> (#<n>)" --body-file <file>`. Move stacked PRs to `main` first, as `good-merge` says
 4. Confirm: `gh pr view <n> --json state,mergeCommit`
 5. Clean up this PR now:
    - `git worktree remove <path>` (from the main checkout, not from inside the worktree)

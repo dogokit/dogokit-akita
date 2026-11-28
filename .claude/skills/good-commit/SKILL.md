@@ -29,6 +29,8 @@ Auto-push is on after any of these in the session:
 
 While it is on, every later commit request ends with a push to the current branch. Do not ask again. Work from `implement-the-ant` is the exception: it stays uncommitted for review until the user asks to commit or runs `release-the-kraken`
 
+Auto-push never targets the default branch. Before each auto-push, check `git branch --show-current` against the default branch. On the default branch, commit, then stop and ask before pushing.
+
 ## Workflow
 
 1. Inspect: `git status --short`, `git diff`, `git diff --cached`, `git log -5 --oneline`. Match the repo's style and scopes.

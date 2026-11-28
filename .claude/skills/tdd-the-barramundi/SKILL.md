@@ -10,7 +10,7 @@ Read [`human-friendly`](../human-friendly/SKILL.md) before writing any text a pe
 
 Write a TDD that a new team member can read once and understand. Keep only what is needed.
 
-For the repo's own rules on where design docs live and which sections are required, also follow [`design-docs`](../design-docs/SKILL.md). This skill adds the plain-language, diagram, and cut rules.
+For the repo's own rules on where design docs live and which sections are required, also follow [`write-design-docs`](../write-design-docs/SKILL.md). This skill adds the plain-language, diagram, and cut rules.
 
 ## Who reads this
 

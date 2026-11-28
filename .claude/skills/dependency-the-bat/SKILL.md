@@ -12,7 +12,7 @@ Goal: one PR on `main` with the latest versions, and every Dependabot PR shows a
 ## Rules
 
 1. Merge only when the user asks for it
-2. Use a merge commit (`--merge`). Never squash or rebase. A merge commit keeps each Dependabot head as an ancestor of `main`, which is how GitHub marks the PR merged
+2. Use a merge commit (`--merge`). Never squash or rebase. A merge commit keeps each Dependabot head as an ancestor of `main`, which is how GitHub marks the PR merged. This is a deliberate exception to the squash default in [`good-merge`](../good-merge/SKILL.md). A squash would leave the Dependabot PRs open. This skill also does its own checks in its steps, so it does not run `good-merge`. Say so in the report
 3. Never bypass checks. No `--admin`, no `--auto`, no force push
 4. "Latest" means the newest published version, not the version in the PR. Check it, do not assume it
 5. Respect pins between packages. If one package pins another (for example `markdownlint-cli` pins `markdownlint`), take both from the same release line
